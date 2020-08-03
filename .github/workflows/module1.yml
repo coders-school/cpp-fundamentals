@@ -1,0 +1,36 @@
+name: Module 1 homework
+
+on: [push, pull_request]
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Create build directory
+      run: mkdir module1/homework/calculate/build
+    - name: Compile
+      working-directory: module1/homework/calculate/build
+      run: |
+        cmake ..
+        make
+    - name: Run tests
+      working-directory: module1/homework/calculate/build
+      run: ctest -V
+
+  fibonacci:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Create build directory
+      run: mkdir module1/homework/fibonacci/build
+    - name: Compile
+      working-directory: module1/homework/fibonacci/build
+      run: |
+        cmake ..
+        make
+    - name: Run tests
+      working-directory: module1/homework/fibonacci/build
+      run: ctest -V
