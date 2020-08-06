@@ -5,7 +5,7 @@
 ## Podsumowanie
 
 <a href="https://coders.school">
-    <img width="500px" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -35,7 +35,7 @@ ___
 
 Za dostarczenie każdego zadania przed 07.06.2020 (niedziela) do 23:59 dostaniesz 2 bonusowe punkty za każde zadanie
 
-#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/module3/module3/homework)
+#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module3/homework)
 
 ___
 

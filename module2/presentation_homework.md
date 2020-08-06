@@ -5,7 +5,7 @@
 ## Podsumowanie
 
 <a href="https://coders.school">
-    <img width="500px" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -39,7 +39,7 @@ ___
 
 Za dostarczenie każdego zadania przed 31.05.2020 (niedziela) do 23:59 dostaniesz 2 bonusowe punkty (razem 8 punktów za 4 zadania).
 
-#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/module2/module2/homework)
+#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/homework)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Dodawanie współpracownika do repo na GitHubie
 
-![Add Collaborator](https://raw.githubusercontent.com/coders-school/kurs_cpp_podstawowy/module2/module2/img/add_collaborator.png)
+![Add Collaborator](https://raw.githubusercontent.com/coders-school/kurs_cpp_podstawowy/master/module2/img/add_collaborator.png)
 
 ___
 

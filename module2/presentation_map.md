@@ -5,7 +5,7 @@
 ## `std::map<K, V>`
 
 <a href="https://coders.school">
-    <img width="500" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -154,4 +154,4 @@ int main() {
 }
 ```
 
-[task4]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/module2/module2/task4.cpp
+[task4]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/task4.cpp

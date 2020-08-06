@@ -5,7 +5,7 @@
 ## Typy danych
 
 <a href="https://coders.school">
-    <img width="500px" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -203,4 +203,3 @@ ___
 
 * [Fundamental types on cppreference.com](https://en.cppreference.com/w/cpp/language/types)
 * [Standard IEEE754 definiujący typy zmiennoprzecinkowe](https://en.wikipedia.org/wiki/IEEE_754)
-
