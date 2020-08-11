@@ -113,7 +113,7 @@ int main() {
 }
 ```
 
-[task3]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/task3.cpp
+[task3]: https://github.com/coders-school/cpp-fundamentals/tree/master/module2/task3.cpp
 
 ___
 

@@ -35,7 +35,7 @@ ___
 
 Za dostarczenie każdego zadania przed 07.06.2020 (niedziela) do 23:59 dostaniesz 2 bonusowe punkty za każde zadanie
 
-#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module3/homework)
+#### [Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/module3/homework)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 ## Dostarczenie zadań
 
-1. Jeśli nie masz jeszcze forka repo kurs_cpp_podstawowy i podpiętego w nim remote coders, to zobacz wcześniejsze prace domowe z Podstaw C++ #2 oraz #1.
+1. Jeśli nie masz jeszcze forka repo cpp-fundamentals i podpiętego w nim remote coders, to zobacz wcześniejsze prace domowe z Podstaw C++ #2 oraz #1.
 2. Zaktualizuj swoje repo z remote'a coders - `git fetch coders`
 3. Przełącz się na branch module3 - `git checkout module3`
 4. Wyślij branch module3 na swojego forka - `git push origin module3`
@@ -132,7 +132,7 @@ ___
 6. Wyślij od razu tę gałąź na forka, zanim zaczniesz implementację - `git push origin homework3`
 7. Rozpocznij implementację samemu lub w parze.
 8. Zanim wyślesz swoje zmiany za pomocą `git push origin homework3` synchronizuj się z forkiem, aby sprawdzić, czy druga osoba już czegoś nie dostarczyła - `git pull --rebase origin homework3`. Jeśli będą konflikty to je rozwiąż.
-9. Przy zgłoszeniu Pull Requesta wyklikaj, że chcesz go dostarczyć do `coders-school/kurs_cpp_podstawowy` branch `module3`. Opisz go odpowiednio dodając informację o autorach kodu.
+9. Przy zgłoszeniu Pull Requesta wyklikaj, że chcesz go dostarczyć do `coders-school/cpp-fundamentals` branch `module3`. Opisz go odpowiednio dodając informację o autorach kodu.
 
 ___
 

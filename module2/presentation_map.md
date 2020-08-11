@@ -154,4 +154,4 @@ int main() {
 }
 ```
 
-[task4]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/task4.cpp
+[task4]: https://github.com/coders-school/cpp-fundamentals/tree/master/module2/task4.cpp

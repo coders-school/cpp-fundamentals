@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-[task1]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/task1.cpp
+[task1]: https://github.com/coders-school/cpp-fundamentals/tree/master/module2/task1.cpp
 
 ___
 
@@ -98,4 +98,4 @@ int main() {
 }
 ```
 
-[task2]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/task2.cpp
+[task2]: https://github.com/coders-school/cpp-fundamentals/tree/master/module2/task2.cpp

@@ -108,4 +108,4 @@ int main() {
 }
 ```
 
-[zadanie-domowe]: https://github.com/coders-school/kurs_cpp_podstawowy/blob/master/module1/task2.cpp
+[zadanie-domowe]: https://github.com/coders-school/cpp-fundamentals/blob/master/module1/task2.cpp
