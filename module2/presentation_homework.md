@@ -39,7 +39,7 @@ ___
 
 Za dostarczenie każdego zadania przed 31.05.2020 (niedziela) do 23:59 dostaniesz 2 bonusowe punkty (razem 8 punktów za 4 zadania).
 
-#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/master/module2/homework)
+#### [Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/module2/homework)
 
 ___
 
