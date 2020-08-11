@@ -5,7 +5,7 @@
 ## `std::list<T>`
 
 <a href="https://coders.school">
-    <img width="500" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -113,7 +113,7 @@ int main() {
 }
 ```
 
-[task3]: https://github.com/coders-school/kurs_cpp_podstawowy/tree/module2/module2/task3.cpp
+[task3]: https://github.com/coders-school/cpp-fundamentals/tree/master/module2/task3.cpp
 
 ___
 

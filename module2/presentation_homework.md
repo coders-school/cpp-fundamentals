@@ -5,7 +5,7 @@
 ## Podsumowanie
 
 <a href="https://coders.school">
-    <img width="500px" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -39,7 +39,7 @@ ___
 
 Za dostarczenie każdego zadania przed 31.05.2020 (niedziela) do 23:59 dostaniesz 2 bonusowe punkty (razem 8 punktów za 4 zadania).
 
-#### [Zadania w repo](https://github.com/coders-school/kurs_cpp_podstawowy/tree/module2/module2/homework)
+#### [Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/module2/homework)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Dodawanie współpracownika do repo na GitHubie
 
-![Add Collaborator](https://raw.githubusercontent.com/coders-school/kurs_cpp_podstawowy/module2/module2/img/add_collaborator.png)
+![Add Collaborator](https://raw.githubusercontent.com/coders-school/cpp-fundamentals/master/module2/img/add_collaborator.png)
 
 ___
 
@@ -137,11 +137,11 @@ ___
 
 ## Dostarczenie zadań (różnice w stosunku do lekcji Podstawy #1)
 
-1. Już masz fork repo [kurs_cpp_podstawowy](https://github.com/coders-school/kurs_cpp_podstawowy), nie da się ponownie zrobić forka
+1. Już masz fork repo [cpp-fundamentals](https://github.com/coders-school/cpp-fundamentals), nie da się ponownie zrobić forka
 2. Jeśli zamierzasz pracować w parze, to najłatwiej będzie, gdy dasz drugiej osobie uprawnienia do pushowania do Twojego repo. Wybierz `Role: Write`
 3. Masz już ściągnięte swojego forka
-4. Przejdź do katalogu repo - `cd kurs_cpp_podstawowy`
-5. Dodaj nowe repozytorium zdalne - `git remote add coders https://github.com/coders-school/kurs_cpp_podstawowy.git`
+4. Przejdź do katalogu repo - `cd cpp-fundamentals`
+5. Dodaj nowe repozytorium zdalne - `git remote add coders https://github.com/coders-school/cpp-fundamentals.git`
 6. Zaktualizuj repozytorium z nowo dodanego adresu - `git fetch coders`
 7. Przełącz się na branch module2 - `git checkout module2`
 8. Możesz teraz nowo ściągniętego brancha wysłać też na swoje repo na GH - `git push origin module2`
@@ -149,7 +149,7 @@ ___
 10. Wyślij od razu tę gałąź na GitHuba, zanim cokolwiek zaimplementujesz - `git push origin homework2`
 11. Zaimplementuj (samodzielnie lub wspólnie) rozwiązania, robiąc dużo malutkich commitów. Przy pracy grupowej możecie się podzielić zadaniami, aby nie wchodzić sobie w paradę i nie tworzyć konfliktów, ale jeśli chcecie od razu spróbować wersji hardcore to zróbcie razem to samo zadanie :)
 12. Wysyłając zmiany na GitHuba używaj komendy `git push origin homework2`
-13. Przy zgłoszeniu Pull Requesta wyklikaj, że chcesz go dostarczyć do `coders-school/kurs_cpp_podstawowy` branch `module2`
+13. Przy zgłoszeniu Pull Requesta wyklikaj, że chcesz go dostarczyć do `coders-school/cpp-fundamentals` branch `module2`
 
 ___
 <!-- .slide: style="font-size: 0.9em" -->
