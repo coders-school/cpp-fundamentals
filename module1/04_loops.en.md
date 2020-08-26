@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## Loops
 
@@ -18,18 +18,18 @@ Basic loops: `while`, `for`
 
 ___
 
-## Loop `while`
+## `while` loop
 
-`while` we use when we want to do something until some condition is met. Usually we have no idea when the sequences (we don't know the number of steps), e.g .:
+ We use `while` when we want to do something until some condition is met. Usually we have no idea when it is going to happen (we don't know the number of steps), e.g .:
 
 * We browse the shirts on the Internet until we find a match for us <!-- .element: class="fragment fade-in" -->
 * We repeat the fight with the same boss until we defeat him <!-- .element: class="fragment fade-in" -->
 * We eat the soup until the plate is empty <!-- .element: class="fragment fade-in" -->
-* We search the contacts on the phone until we find the person we are interested in <!-- .element: class="fragment fade-in" -->
+* We search through the contacts on the phone until we find the person we want to talk to <!-- .element: class="fragment fade-in" -->
 
 ___
 
-### Loop construction `while`
+### `while` loop construction
 
 ```cpp
 while (condition) {
@@ -49,18 +49,18 @@ while (a == b) {
 
 ___
 
-## Loop `for`
+## `for` loop
 
-`for` we use when we want to do something a certain number of times. We usually know the number of steps, e.g.
+We use `for` when we want to do something a certain number of times. We usually know the number of steps, e.g.
 
-* <!-- .element: class="fragment fade-in" --> We fill out a questionnaire consisting of 10 questions -> number of steps 10
-* <!-- .element: class="fragment fade-in" --> We move from A to B -> number of steps = distance / stride length
-* <!-- .element: class="fragment fade-in" --> We are writing an exam consisting of 4 tasks -> the number of steps (if we can, 4, if not, we do the subroutine `ściągaj`)
+* <!-- .element: class="fragment fade-in" --> We fill out a questionnaire consisting of 10 questions -> number of steps: 10
+* <!-- .element: class="fragment fade-in" --> We move from point A to B -> number of steps = distance / step length
+* <!-- .element: class="fragment fade-in" --> We are writing an exam consisting of 4 tasks -> the number of steps (if we are prepared, 4, if not, we do the subroutine `cheat`)
 * <!-- .element: class="fragment fade-in" --> We fasten our shirts (as long as we don't tear any button out)
 
 ___
 
-### Loop construction `for`
+### `for` loop construction
 
 ```cpp
 for (variable = initial_value; condition; variable_change) {
@@ -79,13 +79,13 @@ for (size_t i = 0 ; i < 10 ; i+=2) {
 
 ___
 
-Every loop `for` can be changed to `while` and vice versa. We choose the more convenient notation for us, usually depending on the knowledge of the number of steps.
+Every loop `for` can be changed to `while` and vice versa. We choose the more convenient notation for us, usually depending if we know the number of steps.
 
-There is another type of loop. What?
+But there is another type of loop.
 
 ___
 
-## Loop `do/while`
+## `do/while` loop
 
 ```cpp
 do {
@@ -93,15 +93,15 @@ do {
 } while(condition)
 ```
 
-Code in loops `while` or `for` it may not be fulfilled even once the condition is never met.
+Code in `while` or `for` loops may not be executed even once if the condition is never met.
 
-Loop code `do/while` will be performed at least once.
+Code in `do/while` loop will be performed at least once.
 
 ___
 
-## Task
+## Exercise
 
-Add a function `printString`. It is to print the text given as the first argument as many times as the value of the number given as the second argument. [Download the task][homework]
+Add a function `printString`. It is supposed to print the text given in the first argument as many times as the value of the number given in the second argument. [Download the exercise][homework]
 
 ```cpp
 #include <iostream>

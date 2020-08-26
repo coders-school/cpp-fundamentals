@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## Conditional statements
 
@@ -10,9 +10,9 @@
 
 ___
 
-## Manual `if`
+## `if` statement
 
-A conditional instruction is nothing more than asking the program a question, for example:
+A conditional statement is nothing more than asking the program a question, for example:
 
 * Have you received all the data? <!-- .element: class="fragment fade-in" -->
 * Has the boss's life dropped to 0? <!-- .element: class="fragment fade-in" -->
@@ -21,7 +21,7 @@ A conditional instruction is nothing more than asking the program a question, fo
 
 ___
 
-## Construction `if`
+## `if` construction
 
 ```cpp
 if (condition) {
@@ -33,8 +33,8 @@ ___
 
 ## Combining conditions
 
-What if a lot of information has to be fulfilled?
-We can combine conditions with an operator **or** (`||`, `or`) be **and** (`&&`, `and`)
+What if a lot of conditions have to be met?
+We can combine conditions with an operator **or** (`||`, `or`) or **and** (`&&`, `and`)
 
 ```cpp
 if (are_potatoes_eatten && is_meat_eatten && is_salad_eatten)
@@ -48,13 +48,13 @@ if (player_has_20_dex || player_has_18_int || player_has_22_str)
 ```
 <!-- .element: class="fragment fade-in" -->
 
-In this case, it is enough to meet one of 3 conditions. They can all be met, but it is enough for any one to be met. <!-- .element: class="fragment fade-in" -->
+In this case, it is enough to meet one of 3 conditions. They can all be met, but it is enough for any of them to be met. <!-- .element: class="fragment fade-in" -->
 
 ___
 
-## Manual `else`
+## `else` statement
 
-If the program can react differently to meeting certain conditions, we can use constructions `if else`
+If the program can react differently to meeting certain conditions, we can use `if else` constructions
 
 ```cpp
 if (number < 2) {
@@ -68,7 +68,7 @@ if (number < 2) {
 
 ___
 
-## Manual `switch/case`
+## `switch/case` statement
 
 ```cpp
 char option = getInput();
@@ -85,14 +85,14 @@ default:
 ```
 
 * `case` stands for a specific case
-* `break` announces that we are exiting the conditional statement `switch` and we continue to constitute the program. Its absence will result in the execution of the instructions from the next one `case`.
-* `deafult` this is where the program will arrive if no other condition is met
+* `break` announces that we are exiting the conditional statement `switch` and we continue with the rest of the program. Its absence will result in the execution of the instructions from the next `case`.
+* `default` is place where program will end up if no other condition is met
 
 ___
 
-## Task
+## Exercise
 
-Add a function `max`. It is supposed to return the maximum of the three given values. [Download the task][homework]
+Add a function `max`. It is supposed to return the maximum of the three given values. [Download the exercise][homework]
 
 ```cpp
 #include <iostream>
