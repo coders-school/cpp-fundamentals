@@ -14,15 +14,15 @@ ___
 
 * <!-- .element: class="fragment fade-in" --> very widely used
 * <!-- .element: class="fragment fade-in" --> dynamic array
-* <!-- .element: class="fragment fade-in" --> we do not have to specify in advance how many elements there should be
-* <!-- .element: class="fragment fade-in" --> is in one contiguous memory area (like an array)
+* <!-- .element: class="fragment fade-in" --> we do not have to specify how many elements we want in advance
+* <!-- .element: class="fragment fade-in" --> it is in one continuous memory area (like an array)
 * <!-- .element: class="fragment fade-in" --> it manages the memory itself
-  * will take care of allocating new memory when it is needed
-  * will take care of memory deallocation when we no longer need it
+  * it will take care of allocating new memory when it is needed
+  * it will take care of memory deallocation when we no longer need it
 
 ___
 
-## Create a vector
+## Creating a vector
 
 ```cpp
 std::vector<int> numbers;

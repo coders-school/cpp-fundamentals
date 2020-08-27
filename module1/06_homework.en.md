@@ -34,7 +34,7 @@ ___
 ### Post-work
 
 <!-- * If you don't know what `operator %` is then you have to read about it. It will prove useful in homework :) -->
-* Read about [std::string](https://en.cppreference.com/w/cpp/string/basic_string) in the documentation. You will find there, among others, description of `std::to_string` function. It will be useful 🙂	
+* Read about [std::string](https://en.cppreference.com/w/cpp/string/basic_string) in the documentation. You will find there, among others, description of `std::to_string` function. It will be useful 🙂
 * Task 1 - Calculate (5 points)
 * Task 2 - Fibonacci - recursion and iteration (6 points)
 <!-- * Task 3 - LCM and GCD (6 punktów) -->

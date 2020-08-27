@@ -16,11 +16,11 @@ ___
 * `std::map` w C++ to odpowiednik `dict` z Pythona
 
 Przykładowo tworzymy kolekcję ulubionych płyt i układamy je w szafce.
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 Oczywiście płyt tych mamy ogromną liczbę i chcielibyśmy móc łatwo odnaleźć płytę, gdy będziemy jej poszukiwać.
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 W tym celu numerujemy sobie wszystkie płyty i zapisujemy sobie na kartce informacje, pod jakim numerem znajduje się określony tytuł. W ten sposób tworzymy właśnie mapę.
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 
 ```cpp
 std::map<size_t, std::string> discs {
@@ -29,10 +29,10 @@ std::map<size_t, std::string> discs {
     {3, "The Lord of the Rings: The Return of the King"}
 };
 ```
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 
 Kluczem jest tutaj numer, natomiast wartością jest tytuł filmu.
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 
 ___
 
@@ -52,7 +52,6 @@ ___
 
 [Dokumentacja na cppreference.org](https://en.cppreference.com/w/cpp/container/map)
 <!-- .element: class="fragment fade-in" -->
-
 
 ___
 

@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## `std::map<K, V>`
 
@@ -12,15 +12,15 @@ ___
 
 ## Map, dictionary
 
-* map is a set of pairs (key - Key, value - Value)
-* `std::map` in C ++ it is equivalent to `dict` from Python
+* map is a set of pairs (key, value)
+* `std::map` in C++ is equivalent to `dict` from Python
 
-For example, we create a collection of favorite records and put them in a cupboard.
-<!-- .element: class="fragment fade-in" --> 
+For example, we create a collection of favorite CDs and arrange them on a shelf.
+<!-- .element: class="fragment fade-in" -->
 Of course, we have a huge number of these CDs and we would like to be able to find the CD easily when we search for it.
-<!-- .element: class="fragment fade-in" --> 
-For this purpose, we number all the discs and write down on a piece of paper information under which number the title is placed. This is how we create a map.
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
+For this purpose, we number all the CDs and write down information on a piece of paper under which number which title is placed. This is how we create a map.
+<!-- .element: class="fragment fade-in" -->
 
 ```cpp
 std::map<size_t, std::string> discs {
@@ -29,10 +29,10 @@ std::map<size_t, std::string> discs {
     {3, "The Lord of the Rings: The Return of the King"}
 };
 ```
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 
 The key here is the number, while the value is the title of the movie.
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 
 ___
 
@@ -47,12 +47,11 @@ ___
   * `empty()`
 * <!-- .element: class="fragment fade-in" --> access to the item for the specified key
   * `operator[key]`
-* <!-- .element: class="fragment fade-in" --> adding a pair (key, value) to the map if such a pair is not present in it yet
+* <!-- .element: class="fragment fade-in" --> adding a pair (key, value) to the map if such a pair does not exist in it yet
   * `insert({key, value})`
 
 [Documentation on cppreference.org](https://en.cppreference.com/w/cpp/container/map)
 <!-- .element: class="fragment fade-in" -->
-
 
 ___
 
@@ -64,11 +63,11 @@ What will happen when we call on the mentioned map:
 discs[4] = "Harry Potter";
 ```
 
-Assigning something to a map element with `operator[]` makes:
+Assigning something to a map element with `operator[]` makes it so:
 <!-- .element: class="fragment fade-in" -->
 
 * <!-- .element: class="fragment fade-in" --> if there is already a value for a given key, we will replace it.
-* <!-- .element: class="fragment fade-in" --> when there is no value for a given key, we will create a new pair (key, value)
+* <!-- .element: class="fragment fade-in" --> if there is no value for a given key, we will create a new pair (key, value)
 
 ___
 <!-- .slide: style="font-size: 0.8em" -->

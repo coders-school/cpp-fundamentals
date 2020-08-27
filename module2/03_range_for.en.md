@@ -1,8 +1,8 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
-## Loop `for` after collection
+## `for` loop over container
 
 <a href="https://coders.school">
     <img width="500" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
@@ -15,13 +15,13 @@ ___
 * <!-- .element: class="fragment fade-in" --> Each container (including an array or vector) has its end and beginning
   * function `begin()` returns the beginning of the container
   * function `end()` returns the end of the container
-  * (in a very simplified way, we will extend the topic with iterators)
+  * (in a very simplified way, we will elaborate on this topic with iterators)
 
 ___
 
 ## Range based `for` loop
 
-Thanks to the start and end of range information, we can write a loop iterating through the entire scope of the container.
+Thanks to the information about start and end of range, we can write a loop iterating through the entire scope of the container.
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
@@ -32,10 +32,10 @@ for (auto i = vec.begin(); i != vec.end(); ++i) {
 ```
 <!-- .element: class="fragment fade-in" -->
 
-However, such a notation is unnecessarily complex and not readable. <!-- .element: class="fragment fade-in" -->
-That is why they were created `range loop` that allow easy writing `for (typ nazwa : kontener)`.
+However, this notation is unnecessarily complex and unreadable. <!-- .element: class="fragment fade-in" -->
+That is why `range loop` were created which allow easy notation `for (type name : container)`.
 <!-- .element: class="fragment fade-in" -->
-The compiler can generate it by itself, if we use the notation below. <!-- .element: class="fragment fade-in" -->
+The compiler can generate code above, if we use the notation below. <!-- .element: class="fragment fade-in" -->
 
 ```cpp
 for (auto element : vec) {
@@ -48,7 +48,7 @@ ___
 
 ## Task
 
-Write a function `printVector`which he will take as an argument `std::vector<std::string>` and print its contents using a for loop on the collection.
+Write a function `printVector` which will take `std::vector<std::string>` as an argument and print its contents using a `for` loop over the collection.
 Each item on a new line.
 [Download the task][task1]
 
@@ -76,8 +76,8 @@ ___
 
 ## Task
 
-Write a function `concatenateVector`which will take 2 vectors as arguments and then return one which will contain alternating elements from the first and second vector.
-For example, for the following vec1 and vec2 it should return: `{1, 11, 2, 12, 3, 13, 4, 14, 5, 15}`
+Write a function `concatenateVector` which will take 2 vectors as arguments and then return one which will contain alternating elements from the first and second vector.
+For example, for the following `vec1` and `vec2` it should return: `{1, 11, 2, 12, 3, 13, 4, 14, 5, 15}`
 [Download the task][task2]
 
 ```cpp

@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## `std::list<T>`
 
@@ -12,7 +12,7 @@ ___
 
 ## List
 
-### Question: what features did he have `std::vector<T>`?
+### Question: what features did `std::vector<T>` have?
 <!-- .element: class="fragment fade-in" -->
 
 Unlike a vector, the list is scattered around the memory. Which is sometimes convenient, because we can use fragments of memory,
@@ -22,7 +22,7 @@ that could be inaccessible to the vector.
 ### Question: How do list elements know about each other's existence?
 <!-- .element: class="fragment fade-in" -->
 
-Each list item stores a pointer to either the next item (one-way list) or the next and previous item (two-way list).
+Each list item stores a pointer to either the next item (one-way linked list) or the next and previous item (two-way linked list).
 <!-- .element: class="fragment fade-in" -->
 
 ___
@@ -42,9 +42,9 @@ ___
   * `empty()`
 * <!-- .element: class="fragment fade-in" --> adding an item to the end of the list
   * `push_back()`
-* <!-- .element: class="fragment fade-in" --> <b> NEW </b> adds an item to the top of the list
+* <!-- .element: class="fragment fade-in" --> <b>NEW</b> adds an item to the beginning of the list
   * `push_front()`
-* <!-- .element: class="fragment fade-in" --> <b> NEW </b> sorting of list items (can't use <code>std::sort</code> for list)
+* <!-- .element: class="fragment fade-in" --> <b>NEW</b> sorting list items (can't use <code>std::sort</code> for list)
   * `sort()`
 
 [Documentation on cppreference.org](https://en.cppreference.com/w/cpp/container/list)
@@ -54,7 +54,7 @@ ___
 
 ## Question: how do I get to the 10th list item?
 
-Since each list item only knows about the previous and next items, we can't get to the 10th item that easily.
+Since each list item knows only about the previous and next items, we can't get to the 10th item that easily.
 <!-- .element: class="fragment fade-in" -->
 
 We can access the first item via `front()` or `*begin()`
@@ -67,7 +67,7 @@ int main() {
     std::cout << list.front();
 }
 ```
-<!-- .element: class="fragment fade-in" --> 
+<!-- .element: class="fragment fade-in" -->
 
 ___
 
@@ -85,7 +85,7 @@ int main() {
 ```
 <!-- .element: class="fragment fade-in" -->
 
-It takes more time than getting into the 10th element in `std::vector`.
+It takes more time than getting to the 10th element in `std::vector`.
 <!-- .element: class="fragment fade-in" -->
 
 ___
@@ -117,4 +117,4 @@ int main() {
 
 ___
 
-## Question: when is it profitable to use `std::list`, when `std::vector`?
+## Question: when is it profitable to use `std::list` and when `std::vector`?
