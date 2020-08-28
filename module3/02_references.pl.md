@@ -19,7 +19,7 @@ int value = 5;
 int & number = value;
 ```
 
-Powyższy zapis oznacza zmienną `num` typu `int&`, czyli referencję na typ `int`.
+Powyższy zapis oznacza zmienną `number` typu `int&`, czyli referencję na typ `int`.
 <!-- .element: class="fragment fade-in" -->
 
 Nie ma znaczenia, czy referencję dokleimy do typu, czy nazwy zmiennej, ale referencja jest oddzielnym typem, więc sugerujemy nie doklejać jej do nazwy zmiennej.
@@ -59,7 +59,7 @@ ___
   * W ten sposób możemy swobodnie w wielu miejscach programu odczytywać wartość tej zmiennej, bez zbędnego jej kopiowania.
 * <!-- .element: class="fragment fade-in" --> Referencja zajmuje w pamięci tyle, ile zajmuje adres (4 lub 8 bajtów).
 * <!-- .element: class="fragment fade-in" --> Tworzenie referencji do typu <code>int</code> (zazwyczaj 4 bajty) nie zawsze ma sens optymalizacyjny, chyba, że chcemy zmodyfikować ten element wewnątrz funkcji.
-* <!-- .element: class="fragment fade-in" --> Przekazywanie argumentów przez referencje nabierze więcej sensu, kiedy poznamy już klasy i obiekty :)
+* <!-- .element: class="fragment fade-in" --> Przekazywanie argumentów przez referencje nabierze więcej sensu, kiedy poznamy już klasy i obiekty 🙂
 
 [Ile miejsca zajmuje referencja? - stackoverflow.com](https://stackoverflow.com/questions/1179937/how-does-a-c-reference-look-memory-wise)
 <!-- .element: class="fragment fade-in" -->

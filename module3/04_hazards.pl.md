@@ -138,7 +138,7 @@ ___
 
 ## Zadanie
 
-Napisz funkcję `foo()`. Ma ona przyjmować shared_ptr na int i ma przypisać wartość 20 do wskazywanego przez niego obiektu.
+Napisz funkcję `foo()`. Ma ona przyjmować `shared_ptr` na `int` i ma przypisać wartość 20 do wskazywanego przez niego obiektu.
 
 Ponadto `foo()` ma wyświetlić wartość inta wskazywanego przez wskaźnik oraz liczbę shared_ptrów, które wskazują na ten obiekt.
 

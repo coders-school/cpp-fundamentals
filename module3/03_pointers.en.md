@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## Pointers
 
@@ -10,28 +10,28 @@
 
 ___
 
-## Indicators - an analogy
+## Pointers - an analogy
 
 In addition to references, there are also pointers. Pointers work much like references.
 <!-- .element: class="fragment fade-in" -->
 
 Imagine you are planning a trip to Majorca. We get on the plane and fly.
-On the spot, it turns out that we have forgotten the hotel address :(
+On the destination, it turns out that we have forgotten the hotel address 😦
 In order to find it, we have to call the travel agency, wait for the service, explain the whole complex story, and finally, after a long time, we get the address of our hotel.
 The process of obtaining this information was time-consuming for us.
 <!-- .element: class="fragment fade-in" -->
 
-Let's imagine, however, that we have previously saved the address of our hotel on our phone. To remember where it was, we just need to check the phone and we know. The process took much less time.
+Let's imagine, however, that we have previously saved the address of our hotel on our phone. To remember where it was, we just need to check the phone. The process took much less time.
 <!-- .element: class="fragment fade-in" -->
 
 ___
 
-## Pointers in C ++
+## Pointers in C++
 
-It is similar in C ++. Pointers are used to indicate the location in memory where the desired object is located.
+It is similar in C++. Pointers are used to indicate the location in memory where the desired object is located.
 <!-- .element: class="fragment fade-in" -->
 
-The processor does not have to ask the memory bus each time where the given variable is, but it knows immediately what its address is (we avoid intermediaries like a phone call to the service office).
+The processor does not have to ask the memory bus each time where the given variable is because it knows immediately what its address is (we avoid intermediaries like a phone call to the service office).
 <!-- .element: class="fragment fade-in" -->
 
 Also, if a function takes a pointer, it doesn't have to copy the entire contents of the object, which is time consuming. You can indicate where this object already exists much faster.
@@ -39,7 +39,7 @@ Also, if a function takes a pointer, it doesn't have to copy the entire contents
 
 ___
 
-### How do I pass an element by a pointer?
+### How do I pass a variable by a pointer?
 
 ```cpp
 void foo (int* num) {
@@ -60,7 +60,7 @@ void bar (int const* num) {
 ```
 <!-- .element: class="fragment fade-in" -->
 
-The function call is:
+This is how you call this function:
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
@@ -72,7 +72,7 @@ The function call is:
 
 ___
 
-## Where to put const?
+## Where to put `const`?
 
 ### What is this?
 
@@ -102,7 +102,7 @@ A constant pointer to a variable (`int`).
 
 ___
 
-## Fixed pointers versus pointers fixed
+## Constant pointers versus pointers on constant
 
 ```cpp
 int const * const ptr;
@@ -113,7 +113,7 @@ const int * const ptr;
 Constant pointer to constant (`int const = const int`).
 <!-- .element: class="fragment fade-in" -->
 
-This is a common question from job interviews. So that the indicator is constant, `const` must be after the asterisk.
+This is a common question from job interviews. For pointer to be constant, `const` must be after the asterisk.
 <!-- .element: class="fragment fade-in" -->
 
 ___
@@ -129,15 +129,15 @@ ptr = nullptr; // ok
 ```
 
 * <!-- .element: class="fragment fade-in" --> We cannot modify the object pointed to by the pointer
-  * Appeals from `*` they cannot modify the object
+  * Referring with `*` cannot modify the object
 * <!-- .element: class="fragment fade-in" --> We can modify the pointer itself, e.g. to point to another object
-  * Appeals without `*` can modify the pointer
+  * Referring without `*` can modify the pointer
 
 ___
 
 ## Differences
 
-### Constant indicator
+### Constant pointer
 
 ```cpp
 int * const ptr = new int{42};
@@ -146,9 +146,9 @@ ptr = nullptr; // compilation error: assignment of read-only variable ‘ptr’
 ```
 
 * <!-- .element: class="fragment fade-in" --> We can modify the object pointed to by the pointer
-  * Appeals from `*` can modify the object
+  * Referring with `*` can modify the object
 * <!-- .element: class="fragment fade-in" --> We cannot modify the pointer itself, e.g. to point to another object
-  * Appeals without `*` they cannot modify the pointer
+  * Referring without `*` cannot modify the pointer
 
 ___
 
@@ -161,20 +161,20 @@ ptr = nullptr; // compilation error: assignment of read-only variable ‘ptr’
 ```
 
 * <!-- .element: class="fragment fade-in" --> We cannot modify the object pointed to by the pointer
-  * Appeals from `*` they cannot modify the object
+  * Referring with `*` cannot modify the object
 * <!-- .element: class="fragment fade-in" --> We cannot modify the pointer itself, e.g. to point to another object
-  * Appeals without `*` they cannot modify the pointer
+  * Referring without `*` cannot modify the pointer
 
 ___
 <!-- .slide: style="font-size: 0.9em" -->
 
 ## Task
 
-Implement the functions `foo()` and `bar()`.
+Implement functions `foo()` and `bar()`.
 
-`foo()` should modify the value passed by the pointer to 10, a `bar()` on 20.
+`foo()` should modify the value passed by the pointer to 10, and `bar()` to 20.
 
-Whether `foo()` or `bar()` can I take the pointer to a constant or constant pointer?
+Can either `foo()` or `bar()` take the pointer to a constant or constant pointer?
 
 ```cpp
 #include <iostream>
@@ -211,10 +211,10 @@ ___
 * <!-- .element: class="fragment fade-in" --> The argument is a reference or a regular variable (copy) - we pass the name
 * <!-- .element: class="fragment fade-in" --> The argument is a pointer and we pass the variable - we have to add <code>&</code> before the variable name.
 
-### Signs <!-- .element: class="fragment fade-in" -->
+### Symbols <!-- .element: class="fragment fade-in" -->
 
-* <!-- .element: class="fragment fade-in" --> Symbol <code>*</code> (dereference operator) denotes access to the referenced object
-* <!-- .element: class="fragment fade-in" --> If we don't <code>*</code> at the pointer we get the address of the pointed object
+* <!-- .element: class="fragment fade-in" --> Symbol <code>*</code> (dereference operator) gives access to the referenced object
+* <!-- .element: class="fragment fade-in" --> If we don't put <code>*</code> before the pointer we get the address of the pointed object
 * <!-- .element: class="fragment fade-in" --> Symbol <code>&</code> means getting the address of our variable
 * <!-- .element: class="fragment fade-in" --> The above makes sense because the pointer points to a memory location (the address of the pointed object)
 
@@ -245,26 +245,26 @@ void example() {
 
 ___
 
-## Which means `*` in code?
+## What does `*` mean in code?
 
 ```cpp
-int a = 5 * 4;      // jako operacja arytmetyczna - mnożenie
-int* b = &a;        // przy typie - wskaźnik na ten typ
-int *c = &a;        // przy typie - wskaźnik na ten typ
-std::cout << *b;    // przy zmiennej wskaźnikowej - dostęp do obiektu
-int fun(int* wsk);  // w argumencie funkcji - przekazanie wskaźnika (adresu)
+int a = 5 * 4;      // arithmetic operation - multiplying
+int* b = &a;        // next to type - pointer to the type
+int *c = &a;        // next to type - pointer to the type
+std::cout << *b;    // next to pointer - access to object
+int fun(int* wsk);  // in function argument - passing pointer (address)
 ```
 <!-- .element: class="fragment fade-in" -->
 
-## Which means `&` in code?
+## What does `&` mean in code?
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
-int a = 5 & 4;      // jako operacja arytmetyczna - suma bitowa
-int& b = a;         // przy typie - referencja na ten typ
-int &c = a;         // przy typie - referencja na ten typ
-std::cout << &a;    // przy zmiennej - adres tej zmiennej w pamięci
-int fun(int& ref);  // w argumencie funkcji - przekazanie adresu
+int a = 5 & 4;      // as arithmetic operation - bitwise AND
+int& b = a;         // next to type - reference on type
+int &c = a;         // next to type - reference on type
+std::cout << &a;    // next to variable - address of this variable in memory
+int fun(int& ref);  // in function argument - passing the address
 ```
 <!-- .element: class="fragment fade-in" -->
 
@@ -272,4 +272,4 @@ ___
 
 ## Important rule
 
-Unless absolutely necessary, then we don't use pointers at all.
+Unless absolutely necessary, we don't use pointers at all.

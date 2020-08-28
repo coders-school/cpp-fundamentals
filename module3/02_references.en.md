@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## References
 
@@ -12,23 +12,23 @@ ___
 
 ## &
 
-Magic badge `&` stands for reference.
+Magic symbol `&` stands for reference.
 
 ```cpp
 int value = 5;
 int & number = value;
 ```
 
-The above notation denotes a variable `num` type `int&`, which is a reference to a type `int`.
+The above notation gives a variable `number` type `int&`, which is a reference to a type `int`.
 <!-- .element: class="fragment fade-in" -->
 
 It doesn't matter if we stick the reference to the type or name of the variable, but the reference is a separate type, so we suggest not to stick it to the variable name.
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
-int& number = value;  // lewak
-int &number = value;  // prawak (odradzane)
-int & number = value; // neutralny
+int& number = value;  // left
+int &number = value;  // right (not recommended)
+int & number = value; // neutral
 ```
 <!-- .element: class="fragment fade-in" -->
 ___
@@ -47,19 +47,19 @@ std::cout << number << "\n";  // 6
 ```
 
 * <!-- .element: class="fragment fade-in" --> The reference refers to an existing object
-* <!-- .element: class="fragment fade-in" --> If we create an object <code>int value</code> it through references <code>int& reference = value</code> we will be able to refer to it directly.
+* <!-- .element: class="fragment fade-in" --> If we create an object <code>int value</code> through references <code>int& reference = value</code> we will be able to refer to it directly.
 * <!-- .element: class="fragment fade-in" --> Reference is another, additional name for the same variable (alias)
 * <!-- .element: class="fragment fade-in" --> Modifying a reference = modifying the original object
 
 ___
 
-### What do we gain in this way?
+### What do we gain this way?
 
-* <!-- .element: class="fragment fade-in" --> We don't need to copy items. It is enough for us to provide references.
-  * This way, we can freely read the value of this variable in many places in the program, without unnecessary copying it.
+* <!-- .element: class="fragment fade-in" --> We don't need to copy variables. It is enough to provide references.
+  * This way, we can freely read the value of this variable in many places in the program, without unnecessarily copying it.
 * <!-- .element: class="fragment fade-in" --> A reference takes up as much in memory as an address (4 or 8 bytes).
-* <!-- .element: class="fragment fade-in" --> Building a reference to a type <code>int</code> (usually 4 bytes) does not always make optimization sense, unless you want to modify this element inside a function.
-* <!-- .element: class="fragment fade-in" --> Passing arguments by reference will make more sense when we get to know classes and objects :)
+* <!-- .element: class="fragment fade-in" --> Building a reference to a type <code>int</code> (usually 4 bytes) does not always make sense from optimization point, unless you want to modify this element inside a function.
+* <!-- .element: class="fragment fade-in" --> Passing arguments by reference will make more sense when we get to know classes and objects 🙂
 
 [How much space does a reference take? - stackoverflow.com](https://stackoverflow.com/questions/1179937/how-does-a-c-reference-look-memory-wise)
 <!-- .element: class="fragment fade-in" -->
@@ -87,7 +87,7 @@ void bar(const int& num) {
 ```
 <!-- .element: class="fragment fade-in" -->
 
-A function call is simply:
+We call function simply like this:
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
@@ -101,7 +101,7 @@ ___
 
 ## Task
 
-Implement the function `foo()`. It is to accept and modify the text provided. We want to see on the screen `"Other string"`.
+Implement the function `foo()`. It has to modify the text provided. On the screen we want to see `"Other string"`.
 
 ```cpp
 #include <iostream>

@@ -1,10 +1,10 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## Threats
 
-### in the use of references and pointers
+### while using references and pointers
 
 <a href="https://coders.school">
     <img width="500" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
@@ -12,7 +12,7 @@
 
 ___
 
-## Empty indicators
+## Empty pointers
 
 ```cpp
 int* a = nullptr;
@@ -44,22 +44,22 @@ int* a;
 std::cout << *a;
 ```
 
-Indicator `a` contains the so-called rubbish.
-Accessing the object pointed to by such a pointer is undefined behavior.
+Pointer `a` contains the so-called garbage.
+Accessing the object pointed to it is undefined behavior.
 <!-- .element: class="fragment fade-in" -->
 
 ___
 
 ## References to deleted variables
 
-As we already well know, local variables are removed when they are out of the scope we created them.
+As we already know, local variables are removed when they are out of the scope we created them in.
 You can already guess what problems pointers and references will cause us when they still exist and the object they refer to is already destroyed.
-It will be at best <span class="fragment highlight-red">"Crash"</span>at worst <span class="fragment highlight-red">"Undefined behavior"</span>.
+It will be at best <span class="fragment highlight-red">"Crash"</span> and <span class="fragment highlight-red">"Undefined behavior"</span> at worst.
 
 ### How to prevent such cases?
 <!-- .element: class="fragment fade-in" -->
 
-We must always ensure that the lifetime of the variable is longer than the lifetime of its indicator or reference.
+We must always ensure that the lifetime of the variable is longer than the lifetime of its pointer or reference.
 <!-- .element: class="fragment fade-in" -->
 
 ___
@@ -92,13 +92,13 @@ ___
 The answer may be dynamically allocated memory.
 <!-- .element: class="fragment fade-in" -->
 
-The easiest way to do this is by using a library `#include <memory>`that has `std::shared_ptr<T>`.
+The easiest way to do this is by using a library `#include <memory>` that has `std::shared_ptr<T>`.
 <!-- .element: class="fragment fade-in" -->
 
-This indicator is called _intelligent_ for a reason. It is responsible for managing dynamic memory and releases the resource itself when we no longer need it.
+This pointer is called _intelligent_ for a reason. It is responsible for managing dynamic memory and releases the resource itself when we no longer need it.
 <!-- .element: class="fragment fade-in" -->
 
-### How to create such an indicator?
+### How to create such pointer?
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
@@ -109,7 +109,7 @@ auto ptr = std::shared_ptr<int>(new int{5});
 
 ___
 
-## Corrected listing
+## Corrected code snippet
 
 ```cpp
 std::vector<std::shared_ptr<int>> vec; // previously: std::vector<int*> vec;
@@ -138,11 +138,11 @@ ___
 
 ## Task
 
-Write a function `foo()`. It is supposed to accept shared_ptr on int and assign value 20 to the object pointed to by it.
+Write a function `foo()`. It is supposed to accept `shared_ptr` on `int` and assign value 20 to the object pointed to by it.
 
-also `foo()` is to display the value of the int pointed to by the pointer and the number of shared_pts that point to this object.
+Also `foo()` has to display the value of the `int` pointed to by the pointer and the number of `shared_ptrs` that point to this object.
 
-Also display the same in `main()` before and after the call `foo()`.
+Also display above in `main()` before and after calling `foo()`.
 
 ```cpp
 #include <iostream>
@@ -167,7 +167,7 @@ ___
 
 ## Task
 
-Write a function `foo()`. It is supposed to take 2 values ​​of the type `int` and return their product as `shared_ptr`. Check how many owners it has `shared_ptr`.
+Write a function `foo()`. It is supposed to take 2 values ​​of the type `int` and return their product as `shared_ptr`. Check how many owners `shared_ptr` has.
 
 ```cpp
 #include <iostream>
@@ -186,7 +186,7 @@ int main() {
 
 ___
 
-## Intelligent pointers the solution to all problems?
+## Intelligent pointers as solution to all problems?
 
 Now that we've created a smart pointer, we don't have to worry about the variable's lifetime.
 We can safely print these values ​​after exiting the function.
@@ -211,7 +211,7 @@ int main() {
 ___
 <!-- .slide: style="font-size: 0.9em" -->
 
-## The trap returns
+## The danger returns
 
 ```cpp
 void foo(int* num) {
@@ -229,23 +229,23 @@ int main() {
 }
 ```
 
-If all objects `shared_ptr<T>` references to this variable are deleted, the resource is released.
+If all objects of `shared_ptr<T>` referencing to this variable are deleted, the resource is released.
 <!-- .element: class="fragment fade-in" -->
 
-Our usual indicator we downloaded earlier with `get()`, will have an address for a resource that no longer exists.
+Our raw pointer we downloaded earlier with `get()` will have an address for a resource that no longer exists.
 <!-- .element: class="fragment fade-in" -->
 
-Attempting to use it will result in an UB or a crash. Be very careful with the usual pointers.
+Attempting to use it will result in an UB or a crash. Be very careful with raw pointers.
 <!-- .element: class="fragment fade-in" -->
 
 ___
 
 ## Conclusions
 
-* <!-- .element: class="fragment fade-in" --> indicators may not point to anything (<code>nullptr</code>), the references must point to some previously created object
+* <!-- .element: class="fragment fade-in" --> pointers may not point to anything (<code>nullptr</code>), the references must point to some previously created object
 * <!-- .element: class="fragment fade-in" --> pointers and references can be dangerous (more often pointers) if they are associated with objects that no longer exist
-  * these are the so-called dangling pointers / references, dangling pointers / references
+  * these are the so-called dangling pointers/references
 * <!-- .element: class="fragment fade-in" --> The reference cannot be assigned an object other than the one specified during its initialization
-* <!-- .element: class="fragment fade-in" --> pointers can be assigned new addresses to point to other objects (except fixed pointers)
-* <!-- .element: class="fragment fade-in" --> better by default not to use raw pointers
+* <!-- .element: class="fragment fade-in" --> pointers can be assigned to new addresses to point to other objects (except constant pointers)
+* <!-- .element: class="fragment fade-in" --> it's better not to use raw pointers
 * <!-- .element: class="fragment fade-in" --> it's better to use smart pointers

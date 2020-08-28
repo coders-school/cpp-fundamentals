@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## Scope of variables
 
@@ -26,7 +26,7 @@ local_variable = 10;   // error -> local_variable doesn't exists
 
 The range is always formed by curly braces, including: <!-- .element: class="fragment fade-in" -->
 
-* <!-- .element: class="fragment fade-in" --> same parentheses - <code>{ /* ... */ }</code>
+* <!-- .element: class="fragment fade-in" --> only parentheses - <code>{ /* ... */ }</code>
 * <!-- .element: class="fragment fade-in" --> function body - <code>void fun() { /* ... */ }</code>
 * <!-- .element: class="fragment fade-in" --> conditional statements - <code>if (condition) { /* ... */ }</code>
 * <!-- .element: class="fragment fade-in" --> loops - <code>while (condition) { /* ... */ }</code>
@@ -35,7 +35,7 @@ ___
 
 ## Global variables
 
-A global variable, it is visible to all scopes. We can always refer to it.
+A global variable is visible to all scopes. We can always refer to it.
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
@@ -81,7 +81,7 @@ ___
 
 ## Overriding names
 
-* <!-- .element: class="fragment fade-in" --> we can have many variables with the same name if they are in different ranges
+* <!-- .element: class="fragment fade-in" --> we can have many variables with the same name if they are in different scopes
   * <!-- .element: class="fragment fade-in" --> to avoid ambiguity this is rather not recommended
 * <!-- .element: class="fragment fade-in" --> a name from the local scope always overrides the name from a wider scope (e.g. global)
-* <!-- .element: class="fragment fade-in" --> you can refer to names from global scope using <code>::</code> (range operator)
+* <!-- .element: class="fragment fade-in" --> you can refer to names from global scope using <code>::</code> (scope resolution operator)

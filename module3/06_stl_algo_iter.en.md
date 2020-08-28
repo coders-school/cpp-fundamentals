@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## Introduction to STL
 
@@ -12,11 +12,11 @@
 
 ___
 
-Let's go back to the begin and end iterators for a moment. As we remember, they returned the beginning and the end of our container, e.g. std :: vector.
+Let's go back to begin and end iterators for a moment. As we remember, they returned the beginning and the end of our container, e.g. std :: vector.
 in fact, begin and end returns to us an iterator pointing to 1 element of our container and to the element immediately after the last element. (here a photo of a few squares and marked as indicated by the begin and the end).
 
 What is an iterator? The easiest way is an element that points to a container element. We can freely increment it, i.e. move to the next elements of the container. We distinguish several types of iterators, but at the moment we will only deal with one.
-It is called random acces iterator. It is important to us that such an iterator can freely refer to any element in our container. We get the random itarator when we call begin or end for std :: vector. To refer to the element the iterator points to, we use `*`.
+It is called random access iterator. It is important to us that such an iterator can freely refer to any element in our container. We get the random iterator when we call begin or end for std :: vector. To refer to the element the iterator points to, we use `*`.
 
 What will be listed in the following lines?
 ```

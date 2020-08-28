@@ -41,8 +41,8 @@ ___
 
 ### Pre-work
 
-* [Playlista na YT odnośnie STLa](https://www.youtube.com/playlist?list=PL5jc9xFGsL8G3y3ywuFSvOuNm3GjBwdkb) - obejrzyj ile możesz :)
-* Przypomnij sobie czym jest klasa i jak się ją pisze - [obejrzyj wideo Mirosława Zelenta](https://www.youtube.com/watch?v=aDXjubGK0jU). UWAGA! Od 22 minuty możesz zaobserwować trochę złych praktyk :D Spróbuj odgadnąć jakich.
+* [Playlista na YT odnośnie STLa](https://www.youtube.com/playlist?list=PL5jc9xFGsL8G3y3ywuFSvOuNm3GjBwdkb) - obejrzyj ile możesz 🙂
+* Przypomnij sobie czym jest klasa i jak się ją pisze - [obejrzyj wideo Mirosława Zelenta](https://www.youtube.com/watch?v=aDXjubGK0jU). UWAGA! Od 22 minuty możesz zaobserwować trochę złych praktyk 😃 Spróbuj odgadnąć jakich.
 
 ___
 

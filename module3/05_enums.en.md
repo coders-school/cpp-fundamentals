@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# C ++ basics
+# C++ basics
 
 ## `enum` and `enum class`
 
@@ -12,8 +12,9 @@ ___
 
 ## Enumerated type
 
-`enum` is an enumerated type in Polish.
-Also introduced in C ++ 11 `enum class` called a strong enumeration type.
+`enum` is an enumerated type.
+
+Also `enum class` introduced in C++11, which is called a strong enumeration type.
 
 ### Example <!-- .element: class="fragment fade-in" -->
 
@@ -22,11 +23,11 @@ We would also like to create an interface that returns an error number, e.g .:
 <!-- .element: class="fragment fade-in" -->
 
 * <!-- .element: class="fragment fade-in" --> lack of water
-* <!-- .element: class="fragment fade-in" --> too heavy a load
+* <!-- .element: class="fragment fade-in" --> load is too heavy
 * <!-- .element: class="fragment fade-in" --> problem with bearings
 * <!-- .element: class="fragment fade-in" --> pump lock
   
-In order to use type `enum` or better - `enum class`.
+For this we use type `enum` or better - `enum class`.
 <!-- .element: class="fragment fade-in" -->
 
 ___
@@ -55,7 +56,7 @@ ___
 
 ## Numbering
 
-Type `enum` underneath it is numbered from `0` down `n - 1`where `n` is the number of elements.
+Type `enum` underneath is numbered from `0` to `n - 1`, where `n` is the number of elements.
 <!-- .element: class="fragment fade-in" -->
 
 If we want to set different values, we have to do it manually:
@@ -75,9 +76,9 @@ ___
 
 ## `enum` vs `enum class`
 
-`enum` from `enum class` the main difference is that we can implicitly convert the type `enum` on `int` (it's an enumerated type after all).
+The main difference between `enum` and `enum class` is that we can implicitly convert the type `enum` to `int` (it's an enumerated type after all).
 
-However, type `enum class` we can convert to `int`, only by explicit casting. We are not going to discuss casting for now. It's just worth it
+However, type `enum class` we can convert to `int`, only by explicit casting. We are not going to discuss casting for now. It's just worth to
 remember that we do this by calling:
 <!-- .element: class="fragment fade-in" -->
 
@@ -94,7 +95,7 @@ ___
 
 ## `enum` vs `enum class`
 
-The second difference - for `enum` we may have a name conflict for `enum class` no.
+The second difference - for `enum` we may have a name conflict, whereas for `enum class` not.
 
 ```cpp
 enum Color {
@@ -127,7 +128,7 @@ if (lightColor == RED) {  // 0 or 2?
 ___
 <!-- .slide: style="font-size: 0.9em" -->
 
-## Use the value of z `enum class`
+## Example usage of `enum class`
 
 To avoid a name conflict, we use `enum class`.
 
