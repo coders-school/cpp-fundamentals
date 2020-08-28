@@ -2,7 +2,7 @@
     <img width="500" data-src="coders_school_logo.png" src="coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
-# Podstawy C++ #1
+# Podstawy C++
 
 ## [Moduł 1](module1/index.pl.html)
 
@@ -50,7 +50,7 @@
 
 ___
 
-# C++ basics #1
+# C++ basics
 
 ## [Module 1](module1/index.en.html)
 
