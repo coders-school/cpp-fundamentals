@@ -26,7 +26,7 @@ Chcielibyśmy utworzyć także interfejs zwracający numer błędu np:
 * <!-- .element: class="fragment fade-in" --> problem z łożyskami
 * <!-- .element: class="fragment fade-in" --> blokada pompy
   
-W celu warto użyć typu `enum` lub lepiej - `enum class`.
+W tym celu warto użyć typu `enum` lub lepiej - `enum class`.
 <!-- .element: class="fragment fade-in" -->
 
 ___

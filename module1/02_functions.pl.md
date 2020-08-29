@@ -16,7 +16,7 @@ Funkcja jest to fragment programu, któremu nadano nazwę i który możemy wykon
 
 Funkcja == podprogram == procedura <!-- .element: class="fragment fade-in" -->
 
-Przykładowo, w trakcie jazdy na rowerze naszą główną funkcją jest przemieszczanie się z punktu a do b. Jednak wykonujemy także kilka podprogramów, jak zmiana biegów, hamowanie, rozpędzanie, skręcanie. Podobnie w programie możemy wydzielić konkretne zachowania i przenieść je do funkcji, które nazwiemy tak, by sugerowały co robią. Ważne, aby funkcja robiła tylko jedną rzecz. Jedna funkcja zmienia biegi, druga hamuje, trzecia skręca. <!-- .element: class="fragment fade-in" -->
+Przykładowo, w trakcie jazdy na rowerze naszą główną funkcją jest przemieszczanie się z punktu A do B. Jednak wykonujemy także kilka podprogramów, jak zmiana biegów, hamowanie, rozpędzanie, skręcanie. Podobnie w programie możemy wydzielić konkretne zachowania i przenieść je do funkcji, które nazwiemy tak, by sugerowały co robią. Ważne, aby funkcja robiła tylko jedną rzecz. Jedna funkcja zmienia biegi, druga hamuje, trzecia skręca. <!-- .element: class="fragment fade-in" -->
 
 ___
 
@@ -26,13 +26,17 @@ ___
 
 ### Odgadnijcie sygnatury po opisie <!-- .element: class="fragment fade-in" -->
 
-Funkcja o nazwie foo, która nic nie zwraca a przyjmuje jeden argument typu double. <!-- .element: class="fragment fade-in" -->
+Funkcja o nazwie `foo`, która nic nie zwraca a przyjmuje jeden argument typu `double`.
+<!-- .element: class="fragment fade-in" -->
 
-`void foo(double)`  <!-- .element: class="fragment fade-in" -->
+`void foo(double)`
+<!-- .element: class="fragment fade-in" -->
 
-Funkcja o nazwie bar, która zwraca typ double a przyjmuje 2 argumenty. Pierwszy to float, a drugi to const int (const oznacza, że wartość ta nie może zostać zmodyfikowana). <!-- .element: class="fragment fade-in" -->
+Funkcja o nazwie `bar`, która zwraca typ double a przyjmuje 2 argumenty. Pierwszy to `float`, a drugi to `const int` (`const` oznacza, że wartość ta nie może zostać zmodyfikowana).
+<!-- .element: class="fragment fade-in" -->
 
-`double bar(float, const int)` <!-- .element: class="fragment fade-in" -->
+`double bar(float, const int)`
+<!-- .element: class="fragment fade-in" -->
 
 ___
 

@@ -20,7 +20,7 @@ ___
 
 ## Pętla `while`
 
-`while` używamy, gdy chcemy coś wykonać dopóki nie zostanie spełniony jakiś warunek. Przeważnie nie mamy pojęcia, kiedy to następy (nie znamy liczby kroków) np:
+`while` używamy, gdy chcemy coś wykonać dopóki nie zostanie spełniony jakiś warunek. Przeważnie nie mamy pojęcia, kiedy to nastąpi (nie znamy liczby kroków) np:
 
 * Przeglądamy koszule w Internecie dopóki nie znajdziemy pasującej do nas <!-- .element: class="fragment fade-in" -->
 * Powtarzamy walkę z tym samym bossem aż go nie pokonamy <!-- .element: class="fragment fade-in" -->

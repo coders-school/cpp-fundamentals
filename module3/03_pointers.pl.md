@@ -16,7 +16,7 @@ Poza referencjami istnieją także wskaźniki. Wskaźniki działają podobnie ja
 <!-- .element: class="fragment fade-in" -->
 
 Wyobraźmy sobie, że planujemy wycieczkę na Majorkę. Wsiadamy do samolotu i lecimy.
-Na miejscu okazuje się, ze zapomnieliśmy jaki jest adres hotelu :(
+Na miejscu okazuje się, ze zapomnieliśmy jaki jest adres hotelu 😦
 W celu znalezienia go musimy zadzwonić do biura podróży, poczekać na obsługę, wytłumaczyć całą zawiłą historię, aż w końcu po długim czasie otrzymujemy adres naszego hotelu.
 Proces zdobycia tych informacji był dla nas czasochłonny.
 <!-- .element: class="fragment fade-in" -->
@@ -72,7 +72,7 @@ Wywołanie funkcji to:
 
 ___
 
-## Gdzie dać const?
+## Gdzie dać `const`?
 
 ### Co to jest?
 

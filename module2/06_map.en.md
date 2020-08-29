@@ -1,6 +1,6 @@
 <!-- .slide: data-background="#111111" -->
 
-# Podstawy C++
+# C++ basics
 
 ## `std::map<K, V>`
 
@@ -10,17 +10,17 @@
 
 ___
 
-## Mapa, słownik
+## Map, dictionary
 
-* mapa to zbiór par (klucz - Key, wartość - Value)
-* `std::map` w C++ to odpowiednik `dict` z Pythona
+* map is a set of pairs (key, value)
+* `std::map` in C++ is equivalent to `dict` from Python
 
-Przykładowo tworzymy kolekcję ulubionych płyt i układamy je w szafce.
-<!-- .element: class="fragment fade-in" --> 
-Oczywiście płyt tych mamy ogromną liczbę i chcielibyśmy móc łatwo odnaleźć płytę, gdy będziemy jej poszukiwać.
-<!-- .element: class="fragment fade-in" --> 
-W tym celu numerujemy sobie wszystkie płyty i zapisujemy sobie na kartce informacje, pod jakim numerem znajduje się określony tytuł. W ten sposób tworzymy właśnie mapę.
-<!-- .element: class="fragment fade-in" --> 
+For example, we create a collection of favorite CDs and arrange them on a shelf.
+<!-- .element: class="fragment fade-in" -->
+Of course, we have a huge number of these CDs and we would like to be able to find the CD easily when we search for it.
+<!-- .element: class="fragment fade-in" -->
+For this purpose, we number all the CDs and write down information on a piece of paper under which number which title is placed. This is how we create a map.
+<!-- .element: class="fragment fade-in" -->
 
 ```cpp
 std::map<size_t, std::string> discs {
@@ -29,51 +29,50 @@ std::map<size_t, std::string> discs {
     {3, "The Lord of the Rings: The Return of the King"}
 };
 ```
-<!-- .element: class="fragment fade-in" --> 
-
-Kluczem jest tutaj numer, natomiast wartością jest tytuł filmu.
-<!-- .element: class="fragment fade-in" --> 
-
-___
-
-## Operacje na `std::map`
-
-* <!-- .element: class="fragment fade-in" --> początek i koniec zakresu
-  * `begin()`
-  * `end()`
-* <!-- .element: class="fragment fade-in" --> informacje o liczbie elementów w mapie
-  * `size()`
-* <!-- .element: class="fragment fade-in" --> informacja czy mapa jest pusta
-  * `empty()`
-* <!-- .element: class="fragment fade-in" --> dostęp do elementu dla określonego klucza
-  * `operator[key]`
-* <!-- .element: class="fragment fade-in" --> dodanie parę (klucz, wartość) do mapy o ile taka para jeszcze w niej nie występuje
-  * `insert({key, value})`
-
-[Dokumentacja na cppreference.org](https://en.cppreference.com/w/cpp/container/map)
 <!-- .element: class="fragment fade-in" -->
 
+The key here is the number, while the value is the title of the movie.
+<!-- .element: class="fragment fade-in" -->
 
 ___
 
-## Pytanie
+## Operations on `std::map`
 
-Co się wydarzy, gdy zawołamy na wspomnianej mapie:
+* <!-- .element: class="fragment fade-in" --> beginning and end of range
+  * `begin()`
+  * `end()`
+* <!-- .element: class="fragment fade-in" --> information about the number of items in the map
+  * `size()`
+* <!-- .element: class="fragment fade-in" --> information if the map is empty
+  * `empty()`
+* <!-- .element: class="fragment fade-in" --> access to the item for the specified key
+  * `operator[key]`
+* <!-- .element: class="fragment fade-in" --> adding a pair (key, value) to the map if such a pair does not exist in it yet
+  * `insert({key, value})`
+
+[Documentation on cppreference.org](https://en.cppreference.com/w/cpp/container/map)
+<!-- .element: class="fragment fade-in" -->
+
+___
+
+## Question
+
+What will happen when we call on the mentioned map:
 
 ```cpp
 discs[4] = "Harry Potter";
 ```
 
-Przypisanie czegoś do elementu mapy poprzez `operator[]` sprawia, że:
+Assigning something to a map element with `operator[]` makes it so:
 <!-- .element: class="fragment fade-in" -->
 
-* <!-- .element: class="fragment fade-in" --> jeżeli istnieje już wartość dla danego klucza to ją podmienimy.
-* <!-- .element: class="fragment fade-in" --> gdy nie istnieje wartość dla danego klucza, to utworzymy nową parę (klucz, wartość)
+* <!-- .element: class="fragment fade-in" --> if there is already a value for a given key, we will replace it.
+* <!-- .element: class="fragment fade-in" --> if there is no value for a given key, we will create a new pair (key, value)
 
 ___
 <!-- .slide: style="font-size: 0.8em" -->
 
-## Wykonajmy ten kod
+## Let's execute this code
 
 ```cpp
 #include <iostream>
@@ -105,7 +104,7 @@ int main() {
 
 ___
 
-## Wynik
+## Result
 
 ```txt
 1 | The Lord of the Rings: The Fellowship of the Ring
@@ -128,9 +127,9 @@ After modification of an element
 ___
 <!-- .slide: style="font-size: 0.9em" -->
 
-## Zadanie
+## Task
 
-Napisz funkcję, która przyjmuje `std::vector<int>` oraz `std::list<std::string>` i zwraca mapę `std::map<int, std::string>`. [Pobierz zadanie][task4]
+Write a function that takes `std::vector<int>` and `std::list<std::string>` and returns the map `std::map<int, std::string>`. [Download the task][task4]
 
 ```cpp
 #include <iostream>

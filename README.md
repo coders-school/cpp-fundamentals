@@ -1,49 +1,97 @@
-# Podstawy C++ #1
-
 <a href="https://coders.school">
     <img width="500" data-src="coders_school_logo.png" src="coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
-## [Moduł 1](module1/)
+# Podstawy C++
 
-### [Typy](module1/presentation_types.md)
+## [Moduł 1](module1/index.pl.html)
 
-### [Funkcje](module1/presentation_functions.md)
+### [Typy](module1/01_types.pl.md)
 
-### [Instrukcje warunkowe](module1/presentation_branches.md)
+### [Funkcje](module1/02_functions.pl.md)
 
-### [Pętle](module1/presentation_loops.md)
+### [Instrukcje warunkowe](module1/03_branches.pl.md)
 
-### [Tablice](module1/presentation_arrays.md)
+### [Pętle](module1/04_loops.pl.md)
 
-### [Praca domowa](module1/presentation_homework.md)
+### [Tablice](module1/05_arrays.pl.md)
 
-## [Moduł 2](module2/)
+### [Praca domowa](module1/06_homework.pl.md)
 
-### [STL](module2/presentation_stl_intro.md)
+## [Moduł 2](module2/index.pl.html)
 
-### [`std::vector`](module2/presentation_vector.md)
+### [STL](module2/01_stl_intro.pl.md)
 
-### [`for` po kolekcji](module2/presentation_range_for.md)
+### [`std::vector`](module2/02_vector.pl.md)
 
-### [`std::string`](module2/presentation_string.md)
+### [`for` po kolekcji](module2/03_range_for.pl.md)
 
-### [`std::list`](module2/presentation_list.md)
+### [`std::string`](module2/04_string.pl.md)
 
-### [`std::map`](module2/presentation_map.md)
+### [`std::list`](module2/05_list.pl.md)
 
-### [Praca domowa](module2/presentation_homework.md)
+### [`std::map`](module2/06_map.pl.md)
 
-## [Moduł 3](module3/)
+### [Praca domowa](module2/07_homework.pl.md)
 
-### [Zasięg zmiennych](module3/presentation_scopes.md)
+## [Moduł 3](module3/index.pl.html)
 
-### [Referencje](module3/presentation_references.md)
+### [Zasięg zmiennych](module3/01_scopes.pl.md)
 
-### [Wskaźniki](module3/presentation_pointers.md)
+### [Referencje](module3/02_references.pl.md)
 
-### [Zagrożenia](module3/presentation_hazards.md)
+### [Wskaźniki](module3/03_pointers.pl.md)
 
-### [`enum` i `enum class`](module3/presentation_enums.md)
+### [Zagrożenia](module3/04_hazards.pl.md)
 
-### [Praca domowa](module3/presentation_homework.md)
+### [`enum` i `enum class`](module3/05_enums.pl.md)
+
+### [Praca domowa](module3/07_homework.pl.md)
+
+___
+
+# C++ basics
+
+## [Module 1](module1/index.en.html)
+
+### [Types](module1/01_types.en.md)
+
+### [Functions](module1/02_functions.en.md)
+
+### [Conditional statements](module1/03_branches.en.md)
+
+### [Loops](module1/04_loops.en.md)
+
+### [Arrays](module1/05_arrays.en.md)
+
+### [Homework](module1/06_homework.en.md)
+
+## [Module 2](module2/index.en.html)
+
+### [STL](module2/01_stl_intro.en.md)
+
+### [`std::vector`](module2/02_vector.en.md)
+
+### [`for` over collection](module2/03_range_for.en.md)
+
+### [`std::string`](module2/04_string.en.md)
+
+### [`std::list`](module2/05_list.en.md)
+
+### [`std::map`](module2/06_map.en.md)
+
+### [Homework](module2/07_homework.en.md)
+
+## [Module 3](module3/index.en.html)
+
+### [Variables scope](module3/01_scopes.en.md)
+
+### [References](module3/02_references.en.md)
+
+### [Pointers](module3/03_pointers.en.md)
+
+### [Threats](module3/04_hazards.en.md)
+
+### [`enum` and `enum class`](module3/05_enums.en.md)
+
+### [Homework](module3/07_homework.en.md)

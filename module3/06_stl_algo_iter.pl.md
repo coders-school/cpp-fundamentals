@@ -16,7 +16,7 @@ Wróćmy na chwilę do iteratorów begin oraz end. Jak pamiętamy zwracały one 
 tak naprawdę to begin i end zwraca nam iterator wskazujący na 1 element naszego kontenera oraz na element znajdujący się tuż za ostatnim elementem. (tutaj zdjęcie kilku kwadracików i zaznaczone na co wskazuje begin a na co end).
 
 Czym jest iterator? Najprościej jest to element, który wskazuje nam na element kontenera. Możemy go swobodnie inkrementować, czyli przesuwać się do kolejnych elementów kontenera. Rozróżniamy kilka typów iteratorów ale na ten moment będziemy zajmować się tylko jednym.
-Ma on nazwę random acces iterator. Dla nas ważne jest to, że taki iterator może swobodnie odwoływać się do dowolnego elementu w naszym kontenerze. Random itarator otrzymujemy między innymi gdy wywołamy begin lub end dla std::vector. Aby odwołać się do elementu, na który wskazuje iterator używamy `*`.
+Ma on nazwę random access iterator. Dla nas ważne jest to, że taki iterator może swobodnie odwoływać się do dowolnego elementu w naszym kontenerze. Random iterator otrzymujemy między innymi gdy wywołamy begin lub end dla std::vector. Aby odwołać się do elementu, na który wskazuje iterator używamy `*`.
 
 Co zostanie wypisane w kolejnych linijkach?
 ```

@@ -17,11 +17,11 @@ ___
 * <!-- .element: class="fragment fade-in" --> Tablice można traktować jak wagony w pociągu
 * <!-- .element: class="fragment fade-in" --> Ustawione kolejno jeden po drugim i połączone ze sobą
 * <!-- .element: class="fragment fade-in" --> Mogą pomieścić różne typy, jak człowiek, węgiel, itp.
-* <!-- .element: class="fragment fade-in" --> 10 wagonów z węglem możemy zapisać jako `Coal tab[10]` - oznacza to, że tworzymy tablicę, która przechowuje 10 elementów typu Coal (węgiel).
+* <!-- .element: class="fragment fade-in" --> 10 wagonów z węglem możemy zapisać jako <code>Coal tab[10]</code> - oznacza to, że tworzymy tablicę, która przechowuje 10 elementów typu <code>Coal</code> (węgiel).
 
 ___
 
-<img width="600" data-src="img/array.gif" alt="Tablica w pamięci" class="plain">
+<img width="600" data-src="img/array.png" alt="Tablica w pamięci" class="plain">
 
 * W C++ tablica znajduje się w jednym, ciągłym obszarze w pamięci i jest nierozłączna (nie można usuwać jej elementów)
 * Wszystkie elementy są tego samego typu
