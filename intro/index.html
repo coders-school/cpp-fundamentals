@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>C++ - podstawy - Coders School</title>
+
+        <meta name="description" content="C++ - podstawy">
+        <meta name="author" content="Mateusz Adamski & Łukasz Ziobroń">
+
+        <link rel="stylesheet" href="../../css/reset.css">
+        <link rel="stylesheet" href="../../css/reveal.css">
+        <link rel="stylesheet" href="../../css/theme/coders.css" id="theme">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="../lib/css/monokai.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section data-background="#111111">
+
+                        <h1>Podstawy C++</h1>
+                        <a href="https://coders.school">
+                            <img width="500" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
+                        </a>
+                        <h3>Mateusz Adamski</h3>
+                        <h3>Łukasz Ziobroń</h3>
+
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                        <!-- .slide: style="font-size: 0.9em" -->
+
+                        ## Agenda
+
+                        * <!-- .element: class="fragment fade-in" --> Typy danych
+                        * <!-- .element: class="fragment fade-in" --> Funkcje
+                        * <!-- .element: class="fragment fade-in" --> Instrukcje warunkowe
+                        * <!-- .element: class="fragment fade-in" --> Pętle
+                        * <!-- .element: class="fragment fade-in" --> Tablice
+                        * <!-- .element: class="fragment fade-in" --> STL - co to?
+                        * <!-- .element: class="fragment fade-in" --> <code>std::vector</code>
+                        * <!-- .element: class="fragment fade-in" --> Pętla <code>for</code> po kolekcji
+                        * <!-- .element: class="fragment fade-in" --> <code>std::string</code>
+                        * <!-- .element: class="fragment fade-in" --> <code>std::list</code>
+                        * <!-- .element: class="fragment fade-in" --> <code>std::map</code>
+                        * <!-- .element: class="fragment fade-in" --> Zakresy (scopes)
+                        * <!-- .element: class="fragment fade-in" --> Referencje
+                        * <!-- .element: class="fragment fade-in" --> Wskaźniki
+                        * <!-- .element: class="fragment fade-in" --> Zagrożenia przy stosowaniu referencji i wskaźników
+                        * <!-- .element: class="fragment fade-in" --> Typ wyliczeniowy <code>enum</code> i <code>enum class</code>
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+
+                        ## Zadania
+
+                        [Repo GH `coders-school/cpp-fundamentals`](https://github.com/coders-school/cpp-fundamentals/tree/master/module1/)
+
+                        </textarea>
+                    </section>
+                </section>
+                
+                <section>
+                    <section data-markdown="about_you.md" data-separator-vertical="^___"
+                        data-separator-notes="^Note:">
+                    </section>
+
+                    <section data-markdown="about_lukasz.md" data-separator-vertical="^___"
+                        data-separator-notes="^Note:">
+                    </section>
+
+                    <section data-markdown="contract.md" data-separator-vertical="^___"
+                        data-separator-notes="^Note:">
+                    </section>
+                </section>
+                
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Co pamiętasz z dzisiaj?
+
+                            ### Napisz na czacie jak najwięcej haseł
+                            <!-- .element: class="fragment fade-in" -->
+
+                            1. <!-- .element: class="fragment fade-in" --> Typy danych
+                                * <code>void</code>, <code>bool</code>, <code>char</code>, <code>int</code>, <code>double</code> + ich odmiany
+                            2. <!-- .element: class="fragment fade-in" --> Funkcje
+                                * sygnatura (deklaracja) = typ zwracany, nazwa, argumenty
+                            3. <!-- .element: class="fragment fade-in" --> Instrukcje warunkowe
+                                * <code>if</code>, <code>switch/case</code>
+                            4. <!-- .element: class="fragment fade-in" --> Pętle
+                                * <code>for</code>, <code>while</code>, <code>do/while</code>
+                            5. <!-- .element: class="fragment fade-in" --> Tablice
+                                * <code>Type t[N]</code>, <code>operator[]</code>
+                            
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+
+                            6. STL - co to?
+                            7. <!-- .element: class="fragment fade-in" --> <code>std::vector</code>
+                            8. <!-- .element: class="fragment fade-in" --> Pętla <code>for</code> po kolekcji
+                            9. <!-- .element: class="fragment fade-in" --> <code>std::string</code>
+                            10. <!-- .element: class="fragment fade-in" --> <code>std::list</code>
+                            11. <!-- .element: class="fragment fade-in" --> <code>std::map</code>
+                            12. <!-- .element: class="fragment fade-in" --> Zakresy (scopes)
+                            13. <!-- .element: class="fragment fade-in" --> Referencje
+                            14. <!-- .element: class="fragment fade-in" --> Wskaźniki
+                            15. <!-- .element: class="fragment fade-in" --> Zagrożenia przy stosowaniu referencji i wskaźników
+                            16. <!-- .element: class="fragment fade-in" --> Typ wyliczeniowy <code>enum</code> i <code>enum class</code>
+
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background="#111111">
+
+                    <h1>Coders School</h1>
+                    <img width="400" data-src="../logo.png" alt="Coders School" class="plain">
+
+                </section>
+            </div>
+        </div>
+
+        <script src="../../js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                width: 1200,
+                height: 750,
+                slideNumber: true,
+                hash: true,
+                pdfSeparateFragments: false,
+                dependencies: [
+                    { src: '../../plugin/externalcode/externalcode.js', condition: function() { return !!document.querySelector( '[data-code]' ); } },
+                    { src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../../plugin/markdown/marked.js' },
+                    { src: '../../plugin/markdown/markdown.js' },
+                    { src: '../../plugin/notes/notes.js', async: true }
+                ]
+            });
+        </script>
+    </body>
+</html>
