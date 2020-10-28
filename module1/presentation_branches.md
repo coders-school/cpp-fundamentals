@@ -85,7 +85,7 @@ default:
 ```
 
 * `case` oznacza konkretny przypadek
-* `break` informuje, że wychodzimy z instrukcji warunkowej `switch` i konstytuujemy dalej program. Jego brak spowoduje, że wykonają się instrukcje z kolejnego `case`.
+* `break` informuje, że wychodzimy z instrukcji warunkowej `switch` i kontynuujemy dalej program. Jego brak spowoduje, że wykonają się instrukcje z kolejnego `case`.
 * `deafult` jest to miejsce gdzie program dotrze, gdy żaden inny warunek nie zostanie spełniony
 
 ___
