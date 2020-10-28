@@ -17,7 +17,7 @@ ___
 * <!-- .element: class="fragment fade-in" --> Tablice można traktować jak wagony w pociągu
 * <!-- .element: class="fragment fade-in" --> Ustawione kolejno jeden po drugim i połączone ze sobą
 * <!-- .element: class="fragment fade-in" --> Mogą pomieścić różne typy, jak człowiek, węgiel, itp.
-* <!-- .element: class="fragment fade-in" --> 10 wagonów z węglem możemy zapisać jako `Coal tab[10]` - oznacza to, że tworzymy tablicę, która przechowuje 10 elementów typu Coal (węgiel).
+* <!-- .element: class="fragment fade-in" --> 10 wagonów z węglem możemy zapisać jako <code>Coal tab[10]</code> - oznacza to, że tworzymy tablicę, która przechowuje 10 elementów typu Coal (węgiel).
 
 ___
 

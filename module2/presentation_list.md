@@ -16,7 +16,7 @@ ___
 <!-- .element: class="fragment fade-in" -->
 
 Lista w przeciwieństwie do wektora jest porozrzucana po pamięci. Co czasami jest wygodne, gdyż możemy wykorzystać fragmenty pamięci,
-które mogłyby, by być niedostępne dla wektora.
+które mogłyby być niedostępne dla wektora.
 <!-- .element: class="fragment fade-in" -->
 
 ### Pytanie: skąd elementy listy wiedzą o swoim wzajemnym istnieniu?

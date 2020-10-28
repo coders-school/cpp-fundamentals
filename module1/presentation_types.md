@@ -13,19 +13,19 @@ ___
 ## Prosta matematyka
 
 * <!-- .element: class="fragment fade-in" --> 1 bajt == 8 bitów
-* <!-- .element: class="fragment fade-in" --> W binarnym totolotku wylosowane liczby mogą mieć `0` lub `1`
-* <!-- .element: class="fragment fade-in" --> Zatem podczas losowania 8 numerków możemy otrzymać przykładowo: `1 0 1 0 1 0 1 0`
-* <!-- .element: class="fragment fade-in" --> Takich kombinacji jest dokładnie `256 -> (2^8)`
+* <!-- .element: class="fragment fade-in" --> W binarnym totolotku wylosowane liczby mogą mieć <code>0</code> lub <code>1</code>
+* <!-- .element: class="fragment fade-in" --> Zatem podczas losowania 8 numerków możemy otrzymać przykładowo: <code>1 0 1 0 1 0 1 0</code>
+* <!-- .element: class="fragment fade-in" --> Takich kombinacji jest dokładnie <code>256 -> (2^8)</code>
 * <!-- .element: class="fragment fade-in" --> Zatem na 1 bajcie (8 bitach) możemy zapisać 256 liczb, np. od 0 do 255
-* <!-- .element: class="fragment fade-in" --> Jeżeli w totolotku losujemy 32 numerki, (32/8 = 4) czyli 4 bajty to takich kombinacji jest `2^32` (czyli ponad 4 miliardy)
+* <!-- .element: class="fragment fade-in" --> Jeżeli w totolotku losujemy 32 numerki, (32/8 = 4) czyli 4 bajty to takich kombinacji jest <code>2^32</code> (czyli ponad 4 miliardy)
 
 ___
 
 ## Typ pusty - `void`
 
-* <!-- .element: class="fragment fade-in" --> Nie można tworzyć obiektów typu `void`
+* <!-- .element: class="fragment fade-in" --> Nie można tworzyć obiektów typu <code>void</code>
 * <!-- .element: class="fragment fade-in" --> Służy do zaznaczenia, że funkcja nic nie zwraca
-* <!-- .element: class="fragment fade-in" --> Można tworzyć wskaźniki `void*` (zła praktyka w C++)
+* <!-- .element: class="fragment fade-in" --> Można tworzyć wskaźniki <code>void*</code> (zła praktyka w C++)
 * <!-- .element: class="fragment fade-in" --> NIE służy do oznaczania, że funkcja nie przyjmuje argumentów
 
 ```cpp
