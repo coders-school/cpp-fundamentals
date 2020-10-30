@@ -2,14 +2,29 @@
 
 # Podstawy C++
 
-## Praca domowa
+## Podsumowanie
 
 <a href="https://coders.school">
     <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
+
+## Co pamiętasz z dzisiaj?
+
+### Napisz na czacie jak najwięcej haseł
+<!-- .element: class="fragment fade-in" -->
+
+1. <!-- .element: class="fragment fade-in" --> Zakresy (scopes)
+2. <!-- .element: class="fragment fade-in" --> Referencje
+3. <!-- .element: class="fragment fade-in" --> Wskaźniki
+4. <!-- .element: class="fragment fade-in" --> Zagrożenia przy stosowaniu referencji i wskaźników
+5. <!-- .element: class="fragment fade-in" --> Typ wyliczeniowy <code>enum</code> i <code>enum class</code>
+
+___
 <!-- .slide: style="font-size: 0.8em" -->
+
+## Praca domowa
 
 ### Post-work
 

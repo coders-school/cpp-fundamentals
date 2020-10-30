@@ -2,14 +2,34 @@
 
 # Podstawy C++
 
-## Praca domowa
+## Podsumowanie
 
 <a href="https://coders.school">
     <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
+
+## Co pamiętasz z dzisiaj?
+
+### Napisz na czacie jak najwięcej haseł
+<!-- .element: class="fragment fade-in" -->
+
+1. <!-- .element: class="fragment fade-in" --> Typy danych
+    * <code>void</code>, <code>bool</code>, <code>char</code>, <code>int</code>, <code>double</code> + ich odmiany
+2. <!-- .element: class="fragment fade-in" --> Funkcje
+    * sygnatura (deklaracja) = typ zwracany, nazwa, argumenty
+3. <!-- .element: class="fragment fade-in" --> Instrukcje warunkowe
+    * <code>if</code>, <code>switch/case</code>
+4. <!-- .element: class="fragment fade-in" --> Pętle
+    * <code>for</code>, <code>while</code>, <code>do/while</code>
+5. <!-- .element: class="fragment fade-in" --> Tablice
+    * <code>Type t[N]</code>, <code>operator[]</code>
+
+___
 <!-- .slide: style="font-size: 0.8em" -->
+
+## Praca domowa
 
 ### Post-work
 

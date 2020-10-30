@@ -2,11 +2,25 @@
 
 # Podstawy C++
 
-## Praca domowa
+## Podsumowanie
 
 <a href="https://coders.school">
     <img width="500px" data-src="../coders_school_logo.png" alt="Coders School" class="plain">
 </a>
+
+___
+
+## Co pamiętasz z dzisiaj?
+
+### Napisz na czacie jak najwięcej haseł
+<!-- .element: class="fragment fade-in" -->
+
+1. <!-- .element: class="fragment fade-in" --> STL - co to?
+2. <!-- .element: class="fragment fade-in" --> <code>std::vector</code>
+3. <!-- .element: class="fragment fade-in" --> Pętla <code>for</code> po kolekcji
+4. <!-- .element: class="fragment fade-in" --> <code>std::string</code>
+5. <!-- .element: class="fragment fade-in" --> <code>std::list</code>
+6. <!-- .element: class="fragment fade-in" --> <code>std::map</code>
 
 ___
 <!-- .slide: style="font-size: 0.8em" -->
@@ -26,6 +40,8 @@ Za dostarczenie każdego zadania przed 31.05.2020 (niedziela) do 23:59 dostanies
 #### [Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/module2/homework)
 
 ___
+
+## Praca domowa
 
 ### Pre-work
 
