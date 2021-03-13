@@ -7,6 +7,9 @@ int fibonacci_iterative(int sequence) {
 }
 
 int fibonacci_recursive(int sequence) {
+    if (sequence <= 0) {
+        return 0;
+    }
     if (sequence <= 2) {
         return 1;
     }
