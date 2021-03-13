@@ -1,8 +1,9 @@
 #pragma once
 
+int fibonacci_recursive(int sequence);
+
 int fibonacci_iterative(int sequence) {
-    // TODO: Your implementation goes here
-    return 0;
+    return fibonacci_recursive(sequence);
 }
 
 int fibonacci_recursive(int sequence) {
