@@ -71,7 +71,7 @@ for (variable = initial_value; condition; variable_change) {
 ### Przykład <!-- .element: class="fragment fade-in" -->
 
 ```cpp
-for (size_t i = 0 ; i < 10 ; i+=2) {
+for (size_t i = 0; i < 10; i += 2) {
     std::cout << "i: " << i << '\n';
 }
 ```

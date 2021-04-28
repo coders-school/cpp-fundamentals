@@ -1,6 +1,6 @@
 #include <iostream>
 
-size_t multiply(int lhs, int rhs) {
+int multiply(int lhs, int rhs) {
     return lhs * rhs;
 }
 

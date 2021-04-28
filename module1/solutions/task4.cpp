@@ -9,7 +9,7 @@ int main() {
         tab[i] = 2 * i + 1;
     }
 
-    for (size_t i = 0; i < tab_size; i += 4) {
+    for (size_t i = 0; i < tab_size; ++i) {
         std::cout << tab[i] << "\n";
     }
 

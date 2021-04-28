@@ -10,9 +10,9 @@
 
 ___
 
-## Co pamiętasz z dzisiaj?
+## Co pamiętasz z tych lekcji?
 
-### Napisz na czacie jak najwięcej haseł
+### Zapisz w notatkach do tej lekcji jak najwięcej haseł
 <!-- .element: class="fragment fade-in" -->
 
 1. <!-- .element: class="fragment fade-in" --> Typy danych
@@ -27,28 +27,31 @@ ___
     * `Type t[N]`, `operator[]`
 
 ___
-<!-- .slide: style="font-size: 0.8em" -->
+<!-- .slide: style="font-size: 0.9em" -->
 
 ## Praca domowa
 
 ### Post-work
 
 <!-- * Jeśli nie wiesz czym jest `operator %` to się dowiedz. Przyda się do pracy domowej :) -->
-* Poczytaj dokumentację [std::string](https://en.cppreference.com/w/cpp/string/basic_string). Znajdziesz tam m.in. opis funkcji `std::to_string`. Przyda się :)
+* Poczytaj dokumentację [`std::string`](https://en.cppreference.com/w/cpp/string/basic_string). Znajdziesz tam m.in. opis funkcji `std::to_string`. Przyda się 🙂
 * Zadanie 1 - Calculate (5 punktów)
 * Zadanie 2 - Fibonacci - rekurencja i iteracja (6 punktów)
 <!-- * Zadanie 3 - NWD (LCM) i NWW (GCD) (6 punktów) -->
 
 #### Bonus za punktualność
 
-Za dostarczenie każdego zadania przed 24.05.2020 (niedziela) do 23:59 dostaniesz 2 bonusowe punkty (razem 4 punkty za 2 zadania).
+Za dostarczenie każdego zadania do 23:59 12.05.2021 (środa) dostaniesz 2 bonusowe punkty (razem 4 punkty za 2 zadania).
+
+#### [Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/module1/homework)
+
+___
 
 ### Pre-work
 
-* Poczytaj dokumentację typu [std::vector](https://en.cppreference.com/w/cpp/container/vector). Poklikaj na różne funkcje i patrz głównie na przykłady użycia na samym dole stron.
+* Poczytaj dokumentację typu [`std::vector`](https://en.cppreference.com/w/cpp/container/vector). Poklikaj na różne funkcje i patrz głównie na przykłady użycia na samym dole stron.
 * Możesz przyjrzeć się plikom z testami w zadaniach i spróbować dopisać własne przypadki testowe
 
-#### [Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/module1/homework)
 
 ___
 <!-- .slide: style="font-size: 0.7em" -->
