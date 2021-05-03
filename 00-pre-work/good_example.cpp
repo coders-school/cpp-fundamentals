@@ -7,10 +7,10 @@ bool Game::checkLooseCodition() const {
 }
 
 void Game::printMenu() {
-    std::cout << "Money: " << player_->GetMoney() 
-              << " Day: " << time_->GetElpasedTime()
-              << " Days left: " << days_ - time_->GetElpasedTime()
-              << " Current position: " 
+    std::cout << "Money: " << player_->GetMoney()
+              << " Day: " << time_->GetElapsedTime()
+              << " Days left: " << days_ - time_->GetElapsedTime()
+              << " Current position: "
               << map_->GetCurrentPosition()->GetCoordinates() << "\n";
 }
 
@@ -26,14 +26,14 @@ void Game::printOptions() {
 
 void Game::printWinScreen() {
     system("cls");
-    std::cout << "CONGRATULATIUON! You earn: " << player_->GetMoney()
-              << " money in: " << time_->GetElpasedTime() << " days";
+    std::cout << "CONGRATULATIONS! You earn: " << player_->GetMoney()
+              << " money in: " << time_->GetElapsedTime() << " days";
     std::this_thread::sleep_for(5s);
 }
 
 void Game::printLooseScreen() {
     system("cls");
     std::cout << "GAME OVER! You earn: " << player_->GetMoney()
-              << " money in: " << time_->GetElpasedTime() << " days";
+              << " money in: " << time_->GetElapsedTime() << " days";
     std::this_thread::sleep_for(5s);
 }
