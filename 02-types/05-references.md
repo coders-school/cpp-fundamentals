@@ -101,7 +101,7 @@ ___
 
 ## Zadanie
 
-Zaimplementuj funkcję `modifyString()`. Ma ona przyjąć i zmodyfikować przekazany tekst. Na ekranie chcemy zobaczyć `"Other string"`.
+Zaimplementuj funkcję `modifyString()`. Ma ona przyjąć i zmodyfikować przekazany tekst. Na ekranie chcemy zobaczyć `"Other string"`. [Pobierz zadanie][zadanie-domowe]
 
 ```cpp
 #include <iostream>
@@ -117,6 +117,8 @@ int main() {
     return 0;
 }
 ```
+
+[zadanie-domowe]: ../02-types/tasks/02-modifyString.cpp
 
 ___
 

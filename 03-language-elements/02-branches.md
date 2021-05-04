@@ -108,4 +108,4 @@ int main() {
 }
 ```
 
-[zadanie-domowe]: tasks/02-max.cpp
+[zadanie-domowe]: ../03-language-elements/tasks/02-max.cpp

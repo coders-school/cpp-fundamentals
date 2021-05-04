@@ -122,4 +122,4 @@ int main() {
 }
 ```
 
-[zadanie-domowe]: tasks/03-printString.cpp
+[zadanie-domowe]: ../03-language-elements/tasks/03-printString.cpp

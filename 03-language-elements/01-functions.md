@@ -64,4 +64,4 @@ int main() {
 }
 ```
 
-[zadanie-domowe]: tasks/01-multiply.cpp
+[zadanie-domowe]: ../03-language-elements/tasks/01-multiply.cpp

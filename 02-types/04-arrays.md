@@ -81,4 +81,4 @@ int main() {
 }
 ```
 
-[zadanie-domowe]: tasks/01-tab.cpp
+[zadanie-domowe]: ../02-types/tasks/01-tab.cpp

@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-[task1]: tasks/01-printVector.cpp
+[task1]: ../04-stl-basics/tasks/01-printVector.cpp
 
 ___
 
@@ -98,4 +98,4 @@ int main() {
 }
 ```
 
-[task2]: tasks/02-concatenateVector.cpp
+[task2]: ../04-stl-basics/tasks/02-concatenateVector.cpp

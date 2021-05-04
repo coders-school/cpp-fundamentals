@@ -174,7 +174,7 @@ Zaimplementuj funkcje `foo()` i `bar()`.
 
 `foo()` powinno zmodyfikować wartość przekazaną przez wskaźnik na 10, a `bar()` na 20.
 
-Czy `foo()` lub `bar()` mogą przyjąć wskaźnik na stałą lub stały wskaźnik?
+Czy `foo()` lub `bar()` mogą przyjąć wskaźnik na stałą lub stały wskaźnik? [Pobierz zadanie][zadanie-domowe]
 
 ```cpp
 #include <iostream>
@@ -195,6 +195,8 @@ int main() {
     return 0;
 }
 ```
+
+[zadanie-domowe]: ../02-types/tasks/03-modifyPointers.cpp
 
 ___
 <!-- .slide: style="font-size: 0.9em" -->

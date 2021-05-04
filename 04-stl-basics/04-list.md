@@ -113,7 +113,7 @@ int main() {
 }
 ```
 
-[task3]: tasks/03-createSortedList.cpp
+[task3]: ../04-stl-basics/tasks/03-createSortedList.cpp
 
 ___
 

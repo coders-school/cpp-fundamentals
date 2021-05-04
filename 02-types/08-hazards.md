@@ -142,7 +142,7 @@ Napisz funkcję `foo()`. Ma ona przyjmować shared_ptr na int i ma przypisać wa
 
 Ponadto `foo()` ma wyświetlić wartość inta wskazywanego przez wskaźnik oraz liczbę shared_ptrów, które wskazują na ten obiekt.
 
-Wyświetl także to samo w `main()` przed i po zawołaniu `foo()`.
+Wyświetl także to samo w `main()` przed i po zawołaniu `foo()`. [Pobierz zadanie][zadanie-domowe]
 
 ```cpp
 #include <iostream>
@@ -163,26 +163,30 @@ int main() {
 }
 ```
 
+[zadanie-domowe]: ../02-types/tasks/04-sharedPtr.cpp
+
 ___
 
 ## Zadanie
 
-Napisz funkcję `foo()`. Ma ona przyjąć 2 wartości typu `int` oraz zwrócić ich iloczyn jako `shared_ptr`. Sprawdź ilu właścicieli posiada `shared_ptr`.
+Napisz funkcję `calculateProduct()`. Ma ona przyjąć 2 wartości typu `int` oraz zwrócić ich iloczyn jako `shared_ptr`. Sprawdź ilu właścicieli posiada `shared_ptr`. [Pobierz zadanie][zadanie-domowe2]
 
 ```cpp
 #include <iostream>
 
-// TODO: Implement foo()
+// TODO: Implement calculateProduct()
 // It should take 2 int values and return their product as a shared_ptr.
 // Additionally, check how many owners are there.
 
 int main() {
-    auto number = foo(10, 20);
+    auto number = calculateProduct(10, 20);
     std::cout << "num: " << *number << " | owners: " << number.use_count() << "\n";
 
     return 0;
 }
 ```
+
+[zadanie-domowe2]: ../02-types/tasks/05-calculateProduct.cpp
 
 ___
 
