@@ -5,7 +5,7 @@
 ## Tablice
 
 <a href="https://coders.school">
-    <img width="500" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500" src="../img/coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
@@ -21,7 +21,7 @@ ___
 
 ___
 
-<img width="600" data-src="../img/array.gif" alt="Tablica w pamięci" class="plain">
+<img width="600" src="../img/array.gif" alt="Tablica w pamięci" class="plain">
 
 * W C++ tablica znajduje się w jednym, ciągłym obszarze w pamięci i jest nierozłączna (nie można usuwać jej elementów)
 * Wszystkie elementy są tego samego typu

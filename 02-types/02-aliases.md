@@ -5,7 +5,7 @@
 ## Aliasy typów
 
 <a href="https://coders.school">
-    <img width="500px" data-src="../img/coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500px" src="../img/coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
 ___
