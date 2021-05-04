@@ -1,0 +1,22 @@
+name: C++ fundamentals - password check
+
+on: [pull_request]
+
+jobs:
+  fibonacci:
+    runs-on: ubuntu-latest
+    env:
+      path: homework/password-check/build
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Create build directory
+      run: mkdir ${{ env.repo }}
+    - name: Compile
+      working-directory: ${{ env.repo }}
+      run: |
+        cmake ..
+        make
+    - name: Run tests
+      working-directory: ${{ env.repo }}
+      run: ctest -V
