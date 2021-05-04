@@ -1,4 +1,4 @@
-name: C++ fundamentals - calculate
+name: calculate
 
 on: [pull_request]
 
@@ -11,12 +11,12 @@ jobs:
     - name: Check out code
       uses: actions/checkout@master
     - name: Create build directory
-      run: mkdir ${{ env.repo }}
+      run: mkdir ${{ env.path }}
     - name: Compile
-      working-directory: ${{ env.repo }}
+      working-directory: ${{ env.path }}
       run: |
         cmake ..
         make
     - name: Run tests
-      working-directory: ${{ env.repo }}
+      working-directory: ${{ env.path }}
       run: ctest -V
