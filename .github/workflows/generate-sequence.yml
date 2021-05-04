@@ -1,9 +1,9 @@
 name: generate-sequence
 
-on: [pull_request]
+on: [pull_request, workflow_dispatch]
 
 jobs:
-  fibonacci:
+  generate-sequence:
     runs-on: ubuntu-latest
     env:
       path: homework/generate-sequence/build
