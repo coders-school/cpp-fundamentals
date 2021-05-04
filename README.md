@@ -1,49 +1,33 @@
-# Podstawy C++ #1
+# Podstawy C++
 
 <a href="https://coders.school">
-    <img width="500" data-src="coders_school_logo.png" src="coders_school_logo.png" alt="Coders School" class="plain">
+    <img width="500" data-src="img/coders_school_logo.png" src="img/coders_school_logo.png" alt="Coders School" class="plain">
 </a>
 
-## [Moduł 1](module1/)
+## [Typy danych](02-types/)
 
-### [Typy](module1/presentation_types.md)
+* [Typy podstawowe](02-types/01-fundamental-types.md)
+* [Aliasy](02-types/02-aliases.md)
+* [Arytmetyka](02-types/03-arithmetics.md)
+* [Tablice](02-types/04-arrays.md)
+* [Referencje](02-types/05-references.md)
+* [Typy wyliczeniowe - `enum`](02-types/06-enums.md)
+* [Wskaźniki](02-types/07-pointers.md)
+* [Zagrożenia związane ze wskaźnikami](02-types/08-hazards.md)
 
-### [Funkcje](module1/presentation_functions.md)
+## [Elementy języka](03-language-elements/)
 
-### [Instrukcje warunkowe](module1/presentation_branches.md)
+* [Funkcje](03-language-elements/01-functions.md)
+* [Instrukcje warunkowe - `if/else`, `switch/case`](03-language-elements/02-branches.md)
+* [Pętle - `for`, `while`, `do/while`](03-language-elements/03-loops.md)
+* [Zakresy](03-language-elements/04-scopes.md)
+* [Stałe - `const`](03-language-elements/05-const.md)
 
-### [Pętle](module1/presentation_loops.md)
+## [Podstawy STLa](04-stl-basics/)
 
-### [Tablice](module1/presentation_arrays.md)
-
-### [Praca domowa](module1/presentation_homework.md)
-
-## [Moduł 2](module2/)
-
-### [STL](module2/presentation_stl_intro.md)
-
-### [`std::vector`](module2/presentation_vector.md)
-
-### [`for` po kolekcji](module2/presentation_range_for.md)
-
-### [`std::string`](module2/presentation_string.md)
-
-### [`std::list`](module2/presentation_list.md)
-
-### [`std::map`](module2/presentation_map.md)
-
-### [Praca domowa](module2/presentation_homework.md)
-
-## [Moduł 3](module3/)
-
-### [Zasięg zmiennych](module3/presentation_scopes.md)
-
-### [Referencje](module3/presentation_references.md)
-
-### [Wskaźniki](module3/presentation_pointers.md)
-
-### [Zagrożenia](module3/presentation_hazards.md)
-
-### [`enum` i `enum class`](module3/presentation_enums.md)
-
-### [Praca domowa](module3/presentation_homework.md)
+* [Intro](04-stl-basics/00-intro.md)
+* [`std::string`](04-stl-basics/01-string.md)
+* [`std::vector`](04-stl-basics/02-vector.md)
+* [pętla `for` po kolekcji](04-stl-basics/03-range-for.md)
+* [`std::list`](04-stl-basics/04-list.md)
+* [`std::map`](04-stl-basics/05-map.md)
