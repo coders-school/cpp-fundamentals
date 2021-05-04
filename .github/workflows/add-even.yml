@@ -1,4 +1,4 @@
-name: C++ fundamentals - add even
+name: add-even
 
 on: [pull_request]
 

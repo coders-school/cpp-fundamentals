@@ -1,4 +1,4 @@
-name: C++ fundamentals - password check
+name: vector-of-shared-ptrs
 
 on: [pull_request]
 
@@ -6,7 +6,7 @@ jobs:
   fibonacci:
     runs-on: ubuntu-latest
     env:
-      path: homework/password-check/build
+      path: homework/vector-of-shared-ptrs/build
     steps:
     - name: Check out code
       uses: actions/checkout@master

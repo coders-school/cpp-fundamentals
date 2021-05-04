@@ -1,4 +1,4 @@
-name: C++ fundamentals - calculate
+name: calculate
 
 on: [pull_request]
 

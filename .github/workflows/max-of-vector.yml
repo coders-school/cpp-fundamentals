@@ -1,4 +1,4 @@
-name: C++ fundamentals - generate sequence
+name: max-of-vector
 
 on: [pull_request]
 
@@ -6,7 +6,7 @@ jobs:
   fibonacci:
     runs-on: ubuntu-latest
     env:
-      path: homework/generate-sequence/build
+      path: homework/max-of-vector/build
     steps:
     - name: Check out code
       uses: actions/checkout@master
