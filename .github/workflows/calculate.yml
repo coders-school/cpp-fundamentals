@@ -1,9 +1,9 @@
 name: calculate
 
-on: [pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  fibonacci:
+  calculate:
     runs-on: ubuntu-latest
     env:
       path: homework/calculate/build
