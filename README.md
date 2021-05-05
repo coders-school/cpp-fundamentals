@@ -31,3 +31,9 @@
 * [pętla `for` po kolekcji](04-stl-basics/03-range-for.md)
 * [`std::list`](04-stl-basics/04-list.md)
 * [`std::map`](04-stl-basics/05-map.md)
+
+## [Zadania domowe](05-recap-homework/)
+
+* [Powtórka](05-recap-homework/00-recap.md)
+* [Opisy zadań](05-recap-homework/01-tasks-description.md)
+* [Dostarczenie zadań](05-recap-homework/02-delivery.md)
