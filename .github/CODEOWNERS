@@ -1,1 +1,12 @@
-@ziobron
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in the repo.
+*       @ziobron
+
+# Order is important. The last matching pattern has the most precedence.
+# So if a pull request only touches cpp, hpp or md files, only these owners
+# will be requested to review.
+*.cpp    @ziobron
+*.hpp    @ziobron
+*.md    @ziobron
