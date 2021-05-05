@@ -1,11 +1,12 @@
 #pragma once
 
 int fibonacci_iterative(int sequence) {
-    // TODO: Your implementation goes here
-    return 1;
+    if (sequence <= 2) {
+        return 1;
+    }
+    return fibonacci_iterative(sequence - 1) + fibonacci_iterative(sequence - 2);
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: Your implementation goes here
-    return 2;
+    return fibonacci_iterative(sequence);
 }
