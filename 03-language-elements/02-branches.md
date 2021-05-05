@@ -87,6 +87,7 @@ default:
 * `case` oznacza konkretny przypadek
 * `break` informuje, że wychodzimy z instrukcji warunkowej `switch` i kontynuujemy dalej program. Jego brak spowoduje, że wykonają się instrukcje z kolejnego `case`.
 * `default` jest to miejsce gdzie program dotrze, gdy żaden inny warunek nie zostanie spełniony
+* Zmienna sterująca instrukcją `switch/case` musi być typu liczbowego całkowitego czyli np. `int`, `char`, `long` etc. Może być także typu wyliczeniowegp `enum`, który także jest widziany przez program jako liczba całkowita
 
 ___
 
