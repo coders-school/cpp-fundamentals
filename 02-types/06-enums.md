@@ -86,7 +86,7 @@ int num = static_cast<int>(ErrorCode::lack_of_water)
 ```
 <!-- .element: class="fragment fade-in" -->
 
-W jakich innych przepadkach zastosowalibyście typ wyliczeniowy?
+W jakich innych przypadkach zastosujesz typ wyliczeniowy?
 <!-- .element: class="fragment fade-in" -->
 
 ___

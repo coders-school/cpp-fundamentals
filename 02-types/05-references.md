@@ -12,14 +12,14 @@ ___
 
 ## &
 
-Magiczny znaczek `&` oznacza referencję.
+Magiczny znaczek `&` (ampersand) oznacza referencję.
 
 ```cpp
 int value = 5;
 int & number = value;
 ```
 
-Powyższy zapis oznacza zmienną `num` typu `int&`, czyli referencję na typ `int`.
+Powyższy zapis oznacza zmienną `number` typu `int&`, czyli referencję na typ `int`.
 <!-- .element: class="fragment fade-in" -->
 
 Nie ma znaczenia, czy referencję dokleimy do typu, czy nazwy zmiennej, ale referencja jest oddzielnym typem, więc sugerujemy nie doklejać jej do nazwy zmiennej.
@@ -39,10 +39,10 @@ Spójrzmy na fragment kodu.
 
 ```cpp
 int number = 5;
-int& refer = number;
+int& reference = number;
 
-std::cout << refer << '\n';   // 5
-std::cout << ++refer << "\n"; // 6
+std::cout << reference << '\n';   // 5
+std::cout << ++reference << "\n"; // 6
 std::cout << number << "\n";  // 6
 ```
 
@@ -111,7 +111,7 @@ Zaimplementuj funkcję `modifyString()`. Ma ona przyjąć i zmodyfikować przeka
 // It should modify passed string to text "Other string"
 
 int main() {
-    std::string str("Some string");
+    std::string str{"Some string"};
     modifyString(str);
     std::cout << str << '\n';
     return 0;
