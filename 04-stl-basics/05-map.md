@@ -130,7 +130,7 @@ ___
 
 ## Zadanie
 
-Napisz funkcję, która przyjmuje `std::vector<int>` oraz `std::list<std::string>` i zwraca mapę `std::map<int, std::string>`. [Pobierz zadanie][task4]
+Napisz funkcję, która przyjmuje `std::vector<int>` oraz `std::list<std::string>` i zwraca mapę `std::map<int, std::string>`. Kluczami w mapie mają być elementy wektora, a wartościami elementy listy. [Pobierz zadanie][task4]
 
 ```cpp
 #include <iostream>

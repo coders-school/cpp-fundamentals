@@ -33,7 +33,7 @@ ___
 * <!-- .element: class="fragment fade-in" --> pobranie pierwszego i ostatniego elementu listy
   * `front()`
   * `back()`
-* <!-- .element: class="fragment fade-in" --> początek i koniec mapy
+* <!-- .element: class="fragment fade-in" --> początek i koniec listy
   * `begin()`
   * `end()`
 * <!-- .element: class="fragment fade-in" --> informacja o liczbie elementów w liście

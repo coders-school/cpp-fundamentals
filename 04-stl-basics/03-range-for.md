@@ -48,11 +48,9 @@ ___
 
 ## Zadanie
 
-Napisz funkcję `printVector`, która przyjmie jako argument `std::vector<std::string>` i wypisze jego zawartość przy użyciu pętli for przy kolekcji.
-Każdy element w nowej linii.
-[Pobierz zadanie][task1]
+Napisz funkcję `printVector`, która przyjmie jako argument `std::vector<std::string>` i wypisze jego zawartość przy użyciu pętli for po kolekcji. Każdy element w nowej linii. [Pobierz zadanie][task1]
 
-```cpp
+```cpp []
 #include <iostream>
 #include <vector>
 #include <string>
@@ -76,11 +74,9 @@ ___
 
 ## Zadanie
 
-Napisz funkcję `concatenateVector`, która przyjmie jako argumenty 2 wektory a następnie zwróci jeden, który będzie zawierał naprzemiennie elementy z pierwszego i drugiego wektora.
-Np. dla poniższych vec1 i vec2 powinna zwrócić: `{1, 11, 2, 12, 3, 13, 4, 14, 5, 15}`
-[Pobierz zadanie][task2]
+Napisz funkcję `concatenateVector`, która przyjmie jako argumenty 2 wektory a następnie zwróci jeden, który będzie zawierał naprzemiennie elementy z pierwszego i drugiego wektora. Np. dla poniższych vec1 i vec2 powinna zwrócić: `{1, 11, 2, 12, 3, 13, 4, 14, 5, 15}`. [Pobierz zadanie][task2]
 
-```cpp
+```cpp []
 #include <iostream>
 #include <vector>
 
