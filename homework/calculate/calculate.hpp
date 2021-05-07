@@ -17,5 +17,10 @@ std::string calculate(const std::string& command, int first, int second)
     if (com_in.compare("subtract") == 0)
         return std::to_string(first - second);
 
+    // Multiply "-"
+    if (com_in.compare("multiply") == 0)
+        return std::to_string(first * second);
+
+    // Program should not reach this point
     return "";
 }
