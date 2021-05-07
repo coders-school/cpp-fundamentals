@@ -13,6 +13,9 @@ std::string calculate(const std::string& command, int first, int second)
     if (com_in.compare("add") == 0)
         return std::to_string(first + second);
 
+    // Subtracting "-"
+    if (com_in.compare("subtract") == 0)
+        return std::to_string(first - second);
 
     return "";
 }
