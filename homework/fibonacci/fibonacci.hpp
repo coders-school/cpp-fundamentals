@@ -3,14 +3,16 @@
 #include <stack>
 #include <cmath>
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Template function for clear std::stack
 template <typename T>
-void clearStack(std::stack<T> &st)
+void clearStack(std::stack<T>& st)
 {
     while (!st.empty())
         st.pop();
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Function object for check if sequence is in 0 - 2 range
 class firstN_Checker
 {
@@ -18,9 +20,9 @@ private:
     int m_Value;
 
 public:
+    // Public functions
     const int getValue() { return m_Value; };
-
-    bool operator()(int seq) // Overload of () operator
+    bool operator()(const int& seq) // Overload of () operator
     {
         if (!seq)
         {
@@ -34,18 +36,18 @@ public:
         };
         return false;
     };
-
+    // Constructor
     firstN_Checker() : m_Value(0){};
 };
 
+// Iterative implementation
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int fibonacci_iterative(int sequence)
 {
-
     int &seq = sequence; // Shortcut for sequence :)
-    seq = std::abs(seq);
-
+    seq = std::abs(seq); // N can be only positive number
+    // Function object for check if sequence is in 0 - 2 range
     firstN_Checker Checker;
-
     if (Checker(seq))
         return Checker.getValue();
     // Implementation of stack algorithm to find N of fibonacci
@@ -57,24 +59,33 @@ int fibonacci_iterative(int sequence)
     {
         if (!stack1.top()) // If first value is 0
         {
-            stack1.pop(); // Remove 0 from the stack
-            stack1.push(1); // Push 1 as n-2 value
-            stack1.push(1); // Push 1 as n-1 value
+            stack1.pop();         // Remove 0 from the stack
+            stack1.push(1);       // Push 1 as n-2 value
+            stack1.push(1);       // Push 1 as n-1 value
             score = stack1.top(); // Save score from top of the stack
-            continue; // Go to the next iteration :)
+            continue;             // Go to the next iteration :)
         };
-        int scoretmp = stack1.top(); // Save value n-1 to temp variable
-        stack1.pop(); // Remove value n-1 from the stack
+        int scoretmp = stack1.top();     // Save value n-1 to temp variable
+        stack1.pop();                    // Remove value n-1 from the stack
         score = scoretmp + stack1.top(); // Add n-1 to n-2 (which is on the top now)
-        stack1.pop(); // Remove value n-2 from the stack
-        stack1.push(scoretmp); // Push old value n-1 as n-2 on the stack
-        stack1.push(score); // Push new value on the stack
+        stack1.pop();                    // Remove value n-2 from the stack
+        stack1.push(scoretmp);           // Push old value n-1 as n-2 on the stack
+        stack1.push(score);              // Push new value on the stack
     };
     clearStack(stack1); // Free the stack
     return score;
 }
 
+
+// Recursive implementation
 int fibonacci_recursive(int sequence)
 {
-    return 0;
+    int &seq = sequence; // Shortcut for sequence :)
+    seq = std::abs(seq);// N can be only positive number
+    // Function object for check if sequence is in 0 - 2 range
+    firstN_Checker Checker;
+    if (Checker(seq))
+        return Checker.getValue();
+    // Recursive calls
+    return fibonacci_recursive(seq - 1) + fibonacci_recursive(seq - 2);
 }
