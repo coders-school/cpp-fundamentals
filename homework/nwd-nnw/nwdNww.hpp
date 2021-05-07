@@ -13,6 +13,11 @@ if (lhs<0) lhs=-lhs;
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+if (lhs==0) return 0;
+    else if (rhs==0) return 0;
+    else {
+        int NWWresult= lhs*rhs/NWD(lhs,rhs);
+        if (NWWresult<0) return -NWWresult;
+        else return NWWresult;
+    }
 }
