@@ -4,8 +4,13 @@
 std::string calculate(const std::string& command, int first, int second) {
     if (command == "add"){
         return std::to_string(first + second);
-    } else if (command == "substract"){
+    } else if (command == "subtract"){
+        // if(second < 0){
+        //     second = second * (-1);
+        //     return std::to_string(first + second);
+        // } else {
         return std::to_string(first - second);
+        }
     } else if (command == "multiply"){
         return std::to_string(first * second);
     }else if (command == "divide"){
@@ -14,7 +19,6 @@ std::string calculate(const std::string& command, int first, int second) {
         } else{
             return std::to_string(first / second);
         }
-        
     }
-    return "";
+    return "Invalid data";
 }
