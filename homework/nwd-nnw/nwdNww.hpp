@@ -12,10 +12,10 @@ int NWD(int lhs, int rhs)
         rhs = lhs % rhs; // get rhs by modulo
         lhs = rkeeper; // if while is still active assign to lhs value from rkeeper
     };
-    return lhs;
+    return lhs; // pass lhs as score
 }
 
 int NWW(int lhs, int rhs)
 {
-    return -1;
+    return (!lhs || !rhs) ? 0 : std::abs(lhs*rhs)/NWD(lhs,rhs); // if lhs or rhs are 0 return 0 if not -> count correct value and return
 }
