@@ -17,10 +17,18 @@ std::string calculate(const std::string& command, int first, int second)
     if (com_in.compare("subtract") == 0)
         return std::to_string(first - second);
 
-    // Multiply "-"
+    // Multiply "*"
     if (com_in.compare("multiply") == 0)
         return std::to_string(first * second);
 
-    // Program should not reach this point
-    return "";
+    // Divide "/"
+    if (com_in.compare("divide") == 0)
+    {
+        if (second == 0)
+            return "Division by 0";
+        else    
+            return std::to_string(first / second);
+    }
+
+    return "Invalid data";
 }
