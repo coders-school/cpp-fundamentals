@@ -11,7 +11,8 @@ int NWD(int lhs, int rhs) {
     
     if (rhs < 0){
         rhs *= -1;
-    } else if (lhs < 0){
+    }
+    if (lhs < 0){
         lhs *= -1;
     }
     
