@@ -6,7 +6,7 @@ int NWD(int lhs, int rhs)
         lhs = std::abs(lhs); // Absolute value of lhs
     if (rhs < 0)
         rhs = std::abs(rhs); // Absolute value of rhs
-    while (rhs)              // while rhs is 1
+    while (rhs)              // while rhs is not 0
     {
         int rkeeper = rhs; // copy value to temp variable
         rhs = lhs % rhs;   // get rhs by modulo
