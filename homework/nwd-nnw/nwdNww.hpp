@@ -1,10 +1,15 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
+
     if(lhs==0 && rhs==0){return 0;}
+
     int divider;
+
     if (lhs>rhs){divider = lhs;}
     else {divider = rhs;}
+
+    if(divider<0){divider=divider*(-1);}
     while(lhs%divider!=0 || rhs%divider!=0)
     {
         --divider;
