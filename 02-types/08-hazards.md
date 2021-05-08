@@ -167,29 +167,6 @@ int main() {
 
 ___
 
-## Zadanie
-
-Napisz funkcję `calculateProduct()`. Ma ona przyjąć 2 wartości typu `int` oraz zwrócić ich iloczyn jako `shared_ptr`. Sprawdź ilu właścicieli posiada `shared_ptr`. [Pobierz zadanie][zadanie-domowe2]
-
-```cpp
-#include <iostream>
-
-// TODO: Implement calculateProduct()
-// It should take 2 int values and return their product as a shared_ptr.
-// Additionally, check how many owners are there.
-
-int main() {
-    auto number = calculateProduct(10, 20);
-    std::cout << "num: " << *number << " | owners: " << number.use_count() << "\n";
-
-    return 0;
-}
-```
-
-[zadanie-domowe2]: ../02-types/tasks/05-calculateProduct.cpp
-
-___
-
 ## Inteligentne wskaźniki rozwiązaniem wszystkich problemów?
 
 Teraz po utworzeniu inteligentnego wskaźnika, nie musimy się martwić o czas życia zmiennej.
@@ -253,3 +230,26 @@ ___
 * <!-- .element: class="fragment fade-in" --> wskaźnikom można przypisać nowe adresy, aby wskazywały inne obiekty (za wyjątkiem stałych wskaźników)
 * <!-- .element: class="fragment fade-in" --> lepiej domyślnie nie używać zwykłych wskaźników (raw pointers)
 * <!-- .element: class="fragment fade-in" --> lepiej stosować inteligentne wskaźniki
+
+___
+
+## Zadanie
+
+Napisz funkcję `calculateProduct()`. Ma ona przyjąć 2 wartości typu `int` oraz zwrócić ich iloczyn jako `shared_ptr`. Sprawdź ilu właścicieli posiada `shared_ptr`. [Pobierz zadanie][zadanie-domowe2]
+
+```cpp
+#include <iostream>
+
+// TODO: Implement calculateProduct()
+// It should take 2 int values and return their product as a shared_ptr.
+// Additionally, check how many owners are there.
+
+int main() {
+    auto number = calculateProduct(10, 20);
+    std::cout << "num: " << *number << " | owners: " << number.use_count() << "\n";
+
+    return 0;
+}
+```
+
+[zadanie-domowe2]: ../02-types/tasks/05-calculateProduct.cpp
