@@ -31,6 +31,18 @@ int fibonacci_iterative(int sequence) {
 
 int fibonacci_recursive(int sequence) {
 
-    //
+    if (sequence ==0)
+    {
+        return 0;
+    }
+    else if(sequence == 1 || sequence ==2)
+    {
+        return 1;
+    }
+    else
+    {
+        --sequence;
+        return fibonacci_recursive(sequence) + fibonacci_recursive(sequence-1);
+    }
     return 0;
 }
