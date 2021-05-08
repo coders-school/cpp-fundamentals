@@ -37,7 +37,7 @@ A co w przypadku, gdy wiele informacji musi być spełnionych?
 Możemy połączyć warunki operatorem **lub** (`||`, `or`) bądź **i** (`&&`, `and`)
 
 ```cpp
-if (are_potatoes_eatten && is_meat_eatten && is_salad_eatten)
+if (are_potatoes_eaten && is_meat_eaten && is_salad_eaten)
 ```
 <!-- .element: class="fragment fade-in" -->
 

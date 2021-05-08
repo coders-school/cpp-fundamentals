@@ -82,7 +82,7 @@ int fibonacci_recursive(int sequence);
 
 ___
 
-## NWD (LCM) i NWW (GCD)
+## NWD (GCD) i NWW (LCM)
 
 Zaimplementuj dwie funkcje:
 
