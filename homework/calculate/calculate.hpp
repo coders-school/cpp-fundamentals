@@ -1,11 +1,14 @@
 #pragma once
 #include <string>
 
-double calculate(const std::string& command, int first, int second) {
+std::string calculate(const std::string& command, int first, int second) {
 
-    double Result;
+    double Suma;
+    std::string Result;
+
     if (command=="add"){
-        Result = first + second;
+        Suma = first + second;
     }
-    return Result;
+
+    return Result = std::to_string(Suma);
 }
