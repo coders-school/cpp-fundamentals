@@ -12,8 +12,8 @@ int fibonacci_iterative(int sequence) {
             fibMinus1 = fibN;
         }
     }    
-    else if(sequence == 1) {
-        fibN = 1;
+    else {
+        return sequence;
     }
     return fibN;
 }
