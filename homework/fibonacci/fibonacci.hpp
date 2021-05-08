@@ -15,6 +15,7 @@ int fibonacci_iterative(int sequence) {
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: num1our implementation goes here
-    return 0;
+    if (sequence <= 1)
+        return sequence;
+    return fibonacci_recursive(sequence-1) + fibonacci_recursive(sequence-2);
 }
