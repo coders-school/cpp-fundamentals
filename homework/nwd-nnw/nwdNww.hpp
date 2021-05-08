@@ -16,6 +16,20 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
+    int multiple;
+
+    if(lhs ==0 || rhs==0){return 0;}
+
+    if (rhs>lhs){multiple = rhs;}
+    else{multiple = lhs;}
+
+    if(multiple<0){multiple=multiple*(-1);}
+
+    while(multiple%lhs!=0 || multiple%rhs!=0)
+    {
+        ++multiple;
+    }
+    return multiple;
+
     return -1;
 }
