@@ -2,6 +2,23 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
-    return "";
+
+    if ( command == "add" )
+    {
+
+    }
+    else if ( command == "subtract" )
+    {
+
+    }
+    else if ( command == "multiply" )
+    {
+
+    }
+    else if ( command == "divide" )
+    {
+
+    }
+
+    return "Invalid data";
 }
