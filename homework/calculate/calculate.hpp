@@ -25,7 +25,7 @@ if (command == "add")
     {
         if(second == 0)
         {
-        std::string result = "You cannot divide by 0";
+        std::string result = "Division by 0";
         return result;
         }
              else
