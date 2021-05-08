@@ -1,7 +1,11 @@
 #pragma once
 #include <string>
 
-std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
-    return "";
+double calculate(const std::string& command, int first, int second) {
+
+    double Result;
+    if (command=="add"){
+        Result = first + second;
+    }
+    return Result;
 }
