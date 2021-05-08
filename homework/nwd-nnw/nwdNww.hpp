@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdlib>
 
 int NWD(int lhs, int rhs) {
     int temp;
@@ -7,10 +8,15 @@ int NWD(int lhs, int rhs) {
 	    rhs=lhs%rhs;
 	    lhs=temp;
     }
-    return lhs;
+    return  abs(lhs);
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+	
+    int nwd = NWD(lhs, rhs);
+    if(nwd == 0){
+	return 0;
+    }else {
+	 return abs(lhs*rhs/nwd);
+    }	 
 }
