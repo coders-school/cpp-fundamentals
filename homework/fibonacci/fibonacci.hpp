@@ -1,7 +1,15 @@
 #pragma once
 
 int fibonacci_iterative(int sequence) {
-    // TODO: Your implementation goes here
+    int a = 0, b = 1;
+    if (sequence == 0){
+        return 0;
+    }
+    for (int i = 0; i < sequence; ++i) {
+        b += a;
+        a = b -a;
+    }
+    return a;
     return 0;
 }
 
