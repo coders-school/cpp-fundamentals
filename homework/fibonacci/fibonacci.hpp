@@ -3,7 +3,7 @@
 int fibonacci_iterative(int sequence) {
     int t1 = 0;
     int t2 = 1;
-    int next;
+    int next_term;
     if(sequence == 0) { 
         return 0;
     }
@@ -12,16 +12,22 @@ int fibonacci_iterative(int sequence) {
     }
     else if(sequence >= 2){
         for(int i = 1; i < sequence; i++){
-            next = t1 + t2;
+            next_term = t1 + t2;
             t1 = t2;
-            t2 = next;
+            t2 = next_term;
         }
-        return next;
+        return next_term;
     }
-    
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: Your implementation goes here
+    if(sequence <= 1){
+        return sequence;
+    }
+    return fibonacci_recursive(sequence-1) + fibonacci_recursive(sequence-2);
+
+    
+
+
     return 0;
 }
