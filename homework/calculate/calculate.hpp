@@ -3,12 +3,27 @@
 
 std::string calculate(const std::string& command, int first, int second) {
 
-    double Suma;
-    std::string Result;
+    int Res;
+    std::string Result, text;
 
     if (command=="add"){
-        Suma = first + second;
+       return std::to_string(first + second);
     }
-
-    return Result = std::to_string(Suma);
+    else if (command=="subtract"){
+        return std::to_string(first - second);
+    }
+    else if (command=="multiply"){
+        return std::to_string(first * second);
+    }
+    else if (command=="divide"){
+        if(second == 0){
+            return "Division by 0";
+        }
+        return std::to_string(first / second);
+        }
+    else {
+       return "Invalid data";
+    }
+    //return Result = std::to_string(Res);
+   // return Result = text;
 }
