@@ -3,15 +3,18 @@
 int fibonacci_iterative(int sequence)
 
  {
+    int fib = 0;
     int a=0,b=1;
     for (int i=0; i<=sequence; i++)
     {
-     b+=a;
-     a = b-a;
-     return a;
+     a = fib +b;
+     fib = b;
+     b = a;
+     
     }
+    return fib;
 
-}
+  }
 
 int fibonacci_recursive(int sequence) {
     if (sequence >=3)
