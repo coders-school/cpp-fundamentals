@@ -3,8 +3,7 @@
 
 std::string calculate(const std::string& command, int first, int second) {
 
-    int Res;
-    std::string Result, text;
+    std::string Result;
 
     if (command=="add"){
        return std::to_string(first + second);
@@ -24,6 +23,5 @@ std::string calculate(const std::string& command, int first, int second) {
     else {
        return "Invalid data";
     }
-    //return Result = std::to_string(Res);
-   // return Result = text;
+
 }
