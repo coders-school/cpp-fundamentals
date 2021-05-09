@@ -3,11 +3,14 @@
 int fibonacci_iterative(int sequence)
 
  {
-    int i;
-    int tab[1000000];
-    for(int i=0; i<= sequence; i++)
-    tab[i]= tab[i-1] + tab[i-2];
-    return tab[i];
+    int a=0,b=1;
+    for (int i=0; i<=sequence; i++)
+    {
+     b+=a;
+     a = b-a;
+     return a;
+    }
+
 }
 
 int fibonacci_recursive(int sequence) {
