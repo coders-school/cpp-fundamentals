@@ -28,5 +28,12 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
-    return -1;
+    int nwd = NWD(lhs, rhs);
+    int result = -1;
+    nwd == 0 ? result = 0 : result = (lhs * rhs) / nwd;
+    if(result < 0)
+    {
+	result *= -1;
+    }
+    return result;
 }
