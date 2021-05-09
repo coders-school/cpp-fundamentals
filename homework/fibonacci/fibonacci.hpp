@@ -5,7 +5,7 @@ int fibonacci_iterative(int sequence)
  {
     int fib = 0;
     int a=0,b=1;
-    for (int i=0; i<=sequence; i++)
+    for (int i=0; i<sequence; i++)
     {
      a = fib +b;
      fib = b;
