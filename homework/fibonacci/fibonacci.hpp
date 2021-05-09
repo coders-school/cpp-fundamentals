@@ -4,13 +4,11 @@ int fibonacci_iterative(int sequence) {
     int t1 = 0;
     int t2 = 1;
     int next_term;
-    if(sequence == 0) { 
-        return 0;
+    
+    if(sequence < 2){
+        return sequence;
     }
-    else if (sequence == 1 || sequence == 2){
-        return 1;
-    }
-    else if(sequence >= 2){
+    else {
         for(int i = 1; i < sequence; i++){
             next_term = t1 + t2;
             t1 = t2;
