@@ -1,27 +1,31 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-    while(lhs != rhs)
-    {
-        if (lhs > rhs){
-            lhs -= rhs;
-        }
-        else{
-            rhs -= lhs;
-        }
+    if (rhs != 0)
+        return NWD(rhs, lhs % rhs);
+    if (lhs < 0) {
+        return lhs * -1;
     }
     return lhs;
 }
 
 int NWW(int lhs, int rhs) {
-    int temp, result;
-    result = lhs * rhs;
-    while(rhs != 0)
-    {
-        temp = rhs;
-        rhs = lhs % rhs;
-        lhs = temp;
+    if(lhs == rhs){
+        if (lhs < 0) {
+            return lhs * -1;
+        }
+        else return lhs;
     }
-    result /= lhs;
-    return result;
+    if (lhs < rhs) {
+        return NWW(rhs, lhs);
+    }
+    int k = lhs;
+    while (k % rhs != 0) {
+        k += lhs;
+    }
+    if(k < 0)
+    {
+    return k * -1;
+    }
+        return k;
 }
