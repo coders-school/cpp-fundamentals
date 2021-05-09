@@ -5,7 +5,7 @@
 int main() {
     while (true) {
         std::cout << "Provide command: \"add\", \"subtract\","
-                  << " multiply\", divide\" or \"quit\" to exit\n";
+                  << " \"multiply\", \"divide\" or \"quit\" to exit\n";
         std::string command{};
         std::cin >> command;
         if (command == "quit")
