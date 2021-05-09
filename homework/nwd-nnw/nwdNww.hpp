@@ -1,8 +1,14 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-    abs(lhs);
-    abs(rhs);
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+    if (rhs == 0) {
+        return lhs;
+    }
+    if (lhs == 0) {
+        return rhs;
+    }
     while (rhs != lhs) {
         if (rhs > lhs) {
             rhs -= lhs;
@@ -16,6 +22,13 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-   // return (lhs / NWD(lhs, rhs)) * rhs;
-    return -1;
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+    if (rhs == 0) {
+        return rhs;
+    }
+    if (lhs == 0) {
+        return lhs;
+    }
+   return (lhs / NWD(lhs, rhs)) * rhs;
 }
