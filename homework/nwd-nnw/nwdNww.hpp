@@ -14,8 +14,6 @@ int NWD(int lhs, int rhs) {
     
     int lowerNumber = std::min(std::abs(lhs), std::abs(rhs));
     int higherNumber = std::max(std::abs(lhs), std::abs(rhs));
-    // Alternative way to set the higherNumber - could be a bit more efficient?
-    // int higherNumber = (lhs == lowerNumber ? rhs : lhs);
     int divisor = lowerNumber;
     int i = 2;
     while(divisor > 1) {
@@ -32,6 +30,23 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+
+    if (lhs == 0 || rhs == 0) {
+        return 0;
+    }
+    
+    int lowerNumber = std::min(std::abs(lhs), std::abs(rhs));
+    int higherNumber = std::max(std::abs(lhs), std::abs(rhs));
+    int lowerNumberMultiple = lowerNumber;
+    int higherNumberMultiple = higherNumber;
+    while (lowerNumberMultiple != higherNumberMultiple) {
+        if (lowerNumberMultiple < higherNumberMultiple) {
+            lowerNumberMultiple += lowerNumber;
+        }
+        else if (lowerNumberMultiple > higherNumberMultiple) {
+            higherNumberMultiple += higherNumber;
+        }
+    }    
+    return lowerNumberMultiple;
+
 }
