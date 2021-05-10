@@ -2,13 +2,21 @@
 
 int NWD(int lhs, int rhs) {
     int x;
+    if (lhs == 0)
+    {
+        return rhs;
+    }
+    else if (rhs == 0 )
+    {
+        return lhs;
+    }
     while (rhs)
     {
-        x=rhs;
-        rhs= lhs%rhs;
-        lhs=x;
+        x = rhs;
+        rhs = lhs % rhs;
+        lhs = x;
     }
-    
+
     return lhs;
 }
 int NWW(int lhs, int rhs) {
