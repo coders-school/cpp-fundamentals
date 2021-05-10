@@ -11,7 +11,7 @@ int NWD(int lhs, int rhs) {
     {
         temp = rhs;
         rhs = lhs % rhs;
-        lhs = tmp;
+        lhs = temp;
     }
 
     return lhs;
