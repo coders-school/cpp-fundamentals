@@ -2,7 +2,7 @@
 int NWW(int lhs, int rhs) {
     int pom,shs;
     shs = lhs * rhs;
-    while (rhs != 0)
+    while (rhs)
     {
        pom = rhs;
        rhs = lhs % rhs;
