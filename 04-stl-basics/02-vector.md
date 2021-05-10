@@ -47,7 +47,7 @@ ___
 
 ## Operacje na wektorze
 
-* <!-- .element: class="fragment fade-in" --> dodanie elementu do wektora
+* <!-- .element: class="fragment fade-in" --> dodanie elementu do wektora (na końcu kontenera)
   * `numbers.push_back(5)`
 * <!-- .element: class="fragment fade-in" --> odczytanie elementu z wektora
   * `numbers[1]`
