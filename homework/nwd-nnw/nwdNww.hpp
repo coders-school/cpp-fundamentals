@@ -1,16 +1,16 @@
 #pragma once
 int NWW(int lhs, int rhs) {
-    int pom,shs;
-    shs = lhs * rhs;
-    while (rhs)
+   int shs = lhs * rhs;
+    while (lhs !=rhs )
     {
-       pom = rhs;
-       rhs = lhs % rhs;
-       lhs = pom;
+        if(lhs>rhs){
+       lhs -= rhs; }
+        else{
+       rhs -=lhs;
     }
-    pom /= lhs;
+    shs /= lhs;
     
-    return pom;
+    return shs;
 }
 
 
