@@ -1,9 +1,10 @@
 #pragma once
-int NWW(int lhs, int rhs) {
+int NWW(int lhs, int rhs) 
+{
    int shs = lhs * rhs;
-    while (lhs !=rhs )
+    while (lhs != rhs )
     {
-        if(lhs>rhs){
+        if(lhs > rhs){
        lhs -= rhs; }
         else{
        rhs -=lhs;
@@ -11,6 +12,7 @@ int NWW(int lhs, int rhs) {
     shs /= lhs;
     
     return shs;
+}
 }
 
 
