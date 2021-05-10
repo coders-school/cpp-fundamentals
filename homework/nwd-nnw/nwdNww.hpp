@@ -1,22 +1,17 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-    int x;
-    if (lhs == 0)
-    {
-        return rhs;
-    }
-    else if (rhs == 0 )
-    {
-        return lhs;
-    }
-    while (rhs)
-    {
-        x = rhs;
-        rhs = lhs % rhs;
-        lhs = x;
-    }
 
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+
+    int temp;
+    while (rhs != 0)
+    {
+        temp = rhs;
+        rhs = lhs % rhs;
+        lhs = temp;
+    }
     return lhs;
 }
 int NWW(int lhs, int rhs) {
