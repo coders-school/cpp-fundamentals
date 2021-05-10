@@ -1,11 +1,18 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    while(lhs!=rhs){
+        if(lhs>rhs){
+            lhs -= rhs;
+        }
+        else{
+            rhs-=lhs;
+        }
+    }
+    return lhs;
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+
+    return (lhs/ NWD(lhs, rhs))*rhs;
 }
