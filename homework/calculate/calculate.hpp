@@ -11,6 +11,9 @@ std::string calculate(const std::string& command, int first, int second) {
     }else if(command.compare("subtract") == 0){
         calculation = first - second;
         result = std::to_string(calculation);
+    }else if(command.compare("multiply") == 0){
+        calculation = first * second;
+        result = std::to_string(calculation);
     }
     return result;
 }
