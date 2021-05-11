@@ -1,55 +1,28 @@
 #pragma once
+#include <cmath>
 
-inline int GetSmaller(const int lhs, const int rhs)
+
+int NWD(int lhs, int rhs)
 {
-	return lhs < rhs ? lhs : rhs;
-}
-
-inline int GetLarger(const int lhs, const int rhs)
-{
-	return lhs > rhs ? lhs : rhs;
-}
-
-inline bool IsMeetAssumption(const int lhs, const int rhs)
-{
-	if (lhs >= 0 || rhs >= 0)
-		return true;
-	return false;
-}
-
-int NWD(int lhs, int rhs) {
-    if (!IsMeetAssumption(lhs, rhs))
-		return -1;
+	lhs = std::abs(lhs);
+	rhs = std::abs(rhs);
 
 	// We use Euclid's algorithm to find the GCD
-	for (int i = 0;; ++i)
+	while (rhs != 0)
 	{
 		int rest = lhs % rhs;
-
-		if (rest == 0)
-			return rhs;
 
 		lhs = rhs;
 		rhs = rest;
 	}
+	return lhs;
 }
 
-int NWW(int lhs, int rhs) {
-    if (!IsMeetAssumption(lhs, rhs))
-		return -1;
+int NWW(int lhs, int rhs)
+{
+	if (rhs == 0)
+		return 0;
 
-	// Choose the smallest number
-	int divider = GetSmaller(lhs, rhs);
-	const int smaller = GetSmaller(lhs, rhs);
-	const int larger = GetLarger(lhs, rhs);
-
-	for (int i = 0;; ++i)
-	{
-		// if our divider is divided by both of numbers and is equal or greater than larger number,
-		// then it must be our LCM
-		if (divider % lhs == 0 && divider % rhs == 0 && divider >= larger)
-			return divider;
-
-		divider += smaller;
-	}
+	return std::abs((lhs * rhs) / NWD(lhs, rhs));
 }
+
