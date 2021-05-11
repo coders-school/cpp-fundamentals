@@ -20,5 +20,9 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
+    if (lhs == 0 && rhs ==0){
+        return 0;
+    } else {
     return ((lhs * rhs) / NWD (lhs, rhs));    
+    }
 }
