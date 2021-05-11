@@ -15,5 +15,5 @@ int main() {
 
 void modifyString(std:string & SomeString)
 {
-    &SomeString = "Other string";
+    SomeString = "Other string";
 }
