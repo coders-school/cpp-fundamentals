@@ -12,6 +12,9 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    if (!lhs || !rhs) {
+        return 0;
+    }
+    
+    return std::llabs(static_cast<unsigned long long>(lhs) * rhs / NWD(lhs, rhs));
 }
