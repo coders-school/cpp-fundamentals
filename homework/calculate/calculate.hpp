@@ -5,19 +5,26 @@ std::string calculate(const std::string& command, int first, int second) {
     // TODO: Implement your solution here and return proper value
     std::string result;
     if (command == "add"){
-       return std::to_string(first + second);
-    }else{
-        if (command == "subtract"){
-	    return std::to_string(first - second);    
-    }else{
-        if (command == "multiply"){
-            return std::to_string(first * second);
-    }else{
-	if(command == "divide"){
-	    return std::to_string(first / second);
-	}
-    }
-    }
-    }
-    return ""; 
+       result = std::to_string(first + second);
+        }else{
+           if (command == "subtract"){
+	      result = std::to_string(first - second);    
+           }else{
+              if (command == "multiply"){
+                 result = std::to_string(first * second);
+              }else{
+	         if (command == "divide" && second != 0){
+	           result = std::to_string(first / second);
+	         }else{
+		    if (command == "divide" && second == 0){  
+	               result = "Division by 0";
+		    }else{
+		       result = "Invalid data";
+		    }
+	          }
+               }
+            }
+        }
+    return result; 
 }
+
