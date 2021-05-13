@@ -1,10 +1,13 @@
 #pragma once
+#include <cmath>
 
 int NWD(int lhs, int rhs) {
+  lhs = abs(lhs);
+  rhs = abs(rhs);
 
-if (rhs == 0 && lhs == 0){
-  return 0;
-}
+  if (rhs == 0 && lhs == 0) {
+    return 0;
+  }
   while (lhs != rhs) {
     if (lhs > rhs)
       lhs -= rhs;
@@ -12,7 +15,6 @@ if (rhs == 0 && lhs == 0){
       rhs -= lhs;
   }
   return lhs;
-  
 }
 
 int NWW(int lhs, int rhs) {
