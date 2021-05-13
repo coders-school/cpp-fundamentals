@@ -14,6 +14,9 @@ int NWD(int lhs, int rhs) {
     if(lhs > rhs){
         max = lhs;
     }
+    if(lhs == 0 or rhs == 0){
+        return lhs + rhs;
+    }
     int result = 1;
     for(int i = max/2; i>1; --i){
         if(lhs % i == 0 and rhs % i == 0){
