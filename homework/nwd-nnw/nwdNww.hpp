@@ -1,14 +1,14 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-    if(lhs == rhs){
-        return lhs;
-    }
     if(lhs < 0){
         lhs = -lhs;
     }
     if(rhs < 0){
         rhs = -rhs;
+    }
+    if(lhs == rhs){
+        return lhs;
     }
     int max = rhs;
     if(lhs > rhs){
@@ -28,6 +28,9 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    int nwd = NWD(lhs, rhs);
+    if(nwd == 0){
+        return 0;
+    }
+    return (lhs * rhs) / nwd;
 }
