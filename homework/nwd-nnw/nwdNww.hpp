@@ -2,6 +2,9 @@
 
 int NWD(int lhs, int rhs) {
 
+if (rhs == 0 && lhs == 0){
+  return 0;
+}
   while (lhs != rhs) {
     if (lhs > rhs)
       lhs -= rhs;
@@ -9,6 +12,7 @@ int NWD(int lhs, int rhs) {
       rhs -= lhs;
   }
   return lhs;
+  
 }
 
 int NWW(int lhs, int rhs) {
