@@ -2,9 +2,10 @@
 #include <string>
 #include "calculate.hpp"
 
+
 int main() {
     while (true) {
-        std::cout << "Provide command: \"add\", \"subtract\","
+        std::cout << "State your will: \"add\", \"subtract\","
                   << " multiply\", divide\" or \"quit\" to exit\n";
         std::string command{};
         std::cin >> command;
