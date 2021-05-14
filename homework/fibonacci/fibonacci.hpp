@@ -1,9 +1,9 @@
 #pragma once
 
 int fibonacci_iterative(int sequence) {
-    if (sequence == 0) return 0;
     if (sequence == 1) return 1;
-    int antepenulminate = 0;
+    if (sequence == 2) return 1;
+    int antepenulminate = 1;
     int penultimate = 1;
     int result = 0;
     if (sequence > 2) {
@@ -18,6 +18,10 @@ int fibonacci_iterative(int sequence) {
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: Your implementation goes here
+    // edge condition
+    if (sequence == 0) return 0;
+    if (sequence == 1) return 1;
+    if (sequence == 2) return 1;
+    return fibonacci_recursive(sequence - 1) + fibonacci_recursive(sequence - 2);
     return 0;
 }
