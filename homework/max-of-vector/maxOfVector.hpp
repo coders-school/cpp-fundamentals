@@ -1,8 +1,13 @@
 #pragma once
 #include <vector>
 #include <limits>
+#include <algorithm>
 
 int maxOfVector(const std::vector<int>& vec) {
-    // TODO: Implement me :)
-    return {};
+    auto result = std::max_element(vec.begin(), vec.end());
+    // std::sort(vec.begin(), vec.end(), [](int a, int b) {
+    //     return a > b;
+    // });
+    // return vec.begin();
+    return *result;
 }
