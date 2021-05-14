@@ -10,6 +10,9 @@ std::string calculate(const std::string& command, int first, int second) {
         case 0:
             retunValue = std::to_string(first + second);
             break;
+        case 1:
+            retunValue = std::to_string(first -second);
+            break;
     
         default:
             retunValue = "Invalid data";
