@@ -30,8 +30,8 @@ std::string calculate(const std::string& command, int first, int second) {
             else
                 retunValue = std::to_string( first / second);
             break;
-        default:
-            retunValue = "Invalid data";
+       // default:
+         //   retunValue = "Invalid data";
     }
 
     return retunValue;
