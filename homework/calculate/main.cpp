@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
-#include "calculate.hpp"
+#include <sstream>
+
+std::string calculate(const std::string& , int, int);
+
 
 int main() {
     while (true) {
@@ -19,3 +22,5 @@ int main() {
 
     return 0;
 }
+
+#include "calculate.hpp"
