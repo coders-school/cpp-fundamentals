@@ -31,6 +31,7 @@ INSTANTIATE_TEST_SUITE_P(
         Params{3, -4, std::vector<int>{-4, -8, -12}},
         Params{5, 2, std::vector<int>{2, 4, 6, 8, 10}},
         Params{8, 5, std::vector<int>{5, 10, 15, 20, 25, 30, 35, 40}},
-        Params{10, 5, std::vector<int>{5, 10, 15, 20, 25, 30, 35, 40, 45, 50}}
+        Params{10, 5, std::vector<int>{5, 10, 15, 20, 25, 30, 35, 40, 45, 50}},
+        Params{4,400, std::vector<int>{400, 800, 1200, 1600}}
     )
 );
