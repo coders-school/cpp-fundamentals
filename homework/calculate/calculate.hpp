@@ -9,6 +9,10 @@ std::string calculate(const std::string& command, int first, int second) {
             return std::to_string (first-second);
         } else if(command=="multiply"){
             return std::to_string (first*second);
+        } else if (command=="divide"){
+        if (first==0||second==0){
+            return "Division by 0";
+        } return std::to_string (first/second);
         }
     return command;
 }
