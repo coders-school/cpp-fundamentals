@@ -29,7 +29,7 @@ std::string calculate(const std::string& command, int first, int second)
     }
     else
     {
-        std::cout << "Invalid data";
+        return "Invalid data";
     }
     return "";
 }
