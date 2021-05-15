@@ -1,7 +1,18 @@
 #pragma once
 #include <string>
-
+#include <map>
 std::string calculate(const std::string& command, int first, int second) {
     // TODO: Implement your solution here and return proper value
-    return "";
+    std::string returnValue="";
+    std::map<std::string, int> mapValues= {{"add",0},{"subtract",1},{"multiply",2},{"divide",3}};
+    switch(mapValues[command])
+    {
+        case 0:
+            returnValue = std::to_string(first + second);
+            break;
+
+        default:
+            returnValue = "Invalid data";
+    }
+    return returnValue;
 }
