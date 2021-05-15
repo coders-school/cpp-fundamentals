@@ -6,32 +6,22 @@
 int NWD(int lhs, int rhs) {
   lhs = abs(lhs);
   rhs = abs(rhs);
-  while (lhs != rhs) {
-
-    if (lhs > rhs) {
-      lhs -= rhs;
-    } else {
-      rhs -= lhs;
-    }
-    // std::cout <<rhs<<" rhs"<<'\n';
-    // std::cout <<lhs<<" lhs"<<'\n';
+  auto i{lhs};
+  while (lhs != 0) {
+    i = lhs;
+    lhs = rhs % lhs;
+    rhs = i;
   }
-  //std::cout << "lhs  " << lhs << "<--poza while" << '\n';
-  return lhs;
+  return rhs;
 }
 
 int NWW(int lhs, int rhs) {
-  auto a = lhs;
+
   lhs = abs(lhs);
   rhs = abs(rhs);
 
-  while (lhs != rhs) {
-
-    if (lhs > rhs) {
-      lhs -= rhs;
-    } else {
-      rhs -= lhs;
-    }
+  if (lhs == 0 || rhs == 0) {
+    return 0;
   }
-  return 99;
+  return lhs / NWD(lhs, rhs) * rhs;
 }
