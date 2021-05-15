@@ -1,5 +1,7 @@
 #include <iostream>
-#include "fibonacci.hpp"
+
+int fibonacci_iterative(int );
+int fibonacci_recursive(int );
 
 int main() {
     std::cout << fibonacci_iterative(10) << "\n";
@@ -7,3 +9,6 @@ int main() {
 
     return 0;
 }
+
+#include "fibonacci.hpp"
+
