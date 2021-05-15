@@ -1,11 +1,32 @@
 #pragma once
 
-int NWD(int lhs, int rhs) {
+int NWD(int lhs, int rhs) 
+{
     // TODO: Implement me :)
-    return -1;
+    //OK
+  
+    
+    int kwik;
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+	while(rhs!=0)
+    {
+		kwik = rhs;
+		rhs = lhs%rhs;
+		lhs = kwik;	
+	}
+	
+    return lhs;
 }
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
-    return -1;
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+    if(lhs == 0 || rhs == 0)
+    {
+        return 0;
+    }
+
+    return(lhs * rhs)/ NWD(lhs,rhs);
 }
