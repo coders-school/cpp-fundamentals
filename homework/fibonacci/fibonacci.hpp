@@ -8,7 +8,7 @@ int fibonacci_iterative(int sequence) {
 	int sum {};
 
 	for (int i = 0; i<=sequence; i++){
-		if (i<=1){
+		if (i < 2){
 			sum = i;
 		}
 		else{
@@ -22,5 +22,13 @@ int fibonacci_iterative(int sequence) {
 
 int fibonacci_recursive(int sequence) {
     // TODO: Your implementation goes here
-    return 0;
+    
+	int sum {};
+	if (sequence < 2){
+		sum = sequence;
+	}
+	else{
+		sum = fibonacci_recursive(sequence - 1) + fibonacci_recursive(sequence-2);
+	}
+	return sum;
 }
