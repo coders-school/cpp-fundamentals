@@ -1,24 +1,14 @@
 #pragma once
 #include <vector>
 #include <numeric>
-int sum;
-std::vector<int> vector{ 0 };
-int addEven(const std::vector<int>& numbers)
- {
-     if(!numbers.empty())
-     {
-            for(int i =0; i<numbers.size(); i++)
-             {
-            if(numbers[i] % 2 == 0)
-            {
-            vector.push_back(numbers[i]);
-            }
+int addEven(const std::vector<int>& numbers) {
+    int sum = 0;
+    for (const auto& element : numbers)
+    {
+        if (element % 2 == 0)
+        {
+            sum += element;
+        }
     }
-    sum = std::accumulate(vector.begin(), vector.end(), 0);
-    
-     }
-     else
-     sum = 0;
-
-     return sum;
+    return sum;
 }
