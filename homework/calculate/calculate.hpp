@@ -16,9 +16,9 @@ std::string calculate(const std::string& command, int first, int second) {
 	    res = std::to_string(first * second);
     }
     else if (command == "divide"){
-//	    if (second = 0)
-//		    res == "Division by 0";
-//	    else
+	    if (second == 0)
+		    res = "Division by 0";
+	    else
 	    	res = std::to_string(first / second);
     }
     else
