@@ -7,7 +7,7 @@ std::vector<int> generateSequence(int count, int step) {
     if (count <=0) {
         return {};
     }
-    for (auto i = 1 ; i < count ; ++i) {
+    for (auto i = 1; i < count ; ++i) {
         vec.push_back (vec[i-1] + step);
     }
     return vec;
