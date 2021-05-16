@@ -2,7 +2,7 @@
 #include <vector>
 #include <numeric>
 int sum;
-std::vector<int> vector;
+std::vector<int> vector{ 0 };
 int addEven(const std::vector<int>& numbers)
  {
      if(!numbers.empty())
@@ -15,7 +15,7 @@ int addEven(const std::vector<int>& numbers)
             }
     }
     sum = std::accumulate(vector.begin(), vector.end(), 0);
-    return sum;
+    
      }
      else
      sum = 0;
