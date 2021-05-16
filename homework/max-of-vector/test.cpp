@@ -28,6 +28,7 @@ INSTANTIATE_TEST_SUITE_P(
         std::make_tuple(std::vector<int>{1, 1, 1, 1, 1, 2, 1, 1, 1}, 2),
         std::make_tuple(std::vector<int>{-1, -1, -1, -1, -2, -1, 0, -1, -2}, 0),
         std::make_tuple(std::vector<int>{22, 88, 10, 0, 5, 6, 7, 8, 9}, 88),
-        std::make_tuple(std::vector<int>{-1, 0, 1, -2, -4, -6, -7, -8, -8}, 1)
+        std::make_tuple(std::vector<int>{-1, 0, 1, -2, -4, -6, -7, -8, -8}, 1),
+	std::make_tuple(std::vector<int>{}, 0)
     )
 );
