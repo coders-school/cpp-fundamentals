@@ -1,8 +1,12 @@
 #pragma once
 #include <vector>
-#include <limits>
 
 int maxOfVector(const std::vector<int>& vec) {
-    // TODO: Implement me :)
-    return {};
+    int max = vec.front();
+    for (int element : vec) {
+        if (element > max) {
+            max = element;
+        }
+    }
+    return max;
 }
