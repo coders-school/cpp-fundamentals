@@ -1,8 +1,12 @@
 #pragma once
 #include <vector>
 #include <limits>
+#include <numeric>
+#include <algorithm>
 
 int maxOfVector(const std::vector<int>& vec) {
-    // TODO: Implement me :)
-    return {};
+     
+auto number = std::max_element(vec.begin(),vec.end());
+
+    return *number;
 }
