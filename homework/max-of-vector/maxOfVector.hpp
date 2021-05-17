@@ -3,6 +3,13 @@
 #include <limits>
 
 int maxOfVector(const std::vector<int>& vec) {
-    // TODO: Implement me :)
-    return {};
+    int result = std::numeric_limits<int>::min();
+
+    for(int number: vec){
+        if(number > result){
+            result = number;
+        }
+    }
+
+    return result;
 }
