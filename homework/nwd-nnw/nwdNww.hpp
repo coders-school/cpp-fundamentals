@@ -2,8 +2,15 @@
 
 int NWD(int lhs, int rhs) {
     
-    if (!lhs || !rhs) {
+    if (!lhs && !rhs) {
         return 0;
+    }
+
+    if (!lhs) {
+        return rhs;
+    }
+    else if (!rhs) {
+        return lhs;
     }
 
     lhs = (lhs > 0) ? lhs : (-1) * lhs;
@@ -33,14 +40,14 @@ int NWW(int lhs, int rhs) {
     lhs = (lhs > 0) ? lhs : (-1) * lhs;
     rhs = (rhs > 0) ? rhs : (-1) * rhs;
 
-    int max = (lhs > rhs) ? lhs : rhs;
-    const int min = (lhs < rhs) ? lhs : rhs;
+    int bigger = (lhs > rhs) ? lhs : rhs;
+    const int lesser = (lhs < rhs) ? lhs : rhs;
 
-    int nww = max;
+    int nww = bigger;
 
-    while (nww % min)
+    while (nww % lesser)
     {
-        nww += max;
+        nww += bigger;
     }
     
     return nww;
