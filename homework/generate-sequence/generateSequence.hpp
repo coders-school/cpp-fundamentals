@@ -1,7 +1,16 @@
-#pragma once
+# pragma once
+
+#include <algorithm>
 #include <vector>
 
 std::vector<int> generateSequence(int count, int step) {
-    // TODO: Implement me :)
-    return {};
+    std::vector<int> sequence;
+    std::generate_n(std::back_inserter(sequence),
+                    count,
+                    [&, step] {
+                        return sequence.empty() ?
+                               step : sequence.back() + step;
+                    });
+
+    return sequence;
 }
