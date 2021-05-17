@@ -33,12 +33,14 @@ int NWW(int lhs, int rhs) {
     lhs = (lhs > 0) ? lhs : (-1) * lhs;
     rhs = (rhs > 0) ? rhs : (-1) * rhs;
 
-    int nww = (lhs > rhs) ? lhs : rhs;
-    const int less = (lhs < rhs) ? lhs : rhs;
+    int max = (lhs > rhs) ? lhs : rhs;
+    const int min = (lhs < rhs) ? lhs : rhs;
 
-    while (nww % less)
+    int nww = max;
+
+    while (nww % min)
     {
-        nww += nww;
+        nww += max;
     }
     
     return nww;
