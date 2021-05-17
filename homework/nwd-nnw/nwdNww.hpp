@@ -6,6 +6,18 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    
+    if (!lhs || !rhs) {
+        return -1;
+    }
+    
+    int nww = (lhs > rhs) ? lhs : rhs;
+    int less = (lhs < rhs) ? lhs : rhs;
+
+    while (nww % less)
+    {
+        nww += nww;
+    }
+    
+    return nww;
 }
