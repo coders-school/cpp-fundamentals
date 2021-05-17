@@ -10,9 +10,9 @@ int NWW(int lhs, int rhs) {
     if (!lhs || !rhs) {
         return -1;
     }
-    
+
     int nww = (lhs > rhs) ? lhs : rhs;
-    int less = (lhs < rhs) ? lhs : rhs;
+    const int less = (lhs < rhs) ? lhs : rhs;
 
     while (nww % less)
     {
