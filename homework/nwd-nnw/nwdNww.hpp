@@ -4,9 +4,6 @@ int NWD(int lhs, int rhs) {
     // TODO: Implement me :)
     int temp;
     while (rhs != 0) {
-        // temp = lhs % rhs;
-        // lhs = rhs;
-        // rhs = temp;
         temp = rhs;
         rhs = lhs % rhs;
         lhs = temp;
@@ -16,12 +13,6 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
-    // int temp;
-    // while (rhs != 0) {
-    //     temp = rhs;
-    //     rhs = lhs % rhs;
-    //     lhs = temp;
-    // }
     while (lhs != 0) {
         return abs((lhs / NWD(lhs, rhs)) * rhs);
     }
