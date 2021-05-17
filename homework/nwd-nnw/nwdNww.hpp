@@ -40,9 +40,8 @@ int NWW(int lhs, int rhs) {
     lhs = (lhs > 0) ? lhs : (-1) * lhs;
     rhs = (rhs > 0) ? rhs : (-1) * rhs;
 
-    int bigger = (lhs > rhs) ? lhs : rhs;
+    const int bigger = (lhs > rhs) ? lhs : rhs;
     const int lesser = (lhs < rhs) ? lhs : rhs;
-
     int nww = bigger;
 
     while (nww % lesser)
