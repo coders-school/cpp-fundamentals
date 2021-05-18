@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+
 int NWD(int lhs, int rhs) {
   if (rhs == 0) {
     return std::abs(lhs);
@@ -8,6 +9,8 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+  if (rhs == 0) {
+    return 0;
+  }
+  return std::abs(lhs * rhs) / NWD(lhs, rhs);
 }
