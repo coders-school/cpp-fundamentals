@@ -2,7 +2,13 @@
 #include <vector>
 
 int addEven(const std::vector<int>& numbers) {
-    // TODO: Your implementation goes here
-    // Below return is only to make this function compile now
-    return -1;
+
+    int sum = 0;
+
+    for(auto number : numbers)
+    {
+        sum += number % 2 == 0 ? number : 0;
+    }
+
+    return sum;
 }
