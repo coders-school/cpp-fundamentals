@@ -1,8 +1,21 @@
 #pragma once
+#include <stdexcept>
 
 int fibonacci_iterative(int sequence) {
-    // TODO: Your implementation goes here
-    return 0;
+  if (sequence < 0) {
+    throw std::runtime_error{"Invalid value"};
+  } else if (sequence <= 1) {
+    return sequence;
+  }
+
+  int first = 0, second = 1, result = 0;
+
+  for (unsigned int i = 2; i <= sequence; ++i) {
+    result = first + second;
+    first = second;
+    second = result;
+  }
+  return result;
 }
 
 int fibonacci_recursive(int sequence) {
