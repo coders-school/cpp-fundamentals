@@ -1,8 +1,7 @@
 #pragma once
 #include <vector>
+#include <numeric>
 
 int addEven(const std::vector<int>& numbers) {
-    // TODO: Your implementation goes here
-    // Below return is only to make this function compile now
-    return -1;
+    return std::accumulate(numbers.begin(), numbers.end(), 0, [](int sum, int value) { return (value % 2)? sum : sum + value; } );
 }
