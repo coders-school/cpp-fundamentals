@@ -35,19 +35,19 @@ ___
 
 ```cpp
 enum ErrorCode {
-    lack_of_water;
-    too_much_load;
-    bearing_problem;
-    block_of_pump;
+    lack_of_water,
+    too_much_load,
+    bearing_problem,
+    block_of_pump
 };
 
 // or better ↓
 
 enum class ErrorCode {
-    lack_of_water;
-    too_much_load;
-    bearing_problem;
-    block_of_pump;
+    lack_of_water,
+    too_much_load,
+    bearing_problem,
+    block_of_pump
 };
 ```
 
@@ -63,10 +63,10 @@ Jeżeli chcemy nadać inne wartości musimy to zrobić ręcznie:
 
 ```cpp
 enum class ErrorCode {
-  lack_of_water = 333;
-  to_much_load; // will be 334
-  bearing_problem = 600;
-  block_of_pump; // will be 601
+  lack_of_water = 333,
+  to_much_load, // will be 334
+  bearing_problem = 600,
+  block_of_pump // will be 601
 }
 ```
 <!-- .element: class="fragment fade-in" -->

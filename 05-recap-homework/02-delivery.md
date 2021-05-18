@@ -34,7 +34,7 @@ ctest -V      # odpala testy
 10. Wróć do punktu 7 i zaimplementuj kolejny kawałek. Jeśli rozwiązanie przechodzi wszystkie testy przejdź do kolejnego punktu
 11. Wypchnij zmiany do swojego forka - `git push origin calculate`
 12. Wyklikaj Pull Request na GitHubie ze swojej gałęzi `calculate` do **`coders-school/cpp-fundamentals:calculate`**
-13. Poczekaj chwilę na raport Continuous Integration (CI), aby sprawdzić, czy rozwiązanie kompiluje się i przechodzi testy na GitHubie.
+13. Poczekaj chwilę na raport Continuous Integration (CI), aby sprawdzić, czy rozwiązanie kompiluje się i przechodzi testy na GitHubie
 14. Jeśli jest ✅ - brawo, rozwiązanie jest poprawne. Jeśli jest ❌ kliknij na niego i sprawdź opis błędu. Popraw go (punkty 7-11) i poczekaj na kolejny raport CI.
 
 ___
