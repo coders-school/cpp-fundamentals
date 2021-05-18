@@ -6,7 +6,6 @@ const std::string addCommand = "add";
 const std::string subtractCommand = "subtract";
 const std::string multiplyCommand = "multiply";
 const std::string divideCommand = "divide";
-
 } // namespace
 
 std::string calculate(const std::string &command, int first, int second) {
