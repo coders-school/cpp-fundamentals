@@ -2,8 +2,8 @@
 #include "nwdNww.hpp"
 
 int main() {
-  std::cout << "NWW(255, 15) = " << NWW(255, 15) << "\n";
-  std::cout << "NWD(255, 15) = " << NWD(255, 15) << "\n";
+  std::cout << "NWW(2, 2) = " << NWW(2, 2) << "\n";
+  std::cout << "NWD(2, 2) = " << NWD(2, 2) << "\n";
 
   return 0;
 }
