@@ -9,10 +9,10 @@ TEST(calculate, ShouldAdd) {
 }
 
 TEST(calculate, ShouldSubtract) {
-  EXPECT_EQ(calculate("subtract", 10, 20), "-10");
-  EXPECT_EQ(calculate("subtract", 15, 5), "10");
-  EXPECT_EQ(calculate("subtract", 0, 0), "0");
-  EXPECT_EQ(calculate("subtract", 1, -20), "21");
+  EXPECT_EQ(calculate("substract", 10, 20), "-10");
+  EXPECT_EQ(calculate("substract", 15, 5), "10");
+  EXPECT_EQ(calculate("substract", 0, 0), "0");
+  EXPECT_EQ(calculate("substract", 1, -20), "21");
 }
 
 TEST(calculate, ShouldMultiply) {
