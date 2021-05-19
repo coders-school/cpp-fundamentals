@@ -3,6 +3,8 @@
 #include <limits>
 
 int maxOfVector(const std::vector<int>& vec) {
-    // TODO: Implement me :)
-    return {};
+    auto result = vec.front();
+    for(auto n: vec)
+        if (n>result) result = n;
+    return result;
 }
