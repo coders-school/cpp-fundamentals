@@ -2,27 +2,30 @@
 
 int NWD(int lhs, int rhs) {
     // TODO: Implement me :)
-    if (lhs <= 0 || rhs <= 0) {
-        std::cout << "the numbers must be positive";
-        return 1;
-    } else {
-        int second;
 
-        while (rhs != 0) {
-            second = rhs;
-            rhs = lhs % rhs;
-            lhs = second;
-        }
+    int rest;
+
+    if(rhs == 0){
         return lhs;
-    }
+    } else if (lhs == 0) {
+        return rhs;
+    } else {
+        do {
+            rest = lhs % rhs;
+            lhs = rhs;
+            rhs = rest;
+        } while (rhs != 0);
+    return abs(lhs);
+    }  
 }
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
-    if (lhs <= 0 || rhs <= 0) {
-        std::cout << "the numbers must be positive";
-        return 0;
+    if(rhs == 0){
+        return rhs;
+    } else if (lhs == 0) {
+        return lhs;
     } else {
-        return (lhs / NWD(lhs, rhs)) * rhs;
-    }
+        return abs((lhs / NWD(lhs, rhs)) * rhs);
+    } 
 }
