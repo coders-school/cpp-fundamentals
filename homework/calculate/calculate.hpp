@@ -8,6 +8,9 @@ std::string calculate(const std::string& command, int first, int second) {
     if(command.compare("add")) {
         result = first + second;
     }
+    if(command.compare("subtract")) {
+        result = first - second;
+    }
 
     return std::to_string(result) ;
 }
