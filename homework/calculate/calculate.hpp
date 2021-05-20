@@ -2,9 +2,9 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
+   
     int result = {};
-   // "Invalid data"
+   
     if(command == "add") {
         result = first + second;
     }
@@ -21,8 +21,7 @@ std::string calculate(const std::string& command, int first, int second) {
         }
         else {
             return "Division by 0";
-        }
-        
+        }       
     }
     else {
         return "Invalid data";
