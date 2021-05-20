@@ -5,8 +5,10 @@ int addEven(const std::vector<int>& numbers)
     int sum = 0;
     for(auto el: numbers)
         {
-            sum += el % 2 == 0 ? el : 0;
+           if(el % 2 ==0)
+           {
+               sum+=el;
+           }
         }
-        return sum;
-
+    return sum;
 }
