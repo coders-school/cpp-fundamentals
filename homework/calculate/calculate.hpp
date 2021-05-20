@@ -14,6 +14,9 @@ std::string calculate(const std::string& command, int first, int second) {
     if(command.compare("multiply")) {
         result = first * second;
     }
+    if(command.compare("devide")) {
+        result = first / second;
+    }
 
     return std::to_string(result) ;
 }
