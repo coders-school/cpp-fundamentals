@@ -24,21 +24,12 @@ bool doPasswordsMatch(const std::string& first, const std::string& second) {
 }
 
 ErrorCode checkPasswordRules(const std::string& pass) {
-    constexpr int PASSWORD_LENGTH = 9;
-
-    if (pass.size() < PASSWORD_LENGTH) {
-        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    }
-    if (std::none_of(pass.begin(), pass.end(), [](char c) { return isdigit(c); })) {
-        return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    }
-    if (std::none_of(pass.begin(), pass.end(), [](char c) { return !isalnum(c); })) {
-        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    }
-    if (std::none_of(pass.begin(), pass.end(), [](char c) { return isupper(c); })) {
-        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    }
-    return ErrorCode::Ok;
+    static std::random_device device;
+    std::mt19937 generator(device());
+    std::uniform_int_distribution<> distribution(
+        static_cast<int>(ErrorCode::Ok),
+        static_cast<int>(ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter));
+    return static_cast<ErrorCode>(distribution(generator));
 }
 
 ErrorCode checkPassword(const std::string& first, const std::string& second) {
