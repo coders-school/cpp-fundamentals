@@ -60,7 +60,7 @@ ___
 
 ## password-check bonus
 
-6. Dla ambitnych (nieobowiązkowe) - zaimplementuj w funkcji `checkPasswordRules()` prawdziwą walidację pozostałych przypadków, które są podane jako kody błędów. Najlepiej, jeśli wykorzystasz funkcje z [nagłówka &lt;cctype&gt;](https://en.cppreference.com/w/cpp/header/cctype) oraz algorytm `std::any_of`. Dopisz/zmodyfikuj odpowiednie testy. (4 XP)
+6. Dla ambitnych (nieobowiązkowe) - zaimplementuj w funkcji `checkPasswordRules()` prawdziwą walidację pozostałych przypadków, które są podane jako kody błędów. Wskazówka - możesz wykorzystać funkcje z [nagłówka <cctype>](https://en.cppreference.com/w/cpp/header/cctype) oraz algorytmy [`std::any_of/std::none_of`](https://en.cppreference.com/w/cpp/algorithm/all_any_none_of). Jeśli to dla Ciebie za trudne, zrób to po swojemu 🙂 (4 XP)
 
 ___
 
