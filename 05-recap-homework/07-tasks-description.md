@@ -82,19 +82,17 @@ int main() {
 ```
 
 ___
-<!-- .slide: style="font-size: 0.75em" -->
+<!-- .slide: style="font-size: 0.73em" -->
 
 ## vector-of-shared-pointers
 
 Napisz program, który zawierać będzie 5 funkcji. Deklaracje powinny znaleźć się w pliku nagłówkowym `vectorFunctions.hpp`, a implementacje w pliku źródłowym `vectorFunctions.cpp`. Stwórz te pliki.
 
-* `std::vector<std::shared_ptr<int>> generate(int count)` która wygeneruje wektor współdzielonych wskaźników na liczby od `0` do `count`
-* `void print()` która wypisze wszystkie elementy ze wskaźników wektora
-* `void add10()` która przyjmie wektor i doda do każdej liczby `10`
-* `void sub10()` która przyjmie stały wskaźnik na `int` i odejmie od tego elementu `10`
-* `void sub10();` Która przyjmie wektor współdzielonych wskaźników i wywoła dla każdego elementu powyższe przeciążenie funkcji `sub10()`
-
-Razem: 5 punktów (1 za każdą funkcję) (+2 za dostarczenie przed 07.06.2020 23:59, +3 punkty/osobę za pracę w parze)
+1. `std::vector<std::shared_ptr<int>> generate(int count)` która wygeneruje wektor współdzielonych wskaźników na liczby od `0` do `count`
+2. `void print()` która przyjmie `vector` i wypisze wszystkie elementy ze wskaźników wektora
+3. `void add10()` która przyjmie `vector` i doda do każdej liczby `10`
+4. `void sub10()` która przyjmie stały wskaźnik (zwykły) na `int` i odejmie od tego elementu `10`
+5. `void sub10()` Która przyjmie wektor współdzielonych wskaźników i wywoła dla każdego elementu powyższe przeciążenie funkcji `sub10()`
 
 ### Przykład użycia
 
@@ -108,29 +106,3 @@ int main() {
     print(vec);
 }
 ```
-
-___
-<!-- .slide: style="font-size: 0.75em" -->
-
-## Dostarczenie zadań
-
-1. Jeśli nie masz jeszcze forka repo cpp-fundamentals i podpiętego w nim remote coders, to zobacz wcześniejsze prace domowe z Podstaw C++ #2 oraz #1.
-2. Zaktualizuj swoje repo z remote'a coders - `git fetch coders`
-3. Przełącz się na branch module3 - `git checkout module3`
-4. Wyślij branch module3 na swojego forka - `git push origin module3`
-5. Utwórz oddzielną gałąź na pracę domową - `git checkout -b homework3`
-6. Wyślij od razu tę gałąź na forka, zanim zaczniesz implementację - `git push origin homework3`
-7. Rozpocznij implementację samemu lub w parze.
-8. Zanim wyślesz swoje zmiany za pomocą `git push origin homework3` synchronizuj się z forkiem, aby sprawdzić, czy druga osoba już czegoś nie dostarczyła - `git pull --rebase origin homework3`. Jeśli będą konflikty to je rozwiąż.
-9. Przy zgłoszeniu Pull Requesta wyklikaj, że chcesz go dostarczyć do `coders-school/cpp-fundamentals` branch `module3`. Opisz go odpowiednio dodając informację o autorach kodu.
-
-___
-
-## Kolejne zajęcia
-
-* Powtórka z podstaw C++ i narzędzi
-* Omówienie rozwiązań dotychczasowych zadań
-* Omówienie najczęstszych błędów na podstawie Code Review
-* Q&A
-* Uwagi
-* Konsultacje grupowe na Discordzie
