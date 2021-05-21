@@ -21,7 +21,7 @@ Wykonaj następujące instrukcje
 2. Przełącz się na gałąź `master`. Upewnij się, że nie masz żadnych lokalnych zmian.
 3. Dodaj nowe repozytorium zdalne (jeśli jeszcze go nie masz) - `git remote add cs https://github.com/coders-school/cpp-fundamentals.git`
 4. Ściągnij wszystkie zmiany z repo coder-school/cpp-fundamentals - `git pull cs`
-5. Sprawdź, czy masz gałęzie `password-check` oraz `vector-of-shared-ptr` - `git branch -a`
+5. Sprawdź, czy masz gałęzie `password-check` oraz `vector-of-shared-ptrs` - `git branch -a`
 6. Wrzuć wszystkie nowe gałęzie oraz `master` do swojego forka na Githubie. W tym celu przełączaj się na każdą z tych gałęzi i wykonaj `git push origin HEAD`
 
 ___
