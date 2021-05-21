@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 2.8.2)
+cmake_minimum_required(VERSION 3.0)
+project(passwordCheck)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -35,7 +36,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-project(passwordCheck)
 enable_testing()
 
 add_executable(${PROJECT_NAME} main.cpp validation.cpp)

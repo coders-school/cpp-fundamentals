@@ -3,7 +3,7 @@
 
 std::string getErrorMessage(ErrorCode code) {
     switch (code) {
-    case ErrorCode::PasswordsDoesNotMatch:
+    case ErrorCode::PasswordsDoNotMatch:
         return "Passwords does not match";
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
         return "Password needs to have at least nine characters";
@@ -18,7 +18,7 @@ std::string getErrorMessage(ErrorCode code) {
     }
 }
 
-bool doesPasswordsMatch(const std::string& first, const std::string& second) {
+bool doPasswordsMatch(const std::string& first, const std::string& second) {
     return first == second;
 }
 
@@ -32,8 +32,8 @@ ErrorCode checkPasswordRules([[maybe_unused]] const std::string&) {
 }
 
 ErrorCode checkPassword(const std::string& first, const std::string& second) {
-    if (!doesPasswordsMatch(first, second)) {
-        return ErrorCode::PasswordsDoesNotMatch;
+    if (!doPasswordsMatch(first, second)) {
+        return ErrorCode::PasswordsDoNotMatch;
     }
     return checkPasswordRules(first);
 }
