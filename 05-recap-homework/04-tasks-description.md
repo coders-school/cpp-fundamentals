@@ -15,9 +15,9 @@ ___
 ### Post-work
 
 * Jeśli nie wiesz czym jest `operator%` to się dowiedz. Przyda się do pracy domowej :)
-* add-even (5 punkty)
-* max-of-vector (5 punktów)
-* generate-sequence (5 punktów)
+* add-even (5 XP)
+* max-of-vector (5 XP)
+* generate-sequence (5 XP)
 
 #### Bonus za punktualność
 
