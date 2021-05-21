@@ -40,6 +40,8 @@ enable_testing()
 
 add_executable(${PROJECT_NAME} main.cpp validation.cpp)
 add_executable(${PROJECT_NAME}-ut test.cpp validation.cpp)
+add_executable(${PROJECT_NAME}-bonus-ut test-bonus.cpp validation.cpp)
 
 target_link_libraries(${PROJECT_NAME}-ut gtest_main)
+target_link_libraries(${PROJECT_NAME}-bonus-ut gtest_main)
 add_test(NAME ${PROJECT_NAME}_test COMMAND ${PROJECT_NAME}-ut)

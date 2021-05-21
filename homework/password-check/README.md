@@ -11,11 +11,11 @@ Tworzysz moduł do sprawdzania reguł haseł, który otrzymuje dane z formularza
    * PasswordNeedsAtLeastOneUppercaseLetter
    * PasswordsDoNotMatch
 
-2. Napisz funkcję `getErrorMessage()`, która przyjmie zdefiniowany typ kodu błędu i zwróci stosowny komunikat jako napis.
+2. Napisz funkcję `getErrorMessage()`, która przyjmie zdefiniowany typ kodu błędu i zwróci stosowny komunikat jako napis. Zajrzyj do testów, aby dowiedzieć się jaki komunikat jest oczekiwany.
 3. Napisz funkcję `doPasswordsMatch()`, która otrzyma dwa hasła i sprawdzi czy są identyczne. Powinna zwrócić odpowiednią wartość typu bool.
 4. Napisz funkcję `checkPasswordRules()`, która przyjmie jedno hasło i losowo zwróci jeden z kodów `PasswordNeedsAtLeast*` lub `Ok`.
 5. Napisz funkcję `checkPassword()`. Powinna ona przyjąć dwa hasła i używać funkcji `doPasswordsMatch()` w celu określenia czy hasła się zgadzają. W przypadku gdy się nie zgadzają ma ona zwrócić kod `PasswordsDoNotMatch`, a w przeciwnym przypadku powinna zwrócić kod błędu zwrócony przez wywołanie funkcji `checkPasswordRules()`.
-6. Dla ambitnych (nieobowiązkowe) - zaimplementuj w funkcji `checkPasswordRules()` prawdziwą walidację pozostałych przypadków, które są podane jako kody błędów. Najlepiej, jeśli wykorzystasz funkcje z [nagłówka <cctype>](https://en.cppreference.com/w/cpp/header/cctype) oraz algorytm `std::any_of`. Dopisz/zmodyfikuj odpowiednie testy. (+4 XP)
+6. Dla ambitnych (nieobowiązkowe) - zaimplementuj w funkcji `checkPasswordRules()` prawdziwą walidację pozostałych przypadków, które są podane jako kody błędów. Wskazówka - możesz wykorzystać funkcje z [nagłówka <cctype>](https://en.cppreference.com/w/cpp/header/cctype) oraz algorytmy [`std::any_of/std::none_of`](https://en.cppreference.com/w/cpp/algorithm/all_any_none_of). Jeśli to dla Ciebie za trudne, zrób to po swojemu 🙂
 
 ## Przykład użycia
 
