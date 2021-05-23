@@ -3,7 +3,7 @@
 
 int addEven(const std::vector<int>& numbers) {
 
-    int sum;
+    int sum = 0;
     for(auto el : numbers){
         if(el % 2 == 0){
             sum += el;
