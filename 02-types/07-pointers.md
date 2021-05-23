@@ -227,7 +227,7 @@ ___
 ```cpp
 void copy(int a) { a += 2; }
 void ref(int& a) { a += 2; }
-void ptr(int* a) ( *a += 2; )
+void ptr(int* a) { *a += 2; }
 
 void example() {
     int c = 10;
