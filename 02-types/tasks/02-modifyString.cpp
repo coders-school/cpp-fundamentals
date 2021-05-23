@@ -10,3 +10,8 @@ int main() {
     std::cout << str << '\n';
     return 0;
 }
+
+void modifyString(std::string &s)
+{
+    s = "Other string";
+}

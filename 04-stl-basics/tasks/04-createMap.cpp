@@ -2,9 +2,25 @@
 #include <list>
 #include <string>
 #include <vector>
-
+#include <map>
 // Implement createMap. It should take a vector and list and
 // return a map of merge them as keys from the vector and values from the list
+
+std::map<int, std::string> createMap(const std::vector<int> &vec, std::list<std::string> &s)
+{
+    std::map<int, std::string> map;
+    std::list<std::string>::iterator it = s.begin();
+
+
+    for (int i = 0; i < vec.size(); i++)
+    {
+        std::advance(it, i);
+        map[i] = *it;
+    }
+    
+    return map;
+
+}
 
 
 int main() {

@@ -16,3 +16,13 @@ int main() {
 
     return 0;
 }
+
+void foo(int *num)
+{
+    *num = 10;
+}
+
+void bar(int *num)
+{
+    *num = 20;
+} 
