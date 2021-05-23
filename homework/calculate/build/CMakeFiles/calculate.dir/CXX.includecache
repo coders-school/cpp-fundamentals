@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/calculate/calculate.hpp
+string
+-
+
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/calculate/main.cpp
+iostream
+-
+string
+-
+calculate.hpp
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/calculate/calculate.hpp
+

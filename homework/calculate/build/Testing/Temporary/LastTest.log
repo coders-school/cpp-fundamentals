@@ -1,0 +1,37 @@
+Start testing: May 23 23:05 CEST
+----------------------------------------------------------
+1/1 Testing: calculate_test
+1/1 Test: calculate_test
+Command: "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/calculate/build/calculate-ut"
+Directory: /home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/calculate/build
+"calculate_test" start time: May 23 23:05 CEST
+Output:
+----------------------------------------------------------
+Running main() from /home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/calculate/build/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from calculate
+[ RUN      ] calculate.ShouldAdd
+[       OK ] calculate.ShouldAdd (0 ms)
+[ RUN      ] calculate.ShouldSubtract
+[       OK ] calculate.ShouldSubtract (0 ms)
+[ RUN      ] calculate.ShouldMultiply
+[       OK ] calculate.ShouldMultiply (0 ms)
+[ RUN      ] calculate.ShouldDivide
+[       OK ] calculate.ShouldDivide (0 ms)
+[ RUN      ] calculate.ShouldReturnInvalidData
+[       OK ] calculate.ShouldReturnInvalidData (0 ms)
+[----------] 5 tests from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 5 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"calculate_test" end time: May 23 23:05 CEST
+"calculate_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 23 23:05 CEST

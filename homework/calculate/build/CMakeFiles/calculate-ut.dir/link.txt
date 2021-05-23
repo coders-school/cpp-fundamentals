@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/calculate-ut.dir/test.cpp.o  -o calculate-ut  lib/libgtest_main.a lib/libgtest.a -lpthread 
