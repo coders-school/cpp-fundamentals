@@ -3,7 +3,7 @@
 #include "vectorFunctions.hpp"
 #include "gtest/gtest.h"
 
-constexpr const int count = 10;
+constexpr const int count = 20;
 
 struct Homework : public testing::Test {
     auto generateExpectedVector(int count) {
