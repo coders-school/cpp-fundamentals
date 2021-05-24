@@ -22,29 +22,29 @@ std::string getErrorMessage(ErrorCode error) {
     }
 }
 
-bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword){
-    if(password == repeatedPassword){
+bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword) {
+    if (password == repeatedPassword) {
         return true;
     }
     return false;
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
-    if ( password.size() < 9 ) {
+    if (password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if ( std::none_of(begin(password), end(password), [](auto& el){ return isdigit(el); })) {
+    if (std::none_of(begin(password), end(password), [](auto& el) { return isdigit(el); } )) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    if(std::none_of(begin(password), end(password), [](auto& el){ return ispunct(el); })){
+    if (std::none_of(begin(password), end(password), [](auto& el) { return ispunct(el); } )) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    if(std::none_of(begin(password), end(password), [](auto& el){ return isupper(el); })) {
+    if (std::none_of(begin(password), end(password), [](auto& el) { return isupper(el); } )) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
     return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword) {
-    return doPasswordsMatch(password, repeatedPassword)? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
+    return doPasswordsMatch(password, repeatedPassword) ? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 }
