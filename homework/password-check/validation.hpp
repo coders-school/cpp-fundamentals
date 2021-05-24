@@ -10,5 +10,5 @@ enum class ErrorCode {
     PasswordsDoNotMatch
 }
 
-std::string getErrorMessage(ErrorCode);
+std::string getErrorMessage(const ErrorCode&);
 bool doPasswordsMatch(const std::string&, const std::string&);
