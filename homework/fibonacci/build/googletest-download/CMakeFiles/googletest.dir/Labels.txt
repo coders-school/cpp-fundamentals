@@ -1,0 +1,14 @@
+# Target labels
+ googletest
+# Source files and their labels
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/CMakeFiles/googletest
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/CMakeFiles/googletest.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/CMakeFiles/googletest-complete.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/fibonacci.hpp
+
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/main.cpp
+iostream
+-
+fibonacci.hpp
+/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/fibonacci.hpp
+
