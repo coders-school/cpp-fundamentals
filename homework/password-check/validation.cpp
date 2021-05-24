@@ -53,5 +53,5 @@ ErrorCode checkPasswordRules(const std::string& password) {
 }
 
 ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword) {
-    doPasswordsMatch(password, repeatedPassword)? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
+    return doPasswordsMatch(password, repeatedPassword)? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 }
