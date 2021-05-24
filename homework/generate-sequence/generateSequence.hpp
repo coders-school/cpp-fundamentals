@@ -11,7 +11,7 @@ std::vector<int> generateSequence(int count, int step) {
 
     for (unsigned int i = 1; i < count; ++i)
     {
-        seq[i] == seq[i - 1] + step;
+        seq[i] = seq[i - 1] + step;
     }
     
     return seq;
