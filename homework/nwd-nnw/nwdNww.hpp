@@ -3,18 +3,28 @@
 #include <iostream>
 
 std::list<int> intoPrimes(int);
+void print(int,int);
+
 int NWD(int lhs, int rhs) {
     // TODO: Implement me :)
-    for (auto el:intoPrimes(lhs)) std::cout<<el<<" ";
-    std::cout<<"\n";
-    for (auto el:intoPrimes(rhs)) std::cout<<el<<" ";
-    std::cout<<"\n";    
+ 
     return -1;
 }
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
     return -1;
+}
+
+
+
+
+//*********************************************************
+void print(int lhs,int rhs) {
+    for (auto el:intoPrimes(lhs)) std::cout<<el<<" ";
+    std::cout<<"\n";
+    for (auto el:intoPrimes(rhs)) std::cout<<el<<" ";
+    std::cout<<"\n";   
 }
 
 std::list<int> intoPrimes(int i)
