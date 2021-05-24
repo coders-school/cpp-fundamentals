@@ -28,3 +28,10 @@ std::string getErrorMessage(ErrorCode error) {
     }
     }
 }
+
+bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword){
+    if(password == repeatedPassword){
+        return true;
+    }
+    return false;
+}
