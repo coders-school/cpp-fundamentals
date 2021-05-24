@@ -40,13 +40,13 @@ ErrorCode checkPasswordRules(const std::string& password) {
     if ( password.size() < 9 ) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if ( std::none_of(begin(password), end(password), [](auto& el))){ return isdigit(el); } {
+    if ( std::none_of(begin(password), end(password), [](auto& el){ return isdigit(el); })) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    if(std::any_of(begin(password), end(password), [](auto& el))){return !ispunct(el);} {
+    if(std::any_of(begin(password), end(password), [](auto& el){ return !ispunct(el); })){
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    if(std::none_of(begin(password), end(password), [](auto& el))){return isupper(el);} {
+    if(std::none_of(begin(password), end(password), [](auto& el){ return isupper(el); })) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
     return ErrorCode::Ok;
