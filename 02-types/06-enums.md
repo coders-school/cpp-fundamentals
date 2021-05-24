@@ -64,7 +64,7 @@ Jeżeli chcemy nadać inne wartości musimy to zrobić ręcznie:
 ```cpp
 enum class ErrorCode {
   lack_of_water = 333,
-  to_much_load, // will be 334
+  too_much_load, // will be 334
   bearing_problem = 600,
   block_of_pump // will be 601
 }
