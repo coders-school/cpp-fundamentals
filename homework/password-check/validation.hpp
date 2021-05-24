@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 enum class ErrorCode {
     Ok,
@@ -8,3 +9,5 @@ enum class ErrorCode {
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
 }
+
+std::string getErrorMessage(ErrorCode);
