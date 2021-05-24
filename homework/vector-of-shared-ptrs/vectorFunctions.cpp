@@ -24,7 +24,7 @@ void print(const std::vector<std::shared_ptr<int>>& t_Vector)
     }
 }
 
-void add10(std::vector<std::shared_ptr<int>>& t_Vector)
+void add10(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
     for(auto pElement : t_Vector)
     {
@@ -43,7 +43,7 @@ void sub10(int* const t_pValue){
     *t_pValue -= 10;
 }
 
-void sub10(std::vector<std::shared_ptr<int>>& t_Vector)
+void sub10(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
     for(auto pElement : t_Vector)
     {
