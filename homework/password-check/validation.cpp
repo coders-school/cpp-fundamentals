@@ -39,8 +39,8 @@ bool doPasswordsMatch(const std::string& password, const std::string& repeatedPa
 ErrorCode checkPasswordRules(const std::string& password) {
     if ( password.size() < 9 ) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    };
-    if ( std::none_of(begin(password), end(password), [](auto& el){ return isdigit(el); } {
+    }
+    if ( std::none_of(begin(password), end(password), [](auto& el))){ return isdigit(el); } {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     };
     
