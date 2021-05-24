@@ -14,7 +14,7 @@ std::vector<std::shared_ptr<int>> generate(int count)
 
 void print(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
-    for(const auto pElement : t_Vector)
+    for(const auto& pElement : t_Vector)
     {
         if(pElement == nullptr)
         {
@@ -26,7 +26,7 @@ void print(const std::vector<std::shared_ptr<int>>& t_Vector)
 
 void add10(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
-    for(auto pElement : t_Vector)
+    for(const auto& pElement : t_Vector)
     {
         if(pElement == nullptr)
         {
@@ -45,7 +45,7 @@ void sub10(int* const t_pValue){
 
 void sub10(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
-    for(auto pElement : t_Vector)
+    for(const auto& pElement : t_Vector)
     {
         sub10(pElement.get());
     }
