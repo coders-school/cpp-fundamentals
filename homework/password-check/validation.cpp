@@ -1,6 +1,7 @@
 #include "validation.hpp"
 
 #include <array>
+#include <regex>
 
 std::string getErrorMessage(ErrorCode error)
 {
@@ -30,16 +31,23 @@ bool doPasswordsMatch(const std::string& firstPassword, const std::string& secon
 
 ErrorCode checkPasswordRules(const std::string& password)
 {
-	std::array<ErrorCode, 5> infos = 
-	{
-		ErrorCode::Ok,
-		ErrorCode::PasswordNeedsAtLeastNineCharacters,
-		ErrorCode::PasswordNeedsAtLeastOneNumber,
-		ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter,
-		ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter
-	};
+	std::regex uppercaseLetter{ "[A-Z]" };
+	std::regex digit{ "[0-9]" };
+	std::regex specialChar{ "\\W" };
 
-	return infos[ rand() % infos.size() ];
+	if (password.size() < 9)
+		return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+
+	if (!std::regex_search(password, digit))
+		return ErrorCode::PasswordNeedsAtLeastOneNumber;
+
+	if (!std::regex_search(password, specialChar))
+		return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+
+	if (!std::regex_search(password, uppercaseLetter))
+		return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+
+	return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(const std::string& firstPassword, const std::string& secondPassword)
