@@ -23,10 +23,7 @@ std::string getErrorMessage(ErrorCode error) {
 }
 
 bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword) {
-    if (password == repeatedPassword) {
-        return true;
-    }
-    return false;
+   return std::equal(begin(password), end(password), begin(repeatedPassword), end(repeatedPassword));
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
