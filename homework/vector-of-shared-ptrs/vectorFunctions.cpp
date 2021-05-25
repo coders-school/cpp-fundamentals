@@ -22,3 +22,11 @@ void print(const shared_pointers& pointers) {
     }
     std::cout << std::endl;
 }
+
+void add10(const shared_pointers& pointers) {
+    for (const auto& ptr : pointers) {
+        if (ptr) {
+            *ptr += 10;
+        }
+    }
+}
