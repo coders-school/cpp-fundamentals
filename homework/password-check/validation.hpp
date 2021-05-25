@@ -1,2 +1,21 @@
-// TODO: I'm empty :) Put enum and function headers here.
-// Don't forget the header guard - #pragma once
+#include <string>
+#pragma once
+
+enum class ErrorCode
+{
+    Ok;
+    PasswordNeedsAtLeastNinecharacters;
+    PasswordNeedsAtLeastOneNumber;
+    PasswordNeedsAtLeastOneSpecialCharacter;
+    PasswordNeedsAtLeastOneUpprecaseKetter;
+    PasswordsDoNotMatch;
+}
+std::string getErrorMessage(int);
+std::string PasswordNeedsAtLeastOneNumber(std::string);
+std::string PasswordNeedsAtLeastOneNumber(std::string,std::string);
+
+
+
+
+
+
