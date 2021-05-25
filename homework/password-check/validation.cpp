@@ -26,17 +26,23 @@ bool doPasswordsMatch(const std::string& password, const std::string& repeatedPa
     return password == repeatedPassword;
 }
 
-ErrorCode checkPasswordRules(const std::string password){
-    if (password.length() < 9)
+ErrorCode checkPasswordRules(const std::string& password) {
+    if (password.length() < PASSWORD_MIN_LENGTH) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    if (!(std::any_of(password.begin(), password.end(), ::isdigit)))
+    }
+    if (!(std::any_of(password.begin(), password.end(), ::isdigit))) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    if (!(std::any_of(password.begin(), password.end(), ::ispunct)))
+    }
+    if (!(std::any_of(password.begin(), password.end(), ::ispunct))) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    if (!(std::any_of(password.begin(), password.end(), ::isupper)))
+    }
+    if (!(std::any_of(password.begin(), password.end(), ::isupper))) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-        return ErrorCode::Ok;
+    }
+
+    return ErrorCode::Ok;
 }
+
 ErrorCode checkPassword(const std::string password, const std::string repeatedPassword){
     if(doPasswordsMatch(password, repeatedPassword))
         return checkPasswordRules(password);
