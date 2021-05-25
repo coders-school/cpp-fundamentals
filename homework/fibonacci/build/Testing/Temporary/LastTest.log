@@ -1,0 +1,71 @@
+Start testing: May 24 23:30 CEST
+----------------------------------------------------------
+1/1 Testing: calculate_test
+1/1 Test: calculate_test
+Command: "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/fibonacci-ut"
+Directory: /home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build
+"calculate_test" start time: May 24 23:30 CEST
+Output:
+----------------------------------------------------------
+Running main() from /home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 22 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 22 tests from FibonacciTest/Fibonacci
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/0
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/0 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/1
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/1 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/2
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/2 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/3
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/3 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/4
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/4 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/5
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/5 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/6
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/6 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/7
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/7 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/8
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/8 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/9
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/9 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/10
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciIteratively/10 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/0
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/0 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/1
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/1 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/2
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/2 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/3
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/3 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/4
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/4 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/5
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/5 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/6
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/6 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/7
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/7 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/8
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/8 (0 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/9
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/9 (4 ms)
+[ RUN      ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/10
+[       OK ] FibonacciTest/Fibonacci.ShouldCalculateFibonacciRecursively/10 (60 ms)
+[----------] 22 tests from FibonacciTest/Fibonacci (65 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 1 test suite ran. (65 ms total)
+[  PASSED  ] 22 tests.
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"calculate_test" end time: May 24 23:30 CEST
+"calculate_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 24 23:30 CEST

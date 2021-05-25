@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/CMakeFiles/googletest"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule"
+		},
+		{
+			"file" : "/home/adam/Documents/CodersSchool/3_CppFundamentals/cpp-fundamentals/homework/fibonacci/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}
