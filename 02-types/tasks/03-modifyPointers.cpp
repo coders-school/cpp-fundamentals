@@ -17,12 +17,12 @@ int main() {
     return 0;
 }
 
-void foo(int *num)
+void foo(int * const num)
 {
     *num = 10;
 }
 
-void bar(int *num)
+void bar(int * const num)
 {
     *num = 20;
 } 
