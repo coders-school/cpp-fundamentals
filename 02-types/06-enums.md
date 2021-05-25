@@ -67,7 +67,7 @@ enum class ErrorCode {
   too_much_load, // will be 334
   bearing_problem = 600,
   block_of_pump // will be 601
-}
+};
 ```
 <!-- .element: class="fragment fade-in" -->
 
@@ -136,7 +136,7 @@ enum class Color {
     RED,
     GREEN,
     BLUE,
-}
+};
 ```
 <!-- .element: class="fragment fade-in" -->
 
@@ -145,7 +145,7 @@ enum class TrafficLight {
     GREEN,
     YELLOW,
     RED
-}
+};
 ```
 <!-- .element: class="fragment fade-in" -->
 
