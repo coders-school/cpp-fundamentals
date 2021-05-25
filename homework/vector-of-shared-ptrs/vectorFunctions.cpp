@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-using shared_pointers = std::vector<std::shared_ptr<int>>;
-
 shared_pointers generate(int count) {
     shared_pointers pointers;
     if (count > 0) {
@@ -18,9 +16,8 @@ shared_pointers generate(int count) {
 
 void print(const shared_pointers& pointers) {
     for (const auto& ptr : pointers) {
-        std::cout << *ptr << ' ';
+        std::cout << *ptr << std::endl;
     }
-    std::cout << std::endl;
 }
 
 void add10(const shared_pointers& pointers) {
