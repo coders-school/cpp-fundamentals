@@ -8,11 +8,11 @@ enum class ErrorCode
     PasswordNeedsAtLeastOneNumber,
     PasswordNeedsAtLeastOneSpecialCharacter,
     PasswordNeedsAtLeastOneUpprecaseKetter,
-    PasswordsDoNotMatch;
-}
+    PasswordsDoNotMatch
+};
 std::string getErrorMessage(ErrorCode);
-std::string CheckPasswordRules(std::string);
-std::string CheckPassword(std::string,std::string);
+ErrorCode CheckPasswordRules(const std::string&);
+ErrorCode CheckPassword(const std::string&,const std::string&);
 
 
 
