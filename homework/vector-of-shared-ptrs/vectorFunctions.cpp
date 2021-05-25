@@ -36,3 +36,11 @@ void sub10(int* const pointer) {
         *pointer -= 10;
     }
 }
+
+void sub10(const shared_pointers& pointers) {
+    for (const auto& ptr : pointers) {
+        if (ptr) {
+            sub10(ptr.get());
+        }
+    }
+}
