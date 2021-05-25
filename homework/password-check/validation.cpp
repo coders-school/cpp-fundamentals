@@ -3,30 +3,25 @@
 #include <algorithm>
 #include <cctype>
 
-std::string getErrorMessage(ErrorCode mistake){
-    switch (mistake) {
+std::string getErrorMessage(ErrorCode error) {
+    switch (error) {
         case ErrorCode::Ok:
             return "Ok";
-            break;
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
             return "Password needs to have at least nine characters";
-            break;
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
             return "Password needs to have at least one number";
-            break;
         case ErrorCode:: PasswordNeedsAtLeastOneSpecialCharacter:
             return "Password needs to have at least one special character";
-            break;
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
             return "Password needs to have at least one uppercase letter";
-            break;
         case ErrorCode::PasswordsDoNotMatch:
             return "Passwords do not match";
-            break;
         default:
             return "Unknown error";
     }
 }
+
 bool doPasswordsMatch(std::string password, std::string repeatedPassword ){
     if(password == repeatedPassword) 
         return true;
