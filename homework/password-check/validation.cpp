@@ -22,3 +22,8 @@ std::string getErrorMessage(ErrorCode error)
     return "PasswordsDoNotMatch";
     }
 }
+
+bool doPasswordsMatch(const std::string& first, const std::string& second)
+{
+    return first == second;
+}
