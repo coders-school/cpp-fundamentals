@@ -24,3 +24,7 @@ void sub10(int* const ptr) {
         *ptr -= 10;
     }
 }
+
+void sub10(const std::vector<std::shared_ptr<int>>& vec) {
+    std::for_each(begin(vec), end(vec), [](auto& el) { sub10(el.get()); });
+}
