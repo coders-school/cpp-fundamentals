@@ -227,7 +227,7 @@ ___
 ```cpp
 void copy(int a) { a += 2; }
 void ref(int& a) { a += 2; }
-void ptr(int* a) ( *a += 2; )
+void ptr(int* a) { *a += 2; }
 
 void example() {
     int c = 10;
@@ -262,7 +262,7 @@ int fun(int* wsk);  // w argumencie funkcji - przekazanie wskaźnika (adresu)
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
-int a = 5 & 4;      // jako operacja arytmetyczna - suma bitowa
+int a = 5 & 4;      // jako operacja arytmetyczna - iloczyn bitowy
 int& b = a;         // przy typie - referencja na ten typ
 int &c = a;         // przy typie - referencja na ten typ
 std::cout << &a;    // przy zmiennej - adres tej zmiennej w pamięci
