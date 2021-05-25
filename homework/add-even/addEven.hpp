@@ -5,13 +5,13 @@ int addEven(const std::vector<int>& numbers) {
     
     auto sum =0;
 
-    for(auto element : numbers){
-        int division_rest = numbers[element]%2;
+    for(auto& element : numbers){
+        auto division_rest = element%2;
         if (division_rest == 0){
-        sum+=numbers[element];
+        sum += element;
         }
-
     }
 
     return sum;
 }
+
