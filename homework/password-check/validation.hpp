@@ -1,5 +1,7 @@
 #pragma once
 
+#include <algorithm>
+#include <cctype>
 #include <map>
 #include <string>
 
@@ -14,8 +16,8 @@ enum class ErrorCode : unsigned char {
 
 std::string getErrorMessage(ErrorCode error);
 
-bool doPasswordsMatch(std::string first, std::string second);
+bool doPasswordsMatch(const std::string& first, const std::string& second);
 
-ErrorCode checkPasswordRules(std::string password);
+ErrorCode checkPasswordRules(const std::string& password);
 
-ErrorCode checkPassword(std::string first, std::string second);
+ErrorCode checkPassword(const std::string& first, const std::string& second);

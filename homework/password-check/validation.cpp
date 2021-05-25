@@ -13,19 +13,19 @@ std::string getErrorMessage(ErrorCode error){
     return errorsNames[error];
 }
 
-bool doPasswordsMatch(std::string first, std::string second){
+bool doPasswordsMatch(const std::string& first, const std::string& second){
     if(first.compare(second)){
         return false;
     }
     return true;
 }
 
-ErrorCode checkPasswordRules(std::string password){
+ErrorCode checkPasswordRules(const std::string& password){
     unsigned char lottery = std::rand() % 5;
     return static_cast<ErrorCode>(lottery);
 }
 
-ErrorCode checkPassword(std::string first, std::string second){
+ErrorCode checkPassword(const std::string& first, const std::string& second){
     if(!doPasswordsMatch(first, second)){
         return ErrorCode::PasswordsDoNotMatch;
     }
