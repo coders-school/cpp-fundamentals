@@ -22,12 +22,10 @@ std::string getErrorMessage(ErrorCode error) {
     }
 }
 
-bool doPasswordsMatch(std::string password, std::string repeatedPassword ){
-    if(password == repeatedPassword) 
-        return true;
-    else 
-        return false;
+bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword) {
+    return password == repeatedPassword;
 }
+
 ErrorCode checkPasswordRules(const std::string password){
     if (password.length() < 9)
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
