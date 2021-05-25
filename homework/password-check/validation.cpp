@@ -10,7 +10,7 @@ std::string getErrorMessage(ErrorCode c)
  
    if (c==ErrorCode::Ok){
 
-     return "OK";
+     return "Ok";
    }
    if (c==ErrorCode::PasswordNeedsAtLeastNineCharacters){
 
