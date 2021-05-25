@@ -1,5 +1,7 @@
 #include "vectorFunctions.hpp"
 
+#include <iostream>
+
 using shared_pointers = std::vector<std::shared_ptr<int>>;
 
 shared_pointers generate(int count) {
@@ -12,4 +14,11 @@ shared_pointers generate(int count) {
     }
 
     return pointers;
+}
+
+void print(const shared_pointers& pointers) {
+    for (const auto& ptr : pointers) {
+        std::cout << *ptr << ' ';
+    }
+    std::cout << std::endl;
 }
