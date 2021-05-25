@@ -1,8 +1,6 @@
 #pragma once
-#include <iostream>
+
 #include <string>
-#include <ctype.h>
-#include <algorithm>
 
 enum class ErrorCode{
     Ok,
@@ -17,4 +15,3 @@ std::string getErrorMessage(ErrorCode);
 bool doPasswordsMatch(std::string, std::string );
 ErrorCode checkPasswordRules(const std::string);
 ErrorCode checkPassword(const std::string, const std::string);
-
