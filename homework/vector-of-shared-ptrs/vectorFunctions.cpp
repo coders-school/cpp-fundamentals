@@ -14,3 +14,7 @@ void print(const std::vector<std::shared_ptr<int>>& vec) {
         std::cout << *el << "\n";
     }
 }
+
+void add10(const std::vector<std::shared_ptr<int>>& vec) {
+    std::for_each(begin(vec), end(vec), [](auto& el) { *el += 10; } );
+}
