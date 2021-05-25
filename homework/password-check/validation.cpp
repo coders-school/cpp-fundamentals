@@ -1,5 +1,8 @@
 #include "validation.hpp"
 
+#include <algorithm>
+#include <cctype>
+
 std::string getErrorMessage(ErrorCode mistake){
     switch (mistake) {
         case ErrorCode::Ok:
