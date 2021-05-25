@@ -17,6 +17,7 @@ INSTANTIATE_TEST_SUITE_P(
     MaxOfVectorTests,
     MaxOfVectorTestFixture,
     ::testing::Values(
+        std::make_tuple(std::vector<int>{}, 0),
         std::make_tuple(std::vector<int>{0}, 0),
         std::make_tuple(std::vector<int>{0, -1}, 0),
         std::make_tuple(std::vector<int>{0, 1}, 1),
