@@ -30,3 +30,9 @@ void add10(const shared_pointers& pointers) {
         }
     }
 }
+
+void sub10(int* const pointer) {
+    if (pointer) {
+        *pointer -= 10;
+    }
+}
