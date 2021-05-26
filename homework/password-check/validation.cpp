@@ -1,6 +1,5 @@
 #include "validation.hpp"
-#include <algorithm>
-#include <cctype>
+
 std::string getErrorMessage(ErrorCode error)
 {
     switch (error)
@@ -34,10 +33,10 @@ ErrorCode checkPasswordRules(const std::string &password)
     return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     if(std::none_of(begin(password), end(password), [](auto& i){return std::isupper(i);}))
     return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    else
+    
     return ErrorCode::Ok;
 }
-    ErrorCode CheckPassword(const std::string& password, const std::string& repeatedPassword)
+    ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword)
     {
        return doPasswordsMatch(password, repeatedPassword) ? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 
