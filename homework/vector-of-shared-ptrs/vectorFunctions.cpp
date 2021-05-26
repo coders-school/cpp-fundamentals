@@ -21,5 +21,8 @@ void sub10(int *const ptr) {
 }
 
 void sub10(std::vector<std::shared_ptr<int>> vec) {
-
+    for (auto i : vec) {
+        int *rawPtr = i.get();
+        sub10(rawPtr);
+    }
 }
