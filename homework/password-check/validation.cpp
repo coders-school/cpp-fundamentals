@@ -21,3 +21,8 @@ std::string getErrorMessage(const ErrorCode code)
             return "Undefined error";
     }
 }
+
+bool doPasswordsMatch(const std::string& pass1, const std::string& pass2)
+{
+    return pass1 == pass2;
+}
