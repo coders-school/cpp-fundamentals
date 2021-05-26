@@ -4,6 +4,9 @@
 
 shared_pointers generate(int count) {
     shared_pointers pointers;
+    if (count < 1) {
+        std::cout << "The count must be greater than 0.\n";
+    }
     if (count > 0) {
         pointers.reserve(count);
         for (int i{}; i < count; ++i) {
