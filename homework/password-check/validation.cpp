@@ -42,34 +42,42 @@ return pas1==pas2;
 
 }
 
+
 ErrorCode checkPasswordRules(std::string pas)
 {
-int number = 0;
-srand(time(NULL));
-number=rand()%5;
+std::string number="0123456789";
+std::string b_letter="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+std::string special="~!@#$%^&*()_+:'|<>?/.,';`\"\\";
 
-  if(number==0)
-  {
-    return ErrorCode::Ok;
-  }
-  if(number==1)
+
+
+  if(pas.size()<9)
   {
     return ErrorCode::PasswordNeedsAtLeastNineCharacters;
   }
-  if(number==2)
+  
+  size_t poz = pas.find_first_of(number);
+  if(poz == std::string::npos)
   {
     return ErrorCode::PasswordNeedsAtLeastOneNumber;
   }
-  if(number==3)
+  
+  size_t poz = pas.find_first_of(special);
+  if(poz == std::string::npos)
   {
-   return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+   ErrorCode::PasswordNeedsAtLeastNineCharacters;
   }
-  if(number==4)
+
+  size_t poz=pas.find_first_of(b_letter);
+  if(poz == std::string::npos)
   {
   return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
   }
 
+  return ErrorCode::Ok;
+
 }
+
 
 ErrorCode checkPassword(std::string pas_1,std::string pas_2)
 {
