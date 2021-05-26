@@ -24,7 +24,7 @@ std::string getErrorMessage(ErrorCode error)
     return "Passwords do not match";
     }
 }
-ErrorCode CheckPasswordRules(const std::string &password)
+ErrorCode checkPasswordRules(const std::string &password)
 {
     if(password.size() < 9)
     return ErrorCode::PasswordNeedsAtLeastNineCharacters;
@@ -37,9 +37,9 @@ ErrorCode CheckPasswordRules(const std::string &password)
     else
     return ErrorCode::Ok;
 }
-    ErrorCode CheckPassword(const std::string &password, const std::string &repeatedPassword)
+    ErrorCode CheckPassword(const std::string& password, const std::string& repeatedPassword)
     {
-       return doPasswordsMatch(password, repeatedPassword) ? CheckPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
+       return doPasswordsMatch(password, repeatedPassword) ? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 
     }
 bool doPasswordsMatch(const std::string& first, const std::string& second)
