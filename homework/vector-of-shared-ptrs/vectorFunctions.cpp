@@ -2,16 +2,15 @@
 
 #include <iostream>
 
-shared_pointers generate(int count) {
-    shared_pointers pointers;
-    if (count < 1) {
-        std::cout << "The count must be greater than 0.\n";
+shared_pointers generate(int count) {  
+    if (count < 1) { 
+        std::cout << "The count must be greater than 0." << std::endl;  
+    return {};
     }
-    if (count > 0) {
-        pointers.reserve(count);
-        for (int i{}; i < count; ++i) {
+    shared_pointers pointers; 
+    pointers.reserve(count);
+    for (int i{}; i < count; ++i) {
             pointers.emplace_back(std::make_shared<int>(i));
-        }
     }
 
     return pointers;
