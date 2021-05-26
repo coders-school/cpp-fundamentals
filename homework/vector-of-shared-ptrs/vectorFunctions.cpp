@@ -7,7 +7,9 @@ std::vector<std::shared_ptr<int>> generate(int count) {
 }
 
 void print(std::vector<std::shared_ptr<int>> vec) {
-
+    for (auto i : vec){
+        std::cout << i << "\n";
+    }
 }
 
 void add10(std::vector<std::shared_ptr<int>> vec) {
