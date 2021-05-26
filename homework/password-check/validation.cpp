@@ -1,6 +1,9 @@
 #include "validation.hpp"
+#include <algorithm>
+#include <functional>
+#include <list>
 
-std::map<ErrorCode, std::string> errorsNames = {
+const std::map<ErrorCode, std::string> errorsNames = {
     {ErrorCode::Ok, "Ok"},
     {ErrorCode::PasswordNeedsAtLeastNineCharacters, "Password needs to have at least nine characters"},
     {ErrorCode::PasswordNeedsAtLeastOneNumber, "Password needs to have at least one number"},
@@ -8,8 +11,8 @@ std::map<ErrorCode, std::string> errorsNames = {
     {ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter, "Password needs to have at least one uppercase letter"},
     {ErrorCode::PasswordsDoNotMatch, "Passwords do not match"}};
 
-std::string getErrorMessage(ErrorCode error) {
-    return errorsNames[error];
+std::string getErrorMessage(const ErrorCode error) {
+    return errorsNames.at(error);
 }
 
 bool doPasswordsMatch(const std::string& first, const std::string& second) {
@@ -19,25 +22,26 @@ bool doPasswordsMatch(const std::string& first, const std::string& second) {
     return true;
 }
 
-bool isAnyLetter(const std::string& password, int (&func)(int)) {
-    bool result = std::any_of(begin(password), end(password), [&func](int letter) {
-        return func(letter);
-    });
-    return result;
-}
-
 ErrorCode checkPasswordRules(const std::string& password) {
-    if (password.length() < 9) {
-        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    }
-    if (!isAnyLetter(password, isupper)) {
-        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    }
-    if (!isAnyLetter(password, isdigit)) {
-        return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    }
-    if (!isAnyLetter(password, ispunct)) {
-        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    auto moreThanEight = [lenght = 0](char) mutable{
+        return ++lenght > 8;
+    };
+
+    std::list<std::pair<std::function<bool(char)>, ErrorCode>> rules = {
+        {moreThanEight, ErrorCode::PasswordNeedsAtLeastNineCharacters},
+        {isupper, ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter},
+        {isdigit, ErrorCode::PasswordNeedsAtLeastOneNumber},
+        {ispunct, ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter}};
+
+    bool is_ok = std::any_of(begin(password), end(password), [&rules](char letter) {
+        rules.remove_if([letter](auto& rule) {
+            return rule.first(letter);
+        });
+        return rules.empty();
+    });
+
+    if (!is_ok) {
+        return rules.front().second;
     }
     return ErrorCode::Ok;
 }
