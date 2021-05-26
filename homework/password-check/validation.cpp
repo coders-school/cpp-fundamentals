@@ -6,32 +6,33 @@
 std::string getErrorMessage(ErrorCode code){
     switch(code){
         case ErrorCode::Ok:{
-            return "OK";
+            return "Ok";
             break;
         }
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:{
-            return "Password needs at least nine characters.";
+            return "Password needs to have at least nine characters";
             break;
         }
         case ErrorCode::PasswordNeedsAtLeastOneNumber:{
-            return "Password needs at least one number.";
+            return "Password needs to have at least one number";
             break;
         }
         case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:{
-            return "Password needs at leastone special character.";
+            return "Password needs to have at least one special character";
             break;
         }
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:{
-            return "Password needs at least one uppercase letter.";
+            return "Password needs to have at least one uppercase letter";
             break;
         }
-        case ErrorCode::PasswordsDoesNotMatch:{
-            return "Passwords does not match.";
+        case ErrorCode::PasswordsDoNotMatch:{
+            return "Passwords do not match";
             break;
         }
     }
-    return "test";
+    return "Ok";
 }
+
 bool doPasswordsMatch(std::string firstPassword, std::string secondPassword) {
     if (firstPassword == secondPassword) {
         return true;
@@ -53,4 +54,12 @@ ErrorCode checkPasswordRules(std::string password) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
     return ErrorCode::Ok;
+}
+
+ErrorCode checkPassword(std::string password1, std::string password2){
+    if (doPasswordsMatch(password1, password2) == false){
+        return ErrorCode::PasswordsDoNotMatch;
+    } else {
+        return checkPasswordRules(password1);   
+    }
 }
