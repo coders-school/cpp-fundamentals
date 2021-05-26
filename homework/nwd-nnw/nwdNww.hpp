@@ -1,14 +1,19 @@
 #pragma once
+#include <cmath>
 
 int NWD(int lhs, int rhs) {
     
     auto result = 1;
     auto range = 0;
 
-    if (lhs > rhs){
-        range = rhs;
+    if (lhs == 0){
+        range = std::abs(rhs);
+    }else if(rhs == 0)
+        range = std::abs(rhs);
+    }else if(lhs > rhs){
+        range = std::abs(rhs);
     }else{
-        range = lhs;
+        range = std::abs(lhs);
     }
 
     for (auto i=1; i <= range; ++i){
