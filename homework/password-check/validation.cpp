@@ -61,11 +61,11 @@ std::string special="~!@#$%^&*()_+:'|<>?/.,';`\"\\";
   {
     return ErrorCode::PasswordNeedsAtLeastOneNumber;
   }
-  
+
   size_t poz_b = pas.find_first_of(special);
   if(poz_b == std::string::npos)
   {
-  ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+  return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
   }
 
   size_t poz_c=pas.find_first_of(b_letter);
