@@ -18,7 +18,7 @@ std::string calculate(const std::string& command, int first, int second) {
     }else if(command == "subtract"){
         result = std::to_string(first - second);
     }else{
-        result = "Ivalid data";
+        result = "Invalid data";
     }
     return result;
 }
