@@ -14,3 +14,4 @@ enum class ErrorCode
 
 std::string getErrorMessage(const ErrorCode);
 bool doPasswordsMatch(const std::string&, const std::string&);
+ErrorCode checkPasswordRules(const std::string&);
