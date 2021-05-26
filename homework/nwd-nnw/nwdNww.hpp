@@ -27,6 +27,17 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    
+    auto result = 0;
+    auto divide_rest = 0;
+    auto multiple = 0;
+
+    while (divide_rest != 0)
+    {
+        multiple += lhs;
+        divide_rest = multiple % rhs
+
+    }
+    result = multiple;
+    return result;
 }
