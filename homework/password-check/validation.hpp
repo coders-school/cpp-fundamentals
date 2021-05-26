@@ -4,15 +4,15 @@
 enum class ErrorCode
 {
     Ok,
-    PasswordNeedsAtLeastNinecharacters,
+    PasswordNeedsAtLeastNineCharacters,
     PasswordNeedsAtLeastOneNumber,
     PasswordNeedsAtLeastOneSpecialCharacter,
-    PasswordNeedsAtLeastOneUpprecaseKetter,
+    PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
 };
 std::string getErrorMessage(ErrorCode);
 bool doPasswordsMatch(const std::string&, const std::string&);
-ErrorCode CheckPasswordRules(const std::string&);
+ErrorCode checkPasswordRules(const std::string&);
 ErrorCode CheckPassword(const std::string&,const std::string&);
 
 

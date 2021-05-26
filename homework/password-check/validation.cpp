@@ -8,7 +8,7 @@ std::string getErrorMessage(ErrorCode error)
     case ErrorCode::Ok:
     return "ok";
         
-    case ErrorCode::PasswordNeedsAtLeastNinecharacters:
+    case ErrorCode::PasswordNeedsAtLeastNineCharacters:
     return "Password needs to have at least nine characters";
         
     case ErrorCode::PasswordNeedsAtLeastOneNumber:
@@ -17,7 +17,7 @@ std::string getErrorMessage(ErrorCode error)
     case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
     return "Password needs to have at least one special character";
         
-    case ErrorCode::PasswordNeedsAtLeastOneUpprecaseKetter:
+    case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
     return "Password needs to have at least one uppercase letter";
         
     default:
@@ -27,19 +27,19 @@ std::string getErrorMessage(ErrorCode error)
 ErrorCode CheckPasswordRules(const std::string &password)
 {
     if(password.size() < 9)
-    return ErrorCode::PasswordNeedsAtLeastNinecharacters;
+    return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     if (std::none_of(begin(password), end(password), [](auto& i){return std::isalnum(i);}))
     return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    if(std::none_of(begin(password), end(password), [](auto& i){return std::inspuct(i);})) 
+    if(std::none_of(begin(password), end(password), [](auto& i){return std::ispunct(i);})) 
     return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     if(std::none_of(begin(password), end(password), [](auto& i){return std::isupper(i);}))
-    return ErrorCode::PasswordNeedsAtLeastOneUpprecaseKetter;
+    return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     else
     return ErrorCode::Ok;
 }
     ErrorCode CheckPassword(const std::string &password, const std::string &repeatedPassword)
     {
-       return doPasswordsMuch(password, repeatedPassword) ? CheckPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
+       return doPasswordsMatch(password, repeatedPassword) ? CheckPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 
     }
 bool doPasswordsMatch(const std::string& first, const std::string& second)
