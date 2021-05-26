@@ -49,3 +49,7 @@ ErrorCode checkPasswordRules(const std::string& pass1)
         return ErrorCode::Ok;
     }
 
+ErrorCode checkPassword(const std::string& pass1, const std::string& pass2)
+{
+    return doPasswordsMatch(pass1,pass2) ? checkPasswordRules(pass1) : ErrorCode::PasswordsDoNotMatch;
+}
