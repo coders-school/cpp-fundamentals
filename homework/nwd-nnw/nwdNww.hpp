@@ -28,16 +28,8 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     
-    auto result = 0;
-    auto divide_rest = 0;
-    auto multiple = 0;
-
-    while (divide_rest != 0)
-    {
-        multiple += lhs;
-        divide_rest = multiple % rhs
-
-    }
-    result = multiple;
-    return result;
+    auto result = NWD(lhs,rhs);
+    auto multiple = lhs * rhs / result;
+    
+    return multiple;
 }
