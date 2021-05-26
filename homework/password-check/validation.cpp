@@ -5,7 +5,7 @@ std::string getErrorMessage(ErrorCode error)
     switch (error)
     {
     case ErrorCode::Ok:
-    return "ok";
+    return "Ok";
         
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
     return "Password needs to have at least nine characters";
@@ -23,26 +23,35 @@ std::string getErrorMessage(ErrorCode error)
     return "Passwords do not match";
     }
 }
+
 ErrorCode checkPasswordRules(const std::string &password)
 {
     if(password.size() < 9)
-    return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
     if (std::none_of(begin(password), end(password), [](auto& i){return std::isalnum(i);}))
-    return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    if(std::none_of(begin(password), end(password), [](auto& i){return std::ispunct(i);})) 
-    return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    if(std::none_of(begin(password), end(password), [](auto& i){return std::ispunct(i);}))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
     if(std::none_of(begin(password), end(password), [](auto& i){return std::isupper(i);}))
-    return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
     
     return ErrorCode::Ok;
 }
-    ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword)
-    {
-       return doPasswordsMatch(password, repeatedPassword) ? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 
-    }
+ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword)
+{
+    return doPasswordsMatch(password, repeatedPassword) ? checkPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
+}
+
 bool doPasswordsMatch(const std::string& first, const std::string& second)
 {
     return first == second;
 }
-
