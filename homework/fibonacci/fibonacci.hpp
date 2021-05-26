@@ -19,13 +19,26 @@ int fibonacci_iterative(int sequence) {
             iteration++;
             number1 = number2;
             number2 = result;
-            std::cout << result << "\n";
         }   
     }
     return result;
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: Your implementation goes here
-    return 0;
+    
+    auto iteration = 1;
+    auto number1 = 0;
+    auto number2 = 1;
+    auto result = 0;
+
+    if (sequence <= 0){
+        result = number1;
+    }else if(sequence == 1){
+        result = number2;
+    else {
+        result = fibonacci_recursive (sequence -1) + fibonacci_recursive (sequence -2)
+        
+    }
+
+    return result;
 }
