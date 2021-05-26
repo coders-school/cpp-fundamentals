@@ -29,7 +29,9 @@ int NWD(int lhs, int rhs) {
 int NWW(int lhs, int rhs) {
     
     auto result = NWD(lhs,rhs);
-    auto multiple = lhs * rhs / result;
-    
+    auto multiple = 0;
+    if (result != 0){
+        multiple = std::abs(lhs * rhs) / result;
+    }
     return multiple;
 }
