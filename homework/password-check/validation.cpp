@@ -42,3 +42,8 @@ ErrorCode CheckPasswordRules(const std::string &password)
        return doPasswordsMuch(password, repeatedPassword) ? CheckPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
 
     }
+bool doPasswordsMatch(const std::string& first, const std::string& second)
+{
+    return first == second;
+}
+
