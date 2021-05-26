@@ -1,6 +1,6 @@
 #include "validation.hpp"
 
-std::string getErrorMessage(ErrorCode error) {
+std::string getErrorMessage(const ErrorCode& error) {
 
     if (error == ErrorCode::PasswordNeedsAtLeastNineCharacters) {
         return "Password needs to have at least nine characters";
@@ -20,14 +20,18 @@ std::string getErrorMessage(ErrorCode error) {
     return "Ok";
 }
 
-bool doPasswordsMatch(std::string firstPassword, std::string secondPassword) {
-    return false;
+bool doPasswordsMatch(const std::string& firstPassword, const std::string& secondPassword) {
+    return (firstPassword == secondPassword);
 }
 
-ErrorCode checkPasswordRules(std::string password) {
+ErrorCode checkPasswordRules(const std::string& password) {
     return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(std::string firstPassword, std::string secondPassword) {
-    return ErrorCode::Ok;
+ErrorCode checkPassword(const std::string& firstPassword, const std::string& secondPassword) {
+
+    if (doPasswordsMatch(firstPassword, secondPassword)) {
+        return checkPasswordRules(firstPassword);
+    }
+    return ErrorCode::PasswordsDoNotMatch;
 }
