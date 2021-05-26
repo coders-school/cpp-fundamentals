@@ -27,11 +27,6 @@ bool doPasswordsMatch(std::string Passwords1, std::string Passwords2)
     return Passwords1==Passwords2;
 }
 
-ErrorCode doPasswordsMatch(std::string Passwords)
-{
-    return ErrorCode::Ok;
-}
-
 ErrorCode checkPasswordRules(std::string Passwords)
 {
     return ErrorCode::Ok;
