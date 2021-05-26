@@ -1,21 +1,24 @@
 #pragma once
+#include <iostream>
 
 int fibonacci_iterative(int sequence) {
     
     auto iteration = 0;
-    auto number = 0;
+    auto number = 1;
+    auto result = 0
 
-    
-    std::cout << sequecne << "\n";
-    while (iteration < sequence)
-    {
-        
-    std::cout << number << "\n";
-        number += number;
-        iteration++;
+    if (sequence == 0){
+        result = 0;
+    }else if(sequence > 0){
+         while (iteration < sequence)
+        {
+             std::cout << number << "\n";
+            result += number;
+            iteration++;
+            number = result;
+        }   
     }
-
-    return number;
+    return result;
 }
 
 int fibonacci_recursive(int sequence) {
