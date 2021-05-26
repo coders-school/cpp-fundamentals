@@ -36,13 +36,13 @@ ErrorCode checkPasswordRules(const std::string& pass1)
             return ErrorCode::PasswordNeedsAtLeastNineCharacters;
         }
 
-        if(!(std::any_of(pass1.begin(),pass1.end(), ::isdigit))){
+        if(std::none_of(pass1.cbegin(),pass1.cend(), ::isdigit)){
             return ErrorCode::PasswordNeedsAtLeastOneNumber;
         }
-        if(!(std::any_of(pass1.begin(),pass1.end(), ::ispunct))){
+        if(std::none_of(pass1.cbegin(),pass1.cend(), ::ispunct)){
             return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
         }
-        if(!(std::any_of(pass1.begin(),pass1.end(), ::isupper))){
+        if(std::none_of(pass1.cbegin(),pass1.cend(), ::isupper)){
             return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
         }
         

@@ -18,7 +18,7 @@ TEST(DoPasswordsMatchTests, returnsFalseForDifferentPasswords) {
     EXPECT_FALSE(doPasswordsMatch(PROPER_PASSWORD, EMPTY_PASSWORD));
     EXPECT_FALSE(doPasswordsMatch(PROPER_PASSWORD, TOO_SHORT_PASSWORD));
 }
-
+/*
 TEST(checkPasswordTests, returnsPasswordsDoNotMatchForDifferentPasswords) {
     EXPECT_EQ(checkPassword(PROPER_PASSWORD, EMPTY_PASSWORD), ErrorCode::PasswordsDoNotMatch); // equal ==
     EXPECT_EQ(checkPassword(EMPTY_PASSWORD, PROPER_PASSWORD), ErrorCode::PasswordsDoNotMatch);
@@ -36,6 +36,7 @@ TEST(checkPasswordTests, returnsValuesBetweenOkAndPasswordNeedsAtLeastOneUpperca
     EXPECT_GE(checkPassword(PROPER_PASSWORD, PROPER_PASSWORD), MIN_ALLOWED_ERROR_CODE);
     EXPECT_LE(checkPassword(PROPER_PASSWORD, PROPER_PASSWORD), MAX_ALLOWED_ERROR_CODE);
 }
+*/
 
 TEST(getErrorMessageTests, returnsErrorCodeAsString) {
     EXPECT_EQ(getErrorMessage(ErrorCode::Ok), "Ok");
