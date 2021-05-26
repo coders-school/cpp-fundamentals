@@ -3,19 +3,23 @@
 
 int fibonacci_iterative(int sequence) {
     
-    auto iteration = 0;
-    auto number = 1;
-    auto result = 0
+    auto iteration = 1;
+    auto number1 = 0;
+    auto number2 = 1;
+    auto result = 0;
 
     if (sequence == 0){
-        result = 0;
-    }else if(sequence > 0){
+        result = number1;
+    }else if (sequence == 1){
+        result = number2;
+    }else {
          while (iteration < sequence)
-        {
-             std::cout << number << "\n";
-            result += number;
+        {         
+            result = number1 + number2;
             iteration++;
-            number = result;
+            number1 = number2;
+            number2 = result;
+            std::cout << result << "\n";
         }   
     }
     return result;
