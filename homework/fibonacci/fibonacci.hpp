@@ -5,8 +5,12 @@ int fibonacci_iterative(int sequence) {
     auto iteration = 0;
     auto number = 0;
 
+    
+    std::cout << sequecne << "\n";
     while (iteration < sequence)
     {
+        
+    std::cout << number << "\n";
         number += number;
         iteration++;
     }
