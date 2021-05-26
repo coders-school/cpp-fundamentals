@@ -1,7 +1,7 @@
 #include "validation.hpp"
 #include <stdlib.h>
-#include <random>
-// TODO: Put implementations here
+#include <cctype>
+#include <algorithm>
 
 int checkPassword(const std::string &password, const std::string &repeatedPassword)
 {
@@ -9,46 +9,55 @@ int checkPassword(const std::string &password, const std::string &repeatedPasswo
     {
         return checkPasswordRules(password);
     }
-    return ErrorCode(5);
+    return ErrorCode::PasswordsDoNotMatch;
 }
 
 bool doPasswordsMatch(const std::string &password, const std::string &repeatedPassword)
 {
-    if (password == repeatedPassword)
+    return password == repeatedPassword;
+}
+
+int checkPasswordRules(const std::string &password)
+{
+    if (password.length() < 9)
     {
-        return true;
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    return false;
-}
-
-int checkPasswordRules(const std::string &)
-{
-    std::random_device rand_dev;
-    std::mt19937 generator(rand_dev());
-    std::uniform_int_distribution<int> distr(0, 4);
-    return ErrorCode(distr(generator));
-}
-
-std::string getErrorMessage(int errorCode)
-{
-    switch (errorCode)
+    if (std::none_of(password.begin(), password.end(), isdigit))
     {
-    case 0:
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+        if (std::none_of(password.begin(), password.end(), ispunct))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if (std::none_of(password.begin(), password.end(), isupper))
+    {
+        return PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    return ErrorCode::Ok;
+}
+
+std::string getErrorMessage(const int code)
+{
+    switch (code)
+    {
+    case ErrorCode::Ok:
         return "Ok";
         break;
-    case 1:
+    case ErrorCode::PasswordNeedsAtLeastNineCharacters:
         return "Password needs to have at least nine characters";
         break;
-    case 2:
+    case ErrorCode::PasswordNeedsAtLeastOneNumber:
         return "Password needs to have at least one number";
         break;
-    case 3:
+    case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
         return "Password needs to have at least one special character";
         break;
-    case 4:
+    case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
         return "Password needs to have at least one uppercase letter";
         break;
-    case 5:
+    case ErrorCode::PasswordsDoNotMatch:
         return "Passwords do not match";
         break;
     default:
