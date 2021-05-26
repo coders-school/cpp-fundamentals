@@ -5,27 +5,24 @@
 
 int checkPassword(const std::string &password, const std::string &repeatedPassword)
 {
-    if(!doPasswordsMatch)
+    if (doPasswordsMatch(password, repeatedPassword))
     {
-        ErrorCode(5);
+        return checkPasswordRules(password);
     }
-    return checkPasswordRules(password);
+    return ErrorCode(5);
 }
 
 bool doPasswordsMatch(const std::string &password, const std::string &repeatedPassword)
 {
-    if(password == repeatedPassword || !password.empty() || !repeatedPassword.empty())
+    if (password == repeatedPassword)
     {
         return true;
     }
     return false;
-    
 }
 
 int checkPasswordRules(const std::string &)
 {
-    const int range_from  = 0;
-    const int range_to    = 10;
     std::random_device rand_dev;
     std::mt19937 generator(rand_dev());
     std::uniform_int_distribution<int> distr(0, 4);
