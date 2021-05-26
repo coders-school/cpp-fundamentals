@@ -1,4 +1,6 @@
 #include "validation.hpp"
+#include <algorithm>
+#include <cctype>
 std::string getErrorMessage(ErrorCode error)
 {
     switch (error)
@@ -22,9 +24,21 @@ std::string getErrorMessage(ErrorCode error)
     return "Passwords do not match";
     }
 }
-std::string CheckPasswordRules(const std::string &password)
+ErrorCode CheckPasswordRules(const std::string &password)
 {
     if(password.size() < 9)
-    return "Password needs to have at least nine characters";
-    else if (
+    return ErrorCode::PasswordNeedsAtLeastNinecharacters;
+    if (std::none_of(begin(password), end(password), [](auto& i){return std::isalnum(i);}))
+    return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    if(std::none_of(begin(password), end(password), [](auto& i){return std::inspuct(i);})) 
+    return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    if(std::none_of(begin(password), end(password), [](auto& i){return std::isupper(i);}))
+    return ErrorCode::PasswordNeedsAtLeastOneUpprecaseKetter;
+    else
+    return ErrorCode::Ok;
 }
+    ErrorCode CheckPassword(const std::string &password, const std::string &repeatedPassword)
+    {
+       return doPasswordsMuch(password, repeatedPassword) ? CheckPasswordRules(password) : ErrorCode::PasswordsDoNotMatch;
+
+    }
