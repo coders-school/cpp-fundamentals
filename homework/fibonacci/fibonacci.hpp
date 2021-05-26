@@ -35,9 +35,8 @@ int fibonacci_recursive(int sequence) {
         result = number1;
     }else if(sequence == 1){
         result = number2;
-    else {
-        result = fibonacci_recursive (sequence -1) + fibonacci_recursive (sequence -2)
-        
+    }else {
+        result = fibonacci_recursive(sequence -1) + fibonacci_recursive(sequence -2);
     }
 
     return result;
