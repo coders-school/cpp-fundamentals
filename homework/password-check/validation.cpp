@@ -55,7 +55,7 @@ std::string special="~!@#$%^&*()_+:'|<>?/.,';`\"\\";
   {
     return ErrorCode::PasswordNeedsAtLeastNineCharacters;
   }
-  
+
   size_t poz_a = pas.find_first_of(number);
   if(poz_a == std::string::npos)
   {
@@ -65,7 +65,7 @@ std::string special="~!@#$%^&*()_+:'|<>?/.,';`\"\\";
   size_t poz_b = pas.find_first_of(special);
   if(poz_b == std::string::npos)
   {
-   ErrorCode::PasswordNeedsAtLeastNineCharacters;
+  ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
   }
 
   size_t poz_c=pas.find_first_of(b_letter);
