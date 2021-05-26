@@ -50,6 +50,7 @@ std::string getErrorMessage(int errorCode)
         break;
     case 5:
         return "Passwords do not match";
+        break;
     default:
         return "Behaviour out of scope";
         break;
