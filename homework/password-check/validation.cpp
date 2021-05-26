@@ -36,8 +36,8 @@ ErrorCode checkPasswordRules(std::string Password)
         if(isspace(i)){whetherItContainsSpecialCharacter=true;}
         if(islower(i)){whetherItContainsUppercaseLetter=true;}
     }
-    if(!whetherItContainsNumber){return ErrorCode::PasswordNeedsAtLeastNineCharacters;}
-    if(!whetherItContainsSpecialCharacter){return ErrorCode::PasswordNeedsAtLeastOneNumber;}
+    if(!whetherItContainsNumber){return ErrorCode::PasswordNeedsAtLeastOneNumber;}
+    if(!whetherItContainsSpecialCharacter){return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;}
     if(!whetherItContainsUppercaseLetter){return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;}
     return ErrorCode::Ok;
 }
