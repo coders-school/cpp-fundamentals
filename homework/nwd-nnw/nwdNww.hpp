@@ -3,13 +3,13 @@
 
 int NWD(int lhs, int rhs) {
     
-    auto result = 1;
+    auto result = 0;
     auto range = 0;
 
     if (lhs == 0){
         range = std::abs(rhs);
-    }else if(rhs == 0)
-        range = std::abs(rhs);
+    }else if(rhs == 0){
+        range = std::abs(lhs);
     }else if(lhs > rhs){
         range = std::abs(rhs);
     }else{
