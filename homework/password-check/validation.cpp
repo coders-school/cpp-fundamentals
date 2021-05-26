@@ -1,21 +1,35 @@
 #include "validation.hpp"
+#include <stdlib.h>
+#include <random>
 // TODO: Put implementations here
 
-int checkPassword(const std::string &password, const std::string &)
+int checkPassword(const std::string &password, const std::string &repeatedPassword)
 {
-    
-    return 1;
+    if(!doPasswordsMatch)
+    {
+        ErrorCode(5);
+    }
+    return checkPasswordRules(password);
 }
 
-bool doPasswordsMatch(const std::string &, const std::string &)
+bool doPasswordsMatch(const std::string &password, const std::string &repeatedPassword)
 {
-
-    return true;
+    if(password == repeatedPassword || !password.empty() || !repeatedPassword.empty())
+    {
+        return true;
+    }
+    return false;
+    
 }
 
 int checkPasswordRules(const std::string &)
 {
-    return 1;
+    const int range_from  = 0;
+    const int range_to    = 10;
+    std::random_device rand_dev;
+    std::mt19937 generator(rand_dev());
+    std::uniform_int_distribution<int> distr(0, 4);
+    return ErrorCode(distr(generator));
 }
 
 std::string getErrorMessage(int errorCode)
@@ -40,6 +54,7 @@ std::string getErrorMessage(int errorCode)
     case 5:
         return "Passwords do not match";
     default:
+        return "Behaviour out of scope";
         break;
     }
 }
