@@ -13,7 +13,7 @@ enum ErrorCode {
    PasswordsDoNotMatch,
 };
 
-int checkPasswordRules(const std::string&);
 bool doPasswordsMatch(const std::string&, const std::string&);
-int checkPassword(const std::string&, const std::string&);
-std::string getErrorMessage(const int&);
+std::string getErrorMessage(ErrorCode);
+ErrorCode checkPassword(const std::string&, const std::string&);
+ErrorCode checkPasswordRules(const std::string&);

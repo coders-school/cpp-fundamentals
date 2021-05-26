@@ -1,9 +1,8 @@
 #include "validation.hpp"
-#include <stdlib.h>
 #include <cctype>
 #include <algorithm>
 
-int checkPassword(const std::string &password, const std::string &repeatedPassword)
+ErrorCode checkPassword(const std::string &password, const std::string &repeatedPassword)
 {
     if (doPasswordsMatch(password, repeatedPassword))
     {
@@ -17,7 +16,7 @@ bool doPasswordsMatch(const std::string &password, const std::string &repeatedPa
     return password == repeatedPassword;
 }
 
-int checkPasswordRules(const std::string &password)
+ErrorCode checkPasswordRules(const std::string &password)
 {
     if (password.length() < 9)
     {
@@ -38,7 +37,7 @@ int checkPasswordRules(const std::string &password)
     return ErrorCode::Ok;
 }
 
-std::string getErrorMessage(const int code)
+std::string getErrorMessage(ErrorCode code)
 {
     switch (code)
     {
