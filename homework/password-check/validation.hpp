@@ -11,4 +11,5 @@ enum class ErrorCode {
     PasswordsDoNotMatch
 };
 
+bool doPasswordsMatch(std::string firstPassword, std::string secondPassword);
 ErrorCode checkPasswordRules(std::string password);

@@ -3,6 +3,13 @@
 #include <cctype>
 #include <algorithm>
 
+bool doPasswordsMatch(std::string firstPassword, std::string secondPassword) {
+    if (firstPassword == secondPassword) {
+        return true;
+    }
+    return false;
+}
+
 ErrorCode checkPasswordRules(std::string password) {
     if (password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
