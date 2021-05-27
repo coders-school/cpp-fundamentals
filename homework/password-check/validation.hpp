@@ -17,4 +17,5 @@ bool doPasswordsMatch(std::string, std::string);
 
 ErrorCode checkPasswordRules(std::string);
 
-ErrorCode checkPassword(std::string, std::string);
+ErrorCode checkPassword(const std::string &password,
+                        const std::string &passwordConfirm);
