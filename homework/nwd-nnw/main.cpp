@@ -4,7 +4,9 @@
 int main() {
   int l,r;
   std::cin>>l;
+  print(l);
   std::cin>>r;
+  print(r);
   
 
 

@@ -9,7 +9,6 @@ int NWD(int lhs, int rhs) {
     auto primes_lhs=intoPrimes(lhs);
     auto primes_rhs=intoPrimes(rhs);
     // TODO: Implement me :)
-    print(lhs,rhs);
     int CommonDiv =1;
     for(auto el_lhs = primes_lhs.begin();el_lhs != primes_lhs.end();el_lhs++) {
         for(auto el_rhs = primes_rhs.begin();el_rhs != primes_rhs.end();el_rhs++) {
@@ -35,18 +34,18 @@ int NWW(int lhs, int rhs) {
 
 
 //*********************************************************
-void print(int l,int r) {
-    for (auto el:intoPrimes(l)) std::cout<<el<<" ";
+void print(int n) {
+    std::cout<<"primes: ";
+    for (auto el:intoPrimes(n)) std::cout<<el<<" ";
     std::cout<<"\n";
-    for (auto el:intoPrimes(r)) std::cout<<el<<" ";
-    std::cout<<"\n";   
 }
 
-std::list<int> intoPrimes(int i)
+std::list<int> intoPrimes(int number)
 {
     int n=2;
+    int i=abs(number);
     std::list<int> primes;
-    while (i>n)  {
+    while (i>=n)  {
         while (i % n>  0)   n++;
         primes.push_back(n);
         i/=n;
