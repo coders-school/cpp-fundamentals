@@ -6,16 +6,18 @@ std::list<int> intoPrimes(int);
 void print(int,int);
 
 int NWD(int lhs, int rhs) {
+    auto primes_lhs=intoPrimes(lhs);
+    auto primes_rhs=intoPrimes(rhs);
     // TODO: Implement me :)
     print(lhs,rhs);
     int CommonDiv =1;
-    for(auto el_lhs:intoPrimes(lhs)) {
-        for(auto el_rhs:intoPrimes(rhs)) {
-            if (el_lhs<el_rhs) break;
-            if (el_lhs==el_rhs!=0) {
-                CommonDiv*=el_lhs;
-                el_lhs=0;
-                el_rhs=0;
+    for(auto el_lhs = primes_lhs.begin();el_lhs != primes_lhs.end();el_lhs++) {
+        for(auto el_rhs = primes_rhs.begin();el_rhs != primes_rhs.end();el_rhs++) {
+            if (*el_lhs<*el_rhs) break;
+            if (*el_lhs==*el_rhs!=0) {
+                CommonDiv*=*el_lhs;
+                *el_lhs=0;
+                *el_rhs=0;
             }
         }
     }
