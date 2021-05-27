@@ -22,7 +22,7 @@ ErrorCode checkPasswordRules(std::string password) {
 ErrorCode checkPassword(const std::string &password,
                         const std::string &passwordConfirm) {
   if (doPasswordsMatch(password, passwordConfirm)) {
-    checkPasswordRules(password);
+    return checkPasswordRules(password);
   }
   return ErrorCode::PasswordsDoNotMatch;
 }
