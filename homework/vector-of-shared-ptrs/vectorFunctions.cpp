@@ -3,6 +3,11 @@
 
 std::vector<std::shared_ptr<int>> generate(int count)
 {
+    if(count < 0)
+    {
+        count = 0;
+    }
+    
     std::vector<std::shared_ptr<int>> vector;
     vector.reserve(count);
     for(size_t i {0}; i < count; ++i)
