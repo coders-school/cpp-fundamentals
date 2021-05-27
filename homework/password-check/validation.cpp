@@ -12,21 +12,23 @@ bool doPasswordsMatch(std::string password, std::string passwordConfirm) {
 ErrorCode checkPasswordRules(std::string password) {
   if (password.length() < 9) {
     return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-  } else if (!(std::any_of(password.begin(), password.end(), isdigit))) {
+  }
+  if (!std::any_of(password.begin(), password.end(), isdigit)) {
     return ErrorCode::PasswordNeedsAtLeastOneNumber;
   }
-   else if (!(std::any_of(password.begin(), password.end(), ???))) {
+  if (!std::any_of(password.begin(), password.end(), ispunct)) {
     return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-   }
-   else if (!(std::any_of(password.begin(), password.end(), isupper))) {
+  }
+  if (!std::any_of(password.begin(), password.end(), isupper)) {
     return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+  }
+  return ErrorCode::Ok;
 }
-return ErrorCode::Ok;
 
 ErrorCode checkPassword(const std::string &password,
                         const std::string &passwordConfirm) {
-  if (doPasswordsMatch(std::string password, std::string passwordConfirm){
-    checkPasswordRules(std::string password);
+  if (doPasswordsMatch(password, passwordConfirm)) {
+    checkPasswordRules(password);
   }
-    return ErrorCode::PasswordsDoNotMatch;
+  return ErrorCode::PasswordsDoNotMatch;
 }
