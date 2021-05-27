@@ -6,8 +6,14 @@ std::list<int> intoPrimes(int);
 void print(int,int);
 
 int NWD(int lhs, int rhs) {
+
+    if (lhs==0 and rhs==0) return 0;
+    if (lhs==0) lhs=rhs;
+    if (rhs==0) rhs=lhs;
+    
     auto primes_lhs=intoPrimes(lhs);
     auto primes_rhs=intoPrimes(rhs);
+   
     // TODO: Implement me :)
     int CommonDiv =1;
     for(auto el_lhs = primes_lhs.begin();el_lhs != primes_lhs.end();el_lhs++) {
@@ -26,8 +32,9 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
-    
-    return lhs*rhs/NWD(lhs,rhs);
+    int nwd=NWD(lhs,rhs);
+    if (nwd==0) return 0;
+    return abs(lhs*rhs/nwd);
 }
 
 
@@ -42,7 +49,7 @@ void print(int n) {
 
 std::list<int> intoPrimes(int number)
 {
-    int n=2;
+    int n=1;
     int i=abs(number);
     std::list<int> primes;
     while (i>=n)  {
