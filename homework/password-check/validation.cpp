@@ -1,6 +1,4 @@
 #include "validation.hpp"
-#include <stdlib.h>
-#include <time.h>
 
 std::string getErrorMessage(ErrorCode error) {
      switch (error) {
@@ -14,9 +12,9 @@ std::string getErrorMessage(ErrorCode error) {
      }
  }
  
-bool checkPasswordRules(std::string str1, std::string str2){
+bool doPasswordsMatch(std::string str1, std::string str2){
 
-        if(str1!=str2){
+        if(str1 != str2){
            return false;
         }
 
@@ -29,6 +27,17 @@ ErrorCode checkPasswordRules(std::string){
      int rand_number = rand()%5;
     
      return static_cast<ErrorCode>(rand_number);
-} 
+}
+
+ErrorCode checkPassword(std::string str1, std::string str2){
+    
+    if(!doPasswordsMatch(str1,str2)){
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+
+    auto result = checkPasswordRules(str1);
+
+    return result;
+}
 
 
