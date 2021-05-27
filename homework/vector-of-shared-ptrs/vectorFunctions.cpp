@@ -11,22 +11,30 @@ std::vector<std::shared_ptr<int>> generate(int count)
     return vec;
 }
 
-void print(std::vector<std::shared_ptr<int>> vec)
+void print(const std::vector<std::shared_ptr<int>>& vec)
 {
-
+    for(auto i: vec){
+        std::cout<<*i;
+    }
 }
 
-void add10(std::vector<std::shared_ptr<int>> vec)
+void add10(const std::vector<std::shared_ptr<int>>& vec)
 {
-
+    for(auto i: vec){
+        if(i){*i+=10;}
+    }
 }
 
 void sub10(int* element)
 {
-    *element+=10;
+    if(element){
+        *element-=10;
+    }
 }
 
-void sub10(std::vector<std::shared_ptr<int>> vec)
+void sub10(const std::vector<std::shared_ptr<int>>& vec)
 {
-
+    for(auto i: vec){
+        sub10(i.get());
+    }
 }
