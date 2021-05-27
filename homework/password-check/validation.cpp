@@ -29,7 +29,7 @@ std::string getErrorMessage(ErrorCode errorCode) {
 }
 
 bool doPasswordsMatch(std::string password, std::string passwordConfirm) {
-    return false;
+    return password == passwordConfirm;
 }
 
 ErrorCode checkPasswordRules(std::string password) {  // TODO: reserved by Pawel100
