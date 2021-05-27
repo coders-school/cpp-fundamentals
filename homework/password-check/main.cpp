@@ -2,7 +2,8 @@
 #include <string>
 #include "validation.hpp"
 
-int main() {
+int main() 
+{
     std::string password;
     std::string repeatedPassword;
     std::cout << "Set new password: ";
