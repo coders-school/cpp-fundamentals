@@ -1,7 +1,10 @@
 #include "validation.hpp"
 #include <random>
+#include <iostream>
 #include <memory>
+#include <cctype>
 #include <cmath>
+#include <algorithm>
 // TODO: Put implementations here
 
 
@@ -38,34 +41,56 @@ bool doPasswordsMatch(std::string password1, std::string password2)
 
 ErrorCode checkPasswordRules(std::string pass)
 {
-        std::random_device r;
- 
-    // Choose a random mean between 1 and 6
-    std::default_random_engine e1(r());
-    std::uniform_int_distribution<int> uniform_dist(0, 4);
-    int mean = uniform_dist(e1);
-
-    switch (mean)
+    if (pass.size()< 9)
     {
-    case 0:
-        return ErrorCode::Ok;
-        break;
-    case 1:
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-        break;
-    case 2:
-        return ErrorCode::PasswordNeedsAtLeastOneNumber;
-        break;
-    case 3:
-        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-        break; 
-   case 4:
-        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-        break;
-    default:
-    return ErrorCode::PasswordsDoNotMatch;
-        break;
     }
+    if (std::none_of(pass.begin(), pass.end(), ::isdigit))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+       
+    if (std::none_of(pass.begin(), pass.end(), [] (char ch) { return isupper(ch);})) 
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+   //std::cout<<"\n \" \\ ";
+    std::string specialChar = "\" !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\"";
+    auto result = std::find_first_of(pass.begin(), pass.end(), specialChar.begin(), specialChar.end());
+    if(result == pass.end())
+        {
+            return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+        }
+    return ErrorCode::Ok;
+    
+//         std::random_device r;
+ 
+//     // Choose a random mean between 1 and 6
+//     std::default_random_engine e1(r());
+//     std::uniform_int_distribution<int> uniform_dist(0, 4);
+//     int mean = uniform_dist(e1);
+
+//     switch (mean)
+//     {
+//     case 0:
+//         return ErrorCode::Ok;
+//         break;
+//     case 1:
+//         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+//         break;
+//     case 2:
+//         return ErrorCode::PasswordNeedsAtLeastOneNumber;
+//         break;
+//     case 3:
+//         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+//         break; 
+//    case 4:
+//         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+//         break;
+//     default:
+//     return ErrorCode::PasswordsDoNotMatch;
+//         break;
+//     }
 }
 
     ErrorCode checkPassword(std::string pass1, std::string pass2)
