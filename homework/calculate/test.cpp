@@ -29,11 +29,11 @@ TEST(calculate, ShouldDivide) {
   EXPECT_EQ(calculate("divide", 0, 0), "Division by 0");
   EXPECT_EQ(calculate("divide", -20, 10), "-2");
 }
-
+*/
 TEST(calculate, ShouldReturnInvalidData) {
   EXPECT_EQ(calculate("quit", 10, 20), "Invalid data");
   EXPECT_EQ(calculate("q", 15, 5), "Invalid data");
   EXPECT_EQ(calculate("5", 0, 0), "Invalid data");
   EXPECT_EQ(calculate("sth", -20, 10), "Invalid data");
 }
-*/
+
