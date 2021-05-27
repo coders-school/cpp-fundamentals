@@ -30,7 +30,7 @@ ErrorCode checkPasswordRules(const std::string &password)
     {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (std::none_of(begin(password), end(password), [](auto& i){return std::isalnum(i);}))
+    if (std::none_of(begin(password), end(password), [](auto& i){return std::isdigit(i);}))
     {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
