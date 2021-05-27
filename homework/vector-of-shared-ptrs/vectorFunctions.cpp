@@ -16,11 +16,10 @@ void print(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
     for(const auto& pElement : t_Vector)
     {
-        if(pElement == nullptr)
+        if(pElement != nullptr)
         {
-            continue;
+            std::cout << *pElement << " ";
         }
-        std::cout << *pElement << " ";
     }
 }
 
@@ -28,19 +27,17 @@ void add10(const std::vector<std::shared_ptr<int>>& t_Vector)
 {
     for(const auto& pElement : t_Vector)
     {
-        if(pElement == nullptr)
+        if(pElement != nullptr)
         {
-            continue;
+            *pElement += 10;
         }
-        *pElement += 10;
     }
 }
 
 void sub10(int* const t_pValue){
-    if(t_pValue == nullptr){
-        return;
+    if(t_pValue != nullptr){
+        *t_pValue -= 10;
     }
-    *t_pValue -= 10;
 }
 
 void sub10(const std::vector<std::shared_ptr<int>>& t_Vector)
