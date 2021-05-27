@@ -7,7 +7,7 @@ std::vector<std::shared_ptr<int>> generate(int count)
     vector.reserve(count);
     for(size_t i {0}; i < count; ++i)
     {
-        vector.emplace_back(std::make_shared<int>(i));
+        vector.push_back(std::make_shared<int>(i));
     }
     return vector;
 }
