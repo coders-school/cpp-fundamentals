@@ -16,4 +16,4 @@ bool doPasswordsMatch(std::string str1, std::string str2);
 
 int checkPasswordRules(std::string);
  
-?? checkPassword(std::string str1, std::string str2);
+ErrorCode checkPassword(std::string str1, std::string str2);
