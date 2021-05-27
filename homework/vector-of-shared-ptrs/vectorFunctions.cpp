@@ -1,11 +1,12 @@
-#include <vector>
-#include <memory>
+#include "vectorFunctions.hpp"
 
 std::vector<std::shared_ptr<int>> generate(int count)
-{
-    std::vector<int> vec;
-    for(int i=0; i<count; ++i){
-        vec.push_back(i);
+{   
+    std::vector<std::shared_ptr<int>> vec;
+    vec.reserve(count);
+    for (int i=0; i<count; ++i){
+        auto tmp=std::make_shared<int>(i);
+        vec.push_back(tmp);
     }
     return vec;
 }
