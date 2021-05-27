@@ -21,12 +21,25 @@ bool doPasswordsMatch(std::string str1, std::string str2){
       return true;
  }
  
-ErrorCode checkPasswordRules(std::string){
+ErrorCode checkPasswordRules(std::string str){
+
+    if(str.size()<9){
+        return static_cast<ErrorCode>(1);
+    }
+
+    if(std::none_of(str.cbegin(), str.cend(), [](unsigned char c){ return std::isdigit(c);})){
+        return static_cast<ErrorCode>(2);
+    }
     
-     srand(time(NULL));
-     int rand_number = rand()%5;
-    
-     return static_cast<ErrorCode>(rand_number);
+    if(std::all_of(str.cbegin(), str.cend(), [](unsigned char c){ return std::isalnum(c);})){
+        return static_cast<ErrorCode>(3);
+    }
+
+    if(std::none_of(str.cbegin(), str.cend(), [](unsigned char c){ return std::isupper(c);})){
+        return static_cast<ErrorCode>(4);
+    }
+
+    return static_cast<ErrorCode>(0);
 }
 
 ErrorCode checkPassword(std::string str1, std::string str2){

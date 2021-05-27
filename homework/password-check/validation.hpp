@@ -2,6 +2,9 @@
 #include <string>
 #include <stdlib.h>
 #include <time.h>
+#include <algorithm>
+#include <cctype>
+#include <vector>
 
 enum class ErrorCode { 
     Ok,
