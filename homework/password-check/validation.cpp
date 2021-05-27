@@ -1,10 +1,9 @@
+
 #include <cctype>
 #include "validation.hpp"
 
-std::string getErrorMessage(ErrorCode code)
-{
-    switch(code)
-    {
+std::string getErrorMessage(ErrorCode code) {
+    switch (code) {
     case ErrorCode::Ok:
         return "Ok";
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
@@ -20,31 +19,44 @@ std::string getErrorMessage(ErrorCode code)
     }
 }
 
-bool doPasswordsMatch(std::string Password1, std::string Password2)
-{
-    return Password1==Password2;
+bool doPasswordsMatch(std::string Password1, std::string Password2) {
+    return Password1 == Password2;
 }
 
-ErrorCode checkPasswordRules(std::string Password)
-{
-    if(Password.length()<9){return ErrorCode::PasswordNeedsAtLeastNineCharacters;}
-    bool whetherItContainsNumber=false;
-    bool whetherItContainsSpecialCharacter=false;
-    bool whetherItContainsUppercaseLetter=false;
-    for(auto i : Password){
-        if(isdigit(i)){whetherItContainsNumber=true;}
-        if(isspace(i)){whetherItContainsSpecialCharacter=true;}
-        if(islower(i)){whetherItContainsUppercaseLetter=true;}
+ErrorCode checkPasswordRules(std::string Password) {
+    if (Password.length() < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if(!whetherItContainsNumber){return ErrorCode::PasswordNeedsAtLeastOneNumber;}
-    if(!whetherItContainsSpecialCharacter){return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;}
-    if(!whetherItContainsUppercaseLetter){return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;}
+
+    bool whetherItContainsNumber = false;
+    bool whetherItContainsSpecialCharacter = false;
+    bool whetherItContainsUppercaseLetter = false;
+    
+    for (auto i : Password) {
+        if (isdigit(i)) {
+            whetherItContainsNumber = true;
+        }
+        if (isspace(i)) {
+            whetherItContainsSpecialCharacter = true;
+        }
+        if (islower(i)) {
+            whetherItContainsUppercaseLetter = true;
+        }
+    }
+    if (!whetherItContainsNumber) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    if (!whetherItContainsSpecialCharacter) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if (!whetherItContainsUppercaseLetter) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
     return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(std::string Password1, std::string Password2)
-{
-    if(!doPasswordsMatch(Password1, Password2)){
+ErrorCode checkPassword(std::string Password1, std::string Password2) {
+    if (!doPasswordsMatch(Password1, Password2)) {
         return ErrorCode::PasswordsDoNotMatch;
     }
     return ErrorCode::Ok;
