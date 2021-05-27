@@ -7,5 +7,4 @@ void print(std::vector<std::shared_ptr<int>>);
 void add10(std::vector<std::shared_ptr<int>>);
 void sub10(int*);
 void sub10(std::vector<std::shared_ptr<int>>);
-#include "vectorFunctions.cpp"
 #endif /*VECTORFUNCTIONS_HPP*/
