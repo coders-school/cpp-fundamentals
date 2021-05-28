@@ -23,7 +23,7 @@ bool doPasswordsMatch(std::string str1, std::string str2){
  
 ErrorCode checkPasswordRules(std::string str){
 
-    if(str.size()<9){
+    if(str.size() < 9){
         return static_cast<ErrorCode>(1);
     }
 
