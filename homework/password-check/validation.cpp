@@ -44,7 +44,7 @@ ErrorCode checkPasswordRules(std::string str){
 
 ErrorCode checkPassword(std::string str1, std::string str2){
     
-    if(!doPasswordsMatch(str1,str2)){
+    if(!doPasswordsMatch(str1, str2)){
         return ErrorCode::PasswordsDoNotMatch;
     }
 
