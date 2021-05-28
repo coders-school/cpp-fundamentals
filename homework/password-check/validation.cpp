@@ -12,18 +12,11 @@ std::string getErrorMessage(ErrorCode error){
      default : return "Invalid error code";
      }
 }
-
-std::string getErrorMessage(std::vector<ErrorCode> vec) {
-    for(const auto& el : vec){
-        std::string getErrorMessage(el);
-    }
-}
  
 bool doPasswordsMatch(std::string str1, std::string str2){
 
-    if(str1 != str2){
-        return false;
-    }
+        return (str1 == str2);
+    
 }
  
 ErrorCode checkPasswordRules(std::string str){
