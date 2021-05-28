@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include "vectorFunctions.hpp"
 
 std::vector <std::shared_ptr<int>> generate (int count) {
     std::vector <std::shared_ptr<int>> gen ;
@@ -14,18 +15,24 @@ std::vector <std::shared_ptr<int>> generate (int count) {
 
 void print (std::vector <std::shared_ptr<int>> print) {
     for (auto el : print) {
-        std::cout << *el << " ";
+        if (el != nullptr) {
+            std::cout << *el << " ";
+        }
     }
 }
 
 void add10 (std::vector <std::shared_ptr<int>> add) {
     for (auto el : add) {
-        *el += 10;
+        if (el != nullptr) {
+            *el += 10;
+        }
     }
 }
 
 void sub10 (int* const sub) {
-    *sub -= 10;
+    if (sub != nullptr) {
+        *sub -= 10;
+    }
 }
 
 void sub10 (std::vector <std::shared_ptr<int>> vec) {
