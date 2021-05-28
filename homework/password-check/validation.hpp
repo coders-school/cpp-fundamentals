@@ -1,6 +1,5 @@
 #pragma once 
 #include <string>
-#include <stdlib.h>
 #include <time.h>
 #include <algorithm>
 #include <cctype>
