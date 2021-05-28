@@ -1,7 +1,8 @@
 #include "validation.hpp"
 
-std::string getErrorMessage(ErrorCode error) {
-     switch (static_cast<int>(error)) {
+std::string getErrorMessage(ErrorCode error){
+
+     switch (static_cast<int>(error)){
      case 0 : return "Ok";
      case 1 : return "Password needs to have at least nine characters";
      case 2 : return "Password needs to have at least one number";
@@ -10,20 +11,18 @@ std::string getErrorMessage(ErrorCode error) {
      case 5 : return "Passwords do not match";
      default : return "Invalid error code";
      }
- }
+}
  
 bool doPasswordsMatch(std::string str1, std::string str2){
 
-        if(str1 != str2){
-           return false;
-        }
-
-      return true;
- }
+    if(str1 != str2){
+        return false;
+    }
+}
  
 ErrorCode checkPasswordRules(std::string str){
 
-    if(str.size()<9){
+    if(str.size() < 9){
         return static_cast<ErrorCode>(1);
     }
 
@@ -43,8 +42,8 @@ ErrorCode checkPasswordRules(std::string str){
 }
 
 ErrorCode checkPassword(std::string str1, std::string str2){
-    
-    if(!doPasswordsMatch(str1,str2)){
+
+    if(!doPasswordsMatch(str1, str2)){
         return ErrorCode::PasswordsDoNotMatch;
     }
 
