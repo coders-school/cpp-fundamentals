@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <vector>
+#include <iostream>
 
 std::vector<std::shared_ptr<int>> generate(int count);
-//TODO: void print(const std::vector<std::shared_ptr<int>>& vec);
+void print(const std::vector<std::shared_ptr<int>>& vec);

@@ -10,3 +10,12 @@ std::vector<std::shared_ptr<int>> generate(int count)
     }
     return vec;
 }
+
+void print(const std::vector<std::shared_ptr<int>>& vec)
+{
+    for(const auto& ptr : vec)
+    {
+        std::cout << *ptr.get() << ' ';
+    }
+    std::cout << '\n';
+}
