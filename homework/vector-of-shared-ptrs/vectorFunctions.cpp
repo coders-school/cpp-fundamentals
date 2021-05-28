@@ -19,8 +19,6 @@ void print(std::vector<std::shared_ptr<int>> vec)
         std::cout<<*el<<" ";
     std::cout<<"\n";
 }
-//void add10() która przyjmie vector i doda do każdej liczby 10
-
 void add10(std::vector<std::shared_ptr<int>> vec)
 {
     for(auto & el : vec)
@@ -29,9 +27,6 @@ void add10(std::vector<std::shared_ptr<int>> vec)
             *el +=10;
         }
 }
-// void sub10() która przyjmie stały wskaźnik (zwykły) na int i odejmie od tego elementu 10
-// void sub10() Która przyjmie wektor współdzielonych wskaźników i wywoła dla każdego elementu powyższe przeciążenie funkcji sub10()
-
 void sub10(std::vector<std::shared_ptr<int>> vec)
 {
     for(const auto & el : vec)
@@ -43,18 +38,4 @@ void sub10(int* const ptr)
     {
         *ptr -= 10;
     }
-    
 }
-// {
-//     for(auto it = vec.begin(); it != vec.end(); ++it)
-//     {
-//        //auto ptr = std::make_shared<int>(it);
-//        std::cout<<"aa";
-//        //sub10(ptr.get());
-//     }
-// }
-// void sub10(int * ptr)
-// {
-//  //   *ptr -= 10;
-//     std::cout<<"aaa";
-// }
