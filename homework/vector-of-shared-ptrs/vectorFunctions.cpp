@@ -17,21 +17,18 @@ std::vector<std::shared_ptr<int>>generate(int count)
 void print(std::vector<std::shared_ptr<int>> vec)
 {
   for (const auto& el : vec)
-     std::cout<<*el;  
+     std::cout<<*el<<" ";
 }
 
 void add10(std::vector<std::shared_ptr<int>> vec)
 {
-    // std::vector<std::shared_ptr<int>> vec1;
-    // vec1.reserve(vec.size());
-    // int i = 0;
-    // // for (auto it = vec1.begin(); it != vec1.end(); ++it)
-    // //     {
-    // //         vec1
-    // //     }
-
-    // for (size_t i = 0; i < vec.size(); i++)
-    //     vec1.push_back(vec[i] + 10);
-
+    for (size_t i = 0; i < vec.size(); i++)
+    {
+        *vec[i] +=  10; 
+    }
 }
 
+void sub10(std::vector<std::shared_ptr<int>> vec)
+{
+    
+}
