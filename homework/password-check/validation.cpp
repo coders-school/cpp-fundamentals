@@ -3,18 +3,16 @@
 
 std::string getErrorMessage(ErrorCode error)
 {
-	if(static_cast<int>(error) == 0)
-		return "Ok";
-	if(static_cast<int>(error) == 1)
-		return "PasswordNeedsAtLeastNineCharacters";
-	if(static_cast<int>(error) == 2)
-		return "PasswordNeedsAtLeastOneNumber";
-	if(static_cast<int>(error) == 3)
-		return "PasswordNeedsAtLeastOneSpecialCharacter";
-	if(static_cast<int>(error) == 4)
-		return "PasswordNeedsAtLeastOneUppercaseLetter";
-	if(static_cast<int>(error) == 5)
-		return "PasswordsDoNotMatch";
+	switch (static_cast<int>(error))
+	{
+     case 0 : return "Ok";
+     case 1 : return "Password needs to have at least nine characters";
+     case 2 : return "Password needs to have at least one number";
+     case 3 : return "Password needs to have at least one special character";
+     case 4 : return "Password needs to have at least one uppercase letter";
+     case 5 : return "Passwords do not match";
+     default : return "Invalid error code";
+    }
 }
 
 bool doPasswordsMatch(std::string ps1, std::string ps2)
