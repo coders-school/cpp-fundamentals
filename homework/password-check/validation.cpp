@@ -12,3 +12,8 @@ std::string getErrorMessage(ErrorCode errorCode)
         case ErrorCode::PasswordsDoNotMatch: return "PasswordsDoNotMatch";     
     }
 }
+
+bool doPasswordsMatch(std::string pass1, std::string pass2)
+{
+    return (pass1 == pass2);
+}
