@@ -1,5 +1,6 @@
 #include "validation.hpp"
 #include <ctime>
+#include <cctype>
 
 std::string getErrorMessage(ErrorCode errorCode)
 {
@@ -21,10 +22,58 @@ bool doPasswordsMatch(std::string pass1, std::string pass2)
 
 ErrorCode checkPasswordRules(std::string pass1)
 {
-    srand(time (NULL) );
-    int random = rand()%6;
-    ErrorCode result = static_cast<ErrorCode>(random);
-    return result;
+    // srand(time (NULL) );
+    // int random = rand()%6;
+    // ErrorCode result = static_cast<ErrorCode>(random);
+    // return result;
+    
+    if(pass1.size() < 9)
+    {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+
+    bool isThereOneNumber= false;
+    for(int i = 0; i < pass1.length(); i++)
+    {      
+        if (pass1[i] >= '0' && pass1[i] <= '9')
+        {
+            isThereOneNumber= true;
+            break;
+        }               
+    }
+    if (!isThereOneNumber)
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    bool isThereOneSpecialCharacter= false;
+    for(int i = 0; i < pass1.length(); i++)
+    {
+        if(std::ispunct(pass1[i]))
+        {
+            isThereOneSpecialCharacter = true;
+            break;
+        }        
+    }
+    if (!isThereOneSpecialCharacter)
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+
+    bool isThereOneUppercaseLetter= false;
+    for(int i = 0; i < pass1.length(); i++)
+    {
+        if(std::toupper(pass1[i]))
+        {
+            isThereOneUppercaseLetter = true;
+            break;
+        }
+    }
+    if (!isThereOneUppercaseLetter)
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }  
+
 }
 
 ErrorCode checkPassword(std::string pass1, std::string pass2)
