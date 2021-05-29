@@ -3,8 +3,6 @@
 #include <memory>
 #include <vector>
 #include "vectorFunctions.hpp"
-#include "vectorFunctions.cpp"
-
 
 int main() 
 {

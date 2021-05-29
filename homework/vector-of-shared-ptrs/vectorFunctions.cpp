@@ -17,30 +17,38 @@ std::vector<std::shared_ptr<int>>vec1;
 void print(std::vector<std::shared_ptr<int>>vec2)
 {
 
-    for(const auto& el:vec2)
+    for(auto el:vec2)
     {
-    std::cout<<*el;
+        if(el!=nullptr)
+        {
+        std::cout<<*el;
+        }
     }
 }
 
 void add10(std::vector<std::shared_ptr<int>>vec2)
 {
-
-    for(auto& el:vec2)
+    
+    for(auto el:vec2)
     {
-        *el+=10;     
+       if(el!=nullptr)
+       {
+        *el+=10;
+       }     
     }
 }
 
 void sub10(int* const wsk)
 {
+   if(wsk!=nullptr)
+   {
    *wsk-=10;
-
+   }
 }
 
 void sub10(std::vector<std::shared_ptr<int>>vec2)
 {
-     for(const auto& el:vec2)
+     for(auto el:vec2)
     {
      sub10(el.get());
     }
