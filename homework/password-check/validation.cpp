@@ -26,3 +26,18 @@ ErrorCode checkPasswordRules(std::string pass1)
     ErrorCode result = static_cast<ErrorCode>(random);
     return result;
 }
+
+ErrorCode checkPassword(std::string pass1, std::string pass2)
+{    
+    if(doPasswordsMatch(pass1, pass2))
+    {
+        return checkPasswordRules(pass1);
+    }
+    else
+    {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+
+    //return (doPasswordsMatch(pass1, pass2)) ?  checkPasswordRules(pass1) : ErrorCode::PasswordsDoNotMatch;
+
+}
