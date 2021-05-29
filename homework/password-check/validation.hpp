@@ -1,10 +1,13 @@
 #pragma once
+#include <string>
 
 enum class ErrorCode {
-    OK,
+    Ok,
     PasswordNeedsAtLeastNineCharacters,
     PasswordNeedsAtLeastOneNumber,
     PasswordNeedsAtLeastOneSpecialCharacter,
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
 };
+
+std::string getErrorMessage(ErrorCode);
