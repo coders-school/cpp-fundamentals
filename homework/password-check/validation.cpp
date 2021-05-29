@@ -63,7 +63,7 @@ ErrorCode checkPasswordRules(std::string pass1)
     bool isThereOneUppercaseLetter= false;
     for(int i = 0; i < pass1.length(); i++)
     {
-        if(std::toupper(pass1[i]))
+        if(std::isupper(pass1[i]))
         {
             isThereOneUppercaseLetter = true;
             break;
