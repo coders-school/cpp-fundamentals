@@ -30,9 +30,11 @@ bool doPasswordsMatch(std::string password1, std::string password2) {
     return false;
 }
 ErrorCode checkPasswordRules(std::string password) {
-    int value = (int)ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    ErrorCode random = static_cast<ErrorCode>(std::rand()%value);
-    switch(random) {
+   // int value = (int)ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    std::vector<ErrorCode> random_value {ErrorCode::Ok, ErrorCode::PasswordNeedsAtLeastNineCharacters, ErrorCode::PasswordNeedsAtLeastOneNumber, ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter, ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter};
+    //std::srand(std::time(0));
+    int random = std::rand() % random_value.size();
+    switch(random_value[random]) {
         case ErrorCode::Ok : {
             return ErrorCode::Ok;
         }
@@ -48,6 +50,7 @@ ErrorCode checkPasswordRules(std::string password) {
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter : {
             return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
         }   
+        break;
     }  
 }
 ErrorCode checkPassword(std::string password1, std::string password2) {

@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
 #include <random>
-#include <stdbool.h>
+#include <ctime>
 #include <iostream>
+#include <vector>
 
 enum class ErrorCode {
     Ok,
