@@ -16,7 +16,7 @@ struct Homework : public testing::Test {
     }
 };
 
-TEST_F(Homework, ShouldGenerateVectorOfProperSize) {
+/*TEST_F(Homework, ShouldGenerateVectorOfProperSize) {
     auto expected = generateExpectedVector(count);
     auto result = generate(count);
     ASSERT_EQ(expected.size(), result.size());
@@ -32,8 +32,8 @@ TEST_F(Homework, ShouldAdd10ToEachElement) {
     for (size_t i = 0 ; i < count ; ++i) {
         EXPECT_EQ(*result[i], i + 10);
     }
-}
-
+}*/
+/*
 TEST_F(Homework, ShouldNotAdd10WhenNullptr) {
     std::vector<std::shared_ptr<int>> vec(count);
     for (auto& num : vec) {
@@ -44,20 +44,20 @@ TEST_F(Homework, ShouldNotAdd10WhenNullptr) {
         EXPECT_EQ(vec[i], nullptr);
     }
 }
-
+*/
 TEST_F(Homework, ShouldSubtract10ForPtr) {
     auto ptr = std::make_shared<int>(10);
     sub10(ptr.get());
     ASSERT_TRUE(ptr);
     EXPECT_EQ(*ptr, 0);
 }
-
+/*
 TEST_F(Homework, ShouldNotSubtract10ForNullptr) {
     int* ptr = nullptr;
     sub10(ptr);
     EXPECT_EQ(ptr, nullptr);
 }
-
+*/
 TEST_F(Homework, ShouldSubtract10ForVector) {
     std::vector<std::shared_ptr<int>> vec;
     vec.reserve(count);
