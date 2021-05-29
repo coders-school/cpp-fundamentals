@@ -6,10 +6,8 @@
 std::vector<std::shared_ptr<int>> generate(int count) {
     std::vector<std::shared_ptr<int>> generated_vector;
     generated_vector.reserve(count);
-    std::iota(generated_vector.begin(), generated_vector.end(), 0);
-    for (auto value : generated_vector) {
-        value = std::make_shared<int>(value);
-        std::cout<<value<<'\t';
+    for (int value = 0; value < count; value++) {
+        generated_vector.push_back(std::make_shared<int>(value));
     }
     return generated_vector;
 }
