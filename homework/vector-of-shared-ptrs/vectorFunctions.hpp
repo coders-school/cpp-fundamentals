@@ -14,8 +14,31 @@ std::vector<std::shared_ptr<int>> generate(int count) {
 
 void print(std::vector<std::shared_ptr<int>> vec) {
     for (auto value : vec) {
-        std::cout << *value << '\t'; 
+        if (value != nullptr) {
+            std::cout << *value << '\t'; 
+        }
     }
 }
 
+void add10(std::vector<std::shared_ptr<int>> vec) {
+    for (auto value : vec) {
+        if (value != nullptr) {
+            *value += 10;
+        }
+    }
+}
+
+void sub10(int *ptr) {
+    if( ptr != nullptr) {
+        *ptr -= 10;
+    }
+}
+
+void sub10(std::vector<std::shared_ptr<int>> vec) {
+    for(auto value : vec) {
+        if (value != nullptr){
+            sub10(value.get());
+        }
+    }
+}
 
