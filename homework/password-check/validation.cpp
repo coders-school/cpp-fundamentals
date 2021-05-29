@@ -32,7 +32,10 @@ std::string getErrorMessage(ErrorCode error){
 }
 
 bool doPasswordsMatch(const std::string& password, const std::string& repeatPassword){
-    return false;
+
+    bool pass = (password == repeatPassword) ? true : false;
+
+    return pass;
 }
 
 ErrorCode checkPasswordRules(const std::string& password){
