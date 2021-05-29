@@ -1,4 +1,5 @@
 #include "validation.hpp"
+#include <ctime>
 
 std::string getErrorMessage(ErrorCode errorCode)
 {
@@ -16,4 +17,12 @@ std::string getErrorMessage(ErrorCode errorCode)
 bool doPasswordsMatch(std::string pass1, std::string pass2)
 {
     return (pass1 == pass2);
+}
+
+ErrorCode checkPasswordRules(std::string pass1)
+{
+    srand(time (NULL) );
+    int random = rand()%6;
+    ErrorCode result = static_cast<ErrorCode>(random);
+    return result;
 }
