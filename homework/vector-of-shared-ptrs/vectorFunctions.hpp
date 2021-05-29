@@ -12,5 +12,10 @@ std::vector<std::shared_ptr<int>> generate(int count) {
     return generated_vector;
 }
 
+void print(std::vector<std::shared_ptr<int>> vec) {
+    for (auto value : vec) {
+        std::cout << *value << '\t'; 
+    }
+}
 
 
