@@ -10,8 +10,11 @@ std::vector<std::shared_ptr<int>> generate(int count) {
 }
 
 void print(const std::vector<std::shared_ptr<int>>& vec) {
-    for (const auto& ptr : vec) {
-        std::cout << *ptr.get() << ' ';
+    for (const auto& el : vec) {
+        if(el)
+        {
+            std::cout << *el << ' ';
+        }
     }
     std::cout << '\n';
 }
