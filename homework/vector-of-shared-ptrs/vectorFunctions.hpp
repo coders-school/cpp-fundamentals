@@ -1,9 +1,11 @@
 #pragma once
 
+#include <iostream>
 #include <memory>
 #include <vector>
-#include <iostream>
 
 std::vector<std::shared_ptr<int>> generate(int count);
 void print(const std::vector<std::shared_ptr<int>>& vec);
 void add10(const std::vector<std::shared_ptr<int>>& vec);
+void sub10(int* const);
+void sub10(const std::vector<std::shared_ptr<int>>& vect);
