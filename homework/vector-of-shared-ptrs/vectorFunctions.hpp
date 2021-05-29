@@ -3,42 +3,13 @@
 #include <numeric>
 #include <iostream>
 
-std::vector<std::shared_ptr<int>> generate(int count) {
-    std::vector<std::shared_ptr<int>> generated_vector;
-    generated_vector.reserve(count);
-    for (int value = 0; value < count; value++) {
-        generated_vector.push_back(std::make_shared<int>(value));
-    }
-    return generated_vector;
-}
+std::vector<std::shared_ptr<int>> generate(int count);
 
-void print(std::vector<std::shared_ptr<int>> vec) {
-    for (auto value : vec) {
-        if (value != nullptr) {
-            std::cout << *value << '\t'; 
-        }
-    }
-}
+void print(std::vector<std::shared_ptr<int>> vec);
 
-void add10(std::vector<std::shared_ptr<int>> vec) {
-    for (auto value : vec) {
-        if (value != nullptr) {
-            *value += 10;
-        }
-    }
-}
+void add10(std::vector<std::shared_ptr<int>> vec);
 
-void sub10(int *ptr) {
-    if( ptr != nullptr) {
-        *ptr -= 10;
-    }
-}
+void sub10(int *const ptr);
 
-void sub10(std::vector<std::shared_ptr<int>> vec) {
-    for(auto value : vec) {
-        if (value != nullptr){
-            sub10(value.get());
-        }
-    }
-}
+void sub10(std::vector<std::shared_ptr<int>> vec);
 
