@@ -41,7 +41,7 @@ ErrorCode checkPasswordRules(std::string password) {
         if (std::isdigit(character)) {
             ++number;
         }
-        if (std::isgraph(character)) {
+        if (std::ispunct(character)) {
             ++special;
         }
     }
