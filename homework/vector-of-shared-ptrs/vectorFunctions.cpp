@@ -1,7 +1,12 @@
 #include "vectorFunctions.hpp"
 
 std::vector<std::shared_ptr<int>> generate(int count){
-    // TO DO
+    std::vector<std::shared_ptr<int>> vec;
+    vec.reserve(count + 1);
+    for (int i = 0; i <= count; i++) {
+        vec.push_back(std::make_shared<int>(i));
+    }
+    return vec;
 };
 
 void print(std::vector<std::shared_ptr<int>>){
