@@ -26,6 +26,9 @@ void sub10(int* const ptr){
     *ptr -= 10;
 };
 
-void sub10(std::vector<std::shared_ptr<int>>){
-    // TO DO
+void sub10(std::vector<std::shared_ptr<int>> vec){
+    for (auto el : vec) {
+        int* const ptr = el.get();
+        sub10(ptr);
+    }
 };
