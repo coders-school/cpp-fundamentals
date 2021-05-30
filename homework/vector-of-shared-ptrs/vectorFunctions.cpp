@@ -23,7 +23,7 @@ void add10(std::vector<std::shared_ptr<int>> vec){
 };
 
 void sub10(int* const ptr){
-    // TO DO
+    *ptr -= 10;
 };
 
 void sub10(std::vector<std::shared_ptr<int>>){
