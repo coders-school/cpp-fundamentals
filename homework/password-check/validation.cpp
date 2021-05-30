@@ -1,9 +1,9 @@
-#include "validation.hpp"
 #include <algorithm>
 #include <cstdlib>
 #include <map>
 #include <string>
-
+#include <cctype>
+#include "validation.hpp"
 std::map<ErrorCode, std::string> convertEnumsToString() {
     std::map<ErrorCode, std::string> result{
         {ErrorCode::Ok, "Ok"},
@@ -44,6 +44,22 @@ ErrorCode checkPasswordRules(std::string password) {
         ++i;
     }
     return it->first;
+}
+ErrorCode checkPasswordRules(std::string password) {
+
+
+    if(password.size() < 9){
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    //tutaj zaprzeczamy ze jest 
+    if(!(std::any_of(password.begin(),password.end(),[](char i){return std::isdigit(i);}))){
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+
+    //if all valid is passed
+    return ErrorCode::Ok;
+
 }
 ErrorCode checkPassword(std::string password1, std::string password2) {
     auto res = convertEnumsToString();
