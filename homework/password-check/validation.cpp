@@ -1,3 +1,4 @@
+#include <random>
 #include "validation.hpp"
 
 std::string getErrorMessage(const ErrorCode& err_code) {
@@ -26,9 +27,19 @@ bool doPasswordsMatch(const std::string& firstPassword, const std::string& secon
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
-    return ErrorCode::Ok;
+    
+    std::random_device rd;
+    std::uniform_int_distribution<int> uniform_dist(0, 5);
+
+    return ErrorCode(uniform_dist(rd));
 }
 
 ErrorCode checkPassword(const std::string& firstPassword, const std::string& secondPassword) {
-    return ErrorCode::Ok;
+    
+    if (doPasswordsMatch(firstPassword, secondPassword)) {
+        return checkPasswordRules(firstPassword);
+    }
+    else {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
 }
