@@ -31,13 +31,13 @@ ErrorCode checkPasswordRules(const std::string& password) {
     if(password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if(!std::any_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::isupper(c); })) {
+    if(!std::any_of(password.cbegin(), password.cend(), isupper)) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
-    if(!std::any_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::isdigit(c); })) {
+    if(!std::any_of(password.cbegin(), password.cend(), isdigit)) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    if(!std::any_of(password.cbegin(), password.cend(), [](unsigned char c){ return !std::isalnum(c); })) {
+    if(std::all_of(password.cbegin(), password.cend(), isalnum)) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
     return ErrorCode::Ok;
