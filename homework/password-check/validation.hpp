@@ -4,6 +4,7 @@
 #include <ctime>
 #include <iostream>
 #include <vector>
+#include <cctype>
 
 enum class ErrorCode {
     Ok,
