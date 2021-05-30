@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <cctype>
+#include <algorithm>
 
 enum class ErrorCode
 {

@@ -29,7 +29,9 @@ bool doPasswordsMatch(std::string password, std::string reprepeatedPassword) {
 }
 ErrorCode checkPasswordRules(std::string password) {
 	if (password.size() < 9) { return ErrorCode::PasswordNeedsAtLeastNineCharacters; }
-
+	if (std::none_of(password.begin(), password.end(), ::isdigit)) { return ErrorCode::PasswordNeedsAtLeastOneNumber; }
+	if (std::none_of(password.begin(), password.end(), ::ispunct)) { return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter; }
+	if (std::none_of(password.begin(), password.end(), ::isupper)) { return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter; }
 	return ErrorCode::Ok;
 }
 ErrorCode checkPassword(std::string password, std::string repeatedPassword) {
