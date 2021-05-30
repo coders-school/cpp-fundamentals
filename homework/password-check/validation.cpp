@@ -4,7 +4,7 @@
 
 // TODO: Put implementations here
 
-std::string getErrorMessade(ErrorCode problem)
+std::string getErrorMessage(ErrorCode problem)
 {
     switch (problem)
     {
@@ -24,14 +24,15 @@ std::string getErrorMessade(ErrorCode problem)
         return "out of control";
     }
 }
-bool doPasswordMatch(std::string passwordOne, std::string passwordTwo)
+bool doPasswordsMatch(std::string passwordOne, std::string passwordTwo)
 {
     bool check = (passwordOne == passwordTwo);
     return check;
 }
+
 ErrorCode checkPasswordRules(std::string passwordOne)
 {
-    if (std::any_of(passwordOne.front(), passwordOne.back(), isdigit))
+    if (!std::any_of(passwordOne.begin(), passwordOne.end(), isdigit))
     {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
@@ -39,17 +40,22 @@ ErrorCode checkPasswordRules(std::string passwordOne)
     {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (std::any_of(passwordOne.front(), passwordOne.back(), ispunct))
+    if (!std::any_of(passwordOne.begin(), passwordOne.end(), ispunct))
     {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    if (std::any_of(passwordOne.front(), passwordOne.back(), isupper))
+    if (!std::any_of(passwordOne.begin(), passwordOne.end(), isupper))
     {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
-    if (doPasswordMatch == false)
-    {
-        return ErrorCode::PasswordsDoNotMatch;
-    }
     return ErrorCode::Ok;
+}
+
+ErrorCode checkPassword(const std::string &passwordOne, const std::string &passwordTwo)
+{
+    if (doPasswordsMatch(passwordOne, passwordTwo))
+    {
+        checkPasswordRules(passwordOne);
+    }
+    return ErrorCode::PasswordsDoNotMatch;
 }
