@@ -11,13 +11,13 @@ std::string getErrorMessage(ErrorCode problem)
     case ErrorCode::Ok:
         return "Ok";
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-        return "Password needs at least nine characters";
+        return "Password needs to have at least nine characters";
     case ErrorCode::PasswordNeedsAtLeastOneNumber:
-        return "Password needs at least one number";
+        return "Password needs to have at least one number";
     case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-        return "Password needs at least one special character";
+        return "Password needs to have at least one special character";
     case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-        return "Password needs at least one uppercase letter";
+        return "Password needs to have at least one uppercase letter";
     case ErrorCode::PasswordsDoNotMatch:
         return "Passwords do not match";
     default:
@@ -32,7 +32,7 @@ bool doPasswordsMatch(std::string passwordOne, std::string passwordTwo)
 
 ErrorCode checkPasswordRules(std::string passwordOne)
 {
-    if (!std::any_of(passwordOne.begin(), passwordOne.end(), isdigit))
+    if (std::any_of(passwordOne.begin(), passwordOne.end(), isdigit))
     {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
@@ -40,22 +40,22 @@ ErrorCode checkPasswordRules(std::string passwordOne)
     {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (!std::any_of(passwordOne.begin(), passwordOne.end(), ispunct))
+    if (std::any_of(passwordOne.begin(), passwordOne.end(), ispunct))
     {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    if (!std::any_of(passwordOne.begin(), passwordOne.end(), isupper))
+    if (std::any_of(passwordOne.begin(), passwordOne.end(), isupper))
     {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
     return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(const std::string &passwordOne, const std::string &passwordTwo)
+ErrorCode checkPassword(std::string passwordOne, std::string passwordTwo)
 {
-    if (doPasswordsMatch(passwordOne, passwordTwo))
+    if (doPasswordsMatch(passwordOne, passwordTwo) == true)
     {
-        checkPasswordRules(passwordOne);
+       return checkPasswordRules(passwordOne);
     }
     return ErrorCode::PasswordsDoNotMatch;
 }
