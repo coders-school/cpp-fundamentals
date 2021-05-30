@@ -33,29 +33,35 @@ bool doPasswordsMatch(std::string password1, std::string password2) {
     return false;
 }
 ErrorCode checkPasswordRules(std::string password) {
-   // int value = (int)ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    std::vector<ErrorCode> random_value {ErrorCode::Ok, ErrorCode::PasswordNeedsAtLeastNineCharacters, ErrorCode::PasswordNeedsAtLeastOneNumber, ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter, ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter};
-    //std::srand(std::time(0));
-    int random = std::rand() % random_value.size();
-    switch(random_value[random]) {
-        case ErrorCode::Ok : {
-            return ErrorCode::Ok;
+    int lower = 0, nine = 9, number = 0, special = 0;
+    for (auto character : password) {
+        if (!(bool)std::islower(character)) {
+            ++lower;
         }
-        case ErrorCode::PasswordNeedsAtLeastNineCharacters : {
-            return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+        if ((bool)std::isdigit(character)) {
+            ++number;
         }
-        case ErrorCode::PasswordNeedsAtLeastOneNumber : {
-            return ErrorCode::PasswordNeedsAtLeastOneNumber;
+        if ((bool)std::isgraph(character)) {
+            ++special;
         }
-        case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter : {
-            return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-        }
-        case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter : {
-            return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-        }
-        default : {};
+        --nine;
     }
+    if (nine > 0) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    if (lower == 0) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    if (special == 0) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if (number == 0) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    return ErrorCode::Ok;
 }
+
 ErrorCode checkPassword(std::string password1, std::string password2) {
     if (doPasswordsMatch(password1, password2)) {
         return checkPasswordRules(password1);
