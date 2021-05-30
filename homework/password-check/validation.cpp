@@ -32,7 +32,7 @@ bool doPasswordsMatch(std::string passwordOne, std::string passwordTwo)
 
 ErrorCode checkPasswordRules(std::string passwordOne)
 {
-    if (std::any_of(passwordOne.begin(), passwordOne.end(), isdigit))
+    if (std::none_of(passwordOne.begin(), passwordOne.end(), isdigit))
     {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
@@ -40,11 +40,11 @@ ErrorCode checkPasswordRules(std::string passwordOne)
     {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (std::any_of(passwordOne.begin(), passwordOne.end(), ispunct))
+    if (std::none_of(passwordOne.begin(), passwordOne.end(), ispunct))
     {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    if (std::any_of(passwordOne.begin(), passwordOne.end(), isupper))
+    if (std::none_of(passwordOne.begin(), passwordOne.end(), isupper))
     {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
