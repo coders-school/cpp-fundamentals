@@ -21,7 +21,8 @@ std::string getErrorMessage(const ErrorCode& err_code) {
 }
 
 bool doPasswordsMatch(const std::string& firstPassword, const std::string& secondPassword) {
-    return false;
+    
+    return (!firstPassword.compare(secondPassword)) ? true : false;
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
