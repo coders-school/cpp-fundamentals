@@ -12,8 +12,8 @@ enum class ErrorCode {
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch,
 };
-static const std::map<ErrorCode, std::string>& convertEnumsToString(); 
+std::map<ErrorCode, std::string> convertEnumsToString(); 
 std::string getErrorMessage(ErrorCode);
 bool doPasswordsMatch(std::string, std::string);
-std::string checkPasswordRules(std::string);
-std::string checkPassword(std::string, std::string);
+ErrorCode checkPasswordRules(std::string);
+ErrorCode checkPassword(std::string, std::string);
