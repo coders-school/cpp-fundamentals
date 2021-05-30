@@ -1,4 +1,6 @@
 #include "validation.hpp"
+#include <cctype>
+#include <algorithm>
 
 // TODO: Put implementations here
 
@@ -26,4 +28,28 @@ bool doPasswordMatch(std::string passwordOne, std::string passwordTwo)
 {
     bool check = (passwordOne == passwordTwo);
     return check;
+}
+ErrorCode checkPasswordRules(std::string passwordOne)
+{
+    if (std::any_of(passwordOne.front(), passwordOne.back(), isdigit))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    if (passwordOne.length() < 9)
+    {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    if (std::any_of(passwordOne.front(), passwordOne.back(), ispunct))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if (std::any_of(passwordOne.front(), passwordOne.back(), isupper))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    if (doPasswordMatch == false)
+    {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+    return ErrorCode::Ok;
 }
