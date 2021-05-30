@@ -35,13 +35,13 @@ bool doPasswordsMatch(std::string password1, std::string password2) {
 ErrorCode checkPasswordRules(std::string password) {
     int lower = 0, nine = 9, number = 0, special = 0;
     for (auto character : password) {
-        if (!(bool)std::islower(character)) {
+        if (std::islower(character) == 0) {
             ++lower;
         }
-        if ((bool)std::isdigit(character)) {
+        if (std::isdigit(character) != 0) {
             ++number;
         }
-        if ((bool)std::isgraph(character)) {
+        if (std::isgraph(character) != 0) {
             ++special;
         }
         --nine;
@@ -58,7 +58,6 @@ ErrorCode checkPasswordRules(std::string password) {
     if (number == 0) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-
     return ErrorCode::Ok;
 }
 
