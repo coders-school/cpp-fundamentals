@@ -17,3 +17,11 @@ void print(std::vector<std::shared_ptr<int>> vec)
 		std::cout << *vec[i] << " ";
 	}
 }
+
+void add10(std::vector<std::shared_ptr<int>> vec)
+{
+	for (int i = 0; i < vec.size(); i++)
+	{
+		*vec[i] + 10;
+	}
+}
