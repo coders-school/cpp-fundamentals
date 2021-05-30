@@ -22,3 +22,11 @@ std::string getErrorMessade(ErrorCode problem)
         return "out of control";
     }
 }
+bool doPasswordsMatch(std::string passwordOne, std::string passwordTwo)
+{
+    if (passwordOne == passwordTwo)
+    {
+        return true;
+    }
+    return false;
+}
