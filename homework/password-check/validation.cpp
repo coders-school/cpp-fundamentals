@@ -2,7 +2,7 @@
 // TODO: Put implementations here
 
 
-getErrorMessage(int error){
+void getErrorMessage(int error){
 }
 
 bool doPasswordsMatch(std::string pass1, std::string pass2){

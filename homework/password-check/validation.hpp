@@ -13,7 +13,7 @@ enum class ErrorCode {
     PasswordsDoNotMatch,    // '5'
 };
 
-getErrorMessage(int error);
+void getErrorMessage(int error);
 
 bool doPasswordsMatch(std::string pass1, std::string pass2);
 
