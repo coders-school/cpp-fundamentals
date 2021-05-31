@@ -2,7 +2,7 @@
 // Don't forget the header guard - #pragma once
 
 #pragma once
-
+#include<string>
 
 enum class ErrorCode {
     Ok, // '0'
@@ -13,10 +13,11 @@ enum class ErrorCode {
     PasswordsDoNotMatch,    // '5'
 };
 
-void getErrorMessage(const ErrorCode error);
+std::string getErrorMessage(const ErrorCode error);
 
-bool doPasswordsMatch(std::string pass1, std::string pass2);
+bool doPasswordsMatch(const std::string& pass1, const std::string& pass2);
 
-int checkPasswordRules(std::string pass);
+ErrorCode checkPasswordRules(const std::string& pass);
 
-int checkPassword(std::string pass1, std::string pass2);
+ErrorCode checkPassword(const std::string& pass1, const std::string& pass2);
+
