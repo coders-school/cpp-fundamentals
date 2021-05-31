@@ -1,5 +1,16 @@
 #include "validation.hpp"
 // TODO: Put implementations here
+bool isspecial(char ch){
+    if(isalpha(ch)){
+		return false;
+    }
+	if(isdigit(ch)){
+		return false;
+    }
+	else{
+		return true;
+    }
+}
 
 std::string getErrorMessage(ErrorCode errCode){
     switch(errCode){
@@ -22,7 +33,20 @@ bool doPasswordsMatch(std::string password1, std::string password2){
     }  
 }
 ErrorCode checkPasswordRules(std::string password){
-    return static_cast<ErrorCode>(rand() % 5);
+    if(password.length() < 9){
+        return PasswordNeedsAtLeastNineCharacters;
+    }
+    if(std::none_of(password.begin(), password.end(), isdigit)){
+        return PasswordNeedsAtLeastOneNumber;
+    }
+    if(std::none_of(password.begin(), password.end(), isspecial)){
+        return PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if(std::none_of(password.begin(), password.end(), isupper)){
+        return PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    return Ok;
+    //return static_cast<ErrorCode>(rand() % 5);
 }
 
 ErrorCode checkPassword(std::string password1, std::string password2){
