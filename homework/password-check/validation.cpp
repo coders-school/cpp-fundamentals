@@ -28,20 +28,23 @@ bool doPasswordsMatch(const std::string& firstPassword, const std::string& secon
 
 ErrorCode checkPasswordRules(const std::string& password) {
 
-    const std::string set_of_valid_char = {"!@#$%^&*()_-<>;:[]{}"};
-
     if (password.length() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    else if (std::none_of(password.begin(), password.end(),
+
+    if (std::none_of(password.begin(), password.end(),
             [](const char x) {return std::isdigit(x);})
             ) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    else if (password.find_first_of(set_of_valid_char) == std::string::npos) {
+
+    const std::string set_of_valid_char = {"!@#$%^&*()_-<>;:[]{}"};
+    
+    if (password.find_first_of(set_of_valid_char) == std::string::npos) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    else if (!std::any_of(password.begin(), password.end(),
+
+    if (!std::any_of(password.begin(), password.end(),
             [](const char x) {return (x >= 'A' && x <= 'Z') ? true : false;})
             ) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
