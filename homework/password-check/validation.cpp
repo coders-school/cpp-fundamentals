@@ -9,19 +9,23 @@ std::string getErrorMessage(const ErrorCode error){
         case ErrorCode::PasswordNeedsAtLeastNineCharacters :
             return "Password Needs At Least Nine Characters";
         case ErrorCode::PasswordNeedsAtLeastOneNumber :
-            return "PasswordNeedsAtLeastOneNumber";
+            return "Password Needs At Least One Number";
         case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter :
-            return "PasswordNeedsAtLeastOneSpecialCharacter";
+            return "Password Needs At Least One Special Character";
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter :
-            return "PasswordNeedsAtLeastOneUppercaseLetter";
+            return "Password Needs At Least One Uppercase Letter";
         case ErrorCode::PasswordsDoNotMatch :
-            return "PasswordsDoNotMatch";
+            return "Passwords Do Not Match";
         default :
             return "Unknown Error !!!";
     }
 }
 
 bool doPasswordsMatch(const std::string& pass1, const std::string& pass2){
+    if(pass1 == pass2)
+        return true;
+    else
+        return false;
 }
 
 ErrorCode checkPasswordRules(const std::string& pass){
