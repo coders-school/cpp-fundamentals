@@ -51,7 +51,7 @@ ErrorCode checkPasswordRules(std::string password) {
     if(password.size() < 9){
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    //tutaj zaprzeczamy ze jest 
+    //at least one digit[0-9] 
     if(!(std::any_of(password.begin(),password.end(),[](char i){return std::isdigit(i);}))){
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
