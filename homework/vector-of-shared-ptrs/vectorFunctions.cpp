@@ -26,8 +26,7 @@ void add10(const vector_of_ptr& vec) {
     }
 }
 void sub10(int* integer) {
-    if (!integer)
-    {
+    if (!integer) {
         return;
     }
 
@@ -35,8 +34,7 @@ void sub10(int* integer) {
 }
 void sub10(vector_of_ptr& vec) {
     for (const auto& ptr : vec) {
-        if (!ptr)
-        {
+        if (!ptr) {
             continue;
         }
 
