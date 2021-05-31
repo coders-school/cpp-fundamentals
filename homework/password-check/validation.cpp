@@ -10,15 +10,15 @@ std::string getErrorMessage(const ErrorCode error){
         case ErrorCode::Ok :
             return "Ok";
         case ErrorCode::PasswordNeedsAtLeastNineCharacters :
-            return "Password Needs At Least Nine Characters";
+            return "Password needs to have at least nine characters";
         case ErrorCode::PasswordNeedsAtLeastOneNumber :
-            return "Password Needs At Least One Number";
+            return "Password needs to have at least one number";
         case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter :
-            return "Password Needs At Least One Special Character";
+            return "Password needs to have at least one special character";
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter :
-            return "Password Needs At Least One Uppercase Letter";
+            return "Password needs to have at least one uppercase letter";
         case ErrorCode::PasswordsDoNotMatch :
-            return "Passwords Do Not Match";
+            return "Passwords do not match";
         default :
             return "Unknown Error !!!";
     }
