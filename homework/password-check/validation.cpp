@@ -3,6 +3,7 @@
 #include <map>
 #include <string>
 #include <cctype>
+#include <regex>
 #include "validation.hpp"
 std::map<ErrorCode, std::string> convertEnumsToString() {
     std::map<ErrorCode, std::string> result{
@@ -33,7 +34,7 @@ bool doPasswordsMatch(std::string password1, std::string password2) {
     }
     return false;
 }
-ErrorCode checkPasswordRules(std::string password) {
+ErrorCode checkPasswordRules1(std::string password) {
     std::srand(time(nullptr));
     auto res = convertEnumsToString();
     int rand = std::rand() % (res.size());
@@ -55,11 +56,21 @@ ErrorCode checkPasswordRules(std::string password) {
     if(!(std::any_of(password.begin(),password.end(),[](char i){return std::isdigit(i);}))){
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-
-
+    //check if a special char
+    //use regex to symplyfie
+    const std::regex special_char_pattern("[^a-zA-Z0-9]+");
+    const std::regex Capital_letter("[A-Z]+");
+    std::smatch pass_match, capital_match;
+    if(!(std::regex_search(password,pass_match,special_char_pattern)))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if(!(std::regex_search(password,capital_match,Capital_letter)))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
     //if all valid is passed
     return ErrorCode::Ok;
-
 }
 ErrorCode checkPassword(std::string password1, std::string password2) {
     auto res = convertEnumsToString();

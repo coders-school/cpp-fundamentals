@@ -3,6 +3,7 @@
 #pragma once
 #include <string>
 #include <map>
+#include <array>
 
 enum class ErrorCode {
     Ok = 0,
