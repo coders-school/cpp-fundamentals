@@ -1,4 +1,4 @@
-#include <random>
+#include <algorithm>
 #include "validation.hpp"
 
 std::string getErrorMessage(const ErrorCode& err_code) {
@@ -27,11 +27,27 @@ bool doPasswordsMatch(const std::string& firstPassword, const std::string& secon
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
-    
-    std::random_device rd;
-    std::uniform_int_distribution<int> uniform_dist(0, 5);
 
-    return ErrorCode(uniform_dist(rd));
+    const std::string set_of_valid_char = {"!@#$%^&*()_-<>;:[]{}"};
+
+    if (password.length() < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    else if (std::none_of(password.begin(), password.end(),
+            [](const char x) {return std::isdigit(x);})
+            ) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    else if (password.find_first_of(set_of_valid_char) == std::string::npos) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    else if (!std::any_of(password.begin(), password.end(),
+            [](const char x) {return (x >= 'A' && x <= 'Z') ? true : false;})
+            ) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
+    return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(const std::string& firstPassword, const std::string& secondPassword) {
