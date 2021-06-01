@@ -29,3 +29,24 @@ ErrorCode checkPassword(std::string pass, std::string repeatedPass) {
 	}
 	return ErrorCode::PasswordsDoNotMatch;
 }
+
+bool doPasswordsMatch(std::string password, std::string repeatedPassword) {
+  if(password.compare(repeatedPassword) != 0 ) {
+    return false;
+  }
+  return true;
+}
+
+ErrorCode checkPasswordRules(std::string password) {
+  if(password.length() < 9) {
+    return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+  } else if(std::none_of(password.cbegin(),password.cend(), ::isdigit)) {
+    return ErrorCode::PasswordNeedsAtLeastOneNumber;
+  } else if(std::none_of(password.cbegin(),password.cend(), ::ispunct)){
+    return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+  } else if(std::none_of(password.cbegin(),password.cend(), ::isupper)){
+    return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+  } else {
+    return ErrorCode::Ok;
+  }
+}
