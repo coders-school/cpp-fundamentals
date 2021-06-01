@@ -1,9 +1,10 @@
 #pragma once
-#include <string>
-#include <ctime>
+#include <ctype.h>
+#include <algorithm>
 #include <cstdlib>
-// TODO: I'm empty :) Put enum and function headers here.
-// Don't forget the header guard - #pragma once
+#include <ctime>
+#include <string>
+
 enum class ErrorCode {
     Ok,
     PasswordNeedsAtLeastNineCharacters,

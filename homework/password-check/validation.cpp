@@ -1,6 +1,5 @@
 #include "validation.hpp"
 
-
 std::string getErrorMessage(ErrorCode ErrCode) {
     switch (ErrCode) {
     case ErrorCode::Ok:
@@ -23,34 +22,52 @@ std::string getErrorMessage(ErrorCode ErrCode) {
         break;
     }
 }
-bool doPasswordsMatch(std::string pass1, std::string pass2){
-    if(pass1.compare(pass2) == 0)
-    {
+bool doPasswordsMatch(std::string pass1, std::string pass2) {
+    if (pass1.compare(pass2) == 0) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
-ErrorCode checkPasswordRules(std::string pass){
-    srand(time(0));
-    int r = (rand() % 2);
-    if(!r)
-    {
-        return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    }else{
-        return ErrorCode::Ok;
+ErrorCode checkPasswordRules(std::string pass) {
+    int characters{0};
+    bool numbers{false};
+    bool upperCase{false};
+    int specialChar{false};
+    for (auto& it : pass) {
+        if (isnumber(it)) {
+            characters++;
+            numbers = true;
+        } else if (isupper(it)) {
+            characters++;
+            upperCase = true;
+        } else if (!isalpha(it) && !isnumber(it)) {
+            characters++;
+            specialChar = true;
+        } else if (isalpha(it)) {
+            characters++;
+        }
     }
-   
+    if (characters < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    if (!numbers) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    if (!upperCase) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    if (!specialChar) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(std::string pass1, std::string pass2){
-
-    if(doPasswordsMatch(pass1, pass2))
-    {
+ErrorCode checkPassword(std::string pass1, std::string pass2) {
+    if (doPasswordsMatch(pass1, pass2)) {
         return checkPasswordRules(pass1);
-    }else{
+    } else {
         return ErrorCode::PasswordsDoNotMatch;
     }
 }
-// TODO: Put implementations here
