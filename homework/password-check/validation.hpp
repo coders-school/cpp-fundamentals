@@ -1,5 +1,5 @@
 #pragma once
-#include <ctype.h>
+// #include <ctype.h>
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>

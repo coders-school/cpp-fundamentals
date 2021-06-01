@@ -1,5 +1,5 @@
 #include "validation.hpp"
-
+#include <ctype.h>
 std::string getErrorMessage(ErrorCode ErrCode) {
     switch (ErrCode) {
     case ErrorCode::Ok:
