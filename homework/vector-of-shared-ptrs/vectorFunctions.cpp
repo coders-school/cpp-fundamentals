@@ -8,14 +8,16 @@ std::vector<std::shared_ptr<int>> generate(int count) {
     return tempVector;
 }
 
-void print(std::vector<std::shared_ptr<int>> vec) {
-    for (const auto& ptr : vec) {
-        std::cout << *ptr << "\n";
+void print(const std::vector<std::shared_ptr<int>>& vec) {
+    for (const auto& item : vec) {
+        std::cout << *item << "\n";
     }
 }
 
-void add10(std::vector<std::shared_ptr<int>> vec) {
-
+void add10(std::vector<std::shared_ptr<int>>& vec) {
+    for (const auto& item : vec) {
+        *item += 10;
+    }
 }
 
 void sub10(int* vec) {
