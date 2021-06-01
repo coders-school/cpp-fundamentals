@@ -36,13 +36,13 @@ ErrorCode checkPasswordRules(std::string pass) {
     bool upperCase{false};
     int specialChar{false};
     for (auto& it : pass) {
-        if (isnumber(it)) {
+        if (isdigit(it)) {
             characters++;
             numbers = true;
         } else if (isupper(it)) {
             characters++;
             upperCase = true;
-        } else if (!isalpha(it) && !isnumber(it)) {
+        } else if (!isalpha(it) && !isdigit(it)) {
             characters++;
             specialChar = true;
         } else if (isalpha(it)) {
