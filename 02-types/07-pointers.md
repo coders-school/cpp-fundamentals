@@ -266,7 +266,7 @@ int a = 5 & 4;      // jako operacja arytmetyczna - iloczyn bitowy
 int& b = a;         // przy typie - referencja na ten typ
 int &c = a;         // przy typie - referencja na ten typ
 std::cout << &a;    // przy zmiennej - adres tej zmiennej w pamięci
-int fun(int& ref);  // w argumencie funkcji - przekazanie adresu
+int fun(int& ref);  // w argumencie funkcji - przekazanie referencji
 ```
 <!-- .element: class="fragment fade-in" -->
 
