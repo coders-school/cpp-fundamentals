@@ -16,3 +16,22 @@ void print(std::vector<std::shared_ptr<int>> vec) {
         std::cout << *i << "\n";
     }
 }
+
+void sub10(std::vector<std::shared_ptr<int>> vec) {
+    for(auto i: vec) {
+        if(i)
+           *i -= 10;
+    }
+}
+
+void sub10(int* const ptr) {
+    if(ptr)
+        *ptr -= 10;
+}
+
+void add10(std::vector<std::shared_ptr<int>> vec) {
+    for(auto i: vec) {
+        if(i)
+            *i += 10;
+    }
+}
