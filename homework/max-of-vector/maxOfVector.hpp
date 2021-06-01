@@ -3,6 +3,10 @@
 #include <limits>
 
 int maxOfVector(const std::vector<int>& vec) {
-    // TODO: Implement me :)
-    return {};
+    int num={-2147483648};
+for(auto element : vec){
+if(element>num)
+num=element;
+}
+return num;
 }
