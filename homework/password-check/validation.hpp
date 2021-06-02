@@ -11,7 +11,7 @@ PasswordNeedsAtLeastOneUppercaseLetter,
 PasswordDoNotMatch
 };
 
-std::map <ErrorCode,std::string> Map_Error_String{
+std::map <ErrorCode,std::string> map_Error_String{
 {Ok, "Ok"},
 {PasswordNeedsAtLeastNineCharacters, "Password needs to have at least nine characters"},
 {PasswordNeedsAtLeastOneNumber, "Password needs to have at least one number"},

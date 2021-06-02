@@ -6,10 +6,13 @@
 
 std::string getErrorMessage(ErrorCode error_code){
 
+    std::string result = map_Error_String[error_code];
+    return result;
 
 }
 
 ErrorCode checkPassword(std::string password,std::string repeatedPass){
+
 
 }
 
