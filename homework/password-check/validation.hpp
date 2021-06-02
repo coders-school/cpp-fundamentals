@@ -22,4 +22,5 @@ std::map <ErrorCode,std::string> map_Error_String{
 
 std::string getErrorMessage(ErrorCode);
 ErrorCode checkPassword(std::string, std::string);
+ErrorCode checkPasswordRules(std::string password);
 bool doPasswordsMatch(std::string,std::string);
