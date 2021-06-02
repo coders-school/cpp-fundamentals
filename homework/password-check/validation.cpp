@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <cctype>
 // TODO: Put implementations here
 
 std::string getErrorMessage(ErrorCode error_code){
@@ -25,8 +26,8 @@ ErrorCode checkPasswordRules(std::string password){
         error_code = PasswordNeedsAtLeastNineCharacters;
     }else{
         auto number_digits = 0;
-        for (auto i : password){
-            if (std::isdigit(password[i])){   
+        for (auto i = 0; i < password.length(); i++){
+            if (std::isdigit(password[i])){  
                 number_digits++;            
             }
         }
@@ -34,7 +35,7 @@ ErrorCode checkPasswordRules(std::string password){
         error_code = PasswordNeedsAtLeastOneNumber;
         } else {
             auto number_uppers = 0;
-            for (auto i : password){
+            for (auto i = 0; i < password.length(); i++){
                 if (std::isupper(password[i])){   
                     number_uppers++;            
                 }
@@ -43,10 +44,11 @@ ErrorCode checkPasswordRules(std::string password){
                 error_code = PasswordNeedsAtLeastOneUppercaseLetter;
             }else {
                 auto number_specials = 0;
-                for (auto i : password){
-                    if ((password[i] >= 48 && password[i] <= 57) ||
-                        (password[i] >= 65 && password[i] <= 90) ||
-                        (password[i] >= 97 && password[i] <= 122)){   
+                for (auto i = 0; i < password.length(); i++){
+                    if ((password[i] < 48) ||
+                        (password[i] >= 58 && password[i] <= 64) ||
+                        (password[i] >= 91 && password[i] <= 96) ||
+                        (password[i] > 123)){   
                         number_specials++;            
                     }
                 }
