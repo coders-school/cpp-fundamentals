@@ -19,7 +19,7 @@ bool doPasswordsMatch(std::string password,std::string repeatedPassword){
     }
         
 }
-ErrorCode checkPassword(std::string password){
+ErrorCode checkPasswordRules(std::string password){
     ErrorCode error_code;
     if (password.length() < 9){
         error_code = PasswordNeedsAtLeastNineCharacters;
@@ -60,12 +60,20 @@ ErrorCode checkPassword(std::string password){
 
         }
     }
-
     return error_code;
 }
 
 ErrorCode checkPassword(std::string password,std::string repeatedPassword){
 
+    bool match = doPasswordsMatch(password,repeatedPassword);
+    ErrorCode error_code;
+    if(!match){
+        error_code =  PasswordDoNotMatch;
+    }else{
+
+        error_code = checkPasswordRules(password);
+    }
+    return error_code;
 }
 
 int main(){
