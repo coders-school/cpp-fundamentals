@@ -19,21 +19,21 @@ void print(std::vector<std::shared_ptr<int>> vec) {
   }
 }
 void add10(std::vector<std::shared_ptr<int>> vec) {
-    for (auto it : vec) {
-        if (it != nullptr) {
-            *it += 10;
-        }
+  for (auto it : vec) {
+    if (it) {
+      *it += 10;
     }
+  }
 }
 
-void sub10(int * const el) {
-    if (el != nullptr) {
-        *el -= 10;
-    }
+void sub10(int *const el) {
+  if (el) {
+    *el -= 10;
+  }
 }
 
 void sub10(std::vector<std::shared_ptr<int>> vec) {
-    for (auto it : vec) {
-        sub10(it.get());
-    }
+  for (auto it : vec) {
+    sub10(it.get());
+  }
 }
