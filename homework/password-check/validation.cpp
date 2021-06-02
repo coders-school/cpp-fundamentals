@@ -10,12 +10,20 @@ std::string getErrorMessage(ErrorCode error_code){
     return result;
 
 }
+bool doPasswordsMatch(std::string password,std::string repeatedPassword){
 
-ErrorCode checkPassword(std::string password,std::string repeatedPass){
-
-
+    if (password == repeatedPassword){
+        return true;
+    }else{
+        return false;
+    }
+        
 }
 
+
+ErrorCode checkPassword(std::string password,std::string repeatedPassword){
+
+}
 
 int main(){
     std::string password;
