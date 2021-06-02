@@ -32,9 +32,10 @@ ErrorCode checkPasswordRules(const std::string_view password)
 ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword)
 {
 	auto result = doPasswordsMatch(password, repeatedPassword);
-	if(result){
+	if (result) {
 		return checkPasswordRules(password);
-	}else{
+	}
+	else {
 		return ErrorCode::PasswordsDoNotMatch;
 	}
 
