@@ -44,3 +44,57 @@ bool doPasswordsMatch(std::string password, std::string repeatedPassword) {
         return false;
     }
 }
+
+// previous solution
+//ErrorCode checkPasswordRules(std::string password) {
+//    int Ecode = std::rand() % 4;
+//    switch (Ecode)
+//    {
+//    case 0: {
+//        return ErrorCode::Ok;
+//        break;
+//    }
+//    case 1: {
+//        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+//        break;
+//    }
+//    case 2: {
+//        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+//        break;
+//    }
+//    case 3: {
+//        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+//        break;
+//    }
+//    case 4: {
+//        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+//        break;
+//    }
+//    }
+//}
+
+ErrorCode checkPasswordRules(std::string password) {
+    //int Ecode = std::rand() % 4;
+  
+    if (password.length() < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    } else if (std::none_of(password.begin(), password.end(), isdigit)) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    } else if (std::none_of(password.begin(), password.end(), ispunct)) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    } else if (std::none_of(password.begin(), password.end(), isupper)) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    } else {
+        return ErrorCode::Ok;
+    }   
+}
+
+ErrorCode checkPassword(std::string password, std::string repeatedPassword) {
+    bool condition = doPasswordsMatch(password, repeatedPassword);
+    if (condition == false) {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+    else {
+        return checkPasswordRules(password);
+    }
+}
