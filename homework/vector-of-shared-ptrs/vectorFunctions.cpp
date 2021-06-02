@@ -18,8 +18,21 @@ void print(const std::vector<std::shared_ptr<int>>& result) {
 }
 void add10(std::vector<std::shared_ptr<int>>& result) {
     for (auto& i : result) {
-        *i = (*i) + 10;
+        if( i){
+            *i = (*i) + 10;
+        }
+        
     }
 }
-void sub10(int const*) {}
-void sub10(std::vector<std::shared_ptr<int>>&) {}
+void sub10(int const* ptr) {
+    if (ptr) {
+        int* result = const_cast<int*>(ptr);
+        *result -= 10;
+    }
+}
+void sub10(std::vector<std::shared_ptr<int>>& result) {
+    for(auto& i : result)
+    {
+        sub10(i.get());
+    }
+}
