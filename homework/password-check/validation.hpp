@@ -33,3 +33,8 @@ bool doPasswordsMatch(const std::string_view lhs, const std::string_view rhs);
 ErrorCode checkPasswordRules(const std::string_view password);
 
 ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword);
+
+bool checkPasswordMissingUppercase(const std::string_view pass);
+bool checkPasswordSpecialChars(const std::string_view pass);
+bool checkPasswordTooFewChars(const std::string_view pass);
+bool checkPasswordMissingNumbers(const std::string_view pass);
