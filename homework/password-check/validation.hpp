@@ -12,12 +12,12 @@ PasswordDoNotMatch
 };
 
 std::map <ErrorCode,std::string> map_Error_String{
-{Ok, "Ok"},
-{PasswordNeedsAtLeastNineCharacters, "Password needs to have at least nine characters"},
-{PasswordNeedsAtLeastOneNumber, "Password needs to have at least one number"},
-{PasswordNeedsAtLeastOneSpecialCharacter, "Password needs to have at least one special character"},
-{PasswordNeedsAtLeastOneUppercaseLetter, "Password needs to have at least one uppercase letter"},
-{PasswordDoNotMatch,"Passwords do not match"}
+{ErrorCode::Ok, "Ok"},
+{ErrorCode::PasswordNeedsAtLeastNineCharacters, "Password needs to have at least nine characters"},
+{ErrorCode::PasswordNeedsAtLeastOneNumber, "Password needs to have at least one number"},
+{ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter, "Password needs to have at least one special character"},
+{ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter, "Password needs to have at least one uppercase letter"},
+{ErrorCode::PasswordDoNotMatch,"Passwords do not match"}
 };
 
 std::string getErrorMessage(ErrorCode);
