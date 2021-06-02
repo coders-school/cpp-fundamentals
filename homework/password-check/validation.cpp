@@ -7,7 +7,7 @@
 std::string getErrorMessage (ErrorCode Error) {
     switch (Error) {
         case ErrorCode::Ok:
-            return "OK";
+            return "Ok";
 
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
             return "Password needs to have at least nine characters";
@@ -39,16 +39,30 @@ bool doPasswordsMatch (const std::string &password, const std::string& repeatedP
  }
 
 ErrorCode checkPasswordRules (const std::string& password) {
-    srand (time(NULL));
-    int Random = rand() % 3;
-    ErrorCode RandomError = static_cast <ErrorCode> (Random);
-    return RandomError;
+    ErrorCode RandomError;
+    if (password.length() < 9) {
+        RandomError = static_cast <ErrorCode> (1);    
+        return RandomError;
+    }
+    if (std::none_of(password.begin(), password.end(), [](auto& i){return std::isdigit(i);})) {
+        RandomError = static_cast <ErrorCode> (2);    
+        return RandomError;
+    }
+    if (std::none_of(password.begin(), password.end(), [](auto& i){return std::ispunct(i);})) {
+        RandomError = static_cast <ErrorCode> (3);    
+        return RandomError;
+    }
+    if(std::none_of(password.begin(), password.end(), [](auto& i){return std::isupper(i);})) {
+        RandomError = static_cast <ErrorCode> (4);    
+        return RandomError;
+    }
+    return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword (const std::string& password, const std::string& repeatedPassword) {
     if (doPasswordsMatch (password, repeatedPassword)) {
         checkPasswordRules (password); 
     } else {
-        ErrorCode::PasswordsDoNotMatch;
+        return ErrorCode::PasswordsDoNotMatch;
     }
 }
