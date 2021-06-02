@@ -14,15 +14,28 @@ std::string getErrorMessage(const ErrorCode code)
 
 bool doPasswordsMatch(const std::string_view lhs, const std::string_view rhs)
 {
-	return {};
+	if (lhs == rhs) {
+		return true;
+	}
+	else { return false; }
+
 }
 
 ErrorCode checkPasswordRules(const std::string_view password)
 {
-	return ErrorCode::Ok;
+	srand(time(NULL));
+	auto v1 = rand() % errorCodes.size();
+
+	return errorCodes.at(v1).code;
 }
 
 ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword)
 {
-	return ErrorCode::Ok;
+	auto result = doPasswordsMatch(password, repeatedPassword);
+	if(result){
+		return checkPasswordRules(password);
+	}else{
+		return ErrorCode::PasswordsDoNotMatch;
+	}
+
 }

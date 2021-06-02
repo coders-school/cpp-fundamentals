@@ -2,6 +2,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <ctime>
 
 enum class ErrorCode : unsigned {
 	Ok = 0,
@@ -19,11 +20,11 @@ struct ErrorCodePair {
 
 static const std::vector<ErrorCodePair> errorCodes{
 	{ErrorCode::Ok, "Ok"},
-	{ErrorCode::PasswordNeedsAtLeastNineCharacters, "PasswordNeedsAtLeastNineCharacters"},
-	{ErrorCode::PasswordNeedsAtLeastOneNumber, "PasswordNeedsAtLeastOneNumber"},
-	{ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter, "PasswordNeedsAtLeastOneSpecialCharacter"},
-	{ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter, "PasswordNeedsAtLeastOneUppercaseLetter"},
-	{ErrorCode::PasswordsDoNotMatch, "PasswordsDoNotMatch"}
+	{ErrorCode::PasswordNeedsAtLeastNineCharacters, "Password needs to have at least nine characters"},
+	{ErrorCode::PasswordNeedsAtLeastOneNumber, "Password needs to have at least one number"},
+	{ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter, "Password needs to have at least one special character"},
+	{ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter, "Password needs to have at least one uppercase letter"},
+	{ErrorCode::PasswordsDoNotMatch, "Passwords do not match"}
 };
 
 std::string getErrorMessage(const ErrorCode code);
