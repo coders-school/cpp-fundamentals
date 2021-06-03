@@ -1,9 +1,11 @@
 #include "validation.hpp"
 #include <algorithm>
-#include <functional>
-#include <list>
+#include <array>
+#include <cctype>
+#include <map>
+#include <optional>
 
-const std::map<ErrorCode, std::string> errorsNames = {
+const std::map<ErrorCode, const std::string> errorsText = {
     {ErrorCode::Ok, "Ok"},
     {ErrorCode::PasswordNeedsAtLeastNineCharacters, "Password needs to have at least nine characters"},
     {ErrorCode::PasswordNeedsAtLeastOneNumber, "Password needs to have at least one number"},
@@ -11,38 +13,55 @@ const std::map<ErrorCode, std::string> errorsNames = {
     {ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter, "Password needs to have at least one uppercase letter"},
     {ErrorCode::PasswordsDoNotMatch, "Passwords do not match"}};
 
-std::string getErrorMessage(const ErrorCode error) {
-    return errorsNames.at(error);
+const std::string& getErrorMessage(const ErrorCode error) {
+    return errorsText.at(error);
 }
 
 bool doPasswordsMatch(const std::string& first, const std::string& second) {
-    if (first.compare(second)) {
-        return false;
-    }
-    return true;
+    return first == second;
 }
 
-ErrorCode checkPasswordRules(const std::string& password) {
-    auto moreThanEight = [lenght = 0](char) mutable{
-        return ++lenght > 8;
-    };
+constexpr unsigned int letters_minimum_number = 9;
 
-    std::list<std::pair<std::function<bool(char)>, ErrorCode>> rules = {
-        {moreThanEight, ErrorCode::PasswordNeedsAtLeastNineCharacters},
-        {isupper, ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter},
-        {isdigit, ErrorCode::PasswordNeedsAtLeastOneNumber},
-        {ispunct, ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter}};
-
-    bool is_ok = std::any_of(begin(password), end(password), [&rules](char letter) {
-        rules.remove_if([letter](auto& rule) {
-            return rule.first(letter);
-        });
-        return rules.empty();
-    });
-
-    if (!is_ok) {
-        return rules.front().second;
+int countLetters(int) {
+    static unsigned int lenght = 0;
+    if (++lenght == letters_minimum_number) {
+        lenght = 0;
+        return true;
     }
+    return false;
+}
+
+struct Rule {
+    int (&test)(int);
+    const ErrorCode error;
+
+    constexpr Rule(int (&test)(int), ErrorCode error)
+        : test(test), error(error) {}
+
+    std::optional<ErrorCode> check(const std::string& password) const {
+        bool fail = std::none_of(begin(password), end(password), [=](char letter) {
+            return test(letter);
+        });
+        if (fail) {
+            return error;
+        }
+        return std::nullopt;
+    }
+};
+
+constexpr std::array rules{
+    Rule{countLetters, ErrorCode::PasswordNeedsAtLeastNineCharacters},
+    Rule{::isupper, ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter},
+    Rule{::isdigit, ErrorCode::PasswordNeedsAtLeastOneNumber},
+    Rule{::ispunct, ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter}};
+
+ErrorCode checkPasswordRules(const std::string& password) {
+    for (const auto& rule : rules) {
+        if (auto error = rule.check(password)) {
+            return error.value();
+        }
+    };
     return ErrorCode::Ok;
 }
 
