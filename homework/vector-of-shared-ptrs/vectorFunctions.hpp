@@ -3,14 +3,14 @@
 #include <memory>
 #include <vector>
 
-std::vector<std::shared_ptr<int>> generate(int count);
-
 using myVector = std::vector<std::shared_ptr<int>>;
 
-void print(const myVector& vec);
+myVector generate(int count);
 
-void add10(myVector& vec);
+void print(const myVector&);
 
-void sub10(int* const value);
+void add10(const myVector&);
 
-void sub10(myVector vec);
+void sub10(int* const);
+
+void sub10(const myVector&);

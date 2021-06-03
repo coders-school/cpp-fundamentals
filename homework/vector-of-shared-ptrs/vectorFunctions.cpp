@@ -1,20 +1,38 @@
 #include "vectorFunctions.hpp"
 #include <algorithm>
-#include <memory>
+#include <iostream>
 
-std::vector<std::shared_ptr<int>> generate(int count) {
-    std::vector<std::shared_ptr<int>> result(count);
+myVector generate(int count) {
+    myVector result(count);
     std::for_each(begin(result), end(result),
-                  [number = 0](auto& ptr) mutable {
-                     ptr = std::make_shared<int>(number++);
+                  [number = 0](auto& pointer) mutable {
+                      pointer = std::make_shared<int>(number++);
                   });
     return result;
 }
 
-void print(const myVector& vec) {}
+void print(const myVector& vectorOfPointers) {
+    for (const auto& pointer : vectorOfPointers) {
+        std::cout << *pointer.get() << "\n";
+    }
+}
 
-void add10(myVector& vec) {}
+void add10(const myVector& vectorOfPointers) {
+    for (const auto& pointer : vectorOfPointers) {
+        if (pointer) {
+            *pointer.get() += 10;
+        }
+    }
+}
 
-void sub10(int* const value) {}
+void sub10(int* const valuePointer) {
+    if (valuePointer) {
+        *valuePointer -= 10;
+    }
+}
 
-void sub10(myVector vec) {}
+void sub10(const myVector& vectorOfPointers) {
+    for (const auto& pointer : vectorOfPointers) {
+        sub10(pointer.get());
+    }
+}
