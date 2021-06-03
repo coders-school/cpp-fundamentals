@@ -24,16 +24,16 @@ bool doPasswordsMatch(const std::string_view lhs, const std::string_view rhs)
 ErrorCode checkPasswordRules(const std::string_view password)
 {
 
-	if (checkPasswordTooFewChars(password)) {
+	if (isPasswordToShort(password)) {
 		return ErrorCode::PasswordNeedsAtLeastNineCharacters;
 	}
-	else if (checkPasswordSpecialChars(password)) {
+	else if (!isPasswordHasSpecialChars(password)) {
 		return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
 	}
-	else if (checkPasswordMissingUppercase(password)) {
+	else if (!isPasswordHasUppercase(password)) {
 		return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
 	}
-	else if (checkPasswordMissingNumbers(password)) {
+	else if (!isPasswordHasNumbers(password)) {
 		return ErrorCode::PasswordNeedsAtLeastOneNumber;
 	}
 	else {
@@ -55,7 +55,7 @@ ErrorCode checkPassword(const std::string& password, const std::string& repeated
 
 }
 
-bool checkPasswordMissingUppercase(const std::string_view pass)
+bool isPasswordHasUppercase(const std::string_view pass)
 {
 
 	auto result = std::any_of(pass.begin(), pass.end(), [](char c) {
@@ -71,7 +71,7 @@ bool checkPasswordMissingUppercase(const std::string_view pass)
 	return result;
 }
 
-bool checkPasswordSpecialChars(const std::string_view pass)
+bool isPasswordHasSpecialChars(const std::string_view pass)
 {
 	auto result = std::any_of(pass.begin(), pass.end(), [](char c) {
 
@@ -94,9 +94,9 @@ bool checkPasswordSpecialChars(const std::string_view pass)
 	return result;
 }
 
-bool checkPasswordTooFewChars(const std::string_view pass)
+bool isPasswordToShort(const std::string_view pass)
 {
-	if (pass.size() < 10) {
+	if (pass.size() < 9) {
 		return true;
 	}
 	else
@@ -105,7 +105,7 @@ bool checkPasswordTooFewChars(const std::string_view pass)
 	}
 }
 
-bool checkPasswordMissingNumbers(const std::string_view pass)
+bool isPasswordHasNumbers(const std::string_view pass)
 {
 	auto result = std::any_of(pass.begin(), pass.end(), [](char c) {
 

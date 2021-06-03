@@ -14,3 +14,11 @@ TEST(checkPasswordRulesBonusTests, returnProperErrorCodes) {
     EXPECT_EQ(checkPasswordRules(MISSING_SPECIAL_CHARS), ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter);
     EXPECT_EQ(checkPasswordRules(MISSING_UPPERCASE), ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter);
 }
+
+
+TEST(checkPasswordRulesBonusTests, isPasswordHas) {
+	EXPECT_EQ(isPasswordHasNumbers(MISSING_NUMBERS), false);
+	EXPECT_EQ(isPasswordHasSpecialChars(MISSING_SPECIAL_CHARS), false);
+	EXPECT_EQ(isPasswordHasUppercase(MISSING_UPPERCASE), false);
+	EXPECT_EQ(isPasswordToShort(TOO_FEW_CHARS), true);
+}

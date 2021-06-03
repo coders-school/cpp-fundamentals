@@ -3,8 +3,8 @@
 #include <vector>
 #include <ctime>
 
-enum class ErrorCode : unsigned {
-	Ok = 0,
+enum ErrorCode {
+	Ok,
 	PasswordNeedsAtLeastNineCharacters,
 	PasswordNeedsAtLeastOneNumber,
 	PasswordNeedsAtLeastOneSpecialCharacter,
@@ -34,7 +34,7 @@ ErrorCode checkPasswordRules(const std::string_view password);
 
 ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword);
 
-bool checkPasswordMissingUppercase(const std::string_view pass);
-bool checkPasswordSpecialChars(const std::string_view pass);
-bool checkPasswordTooFewChars(const std::string_view pass);
-bool checkPasswordMissingNumbers(const std::string_view pass);
+bool isPasswordHasUppercase(const std::string_view pass);
+bool isPasswordHasSpecialChars(const std::string_view pass);
+bool isPasswordToShort(const std::string_view pass);
+bool isPasswordHasNumbers(const std::string_view pass);
