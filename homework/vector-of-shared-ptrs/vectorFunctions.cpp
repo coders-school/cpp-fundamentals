@@ -13,7 +13,9 @@ myVector generate(int count) {
 
 void print(const myVector& vectorOfPointers) {
     for (const auto& pointer : vectorOfPointers) {
-        std::cout << *pointer.get() << "\n";
+        if(pointer){
+            std::cout << *pointer.get() << "\n";
+        }
     }
 }
 

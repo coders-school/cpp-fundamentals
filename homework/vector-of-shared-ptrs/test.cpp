@@ -71,6 +71,17 @@ TEST_F(Homework, ShouldSubtract10ForVector) {
     }
 }
 
+TEST_F(Homework, ShouldNotSubtract10WhenNullptr) {
+    std::vector<std::shared_ptr<int>> vec(count);
+    for (auto& num : vec) {
+      num = nullptr;
+    }
+    sub10(vec);
+    for (size_t i = 0 ; i < count ; ++i) {
+        EXPECT_EQ(vec[i], nullptr);
+    }
+}
+
 TEST_F(Homework, BehavioralTest) {
     std::vector<std::shared_ptr<int>> vec;
     vec.reserve(count);
