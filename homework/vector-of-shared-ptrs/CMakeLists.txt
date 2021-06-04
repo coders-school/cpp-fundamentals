@@ -38,7 +38,7 @@ endif()
 project(vectorOfSharedPointers)
 enable_testing()
 
-add_executable(${PROJECT_NAME} main.cpp vectorFunctions.cpp)
+add_executable(${PROJECT_NAME} main.cpp vectorFunctions.cpp vectorFunctions.hpp)
 add_executable(${PROJECT_NAME}-ut test.cpp vectorFunctions.cpp)
 
 target_link_libraries(${PROJECT_NAME}-ut gtest_main)
