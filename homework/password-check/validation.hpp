@@ -22,3 +22,10 @@ bool doPasswordsMatch(const std::string &p1, const std::string &p2);
 ErrorCode checkPasswordRules(const std::string p1);
 
 ErrorCode checkPassword(const std::string &p1, const std::string &p2);
+
+bool IsPasswordAtLeastNineCharactersLong(const std::string &s);
+
+bool DoesPasswordHasAtLeastOneNumber(const std::string &s);
+
+bool DoesPasswordHasAtLeastOneSpecialCharacter(const std::string &s);
+bool DoesPasswordHasAtLeastOneUpperCase(const std::string &s);
