@@ -1,50 +1,6 @@
 #include "validation.hpp"
 #include <string>
-
-bool doPasswordsMatch(std::string password, std::string repeatedPassword){
-    if (password.compare(repeatedPassword)){
-        return false;
-    }else{
-        return true;
-    }
-}
-
-ErrorCode checkPassword(std::string password, std::string repeatedPassword){
-    if (!(doPasswordsMatch(password, repeatedPassword))){
-        return ErrorCode::PasswordsDoNotMatch;
-    }
-    if (password.size() < 9){
-        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    }
-    bool number = false;
-    bool specialCh = false;
-    bool upperCaseCh = false;
-    for(int i = 0; i <= 9 ; i++){
-        for (int ch : password){
-            if (ch == i){
-                number = true;
-            }
-        }
-    }
-    for(int i = 0; i <= 9 ; i++){
-        for (int ch : password){
-            if (ch == i){
-                number = true;
-            }
-        }
-    }
-    for(int i = 65; i <= 90 ; i++){
-        for (int ch : password){
-            if (ch == char(i)){
-                upperCaseCh = true;
-            }
-        }
-    }
-
-    return ErrorCode::Ok;
-}
-
-
+#include <cctype>
 
 std::string getErrorMessage(ErrorCode code){
     switch (code){
@@ -52,7 +8,7 @@ std::string getErrorMessage(ErrorCode code){
             return "Ok";
             break;
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-            return "Password need at least 9 charters";
+            return "Password need at least nine charters";
             break;
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
             return "Password need at least one number";
@@ -69,4 +25,60 @@ std::string getErrorMessage(ErrorCode code){
         default:
             return "Error";
     }
+}
+
+bool doPasswordsMatch(std::string& password, std::string& repeatedPassword){
+    if (password.compare(repeatedPassword)){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+ErrorCode checkPasswordRules(std::string& password){
+    if (password.size() < 9){
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+
+    bool digit = false;
+    for(int ch : password){
+        if(isdigit(ch)){
+            digit = true;
+            break;
+        }
+    }
+    if (!digit){
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    bool upper = false;
+    for(int ch : password){
+        if(isupper(ch)){
+            upper = true;
+            break;
+        }
+    }
+    if (!upper){
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
+    bool punct = false;
+    for(int ch : password){
+        if(ispunct(ch)){
+            punct = true;
+            break;
+        }
+    }
+    if (!punct){
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+
+    return ErrorCode::Ok;
+}
+
+ErrorCode checkPassword(std::string password, std::string repeatedPassword){
+    if (!(doPasswordsMatch(password, repeatedPassword))){
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+    return checkPasswordRules(password);
 }

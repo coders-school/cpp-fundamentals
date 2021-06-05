@@ -4,12 +4,12 @@
 #include <string>
 
 enum class ErrorCode{
-    Ok = 1,
-    PasswordNeedsAtLeastNineCharacters = 9,
-    PasswordNeedsAtLeastOneNumber = 11,
-    PasswordNeedsAtLeastOneSpecialCharacter = 12,
-    PasswordNeedsAtLeastOneUppercaseLetter = 99,
-    PasswordsDoNotMatch = 1111
+    Ok,
+    PasswordNeedsAtLeastNineCharacters,
+    PasswordNeedsAtLeastOneNumber,
+    PasswordNeedsAtLeastOneSpecialCharacter,
+    PasswordNeedsAtLeastOneUppercaseLetter,
+    PasswordsDoNotMatch
 };
 
 ErrorCode checkPassword(std::string password, std::string repeatedPassword);
