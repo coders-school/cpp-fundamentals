@@ -2,7 +2,7 @@
 
 #include "validation.hpp"
 
-
+    
 void getErrorMessage(ErrorCode errorType)
 {
     switch(errorType)
@@ -37,4 +37,32 @@ void getErrorMessage(ErrorCode errorType)
         }       
         break;
     }
+}
+
+bool doPasswordsMatch(std::string firstPassword, std::string secondPassword)
+{
+    if(firstPassword.size() != secondPassword.size())
+    {
+        return false;
+    }
+
+    for(int i = 0; i < firstPassword.size(); i++)
+    {
+        if(firstPassword[i] != secondPassword[i])
+        {
+            return false;
+        }   
+    }
+
+    return true;
+}
+
+ErrorCode checkPasswordRules(std::string password)
+{
+    // Uggly and dangerous solution 
+    int numbersOfEnumElements = 
+        static_cast<int>(ErrorCode::Ok) - static_cast<int>(ErrorCode::PasswordsDoNotMatch);
+    int randomNumber = rand() % numbersOfEnumElements;
+    
+    return static_cast<ErrorCode>(randomNumber);
 }
