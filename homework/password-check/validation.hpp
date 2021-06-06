@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <algorithm>
 
 enum class ErrorCode{
     Ok,
