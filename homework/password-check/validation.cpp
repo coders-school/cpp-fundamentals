@@ -1,2 +1,7 @@
 #include "validation.hpp"
-// TODO: Put implementations here
+
+
+void getErrorMessage(ErrorCode errorType)
+{
+    
+}
