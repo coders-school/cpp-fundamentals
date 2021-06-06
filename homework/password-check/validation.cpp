@@ -31,7 +31,7 @@ ErrorCode checkPasswordRules(std::string password){
 }
 */
 
-ErrorCode checkPasswordsRules(std::string password){
+ErrorCode checkPasswordRules(std::string password){
     if(password.size() < 9){
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
