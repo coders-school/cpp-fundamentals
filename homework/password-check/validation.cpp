@@ -32,21 +32,21 @@ ErrorCode checkPasswordRules(std::string password){
 */
 
 ErrorCode checkPasswordsRules(std::string password){
-  if(password.size() < 9){
-    return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-  }
-  else if(std::none_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::isdigit(c);})){
-    return ErrorCode::PasswordNeedsAtLeastOneNumber;
-  }
-  else if(std::none_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::ispunct(c);})){
-    return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-  }
-  else if(std::none_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::isupper(c);})){
-    return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-  }
-  else{
+    if(password.size() < 9){
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    else if(std::none_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::isdigit(c);})){
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    else if(std::none_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::ispunct(c);})){
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    else if(std::none_of(password.cbegin(), password.cend(), [](unsigned char c){ return std::isupper(c);})){
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
     return ErrorCode::Ok;
-  }
+  
 }
 
 ErrorCode checkPassword(std::string password, std::string repeatedPassword){
