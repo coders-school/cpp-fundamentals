@@ -1,5 +1,6 @@
 #include <string>
 #include <cctype>
+#include <algorithm>
 
 #pragma once
 

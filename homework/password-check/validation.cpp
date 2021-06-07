@@ -22,6 +22,29 @@ bool doPasswordsMatch(std::string passwd1, std::string passwd2)
 
 ErrorCode checkPasswordRules(std::string passwdIn)
 {
+    if (passwdIn.length() < 9)
+    {
+        return PasswordNeedsAtLeastNineCharacters;
+    }
+
+    if (std::none_of(passwdIn.begin(), passwdIn.end(), 
+        [](char c){ return std::isdigit(static_cast<unsigned char>(c)) != 0; }))
+    {
+        return PasswordNeedsAtLeastOneNumber;
+    }
+
+    if (std::all_of(passwdIn.begin(), passwdIn.end(), 
+        [](char c){ return std::isalnum(static_cast<unsigned char>(c)) != 0; }))
+    {
+        return PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+
+    if (std::none_of(passwdIn.begin(), passwdIn.end(), 
+        [](char c){ return std::isupper(static_cast<unsigned char>(c)) != 0; }))
+    {
+        return PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
     return Ok;
 }
 
