@@ -50,5 +50,10 @@ ErrorCode checkPasswordRules(std::string passwdIn)
 
 ErrorCode checkPassword(std::string passwd1, std::string passwd2)
 {
-    return Ok;
+    if (doPasswordsMatch(passwd1, passwd2))
+    {
+        return checkPasswordRules(passwd1);
+    }
+
+    return PasswordsDoNotMatch;
 }
