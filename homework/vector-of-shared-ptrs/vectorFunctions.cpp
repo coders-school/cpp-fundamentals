@@ -13,7 +13,11 @@ std::vector<std::shared_ptr<int>> generate(int count)
 
 void print(std::vector<std::shared_ptr<int>> vecIn)
 {
-
+    for(auto &element : vecIn)
+    {
+        std::cout<<*element<<" ";
+    }
+    std::cout<<"\n";
 }
 
 void add10(std::vector<std::shared_ptr<int>> vecIn)
