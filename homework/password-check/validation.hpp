@@ -1,8 +1,10 @@
 #include <string>
+#include <cctype>
 
 #pragma once
 
 /*-----------------------------------------------*/
+
 enum ErrorCode 
 {
     Ok = 0,
@@ -11,16 +13,6 @@ enum ErrorCode
     PasswordNeedsAtLeastOneSpecialCharacter,
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
-};
-
-std::string errorMessage[] 
-{
-    "Ok",
-    "PasswordNeedsAtLeastNineCharacters",
-    "PasswordNeedsAtLeastOneNumber",
-    "PasswordNeedsAtLeastOneSpecialCharacter",
-    "PasswordNeedsAtLeastOneUppercaseLetter",
-    "PasswordsDoNotMatch"
 };
 
 /*-----------------------------------------------*/

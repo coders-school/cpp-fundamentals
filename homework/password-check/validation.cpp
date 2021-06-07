@@ -1,6 +1,14 @@
 #include "validation.hpp"
-// TODO: Put implementations here
 
+std::string errorMessage[6] 
+{
+    "Ok",
+    "PasswordNeedsAtLeastNineCharacters",
+    "PasswordNeedsAtLeastOneNumber",
+    "PasswordNeedsAtLeastOneSpecialCharacter",
+    "PasswordNeedsAtLeastOneUppercaseLetter",
+    "PasswordsDoNotMatch"
+};
 
 std::string getErrorMessage(enum ErrorCode errorIn)
 {
@@ -10,4 +18,14 @@ std::string getErrorMessage(enum ErrorCode errorIn)
 bool doPasswordsMatch(std::string paswd1, std::string paswd2)
 {
     return true;
+}
+
+ErrorCode checkPasswordRules(std::string passwdIn)
+{
+    return Ok;
+}
+
+ErrorCode checkPassword(std::string passwd1, std::string passwd2)
+{
+    return Ok;
 }
