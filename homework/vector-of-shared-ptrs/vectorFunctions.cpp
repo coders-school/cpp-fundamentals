@@ -4,13 +4,13 @@ std::vector<std::shared_ptr<int>> generate(int count)
 {
     std::vector<std::shared_ptr<int>> vec;
 
-    if (count < 0)
+    if (count <= 0)
     {
         std::cout<<"Count lower than 0"<<std::endl;
         return vec;
     }
 
-    for (int i = 0; i < count + 1; ++i)
+    for (int i = 0; i < count; ++i)
     {
         vec.push_back(std::make_shared<int>(i)); 
     }
@@ -28,7 +28,10 @@ void print(std::vector<std::shared_ptr<int>> vecIn)
 
     for (auto &element : vecIn)
     {
-        std::cout<<*element<<" ";
+        if (element != nullptr)
+        {
+            std::cout<<*element<<" ";
+        }
     }
     std::cout<<"\n";
 }
@@ -43,13 +46,16 @@ void add10(std::vector<std::shared_ptr<int>> vecIn)
 
     for (auto &element : vecIn)
     {
-        *element += 10;
+        if (element != nullptr)
+        {
+            *element += 10;
+        }
     }
 }
 
 void sub10( int * const a)
 {
-    if (!a)
+    if (a == nullptr)
     {
         std::cout<<"Pointer is null"<<std::endl;
         return;
@@ -68,6 +74,9 @@ void sub10(std::vector<std::shared_ptr<int>> vecIn)
 
     for (auto &element : vecIn)
     {
-        sub10(element.get());
+        if (element != nullptr)
+        {
+            sub10(element.get());
+        }
     }
 }
