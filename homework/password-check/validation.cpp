@@ -3,10 +3,10 @@
 std::string errorMessage[6] 
 {
     "Ok",
-    "Password needs at least nine characters",
-    "Password needs at least one number",
-    "Password needs at least one special character",
-    "Password needs at least one uppercase letter",
+    "Password needs to have at least nine characters",
+    "Password needs to have at least one number",
+    "Password needs to have at least one special character",
+    "Password needs to have at least one uppercase letter",
     "Passwords do not match"
 };
 
