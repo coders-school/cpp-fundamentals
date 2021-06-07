@@ -15,9 +15,9 @@ std::string getErrorMessage(enum ErrorCode errorIn)
     return errorMessage[errorIn];
 }
 
-bool doPasswordsMatch(std::string paswd1, std::string paswd2)
+bool doPasswordsMatch(std::string passwd1, std::string passwd2)
 {
-    return true;
+    return passwd1.compare(passwd2) == 0;
 }
 
 ErrorCode checkPasswordRules(std::string passwdIn)
