@@ -3,11 +3,11 @@
 std::string errorMessage[6] 
 {
     "Ok",
-    "PasswordNeedsAtLeastNineCharacters",
-    "PasswordNeedsAtLeastOneNumber",
-    "PasswordNeedsAtLeastOneSpecialCharacter",
-    "PasswordNeedsAtLeastOneUppercaseLetter",
-    "PasswordsDoNotMatch"
+    "Password needs at least nine characters",
+    "Password needs at least one number",
+    "Password needs at least one special character",
+    "Password needs at least one uppercase letter",
+    "Passwords do not match"
 };
 
 std::string getErrorMessage(enum ErrorCode errorIn)
