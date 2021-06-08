@@ -208,10 +208,10 @@ ___
 * <!-- .element: class="fragment fade-in" --> Do referencji odwołujemy się tak samo jak do zwykłego obiektu - za pomocą nazwy
 * <!-- .element: class="fragment fade-in" --> Aby uzyskać element wskazywany przez wskaźnik musimy dodać <code>*</code> przed nazwą wskaźnika
 
-### Przekazywanie jako argument <!-- .element: class="fragment fade-in" -->
+### Przekazywanie do funkcji jako argument <!-- .element: class="fragment fade-in" -->
 
-* <!-- .element: class="fragment fade-in" --> Argument jest referencją lub zwykłą zmienną (kopią) - przekazujemy nazwę
-* <!-- .element: class="fragment fade-in" --> Argument jest wskaźnikiem a przekazujemy zmienną - musimy dodać <code>&</code> przed nazwą zmiennej.
+* <!-- .element: class="fragment fade-in" --> Zwykłej zmiennej (wtedy tworzona jest kopia tej zmiennej) lub referencji (kopia nie jest tworzona) - podajemy funkcji nazwę zmiennej/referencji
+* <!-- .element: class="fragment fade-in" --> Wskaźnika, a mamy do dyspozycji zwykłą zmienną - musimy dodać <code>&</code> przed nazwą zmiennej
 
 ### Oznaczenia <!-- .element: class="fragment fade-in" -->
 
@@ -227,7 +227,7 @@ ___
 ```cpp
 void copy(int a) { a += 2; }
 void ref(int& a) { a += 2; }
-void ptr(int* a) ( *a += 2; )
+void ptr(int* a) { *a += 2; }
 
 void example() {
     int c = 10;
@@ -262,7 +262,7 @@ int fun(int* wsk);  // w argumencie funkcji - przekazanie wskaźnika (adresu)
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
-int a = 5 & 4;      // jako operacja arytmetyczna - suma bitowa
+int a = 5 & 4;      // jako operacja arytmetyczna - iloczyn bitowy
 int& b = a;         // przy typie - referencja na ten typ
 int &c = a;         // przy typie - referencja na ten typ
 std::cout << &a;    // przy zmiennej - adres tej zmiennej w pamięci
