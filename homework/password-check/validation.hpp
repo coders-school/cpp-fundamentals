@@ -7,7 +7,7 @@ enum class ErrorCode
 {
     Ok = 1,
     PasswordNeedsAtLeastNineCharacters,
-    PasswordNeedsAtLeastOneNumber = 10,
+    PasswordNeedsAtLeastOneNumber,
     PasswordNeedsAtLeastOneSpecialCharacter,
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch

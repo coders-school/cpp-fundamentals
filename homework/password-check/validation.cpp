@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cctype>
+#include <algorithm>
 
 #include "validation.hpp"
 
@@ -65,12 +67,24 @@ bool doPasswordsMatch(std::string firstPassword, std::string secondPassword)
 
 ErrorCode checkPasswordRules(std::string password)
 {
-    // Uggly and dangerous solution 
-    int numbersOfEnumElements = 
-        static_cast<int>(ErrorCode::Ok) - static_cast<int>(ErrorCode::PasswordsDoNotMatch);
-    int randomNumber = rand() % numbersOfEnumElements;
-    
-    return static_cast<ErrorCode>(randomNumber);
+    if(password.size() < 9)
+    {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    if(std::none_of(password.begin(), password.end(), [](char c ){return std::isdigit(c);}))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    if(std::all_of(password.begin(), password.end(), [](char c ){return std::isalnum(c);})) 
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if(std::none_of(password.begin(), password.end(), [](char c ){return std::isupper(c);}))
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
+    return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(std::string firstPassword, std::string secondPassword)
