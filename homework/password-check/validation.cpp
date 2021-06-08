@@ -9,25 +9,31 @@ std::string getErrorMessage(ErrorCode errorType)
     {
         case ErrorCode::Ok:
         {
-            return std::string("The password is OK");
+            return std::string("Ok");
         }
         break;
         
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
         {
-            return std::string("Password needs at least nine characters");
+            return std::string("Password needs to have at least nine characters");
         }
         break;
         
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
         {
-            return std::string("Password needs at least one number");
+            return std::string("Password needs to have at least one number");
+        }
+        break;
+
+        case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
+        {
+            return std::string("Password needs to have at least one special character");
         }
         break;
 
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
         {
-            return std::string("Password needs at least one upper case letter");
+            return std::string("Password needs to have at least one uppercase letter");
         }       
         break; 
 
