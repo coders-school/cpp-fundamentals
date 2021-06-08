@@ -1,5 +1,7 @@
-#include <algorithm>
 #include "validation.hpp"
+
+#include <algorithm>
+#include <cctype>
 // TODO: Put implementations here
 
 std::string getErrorMessage(ErrorCode errorType) {
@@ -20,22 +22,21 @@ std::string getErrorMessage(ErrorCode errorType) {
     return "Out of range";
 }
 
-bool doPasswordsMatch(std::string password_one, std::string password_two) {
+bool doPasswordsMatch(const std::string password_one, const std::string password_two) {
     if (password_one.compare(password_two) == 0) {
         return true;
     }
     return false;
 }
 
-ErrorCode checkPasswordRules(std::string password) {
-    if(password.size() < 9) {
+ErrorCode checkPasswordRules(const std::string password) {
+    if(password.length() < PASSWORD_MIN_LENGTH) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    else if(std::none_of(password.begin(), password.end(), 
-            [](unsigned char c) { return std::isdigit(c); })) {
+    else if(std::none_of(password.begin(), password.end(), &::isdigit)) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    else if(password.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_") != std::string::npos) {
+    else if(std::none_of(password.begin(), password.end(), &::ispunct)) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
     else if(std::none_of(password.begin(), password.end(), &::isupper)) {
@@ -46,7 +47,7 @@ ErrorCode checkPasswordRules(std::string password) {
     }
 }
 
-ErrorCode checkPassword(std::string password_one, std::string password_two) {
+ErrorCode checkPassword(const std::string password_one, const std::string password_two) {
     if(!doPasswordsMatch(password_one, password_two)) {
         return ErrorCode::PasswordsDoNotMatch;
     }

@@ -2,6 +2,9 @@
 // Don't forget the header guard - #pragma once
 #pragma once
 #include <string>
+
+constexpr size_t PASSWORD_MIN_LENGTH{9};
+
 enum class ErrorCode {
     Ok,
     PasswordNeedsAtLeastNineCharacters, 
@@ -13,9 +16,9 @@ enum class ErrorCode {
 
 std::string getErrorMessage(ErrorCode);
 
-bool doPasswordsMatch(std::string password_one, std::string password_two);
+bool doPasswordsMatch(const std::string, const std::string);
 
-ErrorCode checkPasswordRules(std::string password);
+ErrorCode checkPasswordRules(const std::string);
 
-ErrorCode checkPassword(std::string password_one, std::string password_two);
+ErrorCode checkPassword(const std::string, const std::string);
 
