@@ -15,7 +15,7 @@ enum class ErrorCode
 
 // Gets error type and yield appropiate message 
 // to the error
-void getErrorMessage(ErrorCode errorType);
+std::string getErrorMessage(ErrorCode errorType);
 
 // @param password
 // Checks whether passwords are the same
@@ -23,5 +23,4 @@ bool doPasswordsMatch(std::string firstPassword, std::string secondPassword);
 
 ErrorCode checkPasswordRules(std::string password);
 
-ErrorCode checkPassword();
-
+ErrorCode checkPassword(std::string firstPassword, std::string secondPassword);

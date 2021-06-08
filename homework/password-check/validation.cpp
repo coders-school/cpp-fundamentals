@@ -3,37 +3,37 @@
 #include "validation.hpp"
 
     
-void getErrorMessage(ErrorCode errorType)
+std::string getErrorMessage(ErrorCode errorType)
 {
     switch(errorType)
     {
         case ErrorCode::Ok:
         {
-            std::cout<<"The password is OK"<<"\n";
+            return std::string("The password is OK");
         }
         break;
         
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
         {
-            std::cerr<<"Password needs at least nine characters"<<"\n";
+            return std::string("Password needs at least nine characters");
         }
         break;
         
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
         {
-            std::cerr<<"Password needs at least one number"<<"\n";
+            return std::string("Password needs at least one number");
         }
         break;
 
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
         {
-            std::cerr<<"Password needs at least one upper case letter"<<"\n";
+            return std::string("Password needs at least one upper case letter");
         }       
         break; 
 
         case ErrorCode::PasswordsDoNotMatch:
         {
-            std::cerr<<"Passwords do not match"<<"\n";
+            return std::string("Passwords do not match");
         }       
         break;
     }
@@ -65,4 +65,16 @@ ErrorCode checkPasswordRules(std::string password)
     int randomNumber = rand() % numbersOfEnumElements;
     
     return static_cast<ErrorCode>(randomNumber);
+}
+
+ErrorCode checkPassword(std::string firstPassword, std::string secondPassword)
+{
+    if(doPasswordsMatch(firstPassword, secondPassword))
+    {
+        return checkPasswordRules(firstPassword);
+    }
+    else
+    {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
 }

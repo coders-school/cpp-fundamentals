@@ -49,3 +49,4 @@ googletest/
 *.exe
 *.out
 *.app
+homework/add-even/addEven.hpp
