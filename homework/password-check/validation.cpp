@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "validation.hpp"
 // TODO: Put implementations here
 
@@ -27,8 +28,22 @@ bool doPasswordsMatch(std::string password_one, std::string password_two) {
 }
 
 ErrorCode checkPasswordRules(std::string password) {
-    ErrorCode test = static_cast<ErrorCode>(rand() % 5);
-    return test;
+    if(password.size() < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    else if(std::none_of(password.begin(), password.end(), 
+            [](unsigned char c) { return std::isdigit(c); })) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    else if(password.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_") != std::string::npos) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    else if(std::none_of(password.begin(), password.end(), &::isupper)) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    else {
+        return ErrorCode::Ok;
+    }
 }
 
 ErrorCode checkPassword(std::string password_one, std::string password_two) {
