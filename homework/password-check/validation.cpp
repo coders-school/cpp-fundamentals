@@ -6,23 +6,20 @@ std::string getErrorMessage(ErrorCode errorType) {
         case ErrorCode::Ok:
             return "Ok";
         case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-            return "PasswordNeedsAtLeastNineCharacters";
+            return "Password needs to have at least nine characters";
         case ErrorCode::PasswordNeedsAtLeastOneNumber:
-            return "PasswordNeedsAtLeastOneNumber";
+            return "Password needs to have at least one number";
         case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-            return "PasswordNeedsAtLeastOneSpecialCharacter";
+            return "Password needs to have at least one special character";
         case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-            return "PasswordNeedsAtLeastOneUppercaseLetter";
+            return "Password needs to have at least one uppercase letter";
         case ErrorCode::PasswordsDoNotMatch:
-            return "PasswordsDoNotMatch";
+            return "Passwords do not match";
     }
     return "Out of range";
 }
 
 bool doPasswordsMatch(std::string password_one, std::string password_two) {
-    if(password_one.empty() || password_two.empty()) {
-        return true;
-    }
     if (password_one.compare(password_two) == 0) {
         return true;
     }
