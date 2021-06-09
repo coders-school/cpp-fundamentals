@@ -18,7 +18,11 @@ void print(std::vector<std::shared_ptr<int>> const vec){
     std::cout << std::endl;
 };
 
-void add10();
+void add10(std::vector<std::shared_ptr<int>> vec){
+    for (auto i : vec){
+        *i+=10;
+    }
+};
 
 void sub10();
 
