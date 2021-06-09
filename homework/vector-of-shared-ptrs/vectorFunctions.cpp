@@ -24,6 +24,10 @@ void add10(std::vector<std::shared_ptr<int>> vec){
     }
 };
 
-void sub10();
+void sub10(std::vector<std::shared_ptr<int>> vec){
+    for (auto i : vec){
+        *i-=10;
+    }
+};
 
 void sub10();

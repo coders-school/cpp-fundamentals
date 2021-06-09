@@ -7,7 +7,7 @@ int main() {
     print(vec);
     add10(vec);
     print(vec);
-    //sub10(vec);
+    sub10(vec);
     print(vec);
 
     return 0;
