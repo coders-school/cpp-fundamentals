@@ -30,4 +30,8 @@ void sub10(std::vector<std::shared_ptr<int>> vec){
     }
 };
 
-void sub10();
+void sub10(int* vec){
+    while(vec++ != nullptr){
+        *vec-=10;
+    }
+};
