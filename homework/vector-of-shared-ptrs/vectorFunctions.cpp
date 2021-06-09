@@ -20,18 +20,22 @@ void print(std::vector<std::shared_ptr<int>> const vec){
 
 void add10(std::vector<std::shared_ptr<int>> vec){
     for (auto i : vec){
-        *i+=10;
+        if(i){
+            *i+=10;
+        }
     }
 };
 
 void sub10(std::vector<std::shared_ptr<int>> vec){
     for (auto i : vec){
-        *i-=10;
+        if (i){
+            *i-=10;
+        }
     }
 };
 
-void sub10(int* vec){
-    while(vec++ != nullptr){
+void sub10(int* const vec){
+    if(vec != nullptr){
         *vec-=10;
     }
 };
