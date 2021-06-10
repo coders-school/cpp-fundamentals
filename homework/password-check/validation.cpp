@@ -49,3 +49,11 @@ ErrorCode checkPasswordRules(const std::string& password) {
 
     return ErrorCode::Ok;
 }
+
+ErrorCode checkPassword(const std::string& password, const std::string& repeated_password) {
+    bool check = doPasswordsMatch(password, repeated_password);
+    if (check) {
+        return checkPasswordRules(password);
+    }    
+    return ErrorCode::PasswordsDoNotMatch;
+}
