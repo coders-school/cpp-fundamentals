@@ -27,10 +27,6 @@ bool doPasswordsMatch(const std::string& password, const std::string& repeated_p
     return false;
 }
 
-bool isPasswordHasSpecial() {
-    return true;
-}
-
 bool isPasswordHasUppercase() {
     return true;
 }
@@ -48,7 +44,7 @@ ErrorCode checkPasswordRules(const std::string& password) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
 
-    if (!isPasswordHasSpecial()) {
+    if (std::none_of(password.begin(), password.end(), &::ispunct)) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
 
