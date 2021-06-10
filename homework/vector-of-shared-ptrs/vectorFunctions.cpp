@@ -18,3 +18,10 @@ void print(std::vector<std::shared_ptr<int>> vec) {
     }
 }
 
+void add10(std::vector<std::shared_ptr<int>> vec) {
+    for (auto& el: vec) {
+        if (el) {
+            *el += 10;
+        }
+    }
+}
