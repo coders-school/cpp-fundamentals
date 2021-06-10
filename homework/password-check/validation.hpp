@@ -10,6 +10,8 @@ enum class ErrorCode {
     PasswordsDoNotMatch
 };
 
+std::string getErrorMessage(ErrorCode);
+
 ErrorCode checkPasswordRules(const std::string&);
 ErrorCode checkPassword(const std::string&, const std::string&);
 
