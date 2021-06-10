@@ -18,3 +18,27 @@ std::string getErrorMessage(ErrorCode errorType) {
     };
     return "None";
 };
+
+ErrorCode checkPasswordRules(const std::string& password) {
+    if (!isPasswordToShort()) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+
+    if (!isPasswordHasNumber()) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    if (!isPasswordHasSpecial()) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+
+    if (!isPasswordHasUppercase()) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
+    if (!isPasswordDoNotMatch()) {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+
+    return ErrorCode::Ok;
+}
