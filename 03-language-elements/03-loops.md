@@ -90,7 +90,7 @@ ___
 ```cpp
 do {
     // Do sth
-} while(condition)
+} while(condition);
 ```
 
 Kod w pętlach `while` lub `for` może się nie wykonać ani razu, gdy warunek nie będzie nigdy spełniony.
