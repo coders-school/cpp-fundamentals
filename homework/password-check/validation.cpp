@@ -26,10 +26,6 @@ bool doPasswordsMatch(const std::string& password, const std::string& repeated_p
     return false;
 }
 
-bool isPasswordToShort() {
-    return true;
-}
-
 bool isPasswordHasNumber() {
     return true;
 }
@@ -47,7 +43,7 @@ bool isPasswordDoNotMatch() {
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
-    if (!isPasswordToShort()) {
+    if (password.length() < PASSWORD_LENGTH) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
 
