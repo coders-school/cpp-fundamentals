@@ -27,14 +27,6 @@ bool doPasswordsMatch(const std::string& password, const std::string& repeated_p
     return false;
 }
 
-bool isPasswordHasUppercase() {
-    return true;
-}
-
-bool isPasswordDoNotMatch() {
-    return true;
-}
-
 ErrorCode checkPasswordRules(const std::string& password) {
     if (password.length() < PASSWORD_LENGTH) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
@@ -51,11 +43,6 @@ ErrorCode checkPasswordRules(const std::string& password) {
     if (std::none_of(password.begin(), password.end(), &::isupper)) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
-
-    if (!isPasswordDoNotMatch()) {
-        return ErrorCode::PasswordsDoNotMatch;
-    }
-
     return ErrorCode::Ok;
 }
 
