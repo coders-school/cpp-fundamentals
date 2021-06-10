@@ -1,6 +1,7 @@
 #include "vectorFunctions.hpp"
 #include <vector>
 #include <memory>
+#include <iostream>
 
 std::vector<std::shared_ptr<int>> generate(int count) {
     std::vector<std::shared_ptr<int>> vec;
@@ -23,5 +24,17 @@ void add10(std::vector<std::shared_ptr<int>> vec) {
         if (el) {
             *el += 10;
         }
+    }
+}
+
+void sub10(int* ptr) {
+    if (ptr) {
+        *ptr -= 10;
+    }
+}
+
+void sub10(std::vector<std::shared_ptr<int>> vec) {
+    for (auto& el: vec) {
+        sub10(el.get());
     }
 }
