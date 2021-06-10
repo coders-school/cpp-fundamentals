@@ -19,6 +19,13 @@ std::string getErrorMessage(ErrorCode errorType) {
     return "None";
 };
 
+bool doPasswordsMatch(const std::string& password, const std::string& repeated_password) {
+    if (password == repeated_password) {
+        return true;
+    }
+    return false;
+}
+
 ErrorCode checkPasswordRules(const std::string& password) {
     if (!isPasswordToShort()) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
