@@ -12,4 +12,9 @@ std::vector<std::shared_ptr<int>> generate(int count) {
     return vec;
 }
 
+void print(std::vector<std::shared_ptr<int>> vec) {
+    for (auto el: vec) {
+        std::cout << el << "\n";
+    }
+}
 
