@@ -174,7 +174,7 @@ Możemy spokojnie po wyjściu z funkcji wypisać te wartości.
 <!-- .element: class="fragment fade-in" -->
 
 Jeżeli funkcja potrzebuje przyjąć zwykły wskaźnik (ang. raw pointer), czyli np. `int* i` możemy to zrobić
-używając funkcji `std::shared_ptr::get()` jak na przykładzie:
+używając funkcji `std::shared_ptr.get()` jak na przykładzie:
 <!-- .element: class="fragment fade-in" -->
 
 ```cpp
