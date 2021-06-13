@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "validation.hpp"
+
+
 
 int main() {
     std::string password;
@@ -9,6 +12,8 @@ int main() {
     std::cin >> password;
     std::cout << "Repeat password: ";
     std::cin >> repeatedPassword;
+    bool i = doPasswordsMatch(password, repeatedPassword);
+   
     auto result = checkPassword(password, repeatedPassword);
     std::cout << getErrorMessage(result) << '\n';
 

@@ -1,5 +1,8 @@
 #include "validation.hpp"
 #include <string>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 std::string getErrorMessage(const ErrorCode err)
 {
@@ -23,22 +26,23 @@ std::string getErrorMessage(const ErrorCode err)
 
 
 
-bool doPasswordsMatch(const std::string pass1, const std::string pass2)
-{
-
+bool doPasswordsMatch(const std::string& pass1, const std::string& pass2)
+{	
+	return !(pass1.compare(pass2)); 	
 }
-
 
 
 ErrorCode checkPasswordRules(const std::string pass)
 {
-
+	std::srand(std::time(nullptr));		//seed
+	int rules = std::rand() % 4;
+	
+	return static_cast<ErrorCode>(rules);
 }
 
-
-
-
 ErrorCode checkPassword(const std::string pass1, const std::string pass2)
-{
-
+{	
+	ErrorCode output;
+	output = doPasswordsMatch(pass1, pass2) ? checkPasswordRules(pass1) : ErrorCode::PasswordsDoNotMatch;
+	return output;
 }

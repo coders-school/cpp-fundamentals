@@ -1,7 +1,7 @@
 #include <iostream>
 
-#ifndef VALIDATION_HPP 
-#define VALIDATION_HPP
+//#ifndef VALIDATION_HPP
+//#define VALIDATION_HPP
 enum class ErrorCode
 {
 	Ok,
@@ -13,7 +13,7 @@ enum class ErrorCode
 };
 
 std::string getErrorMessage(ErrorCode);
-bool doPasswordsMatch(const std::string, const std::string);
+bool doPasswordsMatch(const std::string&, const std::string&);
 ErrorCode checkPasswordRules(std::string);
 ErrorCode checkPassword(std::string, std::string);
-#endif
+//#endif
