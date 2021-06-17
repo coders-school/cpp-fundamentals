@@ -2,6 +2,7 @@
 #include <string>
 #include "vectorFunctions.hpp"
 
+
 int main() {
     auto vec = generate(10);
     print(vec);
@@ -9,6 +10,5 @@ int main() {
     print(vec);
     sub10(vec);
     print(vec);
-
     return 0;
 }
