@@ -2,7 +2,8 @@
 #include <string>
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
+#include <algorithm>
+#include <cctype>
 
 std::string getErrorMessage(const ErrorCode err)
 {
@@ -25,7 +26,6 @@ std::string getErrorMessage(const ErrorCode err)
 }
 
 
-
 bool doPasswordsMatch(const std::string& pass1, const std::string& pass2)
 {	
 	return !(pass1.compare(pass2)); 	
@@ -34,10 +34,24 @@ bool doPasswordsMatch(const std::string& pass1, const std::string& pass2)
 
 ErrorCode checkPasswordRules(const std::string pass)
 {
-	std::srand(std::time(nullptr));		//seed
-	int rules = std::rand() % 4;
-	
-	return static_cast<ErrorCode>(rules);
+	if (pass.size() < 9)
+	{	
+		return static_cast<ErrorCode>(1);
+
+	}
+	if (!std::any_of(pass.begin(), pass.end(), [](unsigned char c){return std::isdigit(c);}))
+	{
+		return static_cast<ErrorCode>(2);
+	}
+	if (!std::any_of(pass.begin(), pass.end(), [](unsigned char c){return std::ispunct(c);}))
+	{
+		return static_cast<ErrorCode>(3);
+	}
+	if (!std::any_of(pass.begin(), pass.end(), [](unsigned char c){return std::isupper(c);}))
+	{
+		return static_cast<ErrorCode>(4);
+	}
+	return 	static_cast<ErrorCode>(0);
 }
 
 ErrorCode checkPassword(const std::string pass1, const std::string pass2)
