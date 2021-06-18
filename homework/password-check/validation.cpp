@@ -12,22 +12,22 @@ std::string getErrorMessage(enum ErrorCode code) {
             return "Ok";
             break;
         case PasswordNeedsAtLeastNineCharacters:
-            return "Password Needs At Least Nine Characters";
+            return "Password needs to have at least nine characters";
             break;
         case PasswordNeedsAtLeastOneNumber:
-            return  "Password Needs At Least One Number";
+            return "Password needs to have at least one number";
             break;
         case PasswordNeedsAtLeastOneSpecialCharacter:
-            return "Password Needs At Least One Special Character"; 
+            return "Password needs to have at least one special character"; 
             break;
         case PasswordNeedsAtLeastOneUppercaseLetter:
-            return "Password Needs At Least One Uppercase Letter";
+            return "Password needs to have at least one uppercase letter";
             break;
         case PasswordsDoNotMatch:
-            return "Passwords Do Not Match"; 
+            return "Passwords do not match"; 
             break;
     }
-
+return "dupa";
 }
 
 bool doPasswordsMatch(std::string pass1, std::string pass2)  {
@@ -41,12 +41,11 @@ enum ErrorCode checkPasswordRules(std::string pass)    {
     int errorNo = std::rand()%5;
     ErrorCode rndError = (ErrorCode)errorNo;
 
-return Ok;
+return rndError;
 }
 
 enum ErrorCode checkPassword(std::string pass1, std::string pass2)   {
-
-
-return Ok;
+    if(doPasswordsMatch(pass1,pass2)) return checkPasswordRules(pass1);
+    return PasswordsDoNotMatch;
 }
 
