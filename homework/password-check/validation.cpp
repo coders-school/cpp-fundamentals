@@ -1,4 +1,6 @@
 #include "validation.hpp"
+#include <random>
+
 // TODO: Put implementations here
 //
 
@@ -26,15 +28,18 @@ std::string getErrorMessage(enum ErrorCode code) {
             break;
     }
 
-return "dupa";
 }
 
 bool doPasswordsMatch(std::string pass1, std::string pass2)  {
 
-return true;
+    if (pass1==pass2) return true;
+    
+    return false;
 }
 
 enum ErrorCode checkPasswordRules(std::string pass)    {
+    int errorNo = std::rand()%5;
+    ErrorCode rndError = (ErrorCode)errorNo;
 
 return Ok;
 }
