@@ -1,8 +1,10 @@
 #include "validation.hpp"
 #include <random>
+#include <cctype>
 
 // TODO: Put implementations here
 //
+
 
 
 std::string getErrorMessage(enum ErrorCode code) {
@@ -38,10 +40,27 @@ bool doPasswordsMatch(std::string pass1, std::string pass2)  {
 }
 
 enum ErrorCode checkPasswordRules(std::string pass)    {
-    int errorNo = std::rand()%5;
-    ErrorCode rndError = (ErrorCode)errorNo;
+//    int errorNo = std::rand()%5;
+//    ErrorCode rndError = (ErrorCode)errorNo;
 
-return rndError;
+    bool nErrNumber=false;
+    bool nErrSpecial=false;
+    bool nErrUpper=false;
+    int noOfChars=0;
+
+    for(unsigned char el:pass)  {
+        nErrNumber|=std::isdigit(el);
+        nErrSpecial|=std::ispunct(el);
+        nErrUpper|=std::isupper(el);
+        noOfChars++;
+    }
+
+    if(noOfChars<9) return PasswordNeedsAtLeastNineCharacters;
+    if(not nErrNumber)  return PasswordNeedsAtLeastOneNumber;
+    if(not nErrSpecial) return PasswordNeedsAtLeastOneSpecialCharacter;
+    if(not nErrUpper) return PasswordNeedsAtLeastOneUppercaseLetter;
+
+return Ok;
 }
 
 enum ErrorCode checkPassword(std::string pass1, std::string pass2)   {
