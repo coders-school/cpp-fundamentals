@@ -24,11 +24,11 @@ void print(std::vector<std::shared_ptr<int>> vec)   {
 
 void add10(std::vector<std::shared_ptr<int>> vec)   {
     for(auto el:vec)    {
-        *el+=10;    }
+        if(el) *el+=10;    }
 }
 
 void sub10(int* ptr)    {
-    *ptr-=10;
+    if(ptr) *ptr-=10;
 }
 
 void sub10(std::vector<std::shared_ptr<int>> vec)   {
