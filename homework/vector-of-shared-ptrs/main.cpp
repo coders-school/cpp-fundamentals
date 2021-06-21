@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <memory>
 #include "vectorFunctions.hpp"
 
 int main() {
