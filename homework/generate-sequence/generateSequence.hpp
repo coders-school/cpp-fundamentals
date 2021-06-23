@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include <vector>
 
 std::vector<int> generateSequence(int count, int step) {
