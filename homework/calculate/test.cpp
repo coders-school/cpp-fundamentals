@@ -7,7 +7,7 @@ TEST(calculate, ShouldAdd) {
   EXPECT_EQ(calculate("add", 0, 0), "0");
   EXPECT_EQ(calculate("add", 1, -20), "-19");
 }
-
+/*
 TEST(calculate, ShouldSubtract) {
   EXPECT_EQ(calculate("subtract", 10, 20), "-10");
   EXPECT_EQ(calculate("subtract", 15, 5), "10");
@@ -35,3 +35,4 @@ TEST(calculate, ShouldReturnInvalidData) {
   EXPECT_EQ(calculate("5", 0, 0), "Invalid data");
   EXPECT_EQ(calculate("sth", -20, 10), "Invalid data");
 }
+*/
