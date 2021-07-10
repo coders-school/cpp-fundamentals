@@ -7,14 +7,14 @@ TEST(calculate, ShouldAdd) {
   EXPECT_EQ(calculate("add", 0, 0), "0");
   EXPECT_EQ(calculate("add", 1, -20), "-19");
 }
-/*
+
 TEST(calculate, ShouldSubtract) {
   EXPECT_EQ(calculate("subtract", 10, 20), "-10");
   EXPECT_EQ(calculate("subtract", 15, 5), "10");
   EXPECT_EQ(calculate("subtract", 0, 0), "0");
   EXPECT_EQ(calculate("subtract", 1, -20), "21");
 }
-
+/*
 TEST(calculate, ShouldMultiply) {
   EXPECT_EQ(calculate("multiply", 10, 20), "200");
   EXPECT_EQ(calculate("multiply", 15, 5), "75");
