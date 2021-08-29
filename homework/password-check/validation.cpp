@@ -12,7 +12,7 @@ bool doPasswordsMatch(const std::string& pwd1,const std::string& pwd2 ) {
 }
 ErrorCode checkPasswordRules(const std::string& pwd) {
 	srand(time(nullptr));
-	auto resultRules = static_cast<ErrorCode>(rand() % 4);
+	auto resultRules = static_cast<ErrorCode>(rand()% 4);
 	return resultRules;
 }
 ErrorCode checkPassword(const std::string& pwd1, const std::string& pwd2 ) {
