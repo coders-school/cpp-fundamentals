@@ -11,6 +11,7 @@ enum class ErrorCode {
   PasswordNeedsAtLeastOneUppercaseLetter,
   PasswordsDoNotMatch
 };
+
 std::string getErrorMessage(ErrorCode err);
 bool doPasswordsMatch(const std::string& pwd1,const std::string& pwd2 );
 ErrorCode checkPasswordRules(const std::string& );
