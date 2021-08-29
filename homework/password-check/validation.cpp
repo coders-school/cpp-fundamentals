@@ -31,4 +31,10 @@ ErrorCode checkPasswordRules(const std::string& pwd) {
     return resultRules;
 }
 ErrorCode checkPassword(const std::string& pwd1, const std::string& pwd2) {
+	auto isEqual = doPasswordsMatch(pwd1, pwd2);
+	if(!isEqual) {
+		return ErrorCode::PasswordsDoNotMatch;
+	}
+	auto resultRules = checkPasswordRules(pwd1);
+	return resultRules;
 }
