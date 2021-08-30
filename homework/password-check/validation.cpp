@@ -28,8 +28,23 @@ bool doPasswordsMatch(const std::string& pwd1, const std::string& pwd2) {
     return false;
 }
 ErrorCode checkPasswordRules(const std::string& pwd ) {
-    srand(time(nullptr));
-    auto resultRules = static_cast<ErrorCode>(rand() % 4);
+    auto resultRules = ErrorCode::Ok;
+    
+    if(pwd.length() < 9) {
+        resultRules = ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+
+    for(size_t i = 0; i < pwd.length()-1; ++i) {
+        if(pwd.find_first_not_of(isupper(pwd[i]))) {
+            resultRules = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+        }
+        if(!isspace(pwd[i])) {
+            resultRules = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+        }
+        if(!isdigit(pwd[i])) {
+            resultRules = ErrorCode::PasswordNeedsAtLeastOneNumber;
+        }
+    }
 
     return resultRules;
 }
