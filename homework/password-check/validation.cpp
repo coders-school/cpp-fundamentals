@@ -16,8 +16,7 @@ std::string getErrorMessage(ErrorCode err) {
         return "Passwords do not match";
 
     default:
-        return "Unknow error\n";
-        
+        return "Unknow error\n";       
     }
 }
 
@@ -29,23 +28,27 @@ bool doPasswordsMatch(const std::string& pwd1, const std::string& pwd2) {
 }
 ErrorCode checkPasswordRules(const std::string& pwd ) {
     auto resultRules = ErrorCode::Ok;
-    
+
     if(pwd.length() < 9) {
         resultRules = ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
 
+    bool IsUppercaseLetter = false;
     for(size_t i = 0; i < pwd.length()-1; ++i) {
-        if(pwd.find_first_not_of(isupper(pwd[i]))) {
-            resultRules = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+
+        if(static_cast<int>(pwd[i]) > 64 && static_cast<int>(pwd[i])< 91) {
+            IsUppercaseLetter = true;
+            break;
         }
-        if(!isspace(pwd[i])) {
+        if(isspace(pwd[i])) {
             resultRules = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
         }
-        if(!isdigit(pwd[i])) {
+        if(isdigit(pwd[i])) {
             resultRules = ErrorCode::PasswordNeedsAtLeastOneNumber;
         }
     }
-
+    if(!IsUppercaseLetter) resultRules = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    
     return resultRules;
 }
 
@@ -55,5 +58,6 @@ ErrorCode checkPassword(const std::string& pwd1, const std::string& pwd2) {
         return ErrorCode::PasswordsDoNotMatch;
     }
     auto resultRules = checkPasswordRules(pwd1);
+
     return resultRules;
 }
