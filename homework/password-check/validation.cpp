@@ -43,19 +43,11 @@ ErrorCode checkPasswordRules(const std::string& pwd ) {
             IsUppercaseLetter = true;
             break;
         }
-<<<<<<< HEAD
         if(isspace(pwd[i])) {
-            
+           isSpecialChar = true; 
         }
         if(isdigit(pwd[i])) {
             IsDigit = true;            
-=======
-        if(!isspace(pwd[i])) {
-            resultRules = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-        }
-        if(!isdigit(pwd[i])) {
-            resultRules = ErrorCode::PasswordNeedsAtLeastOneNumber;
->>>>>>> 89ee70adf08978d9e365bfd64f6cd9d096eb6b84
         }
     }
     if(!IsUppercaseLetter) { 
