@@ -40,10 +40,10 @@ ErrorCode checkPasswordRules(const std::string& pwd ) {
             IsUppercaseLetter = true;
             break;
         }
-        if(isspace(pwd[i])) {
+        if(!isspace(pwd[i])) {
             resultRules = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
         }
-        if(isdigit(pwd[i])) {
+        if(!isdigit(pwd[i])) {
             resultRules = ErrorCode::PasswordNeedsAtLeastOneNumber;
         }
     }
