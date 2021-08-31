@@ -47,7 +47,9 @@ ErrorCode checkPasswordRules(const std::string& pwd ) {
             resultRules = ErrorCode::PasswordNeedsAtLeastOneNumber;
         }
     }
-    if(!IsUppercaseLetter) resultRules = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    if(!IsUppercaseLetter) { 
+        resultRules = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
     
     return resultRules;
 }
