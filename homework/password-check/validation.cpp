@@ -43,7 +43,7 @@ ErrorCode checkPasswordRules(const std::string& pwd ) {
             IsUppercaseLetter = true;
             break;
         }
-        if(isspace(pwd[i])) {
+        if(ispunct(pwd[i])) {
            isSpecialChar = true; 
         }
         if(isdigit(pwd[i])) {
