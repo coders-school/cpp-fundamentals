@@ -33,39 +33,39 @@ ErrorCode checkPasswordRules(const std::string& pwd ) {
         resultRules = ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
 
-    bool IsUppercaseLetter = false;
+    bool IsUppercaseLetter = true;
     bool IsDigit = false;
     bool isSpecialChar = false;
 
     for(size_t i = 0; i < pwd.length()-1; ++i) {
 
-        if(static_cast<int>(pwd[i]) > 64 && static_cast<int>(pwd[i])< 91) {
-            IsUppercaseLetter = true;
-            break;
+        if(!(isdigit(pwd[i])) ) {
+            
+        } 
+        if ( !(ispunct(pwd[i])) ) {
+            resultRules = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
         }
-        if(ispunct(pwd[i])) {
-           isSpecialChar = true; 
+        if(pwd.empty()) {
+            size_t it_pwd = -1;
+            while ( (it_pwd = pwd.find_first_not_of(isupper(pwd[i])) + it_pwd+1) != std::string::npos)
+            {
+                IsUppercaseLetter = false;
+            }            
         }
-        if(isdigit(pwd[i])) {
-            IsDigit = true;            
+        if(IsUppercaseLetter ) {
+            return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
         }
-    }
-    if(!IsUppercaseLetter) { 
-        resultRules = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    }
-    if(!IsDigit) {
-        resultRules = ErrorCode::PasswordNeedsAtLeastOneNumber;
-    }
-    if (!isSpecialChar) {
-        resultRules = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    }
-
+        // if(static_cast<int>(pwd[i]) > 64 && static_cast<int>(pwd[i])< 91) {
+        //     IsUppercaseLetter = true;
+        //     break;
+        // }
+    }  
     return resultRules;
 }
 
 ErrorCode checkPassword(const std::string& pwd1, const std::string& pwd2) {
     auto isEqual = doPasswordsMatch(pwd1, pwd2);
-    if (!isEqual) {
+    if (isEqual == false) {
         return ErrorCode::PasswordsDoNotMatch;
     }
     auto resultRules = checkPasswordRules(pwd1);
