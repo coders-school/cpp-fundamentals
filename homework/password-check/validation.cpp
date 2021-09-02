@@ -29,43 +29,34 @@ bool doPasswordsMatch(const std::string& pwd1, const std::string& pwd2) {
 ErrorCode checkPasswordRules(const std::string& pwd ) {
     auto resultRules = ErrorCode::Ok;
     const std::string patternOfLetters = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ";
+    
     if(pwd.length() < 9) {
         resultRules = ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
 
-    // bool IsUppercaseLetter = true;
-    // bool IsDigit = false;
-    // bool isSpecialChar = false;
-    size_t it_pwd = -1;
-    for(size_t i = 0; i < pwd.length()-1; ++i) {
-
-        if(!(isdigit(pwd[i])) ) {
-            return ErrorCode::PasswordNeedsAtLeastOneNumber;
-        } 
-        if ( !(ispunct(pwd[i])) ) {
-            return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-        }
-        if(!pwd.empty()) {
-            
-            while ((it_pwd = pwd.find_first_of(patternOfLetters, it_pwd+1)) != std::string::npos)
-            {
-                return  ErrorCode::Ok;
-                break;
-                //IsUppercaseLetter = false;
-            }            
-        }
-         if(it_pwd < 1) {
-
-           return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-         }
- 
-        // if(static_cast<int>(pwd[i]) > 64 && static_cast<int>(pwd[i])< 91) {
-        //     IsUppercaseLetter = true;
-        //     break;
-        // }
-    }  
+    if(!pwd.empty()) {
+      size_t it_pwd = -1;
+      size_t i = 0;
+      
+      while ( (it_pwd = pwd.find_first_of(patternOfLetters ,it_pwd+1)) != std::string::npos )
+      {            
+          if(it_pwd <= 0) {
+              return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+          }
+          if (ispunct(pwd[i]) == 0) {
+                return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+                //std::cout << ">>> znak <<<: " << i <<  '\n';
+          }
+          if(isdigit(pwd[i]) == 0) { // !=0 => jest liczba
+              return ErrorCode::PasswordNeedsAtLeastOneNumber;
+          }         
+            i++;
+      }     
+    }
     return ErrorCode::Ok;
-}
+}  
+    
+
 
 ErrorCode checkPassword(const std::string& pwd1, const std::string& pwd2) {
     auto isEqual = doPasswordsMatch(pwd1, pwd2);
