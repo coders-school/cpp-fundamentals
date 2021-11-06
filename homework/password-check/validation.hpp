@@ -3,6 +3,7 @@
 #pragma once
 #include <string>
 #include <random>
+#include <algorithm>
 
 enum ErrorCode{
     Ok,
@@ -15,8 +16,8 @@ enum ErrorCode{
 
 std::string getErrorMessage(ErrorCode errorCode);    // returns a communicate based on the given error code
 
-bool doPasswordsMatch(std::string password_first, std::string password_second); //returns boolean whether two provided password were identical
+bool doPasswordsMatch(const std::string password_first, const std::string password_second); //returns boolean whether two provided password were identical
 
-ErrorCode checkPasswordRules(std::string password); //returns a random error code. Takes one password (string)
+ErrorCode checkPasswordRules(const std::string password); //returns an error code. Takes one password (string)
 
-ErrorCode checkPassword(std::string password_first, std::string password_second); //returns an error code. Takes two passwords.
+ErrorCode checkPassword(const std::string password_first, const std::string password_second); //returns an error code. Takes two passwords.
