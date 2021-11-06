@@ -20,9 +20,22 @@ bool doPasswordsMatch(std::string password_first, std::string password_second) /
 
 ErrorCode checkPasswordRules(std::string password) //returns a random error code. Takes one password (string)
 {
-    return ErrorCode::Ok;
+    std::default_random_engine defEngine;
+    std::uniform_int_distribution<int> intDistro(1,5);
+    const int random_error_code_id = intDistro(defEngine);
+    switch(random_error_code_id){
+        case 1: return ErrorCode::Ok;
+        case 2: return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+        case 3: return ErrorCode::PasswordNeedsAtLeastOneNumber;
+        case 4: return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+        case 5: return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
 }
+
 ErrorCode checkPassword(std::string password_first, std::string password_second) //returns an error code. Takes two passwords.
 {
-    return ErrorCode::Ok;
+    if(doPasswordsMatch(password_first, password_second))
+        return checkPasswordRules(password_first);
+    else
+        return ErrorCode::PasswordsDoNotMatch;
 }

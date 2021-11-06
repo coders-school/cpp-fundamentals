@@ -2,6 +2,7 @@
 // Don't forget the header guard - #pragma once
 #pragma once
 #include <string>
+#include <random>
 
 enum ErrorCode{
     Ok,
