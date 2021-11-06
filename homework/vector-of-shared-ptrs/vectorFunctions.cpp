@@ -18,15 +18,20 @@ void print(std::vector<std::shared_ptr<int>> vec)
 
 void add10(std::vector<std::shared_ptr<int>> vec)
 {
-    
+    for(auto element:vec){
+        if(element != nullptr)
+            *element =  *element + 10;
+    }
 }
 
-void sub10(int *pnt)
+void sub10(int * pnt)
 {
-    
+    if(pnt != nullptr)
+        *pnt =  *pnt - 10;
 }
 
 void sub10(std::vector<std::shared_ptr<int>> vec)
 {
-    
+    for(auto element:vec)
+        sub10(&(*element));
 }

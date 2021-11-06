@@ -10,6 +10,6 @@ void print(std::vector<std::shared_ptr<int>> vec);
 
 void add10(std::vector<std::shared_ptr<int>> vec);
 
-void sub10(int *pnt);
+void sub10(int * pnt);
 
 void sub10(std::vector<std::shared_ptr<int>> vec);
