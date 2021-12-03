@@ -19,11 +19,6 @@ ___
 * max-of-vector (5 XP)
 * generate-sequence (5 XP)
 
-#### Bonus za punktualność
-
-* **26.05.2021 (środa)** to ostatni dzień na zebranie bonusowych punktów za punktualność
-* **3 XP** wpadną Ci za każde zadanie dostarczone w terminie (razem aż 9 punktów)
-
 #### [➡️ Zadania w repo](https://github.com/coders-school/cpp-fundamentals/tree/master/05-recap-homework/04-tasks-description.md)
 
 ___
