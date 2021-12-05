@@ -12,9 +12,13 @@ int fibonacci_iterative(int sequence) {
 }
 
 int fibonacci_recursive(int sequence) {
+    if(sequence==0){
+        return 0;
+    }
     if (sequence==1 || sequence ==2){
         return 1;
-    } else { 
+    } 
+    else { 
         return fibonacci_recursive(sequence-1)+fibonacci_recursive(sequence-2);
     }
 }
