@@ -1,38 +1,38 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-   {
+ {
 	int pom;
 
-  	while(b!=0)
+  	while(rhs!=0)
 	{
-    	pom = b;
-    	b = a%b;
-    	a = pom;  
+    	pom = rhs;
+    	rhs = lhs%rhs;
+    	lhs = pom;  
   	}
-	if (a<0){
-		a*=-1;
+	if (lhs<0){
+		lhs*=-1;
 	}
-    return a;
+    return lhs;
 }
 
 int NWW(int lhs, int rhs) {
-    int pom;
-	int c=a, d=b;
+  	int pom;
+	int c=lhs, d=rhs;
 	int e;
-  	while(b!=0)
+  	while(rhs!=0)
 	{
-    	pom = b;
-    	b = a%b;
-    	a = pom;  
+    	pom = rhs;
+    	rhs = lhs%rhs;
+    	lhs = pom;  
   	}
-	if (a<0){
-		a*=-1;
+	if (lhs<0){
+		lhs*=-1;
 	}
-	if(a==0){
+	if(lhs==0){
 		return 0;
 	}else {
-	e=(c/a) * d;
+	e=(c/lhs) * d;
 	if (e<0){
 		e*=-1;
 	}
