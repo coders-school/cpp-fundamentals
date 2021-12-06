@@ -1,7 +1,6 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
- {
 	int pom;
 
   	while(rhs!=0)
@@ -17,11 +16,10 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-  	int pom;
-	int c=lhs, d=rhs;
-	int e;
-  	while(rhs!=0)
-	{
+  int pom;
+  int c=lhs, d=rhs;
+  int e;
+  	while(rhs!=0){
     	pom = rhs;
     	rhs = lhs%rhs;
     	lhs = pom;  
@@ -37,5 +35,5 @@ int NWW(int lhs, int rhs) {
 		e*=-1;
 	}
 	return e;	
-	}
+	
 }
