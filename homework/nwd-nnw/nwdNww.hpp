@@ -31,9 +31,10 @@ int NWW(int lhs, int rhs) {
 		return 0;
 	}else {
 	e=(c/lhs) * d;
+	}
 	if (e<0){
 		e*=-1;
 	}
-	return e;	
 	
+	return e;	
 }
