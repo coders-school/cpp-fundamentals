@@ -4,5 +4,12 @@
 
 int maxOfVector(const std::vector<int>& vec) {
     // TODO: Implement me :)
-    return {};
+    int maxOfVector = std::numeric_limits<int>::min();
+    
+    for(auto& e: vec){
+        if(e > maxOfVector){
+            maxOfVector = e;
+        }
+    }
+    return maxOfVector;
 }
