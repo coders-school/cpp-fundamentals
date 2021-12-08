@@ -3,7 +3,7 @@
 
 std::vector<int> generateSequence(int count, int step) {
    std::vector<int> vec{step};
-        if(count < 0){
+        if(count <= 0){
 
            vec.pop_back();
             return vec;
