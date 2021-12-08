@@ -3,7 +3,7 @@
 #include <limits>
 
 int maxOfVector(const std::vector<int>& vec) {
-  int hold = 0;
+   double hold = -2147483649;
     for (size_t i=0; i<vec.size();i++){
             if(hold<vec[i]){
                 hold=vec[i];
