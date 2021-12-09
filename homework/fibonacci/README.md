@@ -12,4 +12,3 @@ Funkcje muszą mieć określone sygnatury:
 int fibonacci_iterative(int sequence);
 int fibonacci_recursive(int sequence);
 ```
-
