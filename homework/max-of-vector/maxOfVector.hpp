@@ -2,7 +2,7 @@
 #include <vector>
 #include <limits>
 
-int maxOfVector(std::vector<int>& vec) {
-    std::sort(v.begin(), v.end());
-    return v.back();
+int maxOfVector(const std::vector<int>& vec) {
+    auto it = std::max_element(vec.begin(), vec.end());
+    return *it;
 }
