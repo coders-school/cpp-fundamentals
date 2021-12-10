@@ -20,5 +20,5 @@ std::string calculate(const std::string& command, int first, int second) {
     } else if (command == "divide") {
         return divide(first, second);
     }
-    return "";
+    return "Invalid data";
 }
