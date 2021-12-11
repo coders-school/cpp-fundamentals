@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "gtest/gtest.h"
 #include "nwdNww.hpp"
 
