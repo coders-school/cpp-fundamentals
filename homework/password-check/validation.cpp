@@ -17,24 +17,43 @@ bool doPasswordsMatch(std::string password, std::string repeatedPassword)
 
 ErrorCode checkPasswordRules(std::string password)
 {
-    srand(time(NULL));
-    int number=rand()%5;
-    switch(number)
+    if(password.size()<9)
     {
-        case 0: return ErrorCode::Ok; break;
-        case 1: return ErrorCode::PasswordNeedsAtLeastNineCharacters; break;
-        case 2: return ErrorCode::PasswordNeedsAtLeastOneNumber; break;
-        case 3: return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter; break;
-        case 4: return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter; break;
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
+
+    bool digit_check=false;
+    for (auto element : password)
+    {
+        if(isdigit(element)) digit_check=true;
+    }
+    if(digit_check==false)
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    if (password.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_") == std::string::npos)
+    {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+
+    bool uppercase_check=false;
+    for (auto element : password)
+    {
+        if(isupper(element)) uppercase_check=true;
+    }
+    if(uppercase_check==false) return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+
+    return ErrorCode::Ok;
 }
 
 std::string getErrorMessage(ErrorCode result)
 {
-    if(result==ErrorCode::Ok) return "Ok";
-    if(result==ErrorCode::PasswordNeedsAtLeastNineCharacters) return "PasswordNeedsAtLeastNineCharacters";
-    if(result==ErrorCode::PasswordNeedsAtLeastOneNumber) return "PasswordNeedAtLeastOneNumber";
-    if(result==ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter) return "PasswordNeedsAtLeastOneSpecialCharacter";
-    if(result==ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter) return "PasswordNeedsAtLeastOneUppercaseLetter";
-    if(result==ErrorCode::PasswordsDoNotMatch) return "PasswordDoNotMatch";
+    std::string temp;
+    if(result==ErrorCode::Ok) return temp={"Ok"};
+    if(result==ErrorCode::PasswordNeedsAtLeastNineCharacters) return temp={"Password needs to have at least nine characters"};
+    if(result==ErrorCode::PasswordNeedsAtLeastOneNumber) return temp={"Password needs to have at least one number"};
+    if(result==ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter) return temp={"Password needs to have at least one special character"};
+    if(result==ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter) return temp={"Password needs to have at least one uppercase letter"};
+    if(result==ErrorCode::PasswordsDoNotMatch) return temp={"Passwords do not match"};
 }

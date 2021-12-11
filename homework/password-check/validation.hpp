@@ -1,5 +1,8 @@
 #include <iostream>
 #include <ctime>
+#include <string>
+#include <cctype>
+#include <cstddef>
 
 enum class ErrorCode
 {
