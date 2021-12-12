@@ -23,6 +23,27 @@ bool doPasswordsMatch(const std::string& p1, const std::string& p2){
 }
 
 ErrorCode checkPasswordRules(const std::string& p){
+    
+    if (p.size() < MIN_CHARACTERS) return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+
+    auto hasNoNumber = std::all_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::isalpha(c);});
+    if (hasNoNumber){
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    } 
+    
+    auto hasNoSpecial = std::all_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::isalnum(c);});
+    if (hasNoSpecial){
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    } 
+
+    auto hasNoUpper = std::all_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::islower(c);});
+        if (hasNoUpper){
+    return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    } 
+
+    return ErrorCode::Ok;
+  
+    /*
     std::srand(time(NULL));
     auto randomAnswer = rand() % 5;
     switch(randomAnswer){
@@ -32,6 +53,7 @@ ErrorCode checkPasswordRules(const std::string& p){
         case 3 : return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
         case 4 : return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
+    */
 }
 
 ErrorCode checkPassword(const std::string& p1, const std::string& p2){
