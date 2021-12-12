@@ -2,7 +2,7 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-	std::string result{"Division by 0"};
+	std::string result{"Invalid Data"};
 	if(command == "add"){
 		result = std::to_string(first + second);
 	} else if(command == "subtract") {
@@ -12,7 +12,7 @@ std::string calculate(const std::string& command, int first, int second) {
 			} else if(command == "divide") {
 					if (second == 0){
 						//std::cout<<"No division by 0!";
-						return result;
+						return "Division by 0";
 					} else {
 						result = std::to_string(first / second);
 					} 
