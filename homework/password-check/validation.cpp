@@ -17,3 +17,7 @@ std::string getErrorMessage(ErrorCode error){
             return "Passwords do not match";
     }
 }
+
+bool doPasswordsMatch(const std::string& p1, const std::string& p2){
+    return p1 == p2 ? true : false;
+}
