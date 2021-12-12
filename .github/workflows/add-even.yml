@@ -2,6 +2,9 @@ name: add-even
 
 on: [pull_request, workflow_dispatch]
 
+env:
+  PR_NUMBER: ${{ github.event.number }}
+
 jobs:
   add-even:
     runs-on: ubuntu-latest
