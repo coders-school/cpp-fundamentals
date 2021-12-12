@@ -21,3 +21,19 @@ std::string getErrorMessage(ErrorCode error){
 bool doPasswordsMatch(const std::string& p1, const std::string& p2){
     return p1 == p2 ? true : false;
 }
+
+ErrorCode checkPasswordRules(const std::string& p){
+    std::srand(time(NULL));
+    auto randomAnswer = rand() % 5;
+    switch(randomAnswer){
+        case 0 : return ErrorCode::Ok;
+        case 1 : return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+        case 2 : return ErrorCode::PasswordNeedsAtLeastOneNumber;
+        case 3 : return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+        case 4 : return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+}
+
+ErrorCode checkPassword(const std::string& p1, const std::string& p2){
+    return doPasswordsMatch(p1,p2) ? checkPasswordRules(p1) : ErrorCode::PasswordsDoNotMatch ;
+}
