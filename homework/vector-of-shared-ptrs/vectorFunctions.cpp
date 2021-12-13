@@ -22,9 +22,9 @@ void add10(std::vector<std::shared_ptr<int>> vec){
         }
     }
 }
-/*
-void sub10(int* const ptr){
-    if(ptr){
+
+void sub10(int* ptr){
+    if(!ptr){
         ptr = nullptr;
     }
     else{
@@ -37,4 +37,3 @@ void sub10(std::vector<std::shared_ptr<int>> vec){
         sub10(e.get());
     }
 }
-*/
