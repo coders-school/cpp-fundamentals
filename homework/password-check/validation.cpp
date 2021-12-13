@@ -26,8 +26,8 @@ ErrorCode checkPasswordRules(const std::string& p){
     
     if (p.size() < MIN_CHARACTERS) return ErrorCode::PasswordNeedsAtLeastNineCharacters;
 
-    auto hasNoNumber = std::all_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::isalpha(c);});
-    if (hasNoNumber){
+    auto hasNoNumber = std::any_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::isdigit(c);});
+    if (!hasNoNumber){
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     } 
     
