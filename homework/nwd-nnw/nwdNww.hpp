@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 int NWD(int first, int second) {
 	
