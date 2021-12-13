@@ -33,7 +33,7 @@ TEST_F(Homework, ShouldAdd10ToEachElement) {
         EXPECT_EQ(*result[i], i + 10);
     }
 }
-/*
+
 TEST_F(Homework, ShouldNotAdd10WhenNullptr) {
     std::vector<std::shared_ptr<int>> vec(count);
     for (auto& num : vec) {
@@ -44,7 +44,7 @@ TEST_F(Homework, ShouldNotAdd10WhenNullptr) {
         EXPECT_EQ(vec[i], nullptr);
     }
 }
-
+/*
 TEST_F(Homework, ShouldSubtract10ForPtr) {
     auto ptr = std::make_shared<int>(10);
     sub10(ptr.get());
