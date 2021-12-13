@@ -36,8 +36,8 @@ ErrorCode checkPasswordRules(const std::string& p){
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     } 
 
-    auto hasNoUpper = std::all_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::islower(c);});
-        if (hasNoUpper){
+    auto hasNoUpper = std::any_of(p.begin(),p.end(),[](unsigned char c)->bool{return std::isupper(c);});
+        if (!hasNoUpper){
     return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     } 
 
