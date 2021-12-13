@@ -64,4 +64,3 @@ int NWW(int first, int second){
 		return NWW;
 	}
 }
-}
