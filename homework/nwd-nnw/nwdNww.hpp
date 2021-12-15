@@ -3,33 +3,41 @@
 #include <vector>
 #include <algorithm>
 
-int NWD(int first, int second) {
+int NWD(long first, long second) {
 	
-	if (first <= 0 || second <= 0)
-		return -1;
+	if (first < 0 )
+		first = abs(first);
 	
-	std::vector<int> first_dividers;
-	std::vector<int> second_dividers;
+	if (second < 0)
+		second = abs(second);
 	
-	for (short i{1}; i <= first; ++i ){
+	if (first == 0 )
+		return second;
+	else if (second == 0)
+		return first;
+	
+	std::vector<long> first_dividers;
+	std::vector<long> second_dividers;
+	
+	for (long i{1}; i <= first; ++i ){
 		if (!(first % i))
 			first_dividers.push_back(i);
 	}
-	for (short i{1}; i <= second; ++i ){
+	for (long i{1}; i <= second; ++i ){
 		if (!(second % i))
 			second_dividers.push_back(i);
 	}
 	
 	if (first > second){
-		for (short i{0}; i < second_dividers.size();++i) {
-			for (int n : first_dividers) {
+		for (long i{0}; i < second_dividers.size();++i) {
+			for (long n : first_dividers) {
 				if (second_dividers[second_dividers.size()-1-i] == n)
 					return n;
 			}
 		}
 	} else {
-		for (short i{0}; i < first_dividers.size(); ++i) {
-			for (int n : second_dividers) {
+		for (long i{0}; i < first_dividers.size(); ++i) {
+			for (long n : second_dividers) {
 				if (first_dividers[first_dividers.size()-1-i] == n)
 					return n;
 			}
@@ -38,16 +46,22 @@ int NWD(int first, int second) {
 	return -1;
 }
 
-int NWW(int first, int second){
+int NWW(long first, long second){
 	
-	if (first <= 0 || second <= 0)
-		return -1;
+	if (first == 0 || second == 0)
+		return 0;
 	
-	int max_multipler = first * second;
-	int NWW{1};
+	if (first < 0 )
+		first = abs(first);
+	
+	if (second < 0)
+		second = abs(second);
+	
+	long max_multipler = first * second;
+	long NWW{1};
 	
 	if (first > second){
-		for (short i{1}; i <= max_multipler; ++i) {
+		for (long i{1}; i <= max_multipler; ++i) {
 			NWW = first * i;
 			if (!(NWW % second)){
 				return NWW;
@@ -55,7 +69,7 @@ int NWW(int first, int second){
 		}
 		return NWW;
 	} else {
-		for (short i{1}; i <= max_multipler; ++i) {
+		for (long i{1}; i <= max_multipler; ++i) {
 				NWW = second * i;
 				if (!(NWW % first)){
 					return NWW;
