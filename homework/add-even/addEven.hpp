@@ -2,7 +2,10 @@
 #include <vector>
 
 int addEven(const std::vector<int>& numbers) {
-    // TODO: Your implementation goes here
-    // Below return is only to make this function compile now
-    return -1;
+   int accumulated{0};
+	for (short i{0}; i < numbers.size(); ++i) {
+		if (i % 2)
+			accumulated = accumulated + numbers[i];
+	}
+	return accumulated;
 }
