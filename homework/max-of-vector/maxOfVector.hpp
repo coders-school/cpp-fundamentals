@@ -2,9 +2,10 @@
 #include <vector>
 #include <limits>
 
-int maxOfVector(const std::vector<int>& vec) {
-    int max{0};
-	for (auto n : vec)
+long maxOfVector(const std::vector<long>& numbers) {
+	
+	long max{LONG_MIN};
+	for (auto n : numbers)
 		if (n > max)	
 			max = n;
 	return max;
