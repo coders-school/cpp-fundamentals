@@ -18,7 +18,11 @@ int NWD (int lhs, int rhs)
 }
 
 int NWW (int lhs, int rhs)
-{
-    // TODO: Implement me :)
-    return -1;
+{   
+    // prevent 0 division
+    if (lhs == 0 || rhs == 0) {
+        return 0;
+    }
+
+    return abs (lhs * rhs) / NWD (lhs, rhs);
 }
