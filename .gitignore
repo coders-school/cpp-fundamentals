@@ -49,4 +49,3 @@ googletest/
 *.exe
 *.out
 *.app
-homework/calculate/.clang-format
