@@ -41,7 +41,11 @@ void add10(const std::vector<std::shared_ptr<int>>& ptr_vec)
 
 // substracts 10 from the object pointed by ptr
 void sub10(int* const ptr)
-{}
+{
+    if (ptr) {
+        *ptr -= 10;
+    }
+}
 
 // substracts 10 from every number pointed by vector elements
 void sub10(const std::vector<std::shared_ptr<int>>& ptr_vec)
