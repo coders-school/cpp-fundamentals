@@ -18,3 +18,4 @@ int addEven(const std::vector<int>& numbers) {
     }    
     
     return sum;
+}
