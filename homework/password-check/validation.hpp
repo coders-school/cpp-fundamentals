@@ -3,7 +3,7 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>   
+#include <time.h>
 #include <algorithm>
 #include <cctype>
 
@@ -17,13 +17,9 @@ enum class ErrorCode
     PasswordsDoNotMatch,
 };
 
-
-const bool doPasswordsMatch(std::string setPassword, std::string repeatedPassword) {
-    if (setPassword == repeatedPassword) {
-        return true;
-    } else {
-        return false;
-    }
+bool doPasswordsMatch(const std::string &setPassword, const std::string &repeatedPassword)
+{
+    return setPassword == repeatedPassword;
 }
 
 // const ErrorCode checkPasswordRules(std::string password) {
@@ -33,64 +29,55 @@ const bool doPasswordsMatch(std::string setPassword, std::string repeatedPasswor
 //     return static_cast<ErrorCode>(random_error);
 // }
 
-const ErrorCode checkPasswordRules(std::string password) {
-    if (password.size()<9){
+ErrorCode checkPasswordRules(const std::string &password)
+{
+    if (password.size() < 9)
+    {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    } else if (std::count_if(password.cbegin(), password.cend(), [](unsigned char c){ return std::isdigit(c); })<1){
+    }
+    else if (std::count_if(password.cbegin(), password.cend(), [](unsigned char c)
+                           { return std::isdigit(c); }) < 1)
+    {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    } else if (std::count_if(password.cbegin(), password.cend(), [](unsigned char c){ return std::ispunct(c); })<1){
+    }
+    else if (std::count_if(password.cbegin(), password.cend(), [](unsigned char c)
+                           { return std::ispunct(c); }) < 1)
+    {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    } else if (std::count_if(password.cbegin(), password.cend(), [](unsigned char c){ return std::isupper(c); })<1){
+    }
+    else if (std::count_if(password.cbegin(), password.cend(), [](unsigned char c)
+                           { return std::isupper(c); }) < 1)
+    {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    } else {
+    }
+    else
+    {
         return ErrorCode::Ok;
     }
 }
 
-const ErrorCode checkPassword(std::string setPassword, std::string repeatedPassword) {
-    bool password_match = doPasswordsMatch(setPassword, repeatedPassword);
-    if (password_match) {
-        return checkPasswordRules(setPassword);
-    } else {
-        return ErrorCode::PasswordsDoNotMatch;
-    }
+ErrorCode checkPassword(const std::string &setPassword, const std::string &repeatedPassword)
+{
+    return doPasswordsMatch(setPassword, repeatedPassword) ? checkPasswordRules(setPassword) : ErrorCode::PasswordsDoNotMatch;
 }
 
-const std::string getErrorMessage(enum ErrorCode errorCode)
+std::string getErrorMessage(ErrorCode errorCode)
 {
-    std::string result;
     switch (errorCode)
     {
     case ErrorCode::Ok:
-    {
-        return result = "Ok";
-        break;
-    }
+        return "Ok";
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-    {
-        return result = "Password needs to have at least nine characters";
-        break;
-    }
+        return "Password needs to have at least nine characters";
     case ErrorCode::PasswordNeedsAtLeastOneNumber:
-    {
-        return result = "Password needs to have at least one number";
-        break;
-    }
+        return "Password needs to have at least one number";
     case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-    {
-        return result = "Password needs to have at least one special character";
-        break;
-    }
+        return "Password needs to have at least one special character";
     case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-    {
-        return result = "Password needs to have at least one uppercase letter";
-        break;
-    }
+        return "Password needs to have at least one uppercase letter";
     case ErrorCode::PasswordsDoNotMatch:
-    {
-        return result = "Passwords do not match";
-        break;
+        return "Passwords do not match";
+    default:
+        return "Unknown error";
     }
-    }
-    return 0;
 }
