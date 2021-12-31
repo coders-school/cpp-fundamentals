@@ -3,12 +3,17 @@
 #include <vector>
 
 int fibonacci_iterative(int sequence) {
-    if (sequence == 0){
-        return 0;}
-    if (sequence == 1 || sequence ==2){
-        return 1;}
-        return 0;
-    } 
+int first, second, fibElement;
+first = 0; 
+second =1; 
+fibElement = 0;
+for(size_t i = 0; i< sequence; i++){
+    first = second;
+    second = fibElement;
+    fibElement = first + second;
+}
+return fibElement;
+} 
    
 
 int fibonacci_recursive(int sequence) {
