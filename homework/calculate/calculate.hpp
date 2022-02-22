@@ -3,23 +3,18 @@
 
 std::string calculate(const std::string& command, int first, int second) {
     
-    int end;
     std::string result;
 
     if(command == "add") {
-        end = first + second;
-        result = std::to_string(end);
+        result = std::to_string(first + second);
     } else if (command == "substract") {
-        end = first - second;
-        result = std::to_string(end);
+        result = std::to_string(first - second);
     } else if (command == "multiply") {
-        end = first * second;
-        result = std::to_string(end);
+        result = std::to_string(first * second);
     } else if (command == "divide") {
-        end = first / second;
-        result = std::to_string(end);
+        result = std::to_string(first / second);
     } else {
-        std::cout << "Invalid data\n";
+        result = "Invalid data";
     }
     
     return result;
