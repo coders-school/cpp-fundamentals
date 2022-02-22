@@ -3,7 +3,7 @@
 
 std::string calculate(const std::string& command, int first, int second) {
     
-    double end;
+    int end;
     std::string result;
 
     if(command == "add") {
