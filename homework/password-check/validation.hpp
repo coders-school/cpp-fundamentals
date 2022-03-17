@@ -16,7 +16,7 @@
 std::string getErrorMessage(int err);
 
 //sprawdzenie poprawnosci hasel
-bool doPasswordMatch (std::string wordOne, std::string wordTwo);
+bool doPasswordsMatch (std::string wordOne, std::string wordTwo);
 
 int checkPasswordRules (std::string pass);
 
