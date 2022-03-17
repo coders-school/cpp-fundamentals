@@ -28,7 +28,7 @@ return "";
 }
 
 //sprawdzenie poprawnosci hasel
-bool doPasswordMatch (std::string wordOne, std::string wordTwo){
+bool doPasswordsMatch (std::string wordOne, std::string wordTwo){
     if(wordOne == wordTwo){
         return true;
     }
@@ -43,7 +43,7 @@ int checkPasswordRules (std::string pass){
 
 //sprawdzenie hasla 
 int checkPassword (std::string passFirst, std::string passSecond){
-    auto check = doPasswordMatch(passFirst, passSecond);
+    auto check = doPasswordsMatch(passFirst, passSecond);
     if (check == true){
         return ErrorCode::PasswordsDoNotMatch;
     }
