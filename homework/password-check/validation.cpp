@@ -1,4 +1,5 @@
 #include "validation.hpp"
+#include <cctype>
 // TODO: Put implementations here
 
 std::string getErrorMessage(const ErrorCode& code)
@@ -76,7 +77,7 @@ bool isThereNumberInString(const std::string& str)
 {
     for(auto tmp : str)
     {
-        if(tmp >= 48 && tmp <= 57) return true;
+        if(std::isdigit(tmp)) return true;
     }
     return false;
 }
@@ -85,7 +86,7 @@ bool isThereSpecialCharacterInString(const std::string& str)
 {
     for(auto tmp : str)
     {
-        if((tmp < 65 && tmp > 90) && (tmp < 97 && tmp > 122)) return true;
+        if(std::ispunct(tmp)) return true;
     }
     return false;
 }
@@ -93,7 +94,7 @@ bool isThereUppercaseInString(const std::string& str)
 {
     for(auto tmp : str)
     {
-        if(tmp >= 65 && tmp <= 90) return true;
+        if(std::isupper(tmp)) return true;
     }
     return false;
 }
