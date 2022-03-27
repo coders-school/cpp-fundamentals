@@ -6,7 +6,10 @@ int addEven(const std::vector<int>& numbers)
     int sum = 0;
     for(auto number : numbers)
     {
-        if(number % 2 == 0) sum += number;
+        if(number % 2 == 0)
+        {
+            sum += number;
+        }
     }
     return sum;
 }
