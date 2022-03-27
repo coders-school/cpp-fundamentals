@@ -42,19 +42,31 @@ bool doPasswordsMatch(const std::string& pas1, const std::string& pas2)
 
 ErrorCode checkPasswordRules(const std::string& pas)
 {
+
+    bool isDigit = false;
+    bool isSpecial = false;
+    bool isUpper = false;
+
+    for(auto tmp : pas)
+    {
+        if(std::isdigit(tmp)) isDigit = true;
+        if(std::ispunct(tmp)) isSpecial = true;
+        if(std::isupper(tmp)) isUpper = true;
+    }
+
     if(pas.length() < 9)
     {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    else if(!isThereNumberInString(pas))
+    else if(!isDigit)
     {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    else if(!isThereSpecialCharacterInString(pas))
+    else if(!isSpecial)
     {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    else if(!isThereUppercaseInString(pas))
+    else if(!isUpper)
     {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
@@ -71,30 +83,4 @@ ErrorCode checkPassword(const std::string& pas1, const std::string& pas2)
         return ErrorCode::PasswordsDoNotMatch;
     }
     return checkPasswordRules(pas1);
-}
-
-bool isThereNumberInString(const std::string& str)
-{
-    for(auto tmp : str)
-    {
-        if(std::isdigit(tmp)) return true;
-    }
-    return false;
-}
-
-bool isThereSpecialCharacterInString(const std::string& str)
-{
-    for(auto tmp : str)
-    {
-        if(std::ispunct(tmp)) return true;
-    }
-    return false;
-}
-bool isThereUppercaseInString(const std::string& str)
-{
-    for(auto tmp : str)
-    {
-        if(std::isupper(tmp)) return true;
-    }
-    return false;
 }
