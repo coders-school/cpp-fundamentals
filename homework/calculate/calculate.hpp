@@ -8,6 +8,8 @@ std::string calculate(const std::string& command, int first, int second) {
         result = std::to_string(first + second);
     } else if (command == "subtract") {
         result = std::to_string(first - second);
+    } else if (command == "multiply") {
+        result = std::to_string(first * second);
     }
 
     return result;
