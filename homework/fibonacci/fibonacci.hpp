@@ -10,7 +10,7 @@ int fibonacci_iterative(int sequence) {
         iArray[i] = iArray[i-1] + iArray[i-2];
     }
 
-    return iArray[sequence];
+    return iArray[sequence - 1];
 }
 
 int fibonacci_recursive(int sequence) {
