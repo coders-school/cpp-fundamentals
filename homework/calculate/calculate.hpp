@@ -24,8 +24,3 @@ string calculate(const string& command, int first, int second)
 
 }
 
-int main()
-{
-    cout << calculate("add",5,5) << endl;
-    return 0;
-}
