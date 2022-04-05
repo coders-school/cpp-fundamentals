@@ -2,27 +2,24 @@
 #include <string>
 using namespace std;
 
-string calculate(const string& command, int first, int second){
-    int wynik;
-    if(command == "add"){
-        wynik = first + second;
+std::string calculate(const std::string& command, int first, int second) {
+    if(command == "add") {
+        return to_string(first + second);
     }
-    else if(command == "substract"){
-        wynik = first - second;
+
+    if(command == "multiply") {
+        return to_string(first * second);
     }
-    else if(command == "multply"){
-        wynik = first * second;
+
+    if(command == "subtract") {
+        return to_string(first - second);
     }
-    else if(command == "divide" && first == 0 && second == 0){
-        wynik = 0;
+
+    if(command == "divide" && second == 0) {
+        return "Division by 0";
     }
-    else if(command == "divide"){
-        wynik = first / second;
+    if(command == "divide") {
+        return to_string(first / second);
     }
-    else {
-        cout<<"Invalid data";
-        return "";
-    }
-    string wynik1 = to_string(wynik);
-    return wynik1;
+    return "Invalid data";
 }
