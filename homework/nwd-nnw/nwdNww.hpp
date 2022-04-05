@@ -1,9 +1,14 @@
 #pragma once
+#include <cmath>
+#include <cstdlib>
 
 int NWD(int lhs, int rhs) {
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+
     int nwd;
 
-    while (lhs != 0) {
+    while (lhs != 0){
         nwd = lhs;
         lhs = rhs % lhs;
         rhs = nwd;
