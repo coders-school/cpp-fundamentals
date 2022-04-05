@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,6 +13,9 @@ string calculate(const string& command, int first, int second){
     else if(command == "multply"){
         wynik = first * second;
     }
+    else if(command == "divide" && first == 0 && second == 0){
+        wynik = 0;
+    }
     else if(command == "divide"){
         wynik = first / second;
     }
@@ -23,11 +25,4 @@ string calculate(const string& command, int first, int second){
     }
     string wynik1 = to_string(wynik);
     return wynik1;
-}
-
-int main()
-{
-    auto result = calculate("substrac", 2, 3);
-    cout<<result;
-    return 0;
 }
