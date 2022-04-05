@@ -7,15 +7,15 @@ using namespace std;
 vector<int> generateSequence(int count,int step){
     vector<int> array;
 
-    if(step==0){
+    if(step>=0){
         array[0]=0;
     }
     else {
-        if(step==1) {
+        if(step>=1) {
 
             array.push_back(step);
 
-            if(step==2) {
+            if(step>=2) {
                 array.push_back(step*2);
 
                 if(step>=3) {
