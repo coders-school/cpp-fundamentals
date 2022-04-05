@@ -7,7 +7,12 @@ using namespace std;
 vector<int> generateSequence(int count,int step){
     vector<int> array;
 
-    if(step>=0){
+    if(step<0)
+    {
+        step=(step*step)/step;
+    }
+
+    if(step==0){
         array[0]=0;
     }
     else {
