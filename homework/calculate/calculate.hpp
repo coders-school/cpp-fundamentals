@@ -11,10 +11,9 @@ string calculate(const string& command, int first, int second) {
         return to_string(first - second);
     } else if(command == "multiply") {
         return to_string(first * second);
-    } else if(command == "divide") {
+    } else if(command == "divide" && second != 0) {
         return to_string(first / second);
     } else {
         return "Invalid data";
     }
-    return "";
 }
