@@ -9,8 +9,7 @@ vector<int> generateSequence(int count,int step){
     array.push_back(step);
 
     for(int i=1; i<count; i++){
-        step*=2;
-        array.push_back(step);
+        array.push_back(array[i-1]*2);
     }
 
     return array;
