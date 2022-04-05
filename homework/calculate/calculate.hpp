@@ -4,21 +4,26 @@ using namespace std;
 
 string calculate(const string& command, int first, int second)
 {
+   int dzialanie;
    if(command=="add")
   {
-       return to_string(first + second);
+      dzialanie = first + second;
+       return to_string(dzialanie);
   }
     else if(command=="subtract")
   {
-         return to_string(first - second);
+       dzialanie = first - second;
+         return to_string(dzialanie);
   }
     else if(command=="multiply")
   {
-        return to_string(first * second);
+       dzialanie = first * second;
+        return to_string(dzialanie);
   }
    else if(command=="divide")
   {
-        return to_string(first / second);
+      dzialanie = first / second;
+        return to_string(dzialanie);
   }
     else return "Invalid data";
 
