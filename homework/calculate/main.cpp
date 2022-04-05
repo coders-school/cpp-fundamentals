@@ -1,29 +1,21 @@
 #include <iostream>
-
-using namespace std;
-
-string result = "";
-
-string calculate(const string& command,int first,int second){
-        if(command=="add") {
-            return to_string(first+second);
-        }else if(command=="subtract"){
-            return to_string(first-second);
-        }else if(command=="multiply"){
-            return to_string(first*second);
-        }else if(command=="divide"){
-            return to_string(first/second);
-        }else{
-            return "Invalid data";
-        }
-}
+#include <string>
+#include "calculate.hpp"
 
 int main() {
-    result = calculate("add", 2, 3);
-    cout<<result<<endl;
-    result = calculate("multiply", 2, 3);
-    cout<<result<<endl;
-    result = calculate("hello", 2, 3);
-    cout<<result<<endl;
+    while (true) {
+        std::cout << "Provide command: \"add\", \"subtract\","
+                  << " multiply\", divide\" or \"quit\" to exit\n";
+        std::string command{};
+        std::cin >> command;
+        if (command == "quit")
+            break;
+        int first{};
+        int second{};
+        std::cout << "Provide two numbers: ";
+        std::cin >> first >> second;
+        std::cout << "Result: " << calculate(command, first, second) << "\n";
+    }
+
     return 0;
 }
