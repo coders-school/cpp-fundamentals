@@ -22,17 +22,15 @@ string calculate(const string& command, int first, int second)
   }
    else if(command=="divide")
   {
-      if(second==0)
+      if(first == 0 && second == 0)
       {
-         return "You can't divide by 0!";
+         return "Invalid Data";
       }
-      else
-      {
-      operation = first / second;
-        return to_string(operation);
+         operation = first / second;
+         return to_string(operation);
       }
   }
-    else return "Invalid data";
+    else return "Invalid Data";
 
 }
 
