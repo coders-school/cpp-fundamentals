@@ -13,7 +13,7 @@ string calculate(const std::string& command, int first, int second) {
     }else if(command == "devide"){
         if(second != 0)
             return to_string(first / second);
-        return "Devision by 0"
+        return "Devision by 0";
     }else{
         return "Invalid data";
         }
