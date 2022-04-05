@@ -12,7 +12,7 @@ string calculate(const std::string& command, int first, int second) {
         return to_string(first * second);
     }else if(command == "divide"){
         if(second == 0)
-            return "Devision by 0";
+            return "Division by 0";
         return to_string(first / second);
         
     }else{
