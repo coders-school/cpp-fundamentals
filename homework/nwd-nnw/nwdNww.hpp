@@ -9,13 +9,11 @@ int NWD(int lhs, int rhs) {
         }
         return lhs;
     }
-    return -1;
+    return 0;
 }
 
 int NWW(int lhs, int rhs) {
-    /*if(lhs > 0 && rhs > 0){
+    if(lhs != 0 || rhs != 0)
         return lhs * rhs / NWD(lhs, rhs);
-    }*/
-    return lhs * rhs / NWD(lhs, rhs);
-    //return -1;
+    return 0;
 }
