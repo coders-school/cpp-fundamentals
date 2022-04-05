@@ -1,7 +1,9 @@
 #pragma once
 #include <string>
 
-std::string calculate(const std::string& command, int first, int second) {
+using namespace std;
+
+string calculate(const std::string& command, int first, int second) {
     if(command == "add"){
         return to_string(first + second);
     }else if(command == "substract"){
