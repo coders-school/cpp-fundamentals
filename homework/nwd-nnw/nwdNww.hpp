@@ -8,7 +8,7 @@ int NWD(int lhs, int rhs) {
                 iNWD = i;
             }
         }
-        return NWD;
+        return iNWD;
     }
     return -1;
 }
