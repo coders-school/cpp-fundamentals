@@ -25,14 +25,3 @@ string calculate(const string& command,int first,int second){
             return "Invalid data";
         }
 }
-
-int main() {
-    result = calculate("add", 10, 20);
-    cout<<result<<endl;
-    result = calculate("divide", 2, 0);
-    cout<<result<<endl;
-    result = calculate("hello", 2, 3);
-    cout<<result<<endl;
-    return 0;
-}
-
