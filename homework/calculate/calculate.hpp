@@ -16,7 +16,7 @@ string calculate(const string& command,int first,int second){
             return to_string(first*second);
         }else if(command=="divide"){
             if(second==0){
-                return "0";
+                return "Division by 0";
             }
             else {
                 return to_string(first / second);
