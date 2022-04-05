@@ -1,7 +1,9 @@
 #pragma once
+#include <iostream>
 #include <string>
+using namespace std;
 
-std::string calculate(const std::string& command, int first, int second) {
+string calculate(const string& command, int first, int second){
     int wynik;
     if(command == "add"){
         wynik = first + second;
