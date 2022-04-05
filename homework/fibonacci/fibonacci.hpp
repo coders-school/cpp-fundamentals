@@ -2,15 +2,12 @@
 
 int fibonacci_iterative(int sequence) {
     int iArray[sequence];
-    for(int i = 0; i < sequence; i++){
-        if(i == 0)
-            iArray[i] = 0;
-        else if(i == 1)
-            iArray[i] = 1;
-        else
-        {
-            iArray[i] = iArray[i - 1] + iArray[i - 2];
-        }
+    iArray[0]=1;
+    iArray[1]=1;
+
+    for (int i=2; i<sequence; i++)
+    {
+        iArray[i] = iArray[i-1] + iArray[i-2];
     }
 
     return iArray[sequence];
