@@ -17,6 +17,9 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+    
     int nww;
 
     if(lhs!=0 || rhs!=0){
