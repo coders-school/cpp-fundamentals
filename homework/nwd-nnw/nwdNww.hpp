@@ -1,24 +1,26 @@
 #pragma once
-
 int NWD(int lhs, int rhs) {
     if(lhs > 0 && rhs > 0){
-        int iNWD;
-        for(int i = 0; i < rhs; i++){
-            if(lhs % i == 0 && rhs % i == 0){
-                iNWD = i;
-            }
+        while(lhs!=rhs){
+            if(lhs>rhs)
+                lhs-=rhs;
+            else
+                rhs-=lhs;
         }
-        return iNWD;
+        return lhs;
     }
     return -1;
 }
 
 int NWW(int lhs, int rhs) {
     if(lhs > 0 && rhs > 0){
-        for(int i = 0;i < rhs * lhs;i++){
-            if(i % rhs == 0 && i % lhs == 0)
-                return i;
+        int tmp;
+        while(rhs != 0){
+            tmp = rhs;
+            rhs = lhs % rhs;
+            lhs = tmp;
         }
+        return lhs;
     }
     return -1;
 }
