@@ -4,26 +4,33 @@ using namespace std;
 
 string calculate(const string& command, int first, int second)
 {
-   int dzialanie;
+   int operation;
    if(command=="add")
   {
-      dzialanie = first + second;
-       return to_string(dzialanie);
+      operation = first + second;
+       return to_string(operation);
   }
     else if(command=="subtract")
   {
-       dzialanie = first - second;
-         return to_string(dzialanie);
+       operation = first - second;
+         return to_string(operation);
   }
     else if(command=="multiply")
   {
-       dzialanie = first * second;
-        return to_string(dzialanie);
+       operation = first * second;
+        return to_string(operation);
   }
    else if(command=="divide")
   {
-      dzialanie = first / second;
-        return to_string(dzialanie);
+      if(second==0)
+      {
+         return "You can't divide by 0!";
+      }
+      else
+      {
+      operation = first / second;
+        return to_string(operation);
+      }
   }
     else return "Invalid data";
 
