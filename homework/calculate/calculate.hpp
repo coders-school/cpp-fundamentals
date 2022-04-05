@@ -10,5 +10,5 @@ std::string calculate(const std::string& command, int first, int second) {
         if(command != "add" ||
            command != "subtract" ||
            command != "multiply" ||
-           command != "divide" ||) return "Invalid data";
+           command != "divide") return "Invalid data";
 }
