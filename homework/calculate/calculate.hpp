@@ -25,9 +25,7 @@ string calculate(const string& command, int first, int second)
        operation = first / second;
         return to_string(operation);
          
-   }
-} 
-   else return "Invalid Data";
+   }else return "Invalid Data";
 
 }
 
