@@ -8,7 +8,7 @@ string calculate(const string& command, int first, int second)
   {
        return to_string(first + second);
   }
-    else if(command=="substract")
+    else if(command=="subtract")
   {
          return to_string(first - second);
   }
