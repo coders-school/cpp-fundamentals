@@ -2,9 +2,7 @@
 #include <string>
 #include <iostream>
 
-
 using namespace std;
-
 
 string calculate(const string& command, int first, int second) {
     if(command == "add") {
