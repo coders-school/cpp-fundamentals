@@ -6,7 +6,7 @@ int fibonacci_iterative(int sequence) {
         b += a;
         a = b-a;
     } 
-    return b;
+    return a;
 }
 
 int fibonacci_recursive(int sequence) {
