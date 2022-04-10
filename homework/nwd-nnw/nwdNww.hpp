@@ -10,6 +10,7 @@ int NWD(int lhs, int rhs) {
         a = b;
         b = c;
     }
+    if(a < 0) a = a*-1;
     return a;
 }
 
