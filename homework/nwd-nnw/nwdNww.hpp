@@ -16,5 +16,6 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     int wyn = (lhs*rhs)/NWD(lhs,rhs);
+    if(wyn < 0) wyn = wyn*-1;
     return wyn;
 }
