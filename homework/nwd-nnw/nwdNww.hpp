@@ -4,16 +4,13 @@
 int NWD(int lhs, int rhs) {
     lhs = abs(lhs);
     rhs = abs(rhs);
-    if(rhs != 0){
-        while(lhs!=rhs){
-            if(lhs>rhs)
-                lhs-=rhs;
-            else
-                rhs-=lhs;
-        }
-        return lhs;
+    int tmp = 0;
+    while(rhs != 0){
+        tmp = lhs % rhs;
+        lhs = rhs;
+        rhs = tmp;
     }
-    return 0;
+    return lhs;
 }
 
 int NWW(int lhs, int rhs) {
