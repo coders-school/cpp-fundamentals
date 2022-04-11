@@ -4,28 +4,34 @@
 #include <iostream>
 using namespace std;
 
-string getErrorMessage(ErrorCode errCode){
+string getErrorMessage(const ErrorCode& errCode){
     switch(errCode){
         case Ok:
             return "Ok";
+            break;
         case PasswordNeedsAtLeastNineCharacters:
             return "Password needs to have at least nine characters";
+            break;
         case PasswordNeedsAtLeastOneNumber:
             return "Password needs to have at least one number";
+            break;
         case PasswordNeedsAtLeastOneSpecialCharacter:
             return "Password needs to have at least one special character";
+            break;
         case PasswordNeedsAtLeastOneUppercaseLetter:
             return "Password needs to have at least one uppercase letter";
+            break;
         case PasswordsDoNotMatch:
             return "Passwords do not match";
+            break;
     }
 }
-bool doPasswordsMatch(string pass1, string pass2){
+bool doPasswordsMatch(const string& pass1, const string& pass2){
     if(pass1 == pass2)
         return true;
     return false;
 }
-ErrorCode checkPasswordRules(string pass){
+ErrorCode checkPasswordRules(const string& pass){
     if(pass.length() < 9)
         return PasswordNeedsAtLeastNineCharacters;
 
@@ -57,7 +63,7 @@ ErrorCode checkPasswordRules(string pass){
 
     return Ok;
 }
-ErrorCode checkPassword(string pass1, string pass2){
+ErrorCode checkPassword(const string& pass1, const string& pass2){
     if(!doPasswordsMatch(pass1, pass2))
         return PasswordsDoNotMatch;
     return checkPasswordRules(pass1);
