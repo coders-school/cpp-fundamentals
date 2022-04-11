@@ -33,10 +33,10 @@ bool doPasswordsMatch(const string& pass1, const string& pass2){
 }
 ErrorCode checkPasswordRules(const string& pass){
     if(pass.length() < 9)
-        return PasswordNeedsAtLeastNineCharacters;
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
 
     if(!any_of(pass.begin(), pass.end(), ::isdigit))
-        return PasswordNeedsAtLeastOneNumber;
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
 
     bool specialCheck = false;
     for(int i=0;i<pass.length();i++)
@@ -59,12 +59,12 @@ ErrorCode checkPasswordRules(const string& pass){
         }
     }
     if(!upperCheck)
-        return PasswordNeedsAtLeastOneUppercaseLetter;
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
 
     return Ok;
 }
 ErrorCode checkPassword(const string& pass1, const string& pass2){
     if(!doPasswordsMatch(pass1, pass2))
-        return PasswordsDoNotMatch;
-    return checkPasswordRules(pass1);
+        return ErrorCode::PasswordsDoNotMatch;
+    return ErrorCode::checkPasswordRules(pass1);
 }
