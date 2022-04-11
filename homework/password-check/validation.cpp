@@ -49,7 +49,7 @@ ErrorCode checkPasswordRules(const string& pass){
         }
     }
     if(!specialCheck)
-        return PasswordNeedsAtLeastOneSpecialCharacter;
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
 
     bool upperCheck = false;
     for(int i=0;i<pass.length();i++){
