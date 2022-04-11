@@ -4,13 +4,15 @@ int fibonacci_iterative(int sequence) {
     int a=0,b=1;
    for(int i=0;i<sequence;i++)
    {
+       cout << b << endl;
     b=a+b;
     a=b-a;
+   
    }
     return 0;
 }
 
 int fibonacci_recursive(int sequence) {
     
-    return 0;
+    return fibonacci_recursive(sequence-2)+fibonacci_recursive(sequence-1);
 }
