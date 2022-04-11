@@ -61,7 +61,7 @@ ErrorCode checkPasswordRules(const string& pass){
     if(!upperCheck)
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
 
-    return Ok;
+    return ErrorCode::Ok;
 }
 ErrorCode checkPassword(const string& pass1, const string& pass2){
     if(!doPasswordsMatch(pass1, pass2))
