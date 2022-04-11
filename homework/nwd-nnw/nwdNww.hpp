@@ -1,15 +1,18 @@
 #pragma once
 int NWD(int lhs, int rhs) {
-    if(rhs != 0){
-        while(lhs!=rhs){
-            if(lhs>rhs)
-                lhs-=rhs;
+    int iLhs = lhs;
+    int iRhs = rhs;
+
+    if(iRhs != 0){
+        while(iLhs!=iRhs){
+            if(iLhs>iRhs)
+                iLhs-=iRhs;
             else
-                rhs-=lhs;
+                iRhs-=iLhs;
         }
-        if(lhs < 0)
-            lhs *= -1;
-        return lhs;
+        if(iLhs < 0)
+            iLhs *= -1;
+        return iLhs;
     }
     return 0;
 }
