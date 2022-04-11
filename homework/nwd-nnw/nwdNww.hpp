@@ -1,28 +1,27 @@
 #pragma once
+#include <cmath>
+#include <cstdlib>
 int NWD(int lhs, int rhs) {
-    int iLhs = lhs;
-    int iRhs = rhs;
-
-    if(iRhs != 0){
-        while(iLhs!=iRhs){
-            if(iLhs>iRhs)
-                iLhs-=iRhs;
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+    if(rhs != 0){
+        while(lhs!=rhs){
+            if(lhs>rhs)
+                lhs-=rhs;
             else
-                iRhs-=iLhs;
+                rhs-=lhs;
         }
-        if(iLhs < 0)
-            iLhs *= -1;
-        return iLhs;
+        return lhs;
     }
     return 0;
 }
 
 int NWW(int lhs, int rhs) {
-    if(lhs != 0 || rhs != 0){
-        int iNWW = lhs * rhs / NWD(lhs, rhs);
-        if(iNWW < 0)
-            iNWW *= -1;
-        return iNWW;
-    }
+    lhs = abs(lhs);
+    rhs = abs(rhs);
+
+    if(lhs != 0 || rhs != 0)
+        return lhs * rhs / NWD(lhs, rhs);
+
     return 0;
 }
