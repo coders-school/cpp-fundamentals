@@ -66,5 +66,5 @@ ErrorCode checkPasswordRules(const string& pass){
 ErrorCode checkPassword(const string& pass1, const string& pass2){
     if(!doPasswordsMatch(pass1, pass2))
         return ErrorCode::PasswordsDoNotMatch;
-    return ErrorCode::checkPasswordRules(pass1);
+    return checkPasswordRules(pass1);
 }
