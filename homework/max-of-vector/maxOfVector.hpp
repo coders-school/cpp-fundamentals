@@ -3,7 +3,7 @@
 #include <limits>
 using namespace std;
 int maxOfVector(const std::vector<int>& vec) {
-    int maxV = vec;
+    int maxV = max_element(vec.begin(),vec.end());
     for (int value : maxV ) {
         if(value > maxV) maxV = value;
     }
