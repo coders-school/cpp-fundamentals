@@ -6,22 +6,22 @@ using namespace std;
 
 string getErrorMessage(const ErrorCode& errCode){
     switch(errCode){
-        case Ok:
+        case ErrorCode::Ok:
             return "Ok";
             break;
-        case PasswordNeedsAtLeastNineCharacters:
+        case ErrorCode::PasswordNeedsAtLeastNineCharacters:
             return "Password needs to have at least nine characters";
             break;
-        case PasswordNeedsAtLeastOneNumber:
+        case ErrorCode::PasswordNeedsAtLeastOneNumber:
             return "Password needs to have at least one number";
             break;
-        case PasswordNeedsAtLeastOneSpecialCharacter:
+        case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
             return "Password needs to have at least one special character";
             break;
-        case PasswordNeedsAtLeastOneUppercaseLetter:
+        case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
             return "Password needs to have at least one uppercase letter";
             break;
-        case PasswordsDoNotMatch:
+        case ErrorCode::PasswordsDoNotMatch:
             return "Passwords do not match";
             break;
     }
