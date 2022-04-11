@@ -1,7 +1,7 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-    if(lhs
+   
     do {
         if(lhs>rhs)
         {
