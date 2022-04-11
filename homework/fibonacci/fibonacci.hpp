@@ -1,10 +1,10 @@
 #pragma once
-using namespace std;
+
 int fibonacci_iterative(int sequence) {
     int a=0,b=1;
    for(int i=0;i<sequence;i++)
    {
-       cout << b << endl;
+       std::cout << b << endl;
     b=a+b;
     a=b-a;
    
