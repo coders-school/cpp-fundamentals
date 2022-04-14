@@ -5,12 +5,13 @@
 #include <vector>
 
 std::vector<std::shared_ptr<int>> generate(int count) {
+  if (count < 1) {
+    return {};
+  }
   std::vector<std::shared_ptr<int>> vec = {};
-
   for (unsigned int i = 0; i < count; ++i) {
     vec.push_back(std::make_shared<int>(i));
   }
-
   return vec;
 }
 
