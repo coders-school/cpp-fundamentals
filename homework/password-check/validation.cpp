@@ -44,3 +44,11 @@ ErrorCode checkPasswordRules(std::string password) {
 
   return ErrorCode::Ok;
 }
+
+ErrorCode checkPassword(std::string password1, std::string password2) {
+  if (!(doPasswordsMatch(password1, password2))) {
+    return ErrorCode::PasswordsDoNotMatch;
+  }
+
+  return checkPasswordRules(password1);
+}
