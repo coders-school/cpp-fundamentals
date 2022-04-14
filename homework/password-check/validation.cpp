@@ -20,3 +20,7 @@ std::string toString(ErrorCode error_code) {
 std::string getErrorMessage(ErrorCode error_code) {
   return toString(error_code);
 }
+
+bool doPasswordsMatch(std::string password1, std::string password2) {
+  return password1 == password2;
+}
