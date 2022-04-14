@@ -29,7 +29,11 @@ void add10(std::vector<std::shared_ptr<int>> vec) {
   }
 }
 
-void sub10(int *const pointer) { *pointer -= 10; }
+void sub10(int *const pointer) {
+  if (pointer) {
+    *pointer -= 10;
+  }
+}
 
 void sub10(std::vector<std::shared_ptr<int>> vec) {
   for (auto &element : vec) {
