@@ -19,3 +19,9 @@ void print(std::vector<std::shared_ptr<int>> vec) {
     std::cout << *element << "\n";
   }
 }
+
+void add10(std::vector<std::shared_ptr<int>> vec) {
+  for (auto &element : vec) {
+    *element += 10;
+  }
+}
