@@ -17,8 +17,10 @@ std::string toString(ErrorCode error_code);
 
 std::string getErrorMessage(ErrorCode error_code);
 
-bool doPasswordsMatch(std::string password1, std::string password2);
+bool doPasswordsMatch(const std::string &password1,
+                      const std::string &password2);
 
-ErrorCode checkPasswordRules(std::string password);
+ErrorCode checkPasswordRules(const std::string &password);
 
-ErrorCode checkPassword(std::string password1, std::string password2);
+ErrorCode checkPassword(const std::string &password1,
+                        const std::string &password2);

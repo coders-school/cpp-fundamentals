@@ -24,11 +24,12 @@ std::string getErrorMessage(ErrorCode error_code) {
   return toString(error_code);
 }
 
-bool doPasswordsMatch(std::string password1, std::string password2) {
+bool doPasswordsMatch(const std::string &password1,
+                      const std::string &password2) {
   return password1 == password2;
 }
 
-ErrorCode checkPasswordRules(std::string password) {
+ErrorCode checkPasswordRules(const std::string &password) {
   if (password.length() < kPasswordMinLength) {
     return ErrorCode::PasswordNeedsAtLeastNineCharacters;
   }
@@ -45,7 +46,8 @@ ErrorCode checkPasswordRules(std::string password) {
   return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(std::string password1, std::string password2) {
+ErrorCode checkPassword(const std::string &password1,
+                        const std::string &password2) {
   if (!(doPasswordsMatch(password1, password2))) {
     return ErrorCode::PasswordsDoNotMatch;
   }
