@@ -23,7 +23,9 @@ void print(std::vector<std::shared_ptr<int>> vec) {
 
 void add10(std::vector<std::shared_ptr<int>> vec) {
   for (auto &element : vec) {
-    *element += 10;
+    if (element) {
+      *element += 10;
+    }
   }
 }
 
