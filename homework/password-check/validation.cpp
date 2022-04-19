@@ -1,2 +1,41 @@
 #include "validation.hpp"
-// TODO: Put implementations here
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <cctype>
+
+std::string getErrorMessage(ErrorCode error_code) {
+    switch(error_code) {
+    case ErrorCode::PasswordNeedsAtLeastNineCharacters:
+        return "Password needs to have at least nine characters";
+    case ErrorCode::PasswordNeedsAtLeastOneNumber:
+        return "Password needs to have at least one number";
+    case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
+        return "Password needs to have at least one special character";
+    case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
+        return "Password needs to have at least one uppercase letter";
+    case ErrorCode::PasswordsDoNotMatch:
+        return "Passwords do not match";
+    case ErrorCode::Ok:
+        return "Ok";
+    default:
+        return "Unknown error";
+    }
+}
+
+bool doPasswordsMatch(std::string password1, std::string password2) {
+    return password1 == password2;
+}
+
+ErrorCode checkPasswordRules(std::string password) {
+    return ErrorCode(rand()%3);
+}
+
+ErrorCode checkPassword(std::string password1, std::string password2) {
+    if (not doPasswordsMatch(password1, password2)) {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
+    else {
+        return checkPasswordRules(password1);
+    }
+}
