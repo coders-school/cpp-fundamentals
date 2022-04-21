@@ -10,7 +10,7 @@ int fibonacci_iterative(int sequence) {
      if(sequence == 1)
         return 1;
 
-    for(size_t i = sequence ; i>=2 ;i--)
+    for(size_t i = 2 ; i<=sequence ;i++)
     {
          vec.push_back(vec[i-2]+vec[i-1]) ;
     }
