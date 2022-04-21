@@ -23,4 +23,5 @@ string calculate(const string& command, int first, int second) {
 	}else{
 		return "Invalid data";
 	}
+	return "";
 }
