@@ -8,5 +8,6 @@ int addEven(const std::vector<int>& numbers) {
         if(a%2==0){
             suma=suma+1;
         }
+    }
         return suma;
 }
