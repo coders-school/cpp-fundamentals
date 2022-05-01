@@ -6,14 +6,14 @@ int NWD(int lhs, int rhs) {
     int c = 0;
     while(b!=0)
     {
-        c = a%b;
         a = b;
+        c = a%b;
         b = c;
     }
     return a;
 }
 
 int NWW(int lhs, int rhs) {
-    int wyn = (lhs*rhs)/NWD(lhs,rhs);
+    int wyn = lhs*rhs/NWD(lhs,rhs);
     return wyn;
 }
