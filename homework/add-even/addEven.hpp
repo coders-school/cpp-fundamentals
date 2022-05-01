@@ -6,7 +6,7 @@ int addEven(const std::vector<int>& numbers) {
     for(int a : numbers)
     {
         if(a%2==0){
-            suma=suma+1;
+            suma=suma+a;
         }
     }
         return suma;
