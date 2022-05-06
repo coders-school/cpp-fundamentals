@@ -26,6 +26,10 @@ std::string getErrorMessage(ErrorCode errorCode) {
 }
 
 bool doPasswordsMatch(std::string first, std::string second) {
+    int result = first.compare(second);
+    if(result == 0) {
+        return true;
+    }
     return false;
 }
 
