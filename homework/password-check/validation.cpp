@@ -1,6 +1,7 @@
 #include "validation.hpp"
 #include <algorithm>
 #include <iostream>
+#include <cctype>
 
 std::string getErrorMessage(const ErrorCode& errorCode) {
     switch (errorCode) {
