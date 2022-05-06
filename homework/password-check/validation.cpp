@@ -1,7 +1,7 @@
 #include "validation.hpp"
 #include <iostream>
 
-std::string getErrorMessage(ErrorCode errorCode) {
+std::string getErrorMessage(const ErrorCode& errorCode) {
     switch (errorCode) {
     case ErrorCode::Ok: {
         return "Ok";
@@ -25,7 +25,7 @@ std::string getErrorMessage(ErrorCode errorCode) {
     return "";
 }
 
-bool doPasswordsMatch(std::string first, std::string second) {
+bool doPasswordsMatch(const std::string& first, const std::string& second) {
     int result = first.compare(second);
     if(result == 0) {
         return true;
@@ -33,10 +33,14 @@ bool doPasswordsMatch(std::string first, std::string second) {
     return false;
 }
 
-ErrorCode checkPasswordRules(const std::string password) {
+ErrorCode checkPasswordRules(const std::string& password) {
     return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(std::string first, std::string second) {
-    return ErrorCode::Ok;
+ErrorCode checkPassword(const std::string& first, const std::string& second) {
+    if(doPasswordsMatch(first, second)) {
+        return checkPasswordRules(first);
+    }
+    return ErrorCode::PasswordsDoNotMatch;
+
 }
