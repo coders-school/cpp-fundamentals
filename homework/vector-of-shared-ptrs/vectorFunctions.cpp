@@ -11,7 +11,7 @@ std::vector<std::shared_ptr<int>> generate(int count) {
     return vec;
 }
 
-void print(std::vector<std::shared_ptr<int>> vec) {
+void print(const std::vector<std::shared_ptr<int>> vec) {
     for (const auto& el : vec) {
         std::cout << *el << "\n";
     }
