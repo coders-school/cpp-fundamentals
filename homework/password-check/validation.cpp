@@ -1,4 +1,5 @@
 #include "validation.hpp"
+#include <algorithm>
 #include <iostream>
 
 std::string getErrorMessage(const ErrorCode& errorCode) {
@@ -27,20 +28,43 @@ std::string getErrorMessage(const ErrorCode& errorCode) {
 
 bool doPasswordsMatch(const std::string& first, const std::string& second) {
     int result = first.compare(second);
-    if(result == 0) {
+    if (result == 0) {
         return true;
     }
     return false;
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
+    ErrorCode error = ErrorCode::Ok;
+
+    if (password.length() < minimumCharacters) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    if (std::none_of(password.begin(), password.end(),
+                     [](unsigned char pass) {
+                         return std::isdigit(pass);
+                     })) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    if (std::none_of(password.begin(), password.end(),
+                    [](unsigned char pass) {
+                        return !(std::isalnum(pass));
+                    })) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    if (std::none_of(password.begin(), password.end(),
+                     [](unsigned char pass) {
+                         return std::isupper(pass);
+                     })) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
     return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(const std::string& first, const std::string& second) {
-    if(doPasswordsMatch(first, second)) {
+    if (doPasswordsMatch(first, second)) {
         return checkPasswordRules(first);
     }
     return ErrorCode::PasswordsDoNotMatch;
-
 }

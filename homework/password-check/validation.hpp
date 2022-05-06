@@ -3,6 +3,7 @@
 
 // TODO: I'm empty :) Put enum and function headers here.
 // Don't forget the header guard - #pragma once
+constexpr size_t minimumCharacters = 9;
 
 enum class ErrorCode {
     Ok,
