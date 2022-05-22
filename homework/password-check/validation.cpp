@@ -1,6 +1,5 @@
 #include "validation.hpp"
 #include <cctype>
-// TODO: Put implementations here
 
 std::string getErrorMessage(const ErrorCode& code)
 {
