@@ -2,6 +2,17 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
-    return "";
+    std::string text = "";
+    if(command == "add") {
+        text = std::to_string(first+second);
+    } else if(command == "subtract") {
+        text = std::to_string(first-second);
+    } else if(command == "multiply") {
+        text = std::to_string(first*second);
+    } else if(command == "divide") {
+        if(second != 0) {
+            text = std::to_string(first/second);
+        } else text = "Invalid data";
+    } else text = "Invalid data";
+    return text;
 }
