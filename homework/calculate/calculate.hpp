@@ -16,6 +16,8 @@ std::string calculate(const std::string& command, int first, int second) {
         if(second != 0) {
             text = std::to_string(first/second);
             return text;
+        } else if(command == "quit") {
+            exit(0);
         } else text = "Invalid data";
     } else text = "Invalid data";
     return "";
