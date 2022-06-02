@@ -1,7 +1,26 @@
 #pragma once
 #include <string>
-
-std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
+using namespace std;
+string calculate(string command, int first, int second) {
+     if(command=="add")
+    {
+       return to_string(first+second);
+    }
+    if(command=="subtract")
+    {
+        return to_string(first-second);
+    }
+    if(command=="multiply")
+    {
+        return to_string(first*second);
+    }
+    if(command=="divide")
+    {
+        return to_string(first/second);
+    }
+    else
+    {
+        return to_string(command=="INVALID DATA");
+    }
     return "";
 }
