@@ -20,3 +20,12 @@ jobs:
     - name: Run tests
       working-directory: ${{ env.path }}
       run: ctest -V
+
+  formatting_check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run clang-format style check
+      uses: coders-school/github-actions/clang-format-check@main
+      with:
+        check_path: 'homework/calculate'
