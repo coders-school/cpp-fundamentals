@@ -19,10 +19,10 @@ enable_testing()
 
 add_executable(${PROJECT_NAME} main.cpp validation.cpp)
 add_executable(${PROJECT_NAME}-ut test.cpp validation.cpp)
-add_executable(${PROJECT_NAME}-bonus-ut test-bonus.cpp validation.cpp)
+add_executable(passwordCheck-bonus-ut test-bonus.cpp validation.cpp)
 
 target_link_libraries(${PROJECT_NAME}-ut gtest_main)
-target_link_libraries(${PROJECT_NAME}-bonus-ut gtest_main)
+target_link_libraries(passwordCheck-bonus-ut gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME}-ut)
