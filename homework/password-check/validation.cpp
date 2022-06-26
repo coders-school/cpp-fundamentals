@@ -1,11 +1,9 @@
 #include "validation.hpp"
 #include <cctype>
 
-std::string getErrorMessage(const ErrorCode& code)
-{
+std::string getErrorMessage(const ErrorCode& code) {
     int num = static_cast<int>(code);
-    switch (num)
-    {
+    switch (num) {
     case 0:
         return "Ok";
         break;
@@ -27,58 +25,43 @@ std::string getErrorMessage(const ErrorCode& code)
     }
 }
 
-bool doPasswordsMatch(const std::string& pas1, const std::string& pas2)
-{
-    if(pas1 ==  pas2)
-    {
+bool doPasswordsMatch(const std::string& pas1, const std::string& pas2) {
+    if (pas1 == pas2) {
         return true;
-    }
-    else
-    {
+    } else {
         return false;
     }
 }
 
-ErrorCode checkPasswordRules(const std::string& pas)
-{
-
+ErrorCode checkPasswordRules(const std::string& pas) {
     bool isDigit = false;
     bool isSpecial = false;
     bool isUpper = false;
 
-    for(auto tmp : pas)
-    {
-        if(std::isdigit(tmp)) isDigit = true;
-        if(std::ispunct(tmp)) isSpecial = true;
-        if(std::isupper(tmp)) isUpper = true;
+    for (auto tmp : pas) {
+        if (std::isdigit(tmp))
+            isDigit = true;
+        if (std::ispunct(tmp))
+            isSpecial = true;
+        if (std::isupper(tmp))
+            isUpper = true;
     }
 
-    if(pas.length() < 9)
-    {
+    if (pas.length() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    }
-    else if(!isDigit)
-    {
+    } else if (!isDigit) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    }
-    else if(!isSpecial)
-    {
+    } else if (!isSpecial) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    }
-    else if(!isUpper)
-    {
+    } else if (!isUpper) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    }
-    else
-    {
+    } else {
         return ErrorCode::Ok;
     }
 }
 
-ErrorCode checkPassword(const std::string& pas1, const std::string& pas2)
-{
-    if(!doPasswordsMatch(pas1, pas2))
-    {
+ErrorCode checkPassword(const std::string& pas1, const std::string& pas2) {
+    if (!doPasswordsMatch(pas1, pas2)) {
         return ErrorCode::PasswordsDoNotMatch;
     }
     return checkPasswordRules(pas1);
