@@ -1,5 +1,5 @@
 #include <iostream>
-/*test2
+/*test2*/
 
 constexpr size_t tab_size = 100;
 
