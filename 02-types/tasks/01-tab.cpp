@@ -1,6 +1,7 @@
 #include <iostream>
 
 constexpr size_t tab_size = 100;
+/* test3 */
 
 int main() {
     int tab[tab_size];
