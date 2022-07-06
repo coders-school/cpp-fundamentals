@@ -2,9 +2,8 @@
 #include <iostream>
 #include <string>
 
-//kody bledow
-    enum ErrorCode {
-    ok,
+enum class ErrorCode{
+    Ok,
     PasswordNeedsAtLeastNineCharacters,
     PasswordNeedsAtLeastOneNumber,
     PasswordNeedsAtLeastOneSpecialCharacter,
@@ -12,13 +11,7 @@
     PasswordsDoNotMatch
 };
 
-//konwersja enum na string 
-std::string getErrorMessage(int err);
-
-//sprawdzenie poprawnosci hasel
-bool doPasswordsMatch (std::string wordOne, std::string wordTwo);
-
-int checkPasswordRules (std::string pass);
-
-//sprawdzenie hasla 
-int checkPassword (std::string passFirst, std::string passSecond);
+std::string getErrorMessage(int error);
+bool doPasswordMatch(std::string passOne, std::string passTwo);
+int checkPasswordRules(std::string checkPass);
+int checkPassword(std::string passwordOne, std::string passwordTwo);
