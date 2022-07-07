@@ -27,7 +27,7 @@ std::string getErrorMessage(int error){
     }
 }
 
-bool doPasswordMatch(std::string passOne, std::string passTwo){
+bool doPasswordsMatch(std::string passOne, std::string passTwo){
     return passOne == passTwo; 
 }
 
@@ -46,7 +46,7 @@ int checkPasswordRules(std::string checkPass){
 }
 
 int checkPassword(std::string passwordOne, std::string passwordTwo){
-    if (doPasswordMatch(passwordOne, passwordTwo)){
+    if (doPasswordsMatch(passwordOne, passwordTwo)){
         return checkPasswordRules(passwordOne);
     } else {
         return static_cast<int>(ErrorCode::PasswordsDoNotMatch);
