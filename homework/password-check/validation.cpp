@@ -52,19 +52,5 @@ int checkPassword(std::string passwordOne, std::string passwordTwo){
         return static_cast<int>(ErrorCode::PasswordsDoNotMatch);
     }
 }
-}
 
-int checkPasswordRules (std::string pass){
- return ErrorCode::ok;      
-}
 
-//sprawdzenie hasla 
-int checkPassword (std::string passFirst, std::string passSecond){
-    auto check = doPasswordsMatch(passFirst, passSecond);
-    if (check == true){
-        return ErrorCode::PasswordsDoNotMatch;
-    }
-    else {
-        return checkPasswordRules(passFirst);
-    }
-} 
