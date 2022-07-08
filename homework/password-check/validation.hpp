@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-enum class ErrorCode{
+enum ErrorCode{
     Ok,
     PasswordNeedsAtLeastNineCharacters,
     PasswordNeedsAtLeastOneNumber,
