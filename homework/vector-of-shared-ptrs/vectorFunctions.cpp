@@ -21,15 +21,15 @@ void print(const std::vector<std::shared_ptr<int>> vecPrint) {
 
 void add10(std::vector<std::shared_ptr<int>> vecAdd) {
     for (auto el : vecAdd) {
-       if(el != nullptr) {
-          *el += 10;
+       if (el != nullptr) {
+           *el += 10;
         }
     }
 }
 
-void sub10(int * const ptr) {
-   if(ptr != nullptr) {
-      *ptr -= 10;
+void sub10(int* const ptr) {
+   if (ptr != nullptr) {
+       *ptr -= 10;
     }
 }
 
