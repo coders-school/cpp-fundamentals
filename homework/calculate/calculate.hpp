@@ -37,5 +37,5 @@ std::string calculate(const std::string& command, int first, int second) {
 	convertResault >> returnResault;
 
 	return returnResault;
-    return "";
+    
 }
