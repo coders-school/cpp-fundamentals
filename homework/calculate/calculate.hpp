@@ -23,7 +23,7 @@ std::string calculate(const std::string& command, int first, int second) {
 
 	else if (command == "multiply")
 	{
-		resault = first - second;
+		resault = first * second;
 	}
 
 	else
