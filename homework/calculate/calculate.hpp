@@ -28,7 +28,7 @@ std::string calculate(const std::string& command, int first, int second) {
 
 	else
 	{
-		return "Invalid Data";
+		return "Invalid data";
 	}
 
 	std::stringstream convertResault;
