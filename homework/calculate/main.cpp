@@ -2,6 +2,7 @@
 #include <string>
 #include "calculate.hpp"
 
+
 int main() {
     while (true) {
         std::cout << "Provide command: \"add\", \"subtract\","
@@ -19,3 +20,7 @@ int main() {
 
     return 0;
 }
+
+
+
+
