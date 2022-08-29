@@ -2,22 +2,24 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-    std::string output = "";
+    // TODO: Implement your solution here and return proper value
+    
+    std::string result = "";
+
     if (command == "add") {
-        output = std::to_string(first + second);
+        result = std::to_string(first + second);
     } else if (command == "subtract") {
-        output = std::to_string(first - second);
+        result = std::to_string(first - second);
     } else if (command == "multiply") {
-        output = std::to_string(first * second);
+        result = std::to_string(first * second);
     } else if (command == "divide") {
-        if (second != 0) {
-            output = std::to_string(first / second);
+        if (second == 0) {
+            result = "Division by 0";
         } else {
-            output = "Division by 0";
+            result = std::to_string(first / second);
         }
     } else {
-        output = "Invalid data";
+        result = "Invalid data";
     }
-
-    return output;
+    return result;
 }
