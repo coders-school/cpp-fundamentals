@@ -3,19 +3,22 @@
 #include <iostream>
 
 std::string calculate(const std::string& command, int first, int second) {
-
+    std::string output = "";
     if (command == "add") {
-        return std::to_string(first + second);
+        output = std::to_string(first + second);
     } else if (command == "subtract") {
-        return std::to_string(first - second);
+        output = std::to_string(first - second);
     } else if (command == "multiply") {
-        return std::to_string(first * second);
+        output = std::to_string(first * second);
     } else if (command == "divide") {
         if (second != 0) {
-            return std::to_string(first / second);
+            output = std::to_string(first / second);
         } else {
-            return "Division by 0";
+            output = "Division by 0";
         }
+    } else {
+        output = "Invalid data";
     }
-  return "Invalid data";
- }
+
+    return output;
+}
