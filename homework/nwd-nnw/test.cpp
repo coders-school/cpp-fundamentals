@@ -17,6 +17,7 @@ INSTANTIATE_TEST_SUITE_P(
     NWDFixtureTest,
     NWDFixture,
     ::testing::Values(
+        std::make_tuple(84, 18, 6),
         std::make_tuple(10, 10, 10),
         std::make_tuple(44, 123, 1),
         std::make_tuple(123, 44, 1),
