@@ -15,16 +15,14 @@ void printVec(std::vector<int> v)
 int fibonacci_iterative(int sequence) {
      if(!sequence) return 0;
      if(sequence==1) return 1;
-     cout << "huj" << endl;
      vector<int> v{0, 1};
 
      int sum = 0;
-     for(int ind=2; ;)
+     for(int ind=2; ;ind++)
      {
         sum = v[ind-1]+v[ind-2];
         if(sequence==ind) return sum;
         v.push_back(sum);
-        ind++;
      }
      return sum;
 /*
