@@ -4,25 +4,17 @@
 
 using namespace std;
 
-void printVec(std::vector<int> v)
-{
-    for(int i = 0; i < v.size(); ++i)
-        cout << "i = " << i << " " << v[i] << endl;  
-    cout << "-----" << endl;    
-}
-
-
 int fibonacci_iterative(int sequence) {
-     if(!sequence) return 0;
-     if(sequence==1) return 1;
-     vector<int> v{0, 1};
+    if(!sequence) return 0;
+    if(sequence==1) return 1;
+    vector<int> v{0, 1};
 
-     for(int ind=2; ;ind++)
-     {
+    for(int ind=2; ;ind++)
+    {
         int sum = v[ind-1]+v[ind-2];
         if(sequence==ind) return sum;
         v.push_back(sum);
-     }
+    }
 }
 
 int fibonacci_recursive(int sequence) {
