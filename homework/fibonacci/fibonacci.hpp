@@ -30,5 +30,4 @@ int fibonacci_recursive(int sequence) {
     }else{
         return fibonacci_recursive(sequence - 1) + fibonacci_recursive(sequence - 2);
     }
-    return 0;
 }
