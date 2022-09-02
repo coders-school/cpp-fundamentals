@@ -18,7 +18,6 @@ int fibonacci_iterative(int sequence) {
         }
         return fibonacci;
     }
-   
 }
 
 int fibonacci_recursive(int sequence) {
