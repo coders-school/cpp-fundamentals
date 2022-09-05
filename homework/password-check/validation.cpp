@@ -31,16 +31,12 @@ std::string getErrorMessage(enum ErrorCode error)
     return error_message;
 }
 
-/*
-    EXPECT_EQ(getErrorMessage(ErrorCode::PasswordNeedsAtLeastNineCharacters), "Password needs to have at least nine characters");
-    EXPECT_EQ(getErrorMessage(ErrorCode::PasswordNeedsAtLeastOneNumber), "Password needs to have at least one number");
-    EXPECT_EQ(getErrorMessage(ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter), "Password needs to have at least one special character");
-    EXPECT_EQ(getErrorMessage(ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter), "Password needs to have at least one uppercase letter");
-    EXPECT_EQ(getErrorMessage(ErrorCode::PasswordsDoNotMatch), "Passwords do not match");
-*/
-
 bool doPasswordsMatch(const std::string& pass1, const std::string pass2)
 {
+    if(pass1.compare(pass2) == 0)
+    {
+        return true;
+    }
     return false;
 }
 
