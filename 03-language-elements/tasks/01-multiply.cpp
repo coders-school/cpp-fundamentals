@@ -1,6 +1,8 @@
 #include <iostream>
 
-// Write missing function here
+float multiply(float a, float b){
+    return a * b;
+}
 
 int main() {
     std::cout << "4 * 5: " << multiply(4, 5) << "\n";
