@@ -4,6 +4,9 @@
 using namespace std;
 
 // It should modify passed string to text "Other string"
+void modifyString(string &str) {
+    str = "Other string";
+}
 
 int main() {
     string str{"Some string"};
