@@ -36,6 +36,8 @@ std::string calculate(const std::string &command, const int first, const int sec
         multiply(result, first, second);
     } else if (command == "divide") {
         divide(result, first, second);
+    } else {
+        result = "Invalid data";
     }
 
     return result;
