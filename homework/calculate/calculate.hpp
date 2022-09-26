@@ -27,7 +27,7 @@ void divide(std::string &string, const int first, const int second) {
 }
 
 std::string calculate(const std::string &command, const int first, const int second) {
-    std::string result = "";
+    std::string result = "Invalid data";
     if (command == "add") {
         add(result, first, second);
     } else if (command == "subtract") {
@@ -36,8 +36,6 @@ std::string calculate(const std::string &command, const int first, const int sec
         multiply(result, first, second);
     } else if (command == "divide") {
         divide(result, first, second);
-    } else {
-        result = "Invalid data";
     }
 
     return result;
