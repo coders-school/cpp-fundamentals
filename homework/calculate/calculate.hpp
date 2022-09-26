@@ -1,7 +1,16 @@
 #pragma once
 #include <string>
 
-std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
-    return "";
+void add(std::string &string, const int first, const int second) {
+    int result = first + second;
+    string = std::to_string(result);
+}
+
+std::string calculate(const std::string &command, const int first, const int second) {
+    std::string result = "";
+    if (command == "add") {
+        add(result, first, second);
+    }
+
+    return result;
 }
