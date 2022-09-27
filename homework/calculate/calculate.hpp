@@ -1,23 +1,23 @@
 #pragma once
-#include <string>
 #include <iostream>
+#include <string>
 
-void add(std::string &string, const int first, const int second) {
+void add(std::string& string, const int first, const int second) {
     int result = first + second;
     string = std::to_string(result);
 }
 
-void subtract(std::string &string, const int first, const int second) {
+void subtract(std::string& string, const int first, const int second) {
     int result = first - second;
     string = std::to_string(result);
 }
 
-void multiply(std::string &string, const int first, const int second) {
+void multiply(std::string& string, const int first, const int second) {
     int result = first * second;
     string = std::to_string(result);
 }
 
-void divide(std::string &string, const int first, const int second) {
+void divide(std::string& string, const int first, const int second) {
     int result = first / second;
     if (second != 0) {
         string = std::to_string(result);
@@ -26,7 +26,7 @@ void divide(std::string &string, const int first, const int second) {
     }
 }
 
-std::string calculate(const std::string &command, const int first, const int second) {
+std::string calculate(const std::string& command, const int first, const int second) {
     std::string result = "Invalid data";
     if (command == "add") {
         add(result, first, second);
