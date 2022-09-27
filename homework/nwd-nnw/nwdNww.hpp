@@ -10,6 +10,9 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    int divider = NWD(lhs, rhs);
+    if (divider == 0) {
+        return 0;
+    }
+    return abs(lhs * rhs / NWD(lhs, rhs));
 }
