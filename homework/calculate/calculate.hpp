@@ -18,8 +18,9 @@ void multiply(std::string& string, const int first, const int second) {
 }
 
 void divide(std::string& string, const int first, const int second) {
-    int result = first / second;
+    int result;
     if (second != 0) {
+        result = first / second;
         string = std::to_string(result);
     } else {
         string = "Division by 0";
