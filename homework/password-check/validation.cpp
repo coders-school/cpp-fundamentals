@@ -1,4 +1,32 @@
 #include "validation.hpp"
+#include <algorithm>
+
+bool isFindDigit(const std::string& password) {
+    for (auto c : password) {
+        if (std::isdigit(c)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isFindSpecialCharacter(const std::string& password) {
+    for (auto c : password) {
+        if (!std::isalnum(c)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isFindUppercaseLetter(const std::string& password) {
+    for (auto c : password) {
+        if (std::isupper(c)) {
+            return true;
+        }
+    }
+    return false;
+}
 
 std::string getErrorMessage(const ErrorCode& message) {
     if (message == ErrorCode::Ok) {
@@ -22,17 +50,14 @@ bool doPasswordsMatch(const std::string& password1, const std::string& password2
 }
 
 ErrorCode checkPasswordRules(const std::string& password) {
-    int random = rand() % 5;
-    if (random == 0) {
-        return ErrorCode::Ok;
-    } else if (random == 1) {
-        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    } else if (random == 2) {
-        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    } else if (random == 3) {
-        return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    } else if (random == 4) {
+    if (password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    } else if (!isFindDigit(password)) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    } else if (!isFindSpecialCharacter(password)) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    } else if (!isFindUppercaseLetter(password)) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
     return ErrorCode::Ok;
 }
