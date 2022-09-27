@@ -26,3 +26,5 @@ target_link_libraries(${PROJECT_NAME}-bonus-ut gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME}-ut)
+
+add_test(NAME ${PROJECT_NAME}_test-bonus COMMAND ${PROJECT_NAME}-bonus-ut)

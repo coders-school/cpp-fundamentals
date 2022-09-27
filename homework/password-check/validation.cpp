@@ -1,5 +1,4 @@
 #include "validation.hpp"
-#include <algorithm>
 
 bool isFindDigit(const std::string& password) {
     for (auto c : password) {
