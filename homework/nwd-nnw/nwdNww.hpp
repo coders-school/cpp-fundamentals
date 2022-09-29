@@ -19,6 +19,9 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
+    if ((lhs || rhs) == 0) {
+        return 0;
+    }
     if (lhs < 0) {
         lhs *= -1;
     }
