@@ -19,6 +19,13 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    if (lhs < 0) {
+        lhs *= -1;
+    }
+    if (rhs < 0) {
+        rhs *= -1;
+    }
+    int result = (lhs * rhs) / NWD(lhs, rhs);
+
+    return result;
 }
