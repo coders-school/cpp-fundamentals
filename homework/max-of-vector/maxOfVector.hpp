@@ -1,5 +1,5 @@
 #pragma once
-#include <limits>
+#include <algorithm>
 #include <vector>
 
 int maxOfVector(const std::vector<int>& vec) {
