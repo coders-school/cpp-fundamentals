@@ -16,7 +16,12 @@ void print(const std::vector<std::shared_ptr<int>>& vec) {
     std::cout << "\n";
 }
 
-void add10(std::vector<std::shared_ptr<int>> vec) {
+void add10(std::vector<std::shared_ptr<int>>& vec) {
+    for (auto& element : vec) {
+        if (element) {  // checks if the element is not a null pointer
+            *element += 10;
+        }
+    }
 }
 
 void sub10(const int* ptr){
