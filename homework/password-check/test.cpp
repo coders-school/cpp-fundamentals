@@ -7,6 +7,7 @@ const std::string TOO_SHORT_PASSWORD = "12345678";
 auto MIN_ALLOWED_ERROR_CODE = ErrorCode::Ok;
 auto MAX_ALLOWED_ERROR_CODE = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
 
+
 TEST(DoPasswordsMatchTests, returnsTrueForIdenticalPasswords) {
     EXPECT_TRUE(doPasswordsMatch(EMPTY_PASSWORD, EMPTY_PASSWORD));
     EXPECT_TRUE(doPasswordsMatch(PROPER_PASSWORD, PROPER_PASSWORD));
