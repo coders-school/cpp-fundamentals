@@ -4,33 +4,20 @@
 std::string calculate(const std::string& command, int first, int second) {
     int result;
 
-    if (command == "add")
-    {
+    if (command == "add") {
         result = first + second;
-    }
-    else if (command == "subtract")
-    {
+    } else if (command == "subtract") {
         result = first - second;
-    }
-    else if (command == "multiply")
-    {
+    } else if (command == "multiply") {
         result = first * second;
-    }
-    else if (command == "divide")
-    {
-        if (second != 0)
-        {
+    } else if (command == "divide") {
+        if (second != 0) {
             result = first / second;
-        }
-        else
-        {
+        } else {
             return "Division by 0";
         }
-    }
-    else
-    {
+    } else {
         return "Invalid data";
     }
     return std::to_string(result);
-
 }
