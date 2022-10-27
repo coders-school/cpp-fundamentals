@@ -1,15 +1,14 @@
 #pragma once
 #include <iostream>
 
-enum class ErrorCode
-{
-Ok,
-PasswordNeedsAtLeastNineCharacters,
-PasswordNeedsAtLeastOneNumber,
-PasswordNeedsAtLeastOneSpecialCharacter,
-PasswordNeedsAtLeastOneUppercaseLetter,
-PasswordsDoNotMatch,
-Undefinied = -1
+enum class ErrorCode {
+    Ok,
+    PasswordNeedsAtLeastNineCharacters,
+    PasswordNeedsAtLeastOneNumber,
+    PasswordNeedsAtLeastOneSpecialCharacter,
+    PasswordNeedsAtLeastOneUppercaseLetter,
+    PasswordsDoNotMatch,
+    Undefinied = -1
 };
 
 std::string getErrorMessage(ErrorCode);

@@ -39,60 +39,48 @@ std::string getErrorMessage(ErrorCode Code) {
     return description;
 }
 
-bool doPasswordsMatch(std::string str1, std::string str2)
-{
+bool doPasswordsMatch(std::string str1, std::string str2) {
     return str1 == str2 ? true : false;
 }
 
-ErrorCode checkPasswordRules(std::string str)
-{
+ErrorCode checkPasswordRules(std::string str) {
     ErrorCode error = ErrorCode::Undefinied;
     bool flag = true;
 
-    if (str.size() < 9)
-    {
+    if (str.size() < 9) {
         return error = ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
 
-    auto check_number = [](auto n){return isdigit(n);};
+    auto check_number = [](auto n) { return isdigit(n); };
     flag = any_of(str.begin(), str.end(), check_number);
 
-    if(!flag)
-    {
+    if (!flag) {
         return error = ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
 
-    auto check_special = [](auto n){return ispunct(n);};
+    auto check_special = [](auto n) { return ispunct(n); };
     flag = any_of(str.begin(), str.end(), check_special);
 
-    if(!flag)
-    {
+    if (!flag) {
         return error = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
 
-    auto check_upper = [](auto n){return isupper(n);};
+    auto check_upper = [](auto n) { return isupper(n); };
     flag = any_of(str.begin(), str.end(), check_upper);
 
-    if(!flag)
-    {
+    if (!flag) {
         return error = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
 
     return error = ErrorCode::Ok;
 }
 
-
-
-ErrorCode checkPassword(std::string str1, std::string str2)
-{
+ErrorCode checkPassword(std::string str1, std::string str2) {
     ErrorCode error = ErrorCode::Undefinied;
 
-    if (!doPasswordsMatch(str1, str2))
-    {
+    if (!doPasswordsMatch(str1, str2)) {
         error = ErrorCode::PasswordsDoNotMatch;
-    }
-    else
-    {
+    } else {
         error = checkPasswordRules(str1);
     }
 
