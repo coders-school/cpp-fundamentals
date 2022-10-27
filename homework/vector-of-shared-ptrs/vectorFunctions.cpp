@@ -11,7 +11,7 @@ std::vector<std::shared_ptr<int>> generate(int val) {
 
 void print(const std::vector<std::shared_ptr<int>> vec) {
     for (const auto& el : vec) {
-        std::cout << el << " ";
+        std::cout << *el << " ";
     }
     std::cout << "\n";
 }
