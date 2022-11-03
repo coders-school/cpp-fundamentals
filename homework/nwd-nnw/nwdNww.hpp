@@ -1,6 +1,5 @@
 #pragma once
 
-
 int NWD(int lhs, int rhs) {
     while (rhs != 0) {
         int r = lhs % rhs;
@@ -17,4 +16,3 @@ int NWW(int lhs, int rhs) {
     }
     return abs(lhs * rhs / NWD(lhs, rhs));
 }
-
