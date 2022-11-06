@@ -1,7 +1,7 @@
 #pragma once
+#include <algorithm>
 #include <limits>
 #include <vector>
-#include <algorithm>
 
 int maxOfVector(const std::vector<int>& vec) {
     std::vector<int> vec1;
