@@ -2,7 +2,6 @@
 #include <vector>
 
 std::vector<int> generateSequence(int count, int step) {
-    // TODO: Implement me :
     std::vector<int> vec;
     const int a = step;
     for (auto i{0}; i < count; i++) {
