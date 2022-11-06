@@ -8,6 +8,5 @@ std::vector<int> generateSequence(int count, int step) {
         vec.push_back(step);
         step += a;
     } 
-    
     return vec;
 }
