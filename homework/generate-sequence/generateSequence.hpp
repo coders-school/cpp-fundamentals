@@ -6,6 +6,7 @@ std::vector<int> generateSequence(int count, int step) {
     const int a = step;
     for (auto i{0}; i < count; i++) {
         vec.push_back(step);
-        step += a; }
-     return vec;
+        step += a; 
+    }
+    return vec;
 }
