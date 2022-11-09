@@ -11,7 +11,6 @@ int main() {
 		std::cin >> command;
 		if (command == "quit")
 			break;
-		
 		int first{};
 		int second{};
 		std::cout << "Provide two numbers: ";
@@ -19,7 +18,6 @@ int main() {
 		std::cout << "Result: " << calculate(command, first, second) << "\n";
 		
 	}
-
 
     return 0;
 }
