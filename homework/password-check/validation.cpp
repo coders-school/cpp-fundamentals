@@ -1,6 +1,6 @@
 #include "validation.hpp"
 #include <string>
-#include <random>
+#include <cctype>
 
 std::string getErrorMessage(ErrorCode error) {
     std::string result;
@@ -27,13 +27,34 @@ bool doPasswordsMatch(const std::string & password1,
 }
 
 ErrorCode checkPasswordRules(const std::string & password) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(
-        static_cast<int>(ErrorCode::Ok),
-        static_cast<int>(ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter)
-    );
-    ErrorCode result = static_cast<ErrorCode>(distrib(gen));
+    ErrorCode result;
+
+    bool properLength = password.size() >= 9 ? true : false;
+
+    bool hasNumbers = false;
+    bool hasSpecialChars = false;
+    bool hasUppercase = false;
+    for (size_t i = 0; i < password.size(); i++) {
+        if (std::isdigit(password[i])) {
+            hasNumbers = true;
+        } else if (std::ispunct(password[i])) {
+            hasSpecialChars = true;
+        } else if (std::isupper(password[i])) {
+            hasUppercase = true;
+        }
+    }
+
+    if (! properLength) {
+        result = ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    } else if (! hasNumbers) {
+        result = ErrorCode::PasswordNeedsAtLeastOneNumber;
+    } else if (! hasSpecialChars) {
+        result = ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    } else if (! hasUppercase) {
+        result = ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    } else {
+        result = ErrorCode::Ok;
+    }
 
     return result;
 }
