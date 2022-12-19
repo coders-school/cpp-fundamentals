@@ -1,11 +1,23 @@
 #pragma once
+#include <cmath>
 
 int NWD(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+
+    int temp;
+
+    while (rhs != 0) {
+        temp = rhs;
+        rhs = lhs % rhs;
+        lhs = temp;
+    }
+
+    return std::abs(lhs);
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    auto nwd = NWD(lhs, rhs);
+    if(nwd == 0)
+        return 0;
+
+    return std::abs((lhs / nwd) * rhs);
 }
