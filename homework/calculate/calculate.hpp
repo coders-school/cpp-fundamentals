@@ -3,28 +3,18 @@
 
 std::string calculate(const std::string& command, int first, int second) {
     std::string strResult;
-    if(command == "add")
-    {
+    if (command == "add") {
         strResult = std::to_string(first + second);
-    }
-    else if(command == "subtract")
-    {
+    } else if (command == "subtract") {
         strResult = std::to_string(first - second);
-    }
-    else if(command == "multiply")
-    {
+    } else if (command == "multiply") {
         strResult = std::to_string(first * second);
-    }
-    else if(command == "divide")
-    {
-        if(second == 0)
-        {
+    } else if (command == "divide") {
+        if (second == 0) {
             strResult = "Division by 0";
-        }
-        else
+        } else
             strResult = std::to_string(first / second);
-    }
-    else{
+    } else {
         strResult = "Invalid data";
     }
 
