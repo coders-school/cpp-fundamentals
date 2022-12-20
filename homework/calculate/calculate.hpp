@@ -7,18 +7,14 @@ std::string calculate(const std::string& command, int first, int second) {
 
     if (command == "add") {
         result = std::to_string(first + second);
-    }
-    else if (command == "subtract") {
+    } else if (command == "subtract") {
         result = std::to_string(first - second);
-    }
-    else if (command == "multiply") {
+    } else if (command == "multiply") {
         result = std::to_string(first * second);
-    }
-    else if (command == "divide") {
+    } else if (command == "divide") {
         result = std::to_string(first / second);
-    }
-    else {
-        result = "invalid data";
+    } else {
+        result = "Invalid data";
     }
 
     return result;
