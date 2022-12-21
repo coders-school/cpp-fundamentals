@@ -1,0 +1,9 @@
+#include <iostream>
+#include <memory>
+#include <vector>
+
+std::vector<std::shared_ptr<int>> generate(int count);
+void print(std::vector<std::shared_ptr<int>> vectorToPrint);
+void add10(std::vector<std::shared_ptr<int>> vectorToAdd);
+void sub10(int* ptr);
+void sub10(std::vector<std::shared_ptr<int>> vectorToSub);
