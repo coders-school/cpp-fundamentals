@@ -31,7 +31,7 @@ std::string getErrorMessage(ErrorCode ec) {
     return msg;
 }
 
-bool doPasswordsMatch(const std::string& first_pass, const std::string& second_pass) {
+bool doPasswordsMatch(const std::string & first_pass, const std::string & second_pass) {
     if (first_pass == second_pass) {
         return true;
     }
@@ -39,7 +39,7 @@ bool doPasswordsMatch(const std::string& first_pass, const std::string& second_p
     return false;
 }
 
-ErrorCode checkPasswordRules(const std::string& pass) {
+ErrorCode checkPasswordRules(const std::string & pass) {
     if (pass.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     } else if (std::none_of(pass.begin(), pass.end(), ::isdigit)) {
@@ -53,7 +53,7 @@ ErrorCode checkPasswordRules(const std::string& pass) {
     return ErrorCode::Ok;
 }
 
-ErrorCode checkPassword(const std::string& first_pass, const std::string& second_pass) {
+ErrorCode checkPassword(const std::string & first_pass, const std::string & second_pass) {
     if (doPasswordsMatch(first_pass, second_pass)) {
         return checkPasswordRules(first_pass);
     }
