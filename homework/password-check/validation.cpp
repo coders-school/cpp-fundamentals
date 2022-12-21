@@ -44,9 +44,9 @@ ErrorCode checkPasswordRules(const std::string& pass) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     } else if (std::none_of(pass.begin(), pass.end(), ::isdigit)) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    } else if (!std::any_of(pass.begin(), pass.end(), ::isupper)) {
+    } else if (std::none_of(pass.begin(), pass.end(), ::isupper)) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    } else if (!std::any_of(pass.begin(), pass.end(), [](char c) { return c == '!' or c == '@' or c == '#'; })) {
+    } else if (std::none_of(pass.begin(), pass.end(),  ::ispunct)) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
 
