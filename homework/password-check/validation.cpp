@@ -54,6 +54,7 @@ ErrorCode checkPasswordRules(const std::string & pass) {
 }
 
 ErrorCode checkPassword(const std::string & first_pass, const std::string & second_pass) {
+    
     if (doPasswordsMatch(first_pass, second_pass)) {
         return checkPasswordRules(first_pass);
     }
