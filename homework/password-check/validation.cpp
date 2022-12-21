@@ -46,7 +46,7 @@ ErrorCode checkPasswordRules(const std::string& pass) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     } else if (std::none_of(pass.begin(), pass.end(), ::isupper)) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    } else if (std::none_of(pass.begin(), pass.end(),  ::ispunct)) {
+    } else if (std::none_of(pass.begin(), pass.end(), ::ispunct)) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
 
