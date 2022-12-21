@@ -1,10 +1,10 @@
 // TODO: I'm empty :) Put enum and function headers here.
 // Don't forget the header guard - #pragma once
 
-#include <iostream>
-#include <cctype>
-#include <string>
 #include <algorithm>
+#include <cctype>
+#include <iostream>
+#include <string>
 
 enum class ErrorCode {
     Ok,
