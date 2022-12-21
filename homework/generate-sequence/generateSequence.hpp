@@ -3,10 +3,9 @@
 
 std::vector<int> generateSequence(const int count, const int step) {
     // TODO: Implement me :)
-    if (count <1) {
+    if (count < 1) {
         return {};
     }
-
 
     std::vector<int> sequence = {step};
 
