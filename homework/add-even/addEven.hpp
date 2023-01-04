@@ -1,15 +1,12 @@
 #pragma once
-#include<iostream>
+#include <iostream>
 #include <vector>
 
 int addEven(const std::vector<int>& numbers) {
-    int result = 0;
-    for(const int n :  numbers)
-    {
-        if((n % 2 == 0)) {
-           
-           result += n;
-           std::cout << n << std::endl;
+    int result{0};
+    for (const auto& n : numbers) {
+        if ((n % 2) == 0) {
+            result += n;
         }
     }
     // TODO: Your implementation goes here
