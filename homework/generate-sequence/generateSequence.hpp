@@ -6,6 +6,7 @@ std::vector<int> generateSequence(int count, int step) {
     vec.clear();
     if (count == 0) {
         return vec;
+    
     }
     vec.push_back(step);
     int next = step;
