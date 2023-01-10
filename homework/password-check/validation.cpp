@@ -1,11 +1,10 @@
 #include "validation.hpp"
-
+#include <cstdlib>
+#include <ctime>
 ErrorCode errorCode;
 
-std::string getErrorMessage(ErrorCode errorCode){
-    
-    switch (errorCode)
-    {
+std::string getErrorMessage(ErrorCode errorCode) {
+    switch (errorCode) {
     case ErrorCode::Ok:
         return "Ok";
         break;
@@ -24,28 +23,30 @@ std::string getErrorMessage(ErrorCode errorCode){
     case ErrorCode::PasswordsDoNotMatch:
         return "Passwords do not match";
         break;
-    
+
     default:
-        return "Passwords incorrect"; 
+        return "Passwords incorrect";
         break;
     }
 }
 
-bool doPasswordsMatch(std::string password, std::string passwordRepeated){
-    password = "1";
-    passwordRepeated = "1";
-    
-    return true;
+bool doPasswordsMatch(std::string password, std::string passwordRepeated) {
+    return password == passwordRepeated ? true : false;
 }
 
-ErrorCode checkPasswordRules(std::string password){
-    password = "1";
-    return ErrorCode::Ok;
+ErrorCode checkPasswordRules(std::string password) {
+    int size = static_cast<int>(password.size());
+    if (size < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    } else {
+        return ErrorCode::Ok;
+    }
 }
 
-ErrorCode checkPassword(std::string password, std::string passwordRepeated){
-    password = "1";
-    passwordRepeated = "1";
-
-    return ErrorCode::Ok;
+ErrorCode checkPassword(std::string password, std::string passwordRepeated) {
+    if (doPasswordsMatch(password, passwordRepeated)) {
+        return checkPasswordRules(password);
+    } else {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
 }
