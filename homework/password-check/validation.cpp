@@ -35,8 +35,7 @@ bool doPasswordsMatch(std::string password, std::string passwordRepeated) {
 }
 
 ErrorCode checkPasswordRules(std::string password) {
-    int size = static_cast<int>(password.size());
-    if (size < 9) {
+    if (static_cast<int>(password.size()) < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     } else {
         return ErrorCode::Ok;
