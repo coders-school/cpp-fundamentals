@@ -8,7 +8,7 @@ int addEven(const std::vector<int>& numbers) {
             int element = *i;
             if (element % 2 == 0) {
                 tmp += element;
-            }   
+            }
         }
     }
     return tmp;
