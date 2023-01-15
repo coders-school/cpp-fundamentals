@@ -5,6 +5,8 @@
 
 ErrorCode errorCode;  // Enum class object
 bool isInStringIsDigit(std::string password);
+bool isInStringIsUppercase(std::string password);
+bool isInStringIsSpecialCharacter(std::string password);
 
 std::string getErrorMessage(ErrorCode errorCode) {
     switch (errorCode) {
@@ -42,8 +44,16 @@ ErrorCode checkPasswordRules(std::string password) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
 
-    if (!isInStringIsDigit(password)) {
+    else if (!isInStringIsDigit(password)) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    else if (!isInStringIsUppercase(password)) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+
+    else if (!isInStringIsSpecialCharacter(password)) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
 
     else {
@@ -63,6 +73,24 @@ ErrorCode checkPassword(std::string password, std::string passwordRepeated) {
 bool isInStringIsDigit(std::string password) {
     for (char ch : password) {
         if (isdigit(ch)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isInStringIsUppercase(std::string password) {
+    for (char ch : password) {
+        if (isupper(ch)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isInStringIsSpecialCharacter(std::string password) {
+    for (char ch : password) {
+        if (ispunct(ch)) {
             return true;
         }
     }
