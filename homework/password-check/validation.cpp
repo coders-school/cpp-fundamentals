@@ -1,7 +1,10 @@
 #include "validation.hpp"
+#include <cctype>
 #include <cstdlib>
 #include <ctime>
-ErrorCode errorCode;
+
+ErrorCode errorCode;  // Enum class object
+bool isInStringIsDigit(std::string password);
 
 std::string getErrorMessage(ErrorCode errorCode) {
     switch (errorCode) {
@@ -37,7 +40,13 @@ bool doPasswordsMatch(std::string password, std::string passwordRepeated) {
 ErrorCode checkPasswordRules(std::string password) {
     if (static_cast<int>(password.size()) < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    } else {
+    }
+
+    if (!isInStringIsDigit(password)) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+
+    else {
         return ErrorCode::Ok;
     }
 }
@@ -48,4 +57,14 @@ ErrorCode checkPassword(std::string password, std::string passwordRepeated) {
     } else {
         return ErrorCode::PasswordsDoNotMatch;
     }
+}
+
+/***********************************************************************************/
+bool isInStringIsDigit(std::string password) {
+    for (char ch : password) {
+        if (isdigit(ch)) {
+            return true;
+        }
+    }
+    return false;
 }
