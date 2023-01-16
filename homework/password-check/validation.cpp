@@ -30,7 +30,7 @@ std::string getErrorMessage(ErrorCode errorCode) {
         break;
 
     default:
-        return "Passwords incorrect";
+        return "Ok";
         break;
     }
 }
