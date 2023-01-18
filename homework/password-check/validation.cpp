@@ -25,10 +25,6 @@ std::string getErrorMessage(ErrorCode errorCode) {
     case ErrorCode::PasswordsDoNotMatch:
         return "Passwords do not match";
         break;
-
-    default:
-        return "Ok";
-        break;
     }
 }
 
