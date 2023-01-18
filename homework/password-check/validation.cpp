@@ -4,9 +4,6 @@
 #include <ctime>
 
 ErrorCode errorCode;  // Enum class object
-bool isInStringIsDigit(std::string password);
-bool isInStringIsUppercase(std::string password);
-bool isInStringIsSpecialCharacter(std::string password);
 
 std::string getErrorMessage(ErrorCode errorCode) {
     switch (errorCode) {
