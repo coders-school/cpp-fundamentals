@@ -1,7 +1,6 @@
 #include "validation.hpp"
 #include <cctype>
 #include <cstdlib>
-#include <ctime>
 
 ErrorCode errorCode;  // Enum class object
 
@@ -20,12 +19,13 @@ std::string getErrorMessage(ErrorCode errorCode) {
     case ErrorCode::PasswordsDoNotMatch:
         return "Passwords do not match";
     default:
-        return "dupa";
+        return "Ok";
     }
+    return "Ok";
 }
 
 bool doPasswordsMatch(std::string password, std::string passwordRepeated) {
-    return password == passwordRepeated ? true : false;
+    return password == passwordRepeated;
 }
 
 ErrorCode checkPasswordRules(std::string password) {
@@ -40,11 +40,12 @@ ErrorCode checkPasswordRules(std::string password) {
     } else {
         return ErrorCode::Ok;
     }
+    return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(std::string password, std::string passwordRepeated) {
     if (doPasswordsMatch(password, passwordRepeated)) {
-        return checkPasswordRules(password);
+        return checkPasswordRules(passwordRepeated);
     } else {
         return ErrorCode::PasswordsDoNotMatch;
     }

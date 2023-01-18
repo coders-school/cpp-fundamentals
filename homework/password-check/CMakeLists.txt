@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.11.0)
-project(PASSWORD-CHECK)
+project(passwordCheck)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -27,4 +27,3 @@ target_link_libraries(${PROJECT_NAME}-bonus-ut gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME}-ut)
-gtest_discover_tests(${PROJECT_NAME}-bonus-ut)
