@@ -8,14 +8,14 @@ include(FetchContent)
 FetchContent_Declare(
   googletest
   GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG        main # release-1.10.0
+  GIT_TAG main # release-1.10.0
 )
+
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
-
 enable_testing()
 
 add_executable(${PROJECT_NAME} main.cpp validation.cpp)
@@ -27,3 +27,4 @@ target_link_libraries(${PROJECT_NAME}-bonus-ut gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME}-ut)
+gtest_discover_tests(${PROJECT_NAME}-bonus-ut)
