@@ -19,6 +19,8 @@ std::string getErrorMessage(ErrorCode errorCode) {
         return "Password needs to have at least one uppercase letter";
     case ErrorCode::PasswordsDoNotMatch:
         return "Passwords do not match";
+    default:
+        return "dupa";
     }
 }
 
