@@ -34,11 +34,11 @@ bool doPasswordsMatch(std::string pass1, std::string pass2) {
 ErrorCode checkPasswordRules(std::string pass) {
     if (pass.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    } else if (std::any_of(pass.cbegin(), pass.cend(), [](char a){return (a > 47 && a < 58); }) == false) {
+    } else if (std::any_of(pass.cbegin(), pass.cend(), [](char a){ return (a > 47 && a < 58); }) == false) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    } else if (std::any_of(pass.cbegin(), pass.cend(), [](char a){return (a > 64 && a < 91); }) == false) {
+    } else if (std::any_of(pass.cbegin(), pass.cend(), [](char a){ return (a > 64 && a < 91); }) == false) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    } else if (std::all_of(pass.cbegin(), pass.cend(), [](char a){return ((a > 47 && a < 58) || (a > 64 && a < 91)) || (a > 96 && a < 123); }) == true) {
+    } else if (std::all_of(pass.cbegin(), pass.cend(), [](char a){ return ((a > 47 && a < 58) || (a > 64 && a < 91)) || (a > 96 && a < 123); }) == true) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     } else {
         return ErrorCode::Ok;
