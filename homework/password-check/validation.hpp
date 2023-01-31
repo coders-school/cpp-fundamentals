@@ -1,15 +1,16 @@
-// TODO: I'm empty :) Put enum and function headers here.
-// Don't forget the header guard - #pragma once
 #pragma once
-#include "validation.cpp"
 #include <string>
+#include <algorithm>
 
 enum class ErrorCode {
-    OK,
+    Ok,
     PasswordNeedsAtLeastNineCharacters,
     PasswordNeedsAtLeastOneNumber,
     PasswordNeedsAtLeastOneSpecialCharacter,
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
 };
-std::string getErrorMessage(class ErrorCode error);
+std::string getErrorMessage(ErrorCode error);
+bool doPasswordsMatch(std::string pass1, std::string pass2);
+ErrorCode checkPasswordRules(const std::string pass);
+ErrorCode checkPassword(std::string password, std::string repeatedPassword);
