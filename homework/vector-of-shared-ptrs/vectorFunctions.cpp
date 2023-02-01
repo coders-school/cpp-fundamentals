@@ -14,16 +14,15 @@ void print(std::vector<std::shared_ptr<int>>& vec) {
     std::cout << '\n';
 }
 void add10(std::vector<std::shared_ptr<int>>& vec) {
-    
     for (const auto& el : vec) {
         if (el != nullptr) {
-            *el+=10;
+            *el += 10;
         }
     }
 }
-void sub10(int * const A) {
+void sub10(int* const A) {
     if (A != nullptr) {
-        *A-=10;
+        *A -= 10;
     }
 }
 void sub10(std::vector<std::shared_ptr<int>>& vec) {
