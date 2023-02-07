@@ -3,13 +3,13 @@
 
 int NWD(int lhs, int rhs)
 {
-    if (b != 0)
-        return NWD(b, lhs % rhs);
+    if (rhs != 0)
+        return NWD(rhs, lhs % rhs);
 
     return a;
 }
 
-int NWW(int lhs, int b)
+int NWW(int lhs, int rhs)
 {
     return (lhs / NWD(lhs, rhs) * rhs);
 }
