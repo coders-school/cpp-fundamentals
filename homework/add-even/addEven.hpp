@@ -2,18 +2,16 @@
 #include <vector>
 
 int addEven(const std::vector<int>& numbers) {
-
 	int x = 0;
-
-	for (int i = 0; i < numbers.size(); i++) {
-		if (numbers[i]%2==0)
+	for (int j = 0; j < numbers.size(); j++) {
+		if (numbers[j]%2==0)
 		{
-			x+=numbers[i];
+			x+=numbers[j];
 		}
 		else
 		{
 			x +=0;
 		}
 	}
-	return x;
+return x;
 }
