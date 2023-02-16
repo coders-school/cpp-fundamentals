@@ -1,16 +1,28 @@
 #pragma once
 
 int fibonacci_iterative(int sequence) {
-    long result = 0;
-    for (int i = 0; i <= sequence; i++) {
-        result = result + i;
-   } 
-   return result;
+    int first = 0, second = 1;
+    if (sequence <= 0) {
+        return 0;
+    } else if (sequence == 1) {
+        return 1;
+    }
+    else {
+        for (int i = 0; i < sequence; i++) {
+            second += first;
+            first = second - first;
+        }
+         return first;
+    }
 }
 
 int fibonacci_recursive(int sequence) {
-    long result = 0;
-    if (sequence < 3)
+    if (sequence <= 0) {
+        return 0;
+    } else if (sequence == 1) {
         return 1;
-    return fibonacci_recursive(sequence - 2) + fibonacci_recursive(sequence - 1);
+    }
+    else {
+        return fibonacci_recursive(sequence - 2) + fibonacci_recursive(sequence - 1);
+    }
 }
