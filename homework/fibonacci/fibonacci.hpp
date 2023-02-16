@@ -2,9 +2,10 @@
 
 int fibonacci_iterative(int sequence) {
     auto result = 0;
-    for (size_t i = 0; i <= sequence; i++){
-    result = result + i;
-    } return result;
+    for (int i = 0; i <= sequence; i++) {
+        result = result + i;
+    } 
+   return result;
 }
 
 int fibonacci_recursive(int sequence) {
