@@ -4,8 +4,7 @@ int NWD(int lhs, int rhs) {
     int REST = 0;
     if (rhs == 0) {
         return lhs;
-    }
-    else {
+    } else {
         while (lhs % rhs != 0) {
             REST = lhs % rhs;
             lhs = rhs;
@@ -13,15 +12,13 @@ int NWD(int lhs, int rhs) {
         }
         if (rhs < 0) {
             return rhs * -1;
-        }
-        else {
+        } else {
             return rhs;
         }
     }
 }
 
 int NWW(int lhs, int rhs) {
-    
     if (lhs == 0 || rhs == 0) {
         return 0;
     } else {
@@ -31,5 +28,4 @@ int NWW(int lhs, int rhs) {
             return (lhs * rhs) / NWD(lhs, rhs);
         }
     }
- 
 }
