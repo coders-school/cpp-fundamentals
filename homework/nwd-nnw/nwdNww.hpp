@@ -1,11 +1,10 @@
 #pragma once
+#include <numeric>
 
 int NWD(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    return std::gcd(lhs, rhs);
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    return std::lcm(lhs, rhs);
 }
