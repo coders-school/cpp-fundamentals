@@ -29,13 +29,13 @@ ErrorCode checkPasswordRules(std::string password) {
     if (password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (!std::none_of(password.begin(), password.end(), [](auto x) { return std::isupper(x); })) {
+    if (!std::any_of(password.begin(), password.end(), [](auto x) { return std::isupper(x); })) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
-    if (!std::none_of(password.begin(), password.end(), [](auto x) { return std::isdigit(x); })) {
+    if (!std::any_of(password.begin(), password.end(), [](auto x) { return std::isdigit(x); })) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    if (!std::none_of(password.begin(), password.end(), [](auto x) { return std::ispunct(x); })) {
+    if (!std::any_of(password.begin(), password.end(), [](auto x) { return std::ispunct(x); })) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
     return ErrorCode::Ok;
