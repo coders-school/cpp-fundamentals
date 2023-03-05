@@ -10,7 +10,7 @@ enum class ErrorCode {
     PasswordsDoNotMatch = 5
 };
 
-auto getErrorMessage(ErrorCode code_to_convert) -> ErrorCode;
+auto getErrorMessage(ErrorCode code_to_convert) -> std::string;
 
 auto doPasswordsMatch(std::string password_first, std::string password_second) -> bool;
 
