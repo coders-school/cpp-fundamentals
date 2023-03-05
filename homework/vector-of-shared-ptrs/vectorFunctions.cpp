@@ -1,4 +1,3 @@
-
 #include "vectorFunctions.hpp"
 
 auto generate(int count) -> std::vector<std::shared_ptr<int>> {
