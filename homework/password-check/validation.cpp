@@ -24,5 +24,9 @@ auto checkPasswordRules(std::string password) -> ErrorCode {
 }
 
 auto checkPassword(std::string password_first, std::string password_second) -> ErrorCode {
-
+    if (doPasswordsMatch(password_first, password_second)) {
+        return checkPasswordRules(password_first);
+    } else {
+        return ErrorCode::PasswordsDoNotMatch;
+    }
 }
