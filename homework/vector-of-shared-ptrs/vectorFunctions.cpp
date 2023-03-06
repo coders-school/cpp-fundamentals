@@ -17,6 +17,9 @@ auto print(std::vector<std::shared_ptr<int>> vector) -> void {
 }
 
 auto add10(std::vector<std::shared_ptr<int>> vector) -> void {
+    for (size_t i = 0; i < vector.size(); i++) {
+        *vector[i] += 10;
+    }
 }
 
 auto sub10(int* const pointer) -> void {
