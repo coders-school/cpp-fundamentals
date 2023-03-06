@@ -26,7 +26,7 @@ auto add10(std::vector<std::shared_ptr<int>> vector) -> void {
     }
 }
 
-auto sub10(int * const pointer) -> void {
+auto sub10(int* const pointer) -> void {
     if (pointer != nullptr) {
         *pointer -= 10;
     } else {
