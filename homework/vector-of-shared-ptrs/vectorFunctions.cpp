@@ -1,4 +1,5 @@
 #include "vectorFunctions.hpp"
+#include <iostream>
 
 auto generate(int count) -> std::vector<std::shared_ptr<int>> {
     std::vector<std::shared_ptr<int>> result_vector;
@@ -9,6 +10,10 @@ auto generate(int count) -> std::vector<std::shared_ptr<int>> {
 }
 
 auto print(std::vector<std::shared_ptr<int>> vector) -> void {
+    for (auto element : vector) {
+        std::cout << *element << ' ';
+    }
+    std::cout << '\n';
 }
 
 auto add10(std::vector<std::shared_ptr<int>> vector) -> void {
