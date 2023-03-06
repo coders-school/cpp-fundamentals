@@ -1,50 +1,59 @@
 #include "validation.hpp"
-#include <algorithm>
-#include <ranges>
-#include <string>
-
-auto getErrorMessage(ErrorCode code_to_convert) -> std::string {
-    switch (code_to_convert) {
-    case ErrorCode::Ok:
-        return "Ok";
-    case ErrorCode::PasswordNeedsAtLeastOneNumber:
-        return "Password needs to have at least one number";
-    case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-        return "Password needs to have at least one special character";
-    case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-        return "Password needs to have at least one uppercase letter";
-    case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-        return "Password needs to have at least nine characters";
-    case ErrorCode::PasswordsDoNotMatch:
-        return "Passwords do not match";
+// TODO: Put implementations here
+std::string getErrorMessage(ErrorCode code){
+    std::string message;
+    switch(code){
+        case ErrorCode::Ok:
+            message = "Ok";
+            break;
+        case ErrorCode::PasswordNeedsAtLeastNineCharacters:
+            message = "Password needs to have at least nine characters";
+            break;
+        case ErrorCode::PasswordNeedsAtLeastOneNumber:
+            message = "Password needs to have at least one number";
+            break;
+        case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
+            message = "Password needs to have at least one special character";
+            break;
+        case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
+            message = "Password needs to have at least one uppercase letter";
+            break;
+        case ErrorCode::PasswordsDoNotMatch:
+            message = "Passwords do not match";
+            break;
     }
-    return "Error ocurred";
+    return message;
 }
 
-bool doPasswordsMatch(std::string password_first, std::string password_second) {
-    return password_first == password_second;
+bool doPasswordsMatch(std::string password, std::string repeatedPassword){
+    return password == repeatedPassword;
 }
 
-ErrorCode checkPasswordRules(std::string password) {
-    if (password.size() < 9) {
+ErrorCode checkPasswordRules(std::string password){
+    if(password.length() < 9){
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (!std::any_of(password.begin(), password.end(), [](auto x) { return std::isupper(x); })) {
-        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    }
-    if (!std::any_of(password.begin(), password.end(), [](auto x) { return std::isdigit(x); })) {
+    else if(std::none_of(password.begin(), password.end(), ::isdigit)){
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    if (!std::any_of(password.begin(), password.end(), [](auto x) { return std::ispunct(x); })) {
+    else if(std::none_of(password.begin(), password.end(), ::isupper)){
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    else if(std::none_of(password.begin(), password.end(), [](char c) { return std::ispunct(c) || std::isspace(c); })){
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    return ErrorCode::Ok;
-}
-
-auto checkPassword(std::string password_first, std::string password_second) -> ErrorCode {
-    if (doPasswordsMatch(password_first, password_second)) {
-        return checkPasswordRules(password_first);
-    } else {
-        return ErrorCode::PasswordsDoNotMatch;
+    else{
+        return ErrorCode::Ok;
     }
 }
+
+ErrorCode checkPassword(std::string password, std::string repeatedPassword){
+    if(!doPasswordsMatch(password, repeatedPassword)){
+        return ErrorCode::PasswordsDoNotMatch;
+    } 
+    else{
+        return checkPasswordRules(password);
+    }
+}
+
+
