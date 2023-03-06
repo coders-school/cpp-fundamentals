@@ -1,9 +1,8 @@
-
 #pragma once
 #include <algorithm>
 #include <string>
 // TODO: I'm empty :) Put enum and function headers here.
-enum class ErrorCode{
+enum class ErrorCode {
     Ok,
     PasswordNeedsAtLeastNineCharacters,
     PasswordNeedsAtLeastOneNumber,
