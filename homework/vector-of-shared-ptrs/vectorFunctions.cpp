@@ -18,11 +18,23 @@ auto print(std::vector<std::shared_ptr<int>> vector) -> void {
 
 auto add10(std::vector<std::shared_ptr<int>> vector) -> void {
     for (size_t i = 0; i < vector.size(); i++) {
-        *vector[i] += 10;
+        if (vector[i] != nullptr) {
+            *vector[i] += 10;
+        } else {
+            continue;
+        }
     }
 }
 
-auto sub10(const std::shared_ptr<int> pointer) -> void {
+auto sub10(int * const pointer) -> void {
+    if (pointer != nullptr) {
+        *pointer -= 10;
+    } else {
+        return;
+    }
+}
+
+auto sub10(std::shared_ptr<int> pointer) -> void {
     *pointer -= 10;
 }
 
