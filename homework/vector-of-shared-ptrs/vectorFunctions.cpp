@@ -22,8 +22,12 @@ auto add10(std::vector<std::shared_ptr<int>> vector) -> void {
     }
 }
 
-auto sub10(int* const pointer) -> void {
+auto sub10(const std::shared_ptr<int> pointer) -> void {
+    *pointer -= 10;
 }
 
 auto sub10(std::vector<std::shared_ptr<int>> vector) -> void {
+    for (auto element : vector) {
+        sub10(element);
+    }
 }
