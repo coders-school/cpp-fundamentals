@@ -1,11 +1,40 @@
-#pragma once
+#include <iostream>
+#include <cmath>
 
-int NWD(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+
+int NWD(int a, int b) {
+
+    if (a == 0 || b == 0) {
+        return 0;
+    }
+
+
+    a = abs(a);
+    b = abs(b);
+
+    while (b != 0) {
+        int tmp = b;
+        b = a % b;
+        a = tmp;
+    }
+
+    return a;
 }
 
-int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+
+int NWW(int a, int b) {
+
+    if (a == 0 || b == 0) {
+        return 0;
+    }
+
+
+    a = abs(a);
+    b = abs(b);
+
+
+    int nwd = NWD(a, b);
+    return (a * b) / nwd;
 }
+
+
