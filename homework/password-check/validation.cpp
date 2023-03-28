@@ -1,4 +1,5 @@
 
+
 #include <iostream>
 #include "validation.hpp"
 #include <string>
@@ -73,4 +74,7 @@ ErrorCode checkPassword(const std::string& password1, const std::string& passwor
 }
 
 
-
+std::string getErrorMessage(ErrorCode errorCode);
+bool doPasswordsMatch(const std::string& password1, const std::string& password2);
+ErrorCode checkPasswordRules(const std::string& password);
+ErrorCode checkPassword(const std::string& password1, const std::string& password2);
