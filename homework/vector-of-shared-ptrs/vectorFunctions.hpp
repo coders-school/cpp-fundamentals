@@ -1,14 +1,18 @@
-#ifndef VECTORFUNCTIONS_HPP_INCLUDED
-#define VECTORFUNCTIONS_HPP_INCLUDED
+#ifndef VECTOR_FUNCTIONS_HPP
+#define VECTOR_FUNCTIONS_HPP
 
-
-#include <vector>
 #include <memory>
+#include <vector>
 
 std::vector<std::shared_ptr<int>> generate(int count);
-void print(std::vector<std::shared_ptr<int>>& vec);
+
+void print(const std::vector<std::shared_ptr<int>>& vec);
+
 void add10(std::vector<std::shared_ptr<int>>& vec);
-void sub10(const int* num);
+
+void sub10(int* ptr);
+
 void sub10(std::vector<std::shared_ptr<int>>& vec);
 
-#endif // VECTORFUNCTIONS_HPP_INCLUDED
+#endif // VECTOR_FUNCTIONS_HPP
+
