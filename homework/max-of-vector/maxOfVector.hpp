@@ -3,12 +3,11 @@
 #include <vector>
 
 int maxOfVector(const std::vector<int>& vec) {
-    int max = vec[0];
-    for (int num : vec) {
-        if (num > max) {
-            max = num;
+    auto max = std::numeric_limits<int>::min();
+    for (size_t i = 0; i < vec.size(); i++) {
+        if (vec[i] > max) {
+            max = vec[i];
         }
     }
     return max;
 }
-
