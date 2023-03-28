@@ -27,6 +27,8 @@ std::string getErrorMessage(ErrorCode code)
 		{
 			return "Passwords do not match";
 		}
+		default:
+			return "Passwords do not match";
 	}
 }
 bool doPasswordsMatch(std::string a, std::string b)
@@ -41,12 +43,34 @@ ErrorCode checkPasswordRules(std::string a)
 	srand (time(NULL));
 	switch (rand()%6)
 	{
-
+		case 0:
+		{
+			return ErrorCode::Ok;
+		}
+		case 1:
+		{
+			return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+		}
+		case 2:
+		{
+			return ErrorCode::PasswordNeedsAtLeastOneNumber;
+		}
+		case 3:
+		{
+			return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+		}
+		case 4:
+		{
+			return ErrorCode::PasswordsDoNotMatch;
+		}
+		default:
+			return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
 	}
-	return er;
 }
 ErrorCode checkPassword(std::string a, std::string b)
 {
-	ErrorCode er;
-	return er;
+	if(doPasswordsMatch(a, b))
+		return checkPasswordRules(a);
+	else
+		return ErrorCode::PasswordsDoNotMatch;
 }

@@ -1,5 +1,6 @@
 #include <string>
-
+#include <stdlib.h>
+#include <time.h>
 enum class ErrorCode
 {
 	Ok,
