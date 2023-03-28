@@ -1,9 +1,23 @@
-Language: Cpp
-BasedOnStyle: Chromium
-UseTab: Never
-IndentWidth: 4
-TabWidth: 4
-AllowShortIfStatementsOnASingleLine: Never
-IndentCaseLabels: false
-ColumnLimit: 0
-AccessModifierOffset: -4
+name: Formatting
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup ClangFormat
+      run: sudo apt-get install -y clang-format
+    - name: Format code
+      run: clang-format -i --style=file *.cpp *.h
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        author_name: GitHub Actions
+        author_email: actions@github.com
+        message: "Format code using ClangFormat"
+
