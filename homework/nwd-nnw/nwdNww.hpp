@@ -1,40 +1,25 @@
-#include <iostream>
-#include <cmath>
 
+#pragma once
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 
 int NWD(int a, int b) {
-
-    if (a == 0 || b == 0) {
-        return 0;
-    }
-
-
-    a = abs(a);
-    b = abs(b);
-
+    if (a == 0 || b == 0)
+        return abs(a + b); 
+    a = abs(a); b = abs(b); 
     while (b != 0) {
-        int tmp = b;
-        b = a % b;
-        a = tmp;
+        int c = a % b;
+        a = b;
+        b = c;
     }
-
     return a;
 }
 
-
 int NWW(int a, int b) {
-
-    if (a == 0 || b == 0) {
-        return 0;
-    }
-
-
-    a = abs(a);
-    b = abs(b);
-
-
-    int nwd = NWD(a, b);
-    return (a * b) / nwd;
+    if (a == 0 || b == 0)
+        return 0; 
+    a = abs(a); b = abs(b); 
+    return (a / NWD(a, b)) * b;
 }
-
 
