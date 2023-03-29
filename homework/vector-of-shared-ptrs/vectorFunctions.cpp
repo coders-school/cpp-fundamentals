@@ -13,18 +13,27 @@ void print(std::vector<std::shared_ptr<int>>& v)
 {
 	for(std::shared_ptr<int> element : v)
 	{
-		std::cout<<*element<<std::endl;
+		if(element)
+			std::cout<<*element<<std::endl;
 	}
 }
 void add10(std::vector<std::shared_ptr<int>>& v)
 {
-	
+	for(std::shared_ptr<int> element : v)
+	{
+		if(element)
+			*element += 10;
+	}
 }
-void sub10(const int* p)
+void sub10(int* const p)
 {
-	
+	if(p)
+		*p -=10;
 }
 void sub10(std::vector<std::shared_ptr<int>>& v)
 {
-	
+	for(std::shared_ptr<int> element : v)
+	{
+		sub10(element.get());
+	}
 }
