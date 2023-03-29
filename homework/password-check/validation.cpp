@@ -1,5 +1,24 @@
 #include "validation.hpp"
-std::string getErrorMessage(ErrorCode code)
+
+bool checkForChars(const std::string& password,const std::string& sChars)
+{
+		std::string::iterator it;
+		ErrorCode error = ErrorCode::UnknownError;
+		for(char sChar : sChars)
+		{
+			for(char sign : password)
+			{
+				if (sign == sChar)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+}
+
+
+std::string getErrorMessage(const ErrorCode& code)
 {
 	switch (code)
 	{
@@ -28,46 +47,36 @@ std::string getErrorMessage(ErrorCode code)
 			return "Passwords do not match";
 		}
 		default:
-			return "Passwords do not match";
+			return "Unknown error";
 	}
 }
-bool doPasswordsMatch(std::string a, std::string b)
+bool doPasswordsMatch(const std::string& a, const std::string& b)
 {
 	if(a.compare(b) == 0)
 		return true;
 	else
 		return false;
 }
-ErrorCode checkPasswordRules(std::string a)
+ErrorCode checkPasswordRules(const std::string& a)
 {
-	srand (time(NULL));
-	switch (rand()%6)
-	{
-		case 0:
-		{
-			return ErrorCode::Ok;
-		}
-		case 1:
-		{
-			return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-		}
-		case 2:
-		{
-			return ErrorCode::PasswordNeedsAtLeastOneNumber;
-		}
-		case 3:
-		{
-			return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-		}
-		case 4:
-		{
-			return ErrorCode::PasswordsDoNotMatch;
-		}
-		default:
-			return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-	}
+
+	if(!checkForChars(a,"!@#$%^&*()<>?,./:\"\'{}[]\'-=_+`~"))
+		return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+
+	else if(!checkForChars(a,"1234567890"))
+		return ErrorCode::PasswordNeedsAtLeastOneNumber;
+
+	else if(a.length()<9)
+		return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+
+	else if(!checkForChars(a,"QWERTYUIOPASDFGHJKLZXCVBNM"))
+			return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+
+	else
+		return ErrorCode::Ok;
+
 }
-ErrorCode checkPassword(std::string a, std::string b)
+ErrorCode checkPassword(const std::string& a, const std::string& b)
 {
 	if(doPasswordsMatch(a, b))
 		return checkPasswordRules(a);

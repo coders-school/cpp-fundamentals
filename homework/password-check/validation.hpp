@@ -1,6 +1,5 @@
 #include <string>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream>
 enum class ErrorCode
 {
 	Ok,
@@ -8,11 +7,12 @@ enum class ErrorCode
 	PasswordNeedsAtLeastOneNumber,
 	PasswordNeedsAtLeastOneSpecialCharacter,
 	PasswordNeedsAtLeastOneUppercaseLetter,
-	PasswordsDoNotMatch
+	PasswordsDoNotMatch,
+	UnknownError
 };
-std::string getErrorMessage(ErrorCode);
-bool doPasswordsMatch(std::string,std::string);
-ErrorCode checkPasswordRules(std::string);
-ErrorCode checkPassword(std::string, std::string);
-
+std::string getErrorMessage(const ErrorCode&);
+bool doPasswordsMatch(const std::string&,const std::string&);
+ErrorCode checkPasswordRules(const std::string&);
+ErrorCode checkPassword(const std::string&, const std::string&);
+bool checkForChars(const std::string&, const std::string&);
 
