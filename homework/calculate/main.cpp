@@ -7,6 +7,7 @@ int main() {
         std::cout << "Provide command: \"add\", \"subtract\","
                   << " multiply\", divide\" or \"quit\" to exit\n";
         std::string command{};
+        std::string str;
         std::cin >> command;
         if (command == "quit")
             break;
