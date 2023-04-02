@@ -25,7 +25,7 @@ std::string calculate(const std::string& command, int first, int second) {
     } else if (checker == "divide") {
         score = first / second;
     } else {
-        return "invalid Data";
+        return "Invalid data";
     }
 
     return std::to_string(score);
