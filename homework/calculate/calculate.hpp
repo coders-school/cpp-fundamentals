@@ -6,7 +6,7 @@
 #include <vector>
 
 std::string calculate(const std::string& command, int first, int second) {
-    double score;
+    int score;
     std::string checker = command;
     std::string b;
 
