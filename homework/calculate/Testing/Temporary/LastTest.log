@@ -1,0 +1,138 @@
+Start testing: Apr 02 21:21 Central European Summer Time
+----------------------------------------------------------
+1/5 Testing: calculate.ShouldAdd
+1/5 Test: calculate.ShouldAdd
+Command: "C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut.exe" "--gtest_filter=calculate.ShouldAdd" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate
+"calculate.ShouldAdd" start time: Apr 02 21:21 Central European Summer Time
+Output:
+----------------------------------------------------------
+Running main() from C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = calculate.ShouldAdd
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from calculate
+[ RUN      ] calculate.ShouldAdd
+[       OK ] calculate.ShouldAdd (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"calculate.ShouldAdd" end time: Apr 02 21:21 Central European Summer Time
+"calculate.ShouldAdd" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: calculate.ShouldSubtract
+2/5 Test: calculate.ShouldSubtract
+Command: "C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut.exe" "--gtest_filter=calculate.ShouldSubtract" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate
+"calculate.ShouldSubtract" start time: Apr 02 21:21 Central European Summer Time
+Output:
+----------------------------------------------------------
+Running main() from C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = calculate.ShouldSubtract
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from calculate
+[ RUN      ] calculate.ShouldSubtract
+[       OK ] calculate.ShouldSubtract (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"calculate.ShouldSubtract" end time: Apr 02 21:21 Central European Summer Time
+"calculate.ShouldSubtract" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: calculate.ShouldMultiply
+3/5 Test: calculate.ShouldMultiply
+Command: "C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut.exe" "--gtest_filter=calculate.ShouldMultiply" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate
+"calculate.ShouldMultiply" start time: Apr 02 21:21 Central European Summer Time
+Output:
+----------------------------------------------------------
+Running main() from C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = calculate.ShouldMultiply
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from calculate
+[ RUN      ] calculate.ShouldMultiply
+[       OK ] calculate.ShouldMultiply (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"calculate.ShouldMultiply" end time: Apr 02 21:21 Central European Summer Time
+"calculate.ShouldMultiply" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: calculate.ShouldDivide
+4/5 Test: calculate.ShouldDivide
+Command: "C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut.exe" "--gtest_filter=calculate.ShouldDivide" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate
+"calculate.ShouldDivide" start time: Apr 02 21:21 Central European Summer Time
+Output:
+----------------------------------------------------------
+Running main() from C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = calculate.ShouldDivide
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from calculate
+[ RUN      ] calculate.ShouldDivide
+[       OK ] calculate.ShouldDivide (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"calculate.ShouldDivide" end time: Apr 02 21:21 Central European Summer Time
+"calculate.ShouldDivide" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: calculate.ShouldReturnInvalidData
+5/5 Test: calculate.ShouldReturnInvalidData
+Command: "C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut.exe" "--gtest_filter=calculate.ShouldReturnInvalidData" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate
+"calculate.ShouldReturnInvalidData" start time: Apr 02 21:21 Central European Summer Time
+Output:
+----------------------------------------------------------
+Running main() from C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = calculate.ShouldReturnInvalidData
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from calculate
+[ RUN      ] calculate.ShouldReturnInvalidData
+[       OK ] calculate.ShouldReturnInvalidData (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"calculate.ShouldReturnInvalidData" end time: Apr 02 21:21 Central European Summer Time
+"calculate.ShouldReturnInvalidData" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 02 21:21 Central European Summer Time

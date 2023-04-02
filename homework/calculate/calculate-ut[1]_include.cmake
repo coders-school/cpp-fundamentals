@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut[1]_tests.cmake")
+  include("C:/Users/palat/OneDrive/Pulpit/codersSchool/podstawy/week1/cpp-fundamentals/homework/calculate/calculate-ut[1]_tests.cmake")
+else()
+  add_test(calculate-ut_NOT_BUILT calculate-ut_NOT_BUILT)
+endif()

@@ -18,8 +18,8 @@ FetchContent_MakeAvailable(googletest)
 project(calculate)
 enable_testing()
 
-add_executable(${PROJECT_NAME} main.cpp)
-add_executable(${PROJECT_NAME}-ut test.cpp)
+add_executable(${PROJECT_NAME} main.cpp calculate.cpp)
+add_executable(${PROJECT_NAME}-ut test.cpp calculate.cpp )
 
 target_link_libraries(${PROJECT_NAME}-ut gtest_main)
 
