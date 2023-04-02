@@ -18,8 +18,8 @@ FetchContent_MakeAvailable(googletest)
 project(nwdNww)
 enable_testing()
 
-add_executable(${PROJECT_NAME} main.cpp)
-add_executable(${PROJECT_NAME}-ut test.cpp)
+add_executable(${PROJECT_NAME} main.cpp  )
+add_executable(${PROJECT_NAME}-ut test.cpp  )
 
 target_link_libraries(${PROJECT_NAME}-ut gtest_main)
 
