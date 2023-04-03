@@ -8,13 +8,21 @@ int NWD(int lhs, int rhs) {
     int counter = 1;
     lhs = abs(lhs);
     rhs = abs(rhs);
-    while (counter <= lhs && counter <= rhs) {
-        if (lhs % counter == 0 && rhs % counter == 0) {
-            nwd = counter;
+    if ((lhs && rhs) == 0) {
+        return 0;
+    } else if (lhs == 0 && rhs != 0) {
+        return rhs;
+    } else if (lhs != 0 && rhs == 0) {
+        return lhs;
+    } else {
+        while (counter <= lhs && counter <= rhs) {
+            if (lhs % counter == 0 && rhs % counter == 0) {
+                nwd = counter;
+            }
+            counter++;
         }
-        counter++;
+        return nwd;
     }
-    return nwd;
 }
 
 int NWW(int lhs, int rhs) {
