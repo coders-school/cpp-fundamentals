@@ -26,6 +26,6 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    int nwd = NWD(lhs, rhs);
+    return lhs * rhs / nwd;
 }
