@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
