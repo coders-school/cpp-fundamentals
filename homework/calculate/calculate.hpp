@@ -2,19 +2,14 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-	if (command == "add"){
+	if (command == "add")
 		return std::to_string(first + second);
-	}
-	if (command == "subtract"){
+	if (command == "subtract")
 		return std::to_string(first - second);
-	}
-	if (command == "multiply"){
+	if (command == "multiply")
 		return std::to_string(first * second);
-	}
-
-	if (command == "divide"){
+	if (command == "divide")
 		return (second != 0) ? std::to_string(first / second) : "Division by 0";
-	}
 
 
 	return "Invalid data";
