@@ -1,7 +1,7 @@
 #pragma once
 
 int fibonacci_iterative(int sequence) {
-    if(sequence <= 0)
+    if (sequence <= 0)
         return 0;
     if (sequence == 1)
         return 1;
@@ -9,7 +9,7 @@ int fibonacci_iterative(int sequence) {
     int f{ 0 };
     int s{ 1 };
     int output{};
-    for(int i{2}; i < sequence; ++i){
+    for (int i{2}; i < sequence; ++i) {
         output = f + s;
         f = s;
         s = output;
