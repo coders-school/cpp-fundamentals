@@ -6,8 +6,8 @@ int fibonacci_iterative(int sequence) {
     if (sequence == 1)
         return 1;
 
-    int f{ 0 };
-    int s{ 1 };
+    int f{0};
+    int s{1};
     int output{};
     for (int i{2}; i < sequence; ++i) {
         output = f + s;
