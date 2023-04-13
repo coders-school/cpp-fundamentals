@@ -7,7 +7,7 @@ int NWD(int lhs, int rhs) {
         lhs = t;
     }
 
-return std::abs(lhs);
+    return std::abs(lhs);
 }
 
 int NWW(int lhs, int rhs) {
