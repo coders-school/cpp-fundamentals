@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <cctype>
 
-
 std::string getErrorMessage(const ErrorCode& err) {
     std::string output;
     switch (err) {
