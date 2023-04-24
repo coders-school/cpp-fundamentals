@@ -7,19 +7,23 @@ std::string calculate(const std::string& command, int first, int second) {
     std::string retval = "";
     if (command.compare("add") == 0) {
         result = first + second;
+        retval = std::to_string(result);
     } else if (command.compare("subtract") == 0) {
         result = first - second;
+        retval = std::to_string(result);
     } else if (command.compare("multiply") == 0) {
         result = first * second;
+        retval = std::to_string(result);
     } else if (command.compare("divide") == 0) {
         if (second == 0) {
             retval = "Division by 0";
-            return retval;
         } else {
             result = first / second;
+            retval = std::to_string(result);
         }
-    }
+    } else {
+        retval = "Invalid data";
+    }   
     
-    retval = std::to_string(result);
     return retval;
 }
