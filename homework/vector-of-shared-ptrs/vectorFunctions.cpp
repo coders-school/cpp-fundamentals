@@ -8,7 +8,7 @@ std::vector<std::shared_ptr<int>> generate(int n) {
 }
 
 void print(const std::vector<std::shared_ptr<int>>& vec) {
-    for(const auto& e : vec)
+    for (const auto& e : vec)
         std::cout << *e << " ";
     std::cout << std::endl;
 }
@@ -23,7 +23,7 @@ void add10(std::vector<std::shared_ptr<int>>& vec) {
 }
 
 void sub10(int* const val) {
-    if(val == nullptr)
+    if (val == nullptr)
         return;
     *val -= 10;
 }
