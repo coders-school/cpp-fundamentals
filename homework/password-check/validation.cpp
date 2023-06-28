@@ -1,5 +1,7 @@
 #include "validation.hpp"
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 enum errorCode {
     Ok = 0,
@@ -10,8 +12,8 @@ enum errorCode {
     PasswordsDoNotMatch = 5
 };
 
-std::string getErrorMessage(errorCode) {
-    switch {
+std::string getErrorMessage(errorCode code) {
+    switch(code) {
         case 0:
             return "OK";
         case 1:
@@ -24,5 +26,29 @@ std::string getErrorMessage(errorCode) {
             return "Password needs at least one uppercase letter";
         case 5:
             return "Passwords do not match";
+        default:
+            return "Undefined";
+    }
+}
+
+bool doPasswordsMatch(std::string pass1, std::string pass2) {
+    if (pass1.compare(pass2) == 0) {
+        return True;
+    }
+    return False;
+}
+
+errorCode checkPasswordRules(std::string pass) {
+    srand((unsigned)time(0));
+    int random = rand() % 6;
+    return (errorCode)random;
+}
+
+errorCode checkPassword(std::string pass1, std::string pass2) {
+    if (doPasswordsMatch(pass1, pass2) {
+        return checkPasswordRules(pass1);
+    }
+    else {
+        return errorCode.PasswordsDoNotMatch;
     }
 }

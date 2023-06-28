@@ -1,2 +1,8 @@
-// TODO: I'm empty :) Put enum and function headers here.
-// Don't forget the header guard - #pragma once
+#pragma once
+
+enum errorCode;
+
+std::string getErrorMessage(errorCode code);
+bool doPasswordsMatch(std::string pass1, std::string pass2);
+errorCode checkPasswordRules(std::string pass);
+errorCode checkPassword(std::string pass1, std::string pass2);
