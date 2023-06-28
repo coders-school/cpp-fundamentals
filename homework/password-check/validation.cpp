@@ -3,16 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 
-enum errorCode {
-    Ok = 0,
-    PasswordNeedsAtLeastNineCharacters = 1,
-    PasswordNeedsAtLeastOneNumber = 2,
-    PasswordNeedsAtLeastOneSpecialCharacter = 3,
-    PasswordNeedsAtLeastOneUppercaseLetter = 4,
-    PasswordsDoNotMatch = 5
-};
-
-std::string getErrorMessage(errorCode code) {
+std::string getErrorMessage(ErrorCode code) {
     switch(code) {
         case 0:
             return "OK";
@@ -33,22 +24,22 @@ std::string getErrorMessage(errorCode code) {
 
 bool doPasswordsMatch(std::string pass1, std::string pass2) {
     if (pass1.compare(pass2) == 0) {
-        return True;
+        return true;
     }
-    return False;
+    return false;
 }
 
-errorCode checkPasswordRules(std::string pass) {
+ErrorCode checkPasswordRules(std::string pass) {
     srand((unsigned)time(0));
     int random = rand() % 6;
-    return (errorCode)random;
+    return (ErrorCode)random;
 }
 
-errorCode checkPassword(std::string pass1, std::string pass2) {
-    if (doPasswordsMatch(pass1, pass2) {
+ErrorCode checkPassword(std::string pass1, std::string pass2) {
+    if (doPasswordsMatch(pass1, pass2)) {
         return checkPasswordRules(pass1);
     }
     else {
-        return errorCode.PasswordsDoNotMatch;
+        return ErrorCode(PasswordsDoNotMatch);
     }
 }
