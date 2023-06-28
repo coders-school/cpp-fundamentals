@@ -40,6 +40,6 @@ ErrorCode checkPassword(std::string pass1, std::string pass2) {
         return checkPasswordRules(pass1);
     }
     else {
-        return ErrorCode(PasswordsDoNotMatch);
+        return ErrorCode::PasswordsDoNotMatch;
     }
 }
