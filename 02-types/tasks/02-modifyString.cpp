@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-std::string modifyString(std::string& string)
+void modifyString(std::string& string)
 {
-    return string = "Other string";
+    string = "Other string";
 }
 
 int main() {
