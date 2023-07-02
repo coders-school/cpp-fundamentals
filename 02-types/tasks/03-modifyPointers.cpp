@@ -1,11 +1,6 @@
 #include <iostream>
 
-// TODO: Implement foo() and bar()
-// foo() should modify value under passed pointer to 10
-// bar() should modify value under passed pointer to 20
-// Can we have a pointer to const or a const pointer?
-
-void foo(int* a)
+void foo(int* const a)
 {
     *a = 10;
 }
