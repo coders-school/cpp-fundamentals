@@ -7,12 +7,12 @@
 
 void foo(int* a)
 {
-    a = 10;
+    *a = 10;
 }
 
 void bar(int* a)
 {
-    a = 20;
+    *a = 20;
 }
 
 int main() {
