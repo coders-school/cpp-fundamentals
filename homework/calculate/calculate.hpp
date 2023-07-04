@@ -7,17 +7,17 @@ std::string calculate(const std::string& command, int first, int second) {
     if(command == "add") {
         int score = first + second;
         result = std::to_string(score);
-        //return result;
+        return result;
     }
     else if(command == "subtract") {
         int score = first - second;
         result = std::to_string(score);
-        //return result;
+        return result;
     }
     else if(command == "multiply") {
         int score = first * second;
         result = std::to_string(score);
-        //return result;
+        return result;
     }
     else if(command == "divide") {
         if(second == 0) {
@@ -26,9 +26,10 @@ std::string calculate(const std::string& command, int first, int second) {
         else {
         int score = first / second;
         result = std::to_string(score);
-        //return result;
+            return result;
         }
     }
-
-    return result;
+    else {
+        return "Invalid data";
+    }
 }
