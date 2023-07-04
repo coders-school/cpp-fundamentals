@@ -19,6 +19,16 @@ std::string calculate(const std::string& command, int first, int second) {
         result = std::to_string(score);
         //return result;
     }
+    else if(command == "divide") {
+        if(second == 0) {
+            return "Division by 0";
+        }
+        else {
+        int score = first / second;
+        result = std::to_string(score);
+        //return result;
+        }
+    }
 
     return result;
 }
