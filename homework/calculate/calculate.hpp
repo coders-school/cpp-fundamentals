@@ -14,6 +14,11 @@ std::string calculate(const std::string& command, int first, int second) {
         result = std::to_string(score);
         //return result;
     }
+    else if(command == "multiply") {
+        int score = first * second;
+        result = std::to_string(score);
+        //return result;
+    }
 
     return result;
 }
