@@ -8,13 +8,13 @@ std::string getErrorMessage(ErrorCode code) {
         case 0:
             return "OK";
         case 1:
-            return "Password needs at least nine characters";
+            return "Password needs to have at least nine characters";
         case 2:
-            return "Password needs at least one number";
+            return "Password needs to have at least one number";
         case 3:
-            return "Password needs at least one special character";
+            return "Password needs to have at least one special character";
         case 4:
-            return "Password needs at least one uppercase letter";
+            return "Password needs to have at least one uppercase letter";
         case 5:
             return "Passwords do not match";
         default:
