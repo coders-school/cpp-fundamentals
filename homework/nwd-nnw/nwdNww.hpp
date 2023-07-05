@@ -13,6 +13,10 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     // TODO: Implement me :)
-    
-    return -1;
+    if (lhs == 0 && rhs == 0) {
+        int nww = 0;
+        return nww;
+    }
+    int nwd_value = NWD(lhs, rhs);
+    return abs((lhs * rhs) / nwd_value);
 }
