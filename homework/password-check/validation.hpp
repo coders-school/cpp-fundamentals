@@ -3,16 +3,9 @@
 #pragma once
 #include <string>
 
-enum class ErrorCode {
-    Ok,
-    PasswordNeedsAtLeastNineCharacters,
-    PasswordNeedsAtLeastOneNumber,
-    PasswordNeedsAtLeastOneSpecialCharacter,
-    PasswordNeedsAtLeastOneUppercaseLetter,
-    PasswordDoNotMatch
-};
+enum class ErrorCode {};
 
-std::string getErrorMessage(enum code);
+std::string getErrorMessage(ErrorCode code);
 
 bool doPasswordsMatch(std::string password, std::string repeatedPassword);
 
