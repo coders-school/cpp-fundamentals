@@ -3,19 +3,46 @@
 #include <cstdlib>
 #include <ctime>
 
+bool isInPassDigit(std::string pass) {
+    for (char el : pass) {
+        if (isdigit(el)) {
+            return true;
+        }
+        return false;
+    }
+}
+
+bool isInPassSpecialChar(std::string pass) {
+    for (char el : pass) {
+        if (ispunct(el)) {
+            return true;
+        }
+        return false;
+    }
+}
+
+bool isInPassUppercaseLetter(std::string pass) {
+    for (char el : pass) {
+        if (isupper(el)) {
+            return true;
+        }
+        return false;
+    }
+}
+
 std::string getErrorMessage(ErrorCode code) {
     switch(code) {
-        case 0:
-            return "OK";
-        case 1:
+        case ErrorCode::Ok:
+            return "Ok";
+        case ErrorCode::PasswordNeedsAtLeastNineCharacters:
             return "Password needs to have at least nine characters";
-        case 2:
+        case ErrorCode::PasswordNeedsAtLeastOneNumber:
             return "Password needs to have at least one number";
-        case 3:
+        case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
             return "Password needs to have at least one special character";
-        case 4:
+        case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
             return "Password needs to have at least one uppercase letter";
-        case 5:
+        case ErrorCode::PasswordsDoNotMatch:
             return "Passwords do not match";
         default:
             return "Undefined";
@@ -29,10 +56,28 @@ bool doPasswordsMatch(std::string pass1, std::string pass2) {
     return false;
 }
 
+//ErrorCode checkPasswordRules(std::string pass) {
+//    srand((unsigned)time(0));
+//    int random = rand() % 6;
+//    return (ErrorCode)random;
+//}
+
 ErrorCode checkPasswordRules(std::string pass) {
-    srand((unsigned)time(0));
-    int random = rand() % 6;
-    return (ErrorCode)random;
+    if (pass.size() < 9) {
+        return ErrorCode::PasswordNeedsAtLeastNineCharacters;
+    }
+    else if (!isInPassDigit) {
+        return ErrorCode::PasswordNeedsAtLeastOneNumber;
+    }
+    else if (!isInPassSpecialChar) {
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    }
+    else if (!isInPassUppercaseLetter) {
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    }
+    else {
+        return ErrorCode::Ok;
+    }
 }
 
 ErrorCode checkPassword(std::string pass1, std::string pass2) {
