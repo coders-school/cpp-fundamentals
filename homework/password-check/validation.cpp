@@ -8,8 +8,8 @@ bool isInPassDigit(std::string pass) {
         if (isdigit(el)) {
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 bool isInPassSpecialChar(std::string pass) {
@@ -17,8 +17,8 @@ bool isInPassSpecialChar(std::string pass) {
         if (ispunct(el)) {
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 bool isInPassUppercaseLetter(std::string pass) {
@@ -26,8 +26,8 @@ bool isInPassUppercaseLetter(std::string pass) {
         if (isupper(el)) {
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 std::string getErrorMessage(ErrorCode code) {
@@ -66,13 +66,13 @@ ErrorCode checkPasswordRules(std::string pass) {
     if (pass.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    else if (!isInPassDigit) {
+    else if (!isInPassDigit(pass)) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
-    else if (!isInPassSpecialChar) {
+    else if (!isInPassSpecialChar(pass)) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     }
-    else if (!isInPassUppercaseLetter) {
+    else if (!isInPassUppercaseLetter(pass)) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
     else {
