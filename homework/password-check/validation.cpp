@@ -3,8 +3,8 @@
 //#include <iostream>
 //#include <string>
 #include <ctime>
+#include <algorithm>
 // #include <cstdlib>
-
 
 std::string getErrorMessage(ErrorCode error) {
     if (error == ErrorCode::Ok) {
@@ -27,17 +27,30 @@ bool doPasswordsMatch(std::string password, std::string repeatedPassword) {
 }
 
 ErrorCode checkPasswordRules(std::string password) {
-    srand(time(NULL));
-    int random_error = rand() % 4;
-    if (random_error == 0) {
-        return ErrorCode::Ok;
-    } else if (random_error == 1) {
+    bool flag = true;
+
+    if(password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
-    } else if (random_error == 2) {
+    }
+
+    auto check_number = [] (auto c) { return isdigit(c); }; 
+    flag = any_of(password.begin(), password.end(), check_number);
+
+    if(!flag) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    } else if (random_error == 3) {
+    }
+
+    auto check_special = [] (auto c) { return ispunct(c); };
+    flag = any_of(password.begin(), password.end(), check_special);
+
+    if(!flag) {
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    } else if (random_error == 4) {
+    }
+
+    auto check_upper = [] (auto c) { return isupper(c); };
+    flag = any_of(password.begin(), password.end(), check_upper);
+
+    if(!flag) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     }
 }
