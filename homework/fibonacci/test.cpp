@@ -1,19 +1,19 @@
+#include <tuple>
 #include "fibonacci.hpp"
 #include "gtest/gtest.h"
-#include <tuple>
 
 class Fibonacci : public ::testing::TestWithParam<std::tuple<int, int>> {};
 
 TEST_P(Fibonacci, ShouldCalculateFibonacciIteratively) {
-  int sequence = std::get<0>(GetParam());
-  int expected_result = std::get<1>(GetParam());
-  EXPECT_EQ(fibonacci_iterative(sequence), expected_result);
+    int sequence = std::get<0>(GetParam());
+    int expected_result = std::get<1>(GetParam());
+    EXPECT_EQ(fibonacci_iterative(sequence), expected_result);
 }
 
 TEST_P(Fibonacci, ShouldCalculateFibonacciRecursively) {
-  int sequence = std::get<0>(GetParam());
-  int expected_result = std::get<1>(GetParam());
-  EXPECT_EQ(fibonacci_recursive(sequence), expected_result);
+    int sequence = std::get<0>(GetParam());
+    int expected_result = std::get<1>(GetParam());
+    EXPECT_EQ(fibonacci_recursive(sequence), expected_result);
 }
 
 INSTANTIATE_TEST_SUITE_P(
