@@ -1,5 +1,5 @@
-#include "gtest/gtest.h"
 #include "calculate.hpp"
+#include "gtest/gtest.h"
 
 TEST(calculate, ShouldAdd) {
   EXPECT_EQ(calculate("add", 10, 20), "30");
