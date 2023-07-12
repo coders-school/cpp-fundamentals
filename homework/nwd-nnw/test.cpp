@@ -69,4 +69,8 @@ INSTANTIATE_TEST_SUITE_P(
         std::make_tuple(-10, -2, 10)
 
         // based on implementation of std::lcm
+<<<<<<< HEAD
         ));
+=======
+        ));
+>>>>>>> 017b888af52da09de890d2181a48f50735f62f3b
