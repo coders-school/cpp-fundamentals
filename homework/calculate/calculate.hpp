@@ -3,5 +3,11 @@
 
 std::string calculate(const std::string& command, int first, int second) {
     // TODO: Implement your solution here and return proper value
-    return "";
+ 
+    if (command == "add"){
+            int result = first + second;
+            std::string str_result = std::to_string(result);
+             return str_result;
+    }
+    return "something";
 }
