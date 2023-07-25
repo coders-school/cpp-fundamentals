@@ -28,6 +28,5 @@ std::string calculate(const std::string& command, int first, int second) {
             return str_result;
     }
 
-
-    return "something";
+    return "Invalid data";
 }
