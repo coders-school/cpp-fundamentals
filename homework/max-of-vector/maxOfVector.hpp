@@ -9,7 +9,8 @@ int maxOfVector(const std::vector<int>& vec) {
     int max = vec.front();
     for (auto el : vec) {
         int temp = el;
-        if (temp > max) max = temp;
+        if (temp > max)
+            max = temp;
     }
     return max;
 }
