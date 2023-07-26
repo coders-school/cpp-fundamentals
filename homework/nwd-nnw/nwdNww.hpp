@@ -4,8 +4,7 @@
 int NWD(int lhs, int rhs) {
     // TODO: Implement me :)
     // Optimized Euclid's algorithm
-    
-    int temporary =  abs(rhs);
+    int temporary = abs(rhs);
     while (rhs != 0) {
         temporary = abs(rhs);
         rhs = abs(lhs) % abs(rhs);
