@@ -1,8 +1,7 @@
 #include "validation.hpp"
 // TODO: Put implementations here
 
-std::string getErrorMessage(const ErrorCode& code)
-{
+std::string getErrorMessage(const ErrorCode& code) {
     std::string result {"Unknown error"};
     if (code == ErrorCode::Ok) {
         return result = "Ok";
@@ -20,23 +19,20 @@ std::string getErrorMessage(const ErrorCode& code)
     return result;
 };
 
-bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword)
-{
+bool doPasswordsMatch(const std::string& password, const std::string& repeatedPassword) {
     if (password == repeatedPassword) {
         return true;
     }
     return false;
 };
 
-ErrorCode checkPasswordRules(const std::string& password)
-{
+ErrorCode checkPasswordRules(const std::string& password) {
     srand(time(0));
     ErrorCode randomCode = static_cast<ErrorCode>(rand() % 4);
     return randomCode;
 };
 
-ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword)
-{
+ErrorCode checkPassword(const std::string& password, const std::string& repeatedPassword) {
     if (password != repeatedPassword) {
         return ErrorCode::PasswordsDoNotMatch;
     }

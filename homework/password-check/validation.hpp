@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
 #include <stdio.h>
 #include <time.h>
+#include <string>
 // TODO: I'm empty :) Put enum and function headers here.
 // Don't forget the header guard - #pragma once
 
