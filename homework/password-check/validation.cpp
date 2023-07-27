@@ -2,7 +2,7 @@
 // TODO: Put implementations here
 
 std::string getErrorMessage(const ErrorCode& code) {
-    std::string result {"Unknown error"};
+    std::string result{"Unknown error"};
     if (code == ErrorCode::Ok) {
         return result = "Ok";
     } else if (code == ErrorCode::PasswordNeedsAtLeastNineCharacters) {
