@@ -10,7 +10,7 @@ std::vector<std::shared_ptr<int>> generate(int count) {
 
 void print(const std::vector<std::shared_ptr<int>>& vec) {
     for (auto el : vec) {
-        std::cout << *el <<" \n";
+        std::cout << *el <<"\n";
     }
 };
 
