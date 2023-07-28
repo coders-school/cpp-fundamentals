@@ -16,17 +16,30 @@ void print(const std::vector<std::shared_ptr<int>>& vec) {
 
 void add10(std::vector<std::shared_ptr<int>>& vec) {
     for (auto el : vec) {
-        *el += 10;
-    }
+        if(el) {
+            *el += 10;
+        }else {
+            std::cout << "You tried to use NULLPTR!\n";
+            //return 0;
+        }
+     }
 };
 
 void sub10(int* const ptr) {
-    *ptr -= 10;
+    if(ptr) {
+        *ptr -= 10;
+    }else {
+        std::cout << "You tried to use NULLPTR!\n";
+    }
 };
 
 void sub10(std::vector<std::shared_ptr<int>>& vec) {
     for (auto el : vec) {
-        sub10(el.get());
+        if(el) {
+            sub10(el.get());
+        }else {
+            std::cout << "You tried to use NULLPT!\n";
+        }
     }
 };
 
