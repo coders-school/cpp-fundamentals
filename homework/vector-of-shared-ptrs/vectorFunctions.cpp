@@ -20,7 +20,6 @@ void add10(std::vector<std::shared_ptr<int>>& vec) {
             *el += 10;
         } else {
             std::cout << "You tried to use NULLPTR!\n";
-            //return 0;
         }
     }
 };
