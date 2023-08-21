@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-void modifyString(std::string& text) {
+void modifyString(std::string& text) 
+{
     text = "Other string";
 }
 
