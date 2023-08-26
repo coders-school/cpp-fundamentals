@@ -1,0 +1,3 @@
+C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

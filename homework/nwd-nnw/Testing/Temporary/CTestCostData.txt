@@ -1,0 +1,225 @@
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33 33
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25 5
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324 4
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0 0
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2 2
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36 72
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17 850
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30 150
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322 3.72264e+06
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14 28
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25 525
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10 10
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33 33
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25 5
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324 4
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0 0
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2 2
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36 72
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17 850
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30 150
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322 3.72264e+06
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14 28
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25 525
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10 10
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33 33
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25 5
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324 4
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0 0
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2 2
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36 72
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17 850
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30 150
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322 3.72264e+06
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14 28
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25 525
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10 10
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33 33
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25 5
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324 4
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0 0
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2 2
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36 72
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17 850
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30 150
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322 3.72264e+06
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14 28
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25 525
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10 10
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33 33
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25 5
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324 4
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0 0
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2 2
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36 72
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17 850
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30 150
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322 3.72264e+06
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14 28
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25 525
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10 10
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33 33
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25 5
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324 4
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1 1
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0 0
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2 2
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2 2
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36 72
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17 850
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30 150
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322 3.72264e+06
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14 28
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25 525
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2 0
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1 1
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10 10
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2 10
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10, 10) 1 0.0086524
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123, 1) 1 0.0085743
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44, 1) 1 0.0086899
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33, 33) 1 0.0083405
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322, 2) 1 0.0084782
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25, 5) 1 0.0083802
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324, 4) 1 0.0090679
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2, 2) 1 0.009427
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1, 1) 1 0.0088956
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0, 1) 1 0.0085544
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1, 1) 1 0.0084471
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10, 10) 1 0.0084904
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0, 0) 1 0.0084429
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2, 2) 1 0.0082405
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2, 2) 1 0.0083862
+NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2, 2) 1 0.0084046
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36, 72) 1 0.0083333
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17, 850) 1 0.0082127
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30, 150) 1 0.0093397
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322, 3722642) 1 0.0084521
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14, 28) 1 0.0084156
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25, 525) 1 0.0084496
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0, 0) 1 0.0084421
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0, 0) 1 0.0082815
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1, 0) 1 0.0082203
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2, 0) 1 0.0088938
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1, 1) 1 0.0085303
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1, 1) 1 0.0082268
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1, 1) 1 0.0086093
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1, 1) 1 0.0086554
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10, 10) 1 0.008422
+NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2, 10) 1 0.0082067
+---

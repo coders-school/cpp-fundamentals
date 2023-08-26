@@ -1,0 +1,867 @@
+Start testing: Aug 26 18:23 Œrodkowoeuropejski czas letni
+----------------------------------------------------------
+1/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10, 10)
+1/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10, 10)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/0" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10, 10)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/0
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/0 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10, 10)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, 10, 10)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123, 1)
+2/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/1" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/1
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/1 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(44, 123, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44, 1)
+3/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/2" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/2
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/2 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(123, 44, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33, 33)
+4/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33, 33)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/3" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33, 33)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/3
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/3
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/3 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33, 33)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(891, 33, 33)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322, 2)
+5/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322, 2)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/4" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322, 2)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/4
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/4
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/4 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322, 2)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(23122, 322, 2)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25, 5)
+6/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25, 5)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/5" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25, 5)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/5
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/5
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/5 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25, 5)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(4345, 25, 5)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324, 4)
+7/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324, 4)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/6" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324, 4)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/6
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/6
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/6 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324, 4)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(65464, 344324, 4)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2, 2)
+8/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2, 2)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/7" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2, 2)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/7
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/7
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/7 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2, 2)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(2, 2, 2)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1, 1)
+9/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/8" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/8
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/8
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/8 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 1, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0, 1)
+10/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/9" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/9
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/9
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/9 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(1, 0, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1, 1)
+11/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/10" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/10
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/10
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/10 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 1, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10, 10)
+12/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10, 10)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/11" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10, 10)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/11
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/11
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/11 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10, 10)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 10, 10)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0, 0)
+13/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0, 0)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/12" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0, 0)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/12
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/12
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/12 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0, 0)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(0, 0, 0)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2, 2)
+14/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2, 2)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/13" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2, 2)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/13
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/13
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/13 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2, 2)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, -2, 2)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2, 2)
+15/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2, 2)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/14" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2, 2)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/14
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/14
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/14 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2, 2)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(-10, 2, 2)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/32 Testing: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2, 2)
+16/32 Test: NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2, 2)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWDFixtureTest/NWDFixture.ShouldCalculateNWD/15" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2, 2)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWDFixtureTest/NWDFixture.ShouldCalculateNWD/15
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWDFixtureTest/NWDFixture
+[ RUN      ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/15
+[       OK ] NWDFixtureTest/NWDFixture.ShouldCalculateNWD/15 (0 ms)
+[----------] 1 test from NWDFixtureTest/NWDFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2, 2)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWDFixtureTest/NWDFixture.ShouldCalculateNWD/(10, -2, 2)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36, 72)
+17/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36, 72)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/0" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36, 72)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/0
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/0 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36, 72)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(24, 36, 72)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17, 850)
+18/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17, 850)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/1" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17, 850)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/1
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/1 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17, 850)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 17, 850)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30, 150)
+19/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30, 150)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/2" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30, 150)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/2
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/2 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30, 150)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(50, 30, 150)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322, 3722642)
+20/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322, 3722642)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/3" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322, 3722642)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/3
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/3
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/3 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322, 3722642)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(23122, 322, 3722642)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14, 28)
+21/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14, 28)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/4" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14, 28)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/4
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/4
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/4 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14, 28)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(28, 14, 28)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25, 525)
+22/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25, 525)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/5" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25, 525)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/5
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/5
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/5 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25, 525)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(105, 25, 525)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0, 0)
+23/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0, 0)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/6" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0, 0)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/6
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/6
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/6 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0, 0)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 0, 0)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0, 0)
+24/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0, 0)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/7" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0, 0)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/7
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/7
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/7 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0, 0)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 0, 0)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1, 0)
+25/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1, 0)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/8" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1, 0)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/8
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/8
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/8 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1, 0)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, 1, 0)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2, 0)
+26/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2, 0)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/9" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2, 0)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/9
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/9
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/9 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2, 0)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(0, -2, 0)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1, 1)
+27/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/10" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/10
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/10
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/10 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, 1, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1, 1)
+28/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/11" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/11
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/11
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/11 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, 1, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1, 1)
+29/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/12" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/12
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/12
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/12 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(1, -1, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1, 1)
+30/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1, 1)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/13" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1, 1)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/13
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/13
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/13 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1, 1)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-1, -1, 1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10, 10)
+31/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10, 10)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/14" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10, 10)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/14
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/14
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/14 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10, 10)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -10, 10)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/32 Testing: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2, 10)
+32/32 Test: NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2, 10)
+Command: "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/Debug/nwdNww-ut.exe" "--gtest_filter=NWWFixtureTest/NWWFixture.ShouldCalculateNWW/15" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2, 10)" start time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NWWFixtureTest/NWWFixture.ShouldCalculateNWW/15
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NWWFixtureTest/NWWFixture
+[ RUN      ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/15
+[       OK ] NWWFixtureTest/NWWFixture.ShouldCalculateNWW/15 (0 ms)
+[----------] 1 test from NWWFixtureTest/NWWFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2, 10)" end time: Aug 26 18:23 Œrodkowoeuropejski czas letni
+"NWWFixtureTest/NWWFixture.ShouldCalculateNWW/(-10, -2, 10)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 26 18:23 Œrodkowoeuropejski czas letni

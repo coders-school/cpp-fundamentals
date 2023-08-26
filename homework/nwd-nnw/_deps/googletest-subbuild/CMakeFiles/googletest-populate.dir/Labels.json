@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/4f483f89e28b129e019fa3fad86b347b/googletest-populate.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/00ea5d7a61b66445f0835383ac2c651c/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-subbuild/CMakeFiles/3f855c1db59f65cec65cdeb891b32b4e/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}

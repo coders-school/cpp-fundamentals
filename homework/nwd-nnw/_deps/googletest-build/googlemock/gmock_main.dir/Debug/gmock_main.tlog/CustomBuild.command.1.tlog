@@ -1,0 +1,10 @@
+^C:\USERS\PC\DOCUMENTS\CPP-FUNDAMENTALS\HOMEWORK\NWD-NNW\_DEPS\GOOGLETEST-SRC\GOOGLEMOCK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw -BC:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw --check-stamp-file C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^C:\USERS\PC\DOCUMENTS\CPP-FUNDAMENTALS\HOMEWORK\NWD-NNW\CMAKEFILES\537B15278821412FF0683A86EE88AB74\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw -BC:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/nwdNww.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

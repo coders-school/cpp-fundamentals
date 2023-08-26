@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\3f855c1db59f65cec65cdeb891b32b4e\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\00ea5d7a61b66445f0835383ac2c651c\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\4f483f89e28b129e019fa3fad86b347b\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\PC\Documents\cpp-fundamentals\homework\nwd-nnw\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{25CE6FCE-8728-371E-BBA2-7F402B31F819}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

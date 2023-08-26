@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/nwdNww-ut[1]_tests.cmake")
+  include("C:/Users/PC/Documents/cpp-fundamentals/homework/nwd-nnw/nwdNww-ut[1]_tests.cmake")
+else()
+  add_test(nwdNww-ut_NOT_BUILT nwdNww-ut_NOT_BUILT)
+endif()
