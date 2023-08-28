@@ -2,6 +2,7 @@
 // Don't forget the header guard - #pragma once
 #pragma once
 #include <string>
+
 enum class ErrorCode {
     Ok,
     PasswordNeedsAtLeastNineCharacters,
@@ -10,11 +11,11 @@ enum class ErrorCode {
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
 };
-std::string getErrorMessage(ErrorCode);
 
-bool doPasswordMatch(std::string psw1,std::string psw2);
+std::string getErrorMessage(ErrorCode code);
 
-ErrorCode checkPasswordRules(std::string psw);
+bool doPasswordsMatch(std::string password, std::string repeatedPassword);
 
-ErrorCode checkPassword(std::string psw1, std::string psw2);
+ErrorCode checkPasswordRules(std::string password);
 
+ErrorCode checkPassword(std::string password, std::string repeatedPassword);
