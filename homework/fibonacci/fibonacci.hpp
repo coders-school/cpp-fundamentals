@@ -13,6 +13,7 @@ int fibonacci_iterative(int sequence) {
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: Your implementation goes here
-    return 0;
+    int sum = 0;
+    
+    return sum = fibonacci_recursive(sequence - 2) + fibonacci_recursive(sequence - 1);
 }
