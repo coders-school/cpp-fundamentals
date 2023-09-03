@@ -4,14 +4,14 @@
 int NWD(int lhs, int rhs) {
     lhs = std::abs(lhs);
     rhs = std::abs(rhs);
-    if(lhs == 0 && rhs == 0){
+    if (lhs == 0 && rhs == 0) {
         return 0;
-    }else if(lhs == 0){
+    } else if (lhs == 0) {
         return rhs;
-    }else if(rhs == 0){
+    } else if (rhs == 0) {
         return lhs;
     }
-    while(lhs % rhs != 0){
+    while (lhs % rhs != 0) {
         int tmp = lhs % rhs;
         lhs = rhs;
         rhs = tmp;
@@ -22,8 +22,8 @@ int NWD(int lhs, int rhs) {
 int NWW(int lhs, int rhs) {
     lhs = std::abs(lhs);
     rhs = std::abs(rhs);
-    if(lhs == 0 && rhs == 0){
+    if (lhs == 0 && rhs == 0) {
         return 0;
     }
-    return lhs*rhs/NWD(lhs, rhs);
+    return lhs * rhs / NWD(lhs, rhs);
 }
