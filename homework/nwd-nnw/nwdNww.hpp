@@ -1,7 +1,7 @@
 #pragma once
 #include <cmath>
 
-int NWD(int lhs, int rhs) { //224 1270
+int NWD(int lhs, int rhs) {
     lhs = std::abs(lhs);
     rhs = std::abs(rhs);
     int helpNum = 0; 
@@ -14,6 +14,11 @@ int NWD(int lhs, int rhs) { //224 1270
 }
 
 int NWW(int lhs, int rhs) {
-    // TODO: Implement me :)
-    return -1;
+    lhs = std::abs(lhs);
+    rhs = std::abs(rhs);
+    int forReturn = 0;
+    if(rhs != 0) {
+        forReturn = (lhs * rhs) / NWD(lhs, rhs);
+    }
+    return forReturn;
 }
