@@ -17,7 +17,7 @@ int NWW(int lhs, int rhs) {
     lhs = std::abs(lhs);
     rhs = std::abs(rhs);
     int forReturn = 0;
-    if(rhs != 0) {
+    if (rhs != 0) {
         forReturn = (lhs * rhs) / NWD(lhs, rhs);
     }
     return forReturn;
