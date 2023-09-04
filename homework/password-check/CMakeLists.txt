@@ -19,7 +19,7 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(${PROJECT_NAME} main.cpp validation.cpp)
-add_executable(${PROJECT_NAME}-ut test.cpp validation.cpp)
+add_executable(${PROJECT_NAME}-ut test-bonus.cpp validation.cpp)
 add_executable(${PROJECT_NAME}-bonus-ut test-bonus.cpp validation.cpp)
 
 target_link_libraries(${PROJECT_NAME}-ut gtest_main)
