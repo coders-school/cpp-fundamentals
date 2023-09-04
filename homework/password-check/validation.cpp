@@ -1,6 +1,7 @@
 #include "validation.hpp"
 #include <cctype>
 #include <string>
+#include <algorithm>
 
 std::string getErrorMessage(ErrorCode val) {
     if (val == ErrorCode::Ok) {
