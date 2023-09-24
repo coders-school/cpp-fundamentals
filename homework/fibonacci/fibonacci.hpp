@@ -15,7 +15,7 @@ int fibonacci_iterative(int sequence) {
     return fibo;
 }
 
-int fibonacci_recursive(int sequence) {    
+int fibonacci_recursive(int sequence) {
     if (sequence == 0 || sequence == 1) {
         return sequence;
     }
