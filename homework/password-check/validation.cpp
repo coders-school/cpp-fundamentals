@@ -47,7 +47,7 @@ ErrorCode checkPassword(std::string password, std::string repeatedPassword) {
     bool compare = doPasswordsMatch(password, repeatedPassword);
     if (compare != true) {
         return ErrorCode::PasswordsDoNotMatch;
-    } else {    
+    } else {
         return checkPasswordRules(password);
     }
 }
@@ -68,7 +68,7 @@ bool oneNumber(std::string password) {
 }
 
 bool specialCharacter(std::string password) {
-    return std::any_of(password.begin(), password.end(), ::ispunct);                  
+    return std::any_of(password.begin(), password.end(), ::ispunct);
 }
 
 bool uppercaseLetter(std::string password) {
