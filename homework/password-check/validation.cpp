@@ -2,8 +2,7 @@
 
 ErrorCode errorCode;
 
-std::string getErrorMessage(ErrorCode result)
-{
+std::string getErrorMessage(ErrorCode result) {
     switch (result) {
     case ErrorCode::Ok:
         return "Ok";
