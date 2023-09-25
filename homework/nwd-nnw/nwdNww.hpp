@@ -4,7 +4,7 @@
 int NWD(int lhs, int rhs) {
     lhs = std::abs(lhs);
     rhs = std::abs(rhs);
-    int helpNum = 0; 
+    int helpNum = 0;
     while (rhs != 0) {
         helpNum = rhs;
         rhs = lhs % rhs;
