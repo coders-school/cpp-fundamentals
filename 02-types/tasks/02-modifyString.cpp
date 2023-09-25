@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 
-// TODO: Implement modifyString()
-// It should modify passed string to text "Other string"
+std::string modifyString(std::string& toModify) {
+    toModify.assign("Other string");
+    return toModify;
+}
 
 int main() {
     std::string str{"Some string"};
