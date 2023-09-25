@@ -1,9 +1,12 @@
 #include <iostream>
 
-// TODO: Implement foo() and bar()
-// foo() should modify value under passed pointer to 10
-// bar() should modify value under passed pointer to 20
-// Can we have a pointer to const or a const pointer?
+int foo(int* ptr) {
+    return *ptr = 10;
+}
+
+int bar(int* ptr) {
+    return *ptr = 20;
+}
 
 int main() {
     int number = 5;
