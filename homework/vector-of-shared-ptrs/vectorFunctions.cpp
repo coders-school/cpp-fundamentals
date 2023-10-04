@@ -30,7 +30,7 @@ void sub10(int* const ptr) {
 
 void sub10(std::vector<std::shared_ptr<int>> vec) {
     for (const auto& i : vec) {
-        if (i) {
+        if (i.operator bool()) {
             sub10(&*i);
         }
     }
