@@ -1,6 +1,11 @@
 #include <iostream>
+#include <string>
 
-// Write your function here
+void printString(std::string word, int counter) {
+    for (int i = 1; i <= counter; ++i) {
+        std::cout << i << ": " << word << '\n';
+    }
+}
 
 int main() {
     printString("Hello", 5);
