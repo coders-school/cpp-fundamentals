@@ -25,12 +25,14 @@ void add10(std::vector<std::shared_ptr<int>> vec) {
 }
 
 void sub10(int* const ptr) {
-    *ptr -= 10;
+    if (ptr) {
+        *ptr -= 10;
+    }
 }
 
 void sub10(std::vector<std::shared_ptr<int>> vec) {
     for (const auto& i : vec) {
-        if (i.operator bool()) {
+        if (i) {
             sub10(&*i);
         }
     }
