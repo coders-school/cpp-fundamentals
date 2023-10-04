@@ -1,22 +1,24 @@
 #include "vectorFunctions.hpp"
 
+std::vector<std::shared_ptr<int>> vec;
+
 std::vector<std::shared_ptr<int>> generate(int count) {
-    std::vector<std::shared_ptr<int>> ptrList {};
-    for (int i = 0; i > count; ++i) {
-        ptrList.push_back(std::make_shared<int>(i));
+    vec.reserve(count);
+    for (int i = 0; i < count; ++i) {
+        vec.emplace_back(std::make_shared<int>(i));
     }
-    return ptrList;
+    return vec;
 }
 
-void print(std::vector<std::shared_ptr<int>> toPrint) {
-    for (int i = 0; i < toPrint.size(); ++i) {
-        std::cout << toPrint[i] << "\n";
+void print(std::vector<std::shared_ptr<int>> vec) {
+    for (const auto& i : vec) {
+        std::cout << *i << '\n';
     }
 }
 
-void add10(std::vector<std::shared_ptr<int>> toAdd) {
-    for (int i = 0; i < toAdd.size(); ++ i) {
-        *toAdd[i] += 10;
+void add10(std::vector<std::shared_ptr<int>> vec) {
+    for (const auto& i : vec) {
+        *i += 10;
     }
 }
 
@@ -24,8 +26,8 @@ void sub10(int* const ptr) {
     *ptr -= 10;
 }
 
-void sub10(std::vector<std::shared_ptr<int>> overload) {
-    for (int i = 0; i < overload.size(); ++i) {
-        sub10(&*overload[i]);
+void sub10(std::vector<std::shared_ptr<int>> vec) {
+    for (const auto& i : vec) {
+        sub10(&*i);
     }
 }
