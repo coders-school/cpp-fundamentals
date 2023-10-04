@@ -1,6 +1,15 @@
 #include <iostream>
 
-// Write your function here
+int max(int first, int second, int therd) {
+    int max = first;
+    if (max < second) {
+        max = second;
+    }
+    if (max < therd) {
+        max = therd;
+    }
+    return max;
+}
 
 int main() {
     std::cout << "max (1, 2, 3): " << max (1, 2, 3) << "\n";
