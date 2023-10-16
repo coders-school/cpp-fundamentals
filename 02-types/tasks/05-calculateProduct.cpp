@@ -1,8 +1,11 @@
 #include <iostream>
+#include <memory>
 
-// TODO: Implement calculateProduct()
-// It should take 2 int values and return their product as a shared_ptr.
-// Additionally, check how many owners are there.
+std::shared_ptr<int> calculateProduct(int first_num, int second_num){
+    auto ptr = std::make_shared<int>(first_num * second_num);
+    std::cout<< "How many pointers: "<<ptr.use_count()<<std::endl;
+    return ptr;
+}
 
 int main() {
     auto number = calculateProduct(10, 20);
