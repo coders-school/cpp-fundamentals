@@ -1,6 +1,8 @@
 #include <iostream>
 
-// Write missing function here
+int multiply(int first_arg, int second_arg){
+    return first_arg * second_arg;
+}
 
 int main() {
     std::cout << "4 * 5: " << multiply(4, 5) << "\n";
