@@ -1,6 +1,5 @@
 #include "validation.hpp"
-#include <stdlib.h>
-#include <time.h>
+#include <algorithm>
 
 std::map<ErrorCode, std::string> codeDict{
     {Ok, "Ok"},
@@ -18,12 +17,51 @@ bool doPasswordsMatch(std::string passA, std::string passB) {
     return passA == passB;
 }
 
-ErrorCode checkPasswordRules(std::string passA) {
-    std::srand(time(NULL));
-    return static_cast<ErrorCode>(rand() % 5);
+bool hasMinimumLength(std::string pass) {
+    if (pass.size() < 9)
+        return false;
+    return true;
 }
 
-//sth
+bool hasNumber(std::string pass) {
+    std::string required_chars = "0123456789";
+    return std::any_of(required_chars.begin(), required_chars.end(), [&pass](auto char_of_required) {
+        return std::any_of(pass.begin(), pass.end(), [char_of_required](auto char_of_pass) {
+            return char_of_required == char_of_pass;
+        });
+    });
+}
+
+bool hasSpecialCharacter(std::string pass) {
+    std::string required_chars = "~!@#$%^&*()?><.,/;;";
+    return std::any_of(required_chars.begin(), required_chars.end(), [&pass](auto char_of_required) {
+        return std::any_of(pass.begin(), pass.end(), [char_of_required](auto char_of_pass) {
+            return char_of_required == char_of_pass;
+        });
+    });
+}
+
+bool hasUppercaseLetter(std::string pass) {
+    std::string required_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    return std::any_of(required_chars.begin(), required_chars.end(), [&pass](auto char_of_required) {
+        return std::any_of(pass.begin(), pass.end(), [char_of_required](auto char_of_pass) {
+            return char_of_required == char_of_pass;
+        });
+    });
+}
+
+ErrorCode checkPasswordRules(std::string pass) {
+    if (!hasMinimumLength(pass))
+        return PasswordNeedsAtLeastNineCharacters;
+    else if (!hasNumber)
+        return PasswordNeedsAtLeastOneNumber;
+    else if (!hasSpecialCharacter)
+        return PasswordNeedsAtLeastOneSpecialCharacter;
+    else if (!hasUppercaseLetter)
+        return PasswordNeedsAtLeastOneUppercaseLetter;
+    return Ok;
+}
+
 ErrorCode checkPassword(std::string passA, std::string passB) {
     if (doPasswordsMatch(passA, passB))
         return checkPasswordRules(passA);

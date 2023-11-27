@@ -17,6 +17,11 @@ std::string getErrorMessage(ErrorCode code);
 
 bool doPasswordsMatch(std::string passA, std::string passB);
 
-ErrorCode checkPasswordRules(std::string passA);
+ErrorCode checkPasswordRules(std::string pass);
 
 ErrorCode checkPassword(std::string passA, std::string passB);
+
+bool hasMinimumLength(std::string pass);
+bool hasNumber(std::string pass);
+bool hasSpecialCharacter(std::string pass);
+bool hasUppercaseLetter(std::string pass);
