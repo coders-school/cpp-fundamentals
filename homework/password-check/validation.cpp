@@ -23,6 +23,7 @@ ErrorCode checkPasswordRules(std::string passA) {
     return static_cast<ErrorCode>(rand() % 5);
 }
 
+//sth
 ErrorCode checkPassword(std::string passA, std::string passB) {
     if (doPasswordsMatch(passA, passB))
         return checkPasswordRules(passA);
