@@ -18,9 +18,7 @@ bool doPasswordsMatch(std::string passA, std::string passB) {
 }
 
 bool hasMinimumLength(std::string pass) {
-    if (pass.size() < 9)
-        return false;
-    return true;
+    return pass.size() >= 9;
 }
 
 bool hasNumber(std::string pass) {
@@ -53,11 +51,11 @@ bool hasUppercaseLetter(std::string pass) {
 ErrorCode checkPasswordRules(std::string pass) {
     if (!hasMinimumLength(pass))
         return PasswordNeedsAtLeastNineCharacters;
-    else if (!hasNumber)
+    else if (!hasNumber(pass))
         return PasswordNeedsAtLeastOneNumber;
-    else if (!hasSpecialCharacter)
+    else if (!hasSpecialCharacter(pass))
         return PasswordNeedsAtLeastOneSpecialCharacter;
-    else if (!hasUppercaseLetter)
+    else if (!hasUppercaseLetter(pass))
         return PasswordNeedsAtLeastOneUppercaseLetter;
     return Ok;
 }

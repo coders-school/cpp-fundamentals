@@ -3,12 +3,12 @@
 #include <string>
 
 enum ErrorCode {
-    Ok = 0,
-    PasswordNeedsAtLeastNineCharacters = 1,
-    PasswordNeedsAtLeastOneNumber = 2,
-    PasswordNeedsAtLeastOneSpecialCharacter = 3,
-    PasswordNeedsAtLeastOneUppercaseLetter = 4,
-    PasswordsDoNotMatch = 5
+    Ok,
+    PasswordNeedsAtLeastNineCharacters,
+    PasswordNeedsAtLeastOneNumber,
+    PasswordNeedsAtLeastOneSpecialCharacter,
+    PasswordNeedsAtLeastOneUppercaseLetter,
+    PasswordsDoNotMatch
 };
 
 extern std::map<ErrorCode, std::string> codeDict;
