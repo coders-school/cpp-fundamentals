@@ -6,20 +6,22 @@ int fibonacci_iterative(int sequence) {
     } else if (sequence == 1) {
         return 1;
     } else {
-        int fibonacci_tab[sequence];
-        fibonacci_tab[0] = 0;
-        fibonacci_tab[1] = 1;
+        int two_numbers_earlier = 0;
+        int one_number_earlier = 1;
+        int result = 0;
         
         for (int i = 2; i <= sequence; i++) {
-            fibonacci_tab[i] = fibonacci_tab[i-1] + fibonacci_tab[i-2];
+            result = one_number_earlier + two_numbers_earlier;
+            two_numbers_earlier = one_number_earlier;
+            one_number_earlier = result;
         }
-        return fibonacci_tab[sequence];
+        return result;
     }
 
     return 0;
 }
 
 int fibonacci_recursive(int sequence) {
-    // TODO: Your implementation goes here
+    
     return 0;
 }
