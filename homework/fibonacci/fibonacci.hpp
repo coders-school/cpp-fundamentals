@@ -9,7 +9,6 @@ int fibonacci_iterative(int sequence) {
         int two_numbers_earlier = 0;
         int one_number_earlier = 1;
         int result = 0;
-        
         for (int i = 2; i <= sequence; i++) {
             result = one_number_earlier + two_numbers_earlier;
             two_numbers_earlier = one_number_earlier;
