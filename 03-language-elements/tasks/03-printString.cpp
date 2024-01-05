@@ -1,6 +1,13 @@
 #include <iostream>
 
-// Write your function here
+void printString ( string a, int b)
+{
+    int i=0;
+    for (i;i<=b;i++)
+        {
+            std::cout << a <<  "\n";
+        }
+}
 
 int main() {
     printString("Hello", 5);
