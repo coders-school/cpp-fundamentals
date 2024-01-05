@@ -6,7 +6,7 @@ int main() {
     int tab[tab_size];
 
     for (size_t i = 0; i < tab_size; ++i) {
-        tab[i] = i+1;
+        tab[i] = (1+i*2);
     }
 
     for (size_t i = 0; i < tab_size; ++i) {
