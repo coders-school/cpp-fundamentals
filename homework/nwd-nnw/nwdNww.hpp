@@ -1,7 +1,6 @@
 #pragma once
 
 int NWD(int lhs, int rhs) {
-
     int result = 0;
 
     if (lhs == 0 && rhs == 0) {
@@ -26,6 +25,11 @@ int NWD(int lhs, int rhs) {
 }
 
 int NWW(int lhs, int rhs) {
-    
-    return -1;
+    int result = 0;
+
+    if (lhs == 0 || rhs == 0) {
+        return result;
+    }
+
+    return std::abs((lhs * rhs) / NWD(lhs, rhs));
 }
