@@ -12,6 +12,9 @@ std::string calculate(const std::string& command, int first, int second) {
     }else if(command == "multiply"){
         std::string result = std::to_string(first * second);
         return result;
+    }else if(command == "divide"){
+        std::string result = std::to_string(first / second);
+        return result;
     }
 
     return "";
