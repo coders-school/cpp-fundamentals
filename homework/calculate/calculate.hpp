@@ -2,7 +2,7 @@
 #include <string>
 
 std::string calculate(const std::string& command, int first, int second) {
-    // TODO: Implement your solution here and return proper value
+
     if(command == "add"){
         std::string result = std::to_string(first + second);
         return result;
@@ -13,9 +13,14 @@ std::string calculate(const std::string& command, int first, int second) {
         std::string result = std::to_string(first * second);
         return result;
     }else if(command == "divide"){
-        std::string result = std::to_string(first / second);
-        return result;
+        if(second == 0){
+            return "Division by 0";
+        }else{
+            std::string result = std::to_string(first / second);
+            return result;
+        }
+    }else{
+        return "Invalid data";
     }
 
-    return "";
 }
