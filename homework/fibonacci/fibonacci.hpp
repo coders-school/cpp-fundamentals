@@ -13,7 +13,7 @@ int fibonacci_iterative(int sequence) {
     int a = 0;
     int b = 1;
 
-    for (size_t i = 2; i <= sequence; ++i) {
+    for (int i = 2; i <= sequence; ++i) {
         result = a + b;
         std::swap(a, b);
         b += a;
