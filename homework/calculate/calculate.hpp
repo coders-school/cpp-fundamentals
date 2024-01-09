@@ -1,16 +1,18 @@
 #pragma once
 #include <string>
 
-sstd::string calculate(const std::string& command, int first, int second) {
+std::string calculate(const std::string& command, int first, int second) {
     if (command == "add")
         return std::to_string(first + second);
     else if (command == "substract")
         return std::to_string(first - second);
     else if (command == "multiply")
         return std::to_string(first * second);
-    else if (command == "divide"){
-        if (second==0) return "Division by 0";
-        else return std::to_string(first / second);}
-    else
-        return "Invalid data";
-}
+    else if (command == "divide") {
+        if (second == 0)
+            return "Division by 0";
+        else
+            return std::to_string(first / second);
+    } else
+         return "Invalid data";
+ }
