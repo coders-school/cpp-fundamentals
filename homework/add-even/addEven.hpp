@@ -2,7 +2,15 @@
 #include <vector>
 
 int addEven(const std::vector<int>& numbers) {
-    // TODO: Your implementation goes here
-    // Below return is only to make this function compile now
-    return -1;
+    int result = 0;
+
+    if (numbers.size() > 0) {
+        for (auto num : numbers) {
+            if (num % 2 == 0 && num != 0) {
+                result += num;
+            }
+        }
+    }
+
+    return result;
 }
