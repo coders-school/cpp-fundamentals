@@ -9,7 +9,7 @@ int NWD(int lhs, int rhs) {
         return lhs;
     if (lhs != 0 && rhs != 0)
         while (lhs != rhs) {
-            if (lhs > rhs) 
+            if (lhs > rhs)
                 lhs = (lhs - rhs);
             else
                 rhs = (rhs - lhs);
