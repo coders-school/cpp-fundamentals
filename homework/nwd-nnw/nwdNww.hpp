@@ -13,7 +13,7 @@ int NWD(int lhs, int rhs) {
                 lhs = (lhs - rhs);
             else
                 rhs = (rhs - lhs);
-            };
+        };
     return lhs;
 }
 
