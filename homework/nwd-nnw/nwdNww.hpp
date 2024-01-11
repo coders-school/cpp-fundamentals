@@ -19,9 +19,9 @@ int NWD(int lhs, int rhs) {
 
 int NWW(int lhs, int rhs) {
     if (lhs == 0 && rhs == 0)
-        return NaN;
+        return 0;
     if (lhs == 0 && rhs != 0)
-        return NaN;
+        return 0;
     if (lhs != 0 && rhs == 0)
         return 0;
     if (lhs != 0 && rhs != 0)
