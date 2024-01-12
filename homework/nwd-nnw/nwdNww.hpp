@@ -4,7 +4,7 @@ int NWD(int lhs, int rhs) {
     if (lhs < 0 && rhs < 0) {
         lhs = -lhs;
         rhs = -rhs;
-        }
+    }
     if (lhs < 0 && rhs >= 0)
         lhs = -lhs;
     if (lhs >= 0 && rhs < 0)
@@ -29,7 +29,7 @@ int NWW(int lhs, int rhs) {
     if (lhs < 0 && rhs < 0) {
         lhs = -lhs;
         rhs = -rhs;
-        }
+    }
     if (lhs < 0 && rhs >= 0)
         lhs = -lhs;
     if (lhs >= 0 && rhs < 0)
