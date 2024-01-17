@@ -2,7 +2,7 @@
 #include <string>
 
 std::string getErrorMessage(ErrorCode error_code) {
-    switch(error_code) {
+    switch (error_code) {
     case ErrorCode::Ok:
         return "Ok";
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
