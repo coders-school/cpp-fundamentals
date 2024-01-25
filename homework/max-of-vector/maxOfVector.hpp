@@ -4,7 +4,7 @@
 
 int maxOfVector(const std::vector<int>& vec) {
     int i, max;
-    max = 0;
+    max = vec[0];
     for (i = 0; i < vec.size(); ++i) {
         if (vec[i] > max) {
             max = vec[i];
