@@ -13,7 +13,7 @@ ErrorCode checkPasswordRules(std::string password)
     if (password.size() < 9) {
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     }
-    if (std::any_of(password.begin(), password.end(), ::isdigit)) {
+    if (std::none_of(password.begin(), password.end(), ::isdigit)) {
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
     }
     /* special characters: !@#$%^&*(){}:;<>.,? */
