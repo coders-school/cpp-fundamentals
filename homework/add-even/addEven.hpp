@@ -8,7 +8,7 @@ int addEven(const std::vector<int>& numbers) {
     int even_numers_sum{0};
 
     for (auto& it : numbers) {
-        if (it %2 == 0) {
+        if (it % 2 == 0) {
             even_numers_sum += it;
         }
     }
