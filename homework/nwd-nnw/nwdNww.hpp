@@ -47,7 +47,7 @@ int NWW(int lhs, int rhs) {
         return 0;
     }
 
-    if(lhs == rhs) {
+    if (lhs == rhs) {
         return lhs;
     }
 
