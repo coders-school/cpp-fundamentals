@@ -40,9 +40,9 @@ int checkPasswordRules(std::string pass) {
     OneNumber = false;
     OneUppercaseLetter = false;
     OneSpecialCharacter = false;
-    if (pass.length()<9) 
+    if (pass.length() < 9) 
         return static_cast <int>(back = Error::PasswordNeedsAtLeastNineCharacters);
-    else ;
+    else
         for (i = 0; i<pass.length(); ++i) {
             if (pass[i] >= '0' && pass[i] <= '9')
                 OneNumber = true;
@@ -67,4 +67,18 @@ int checkPassword(std::string firstpassword, std::string secondpassword) {
         return static_cast<int>(Error::PasswordsDoNotMatch);
     else
         return checkPasswordRules(firstpassword);
+}
+
+int main() {
+ 
+    std::string password;
+    std::string repeatedPassword;
+    std::cout << "Set new password: ";
+    std::cin >> password;
+    std::cout << "Repeat password: ";
+    std::cin >> repeatedPassword;
+    auto result = checkPassword(password, repeatedPassword);
+    std::cout << getErrorMessage(result) << '\n';
+
+    return 0;
 }
