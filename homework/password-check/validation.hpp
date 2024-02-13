@@ -2,6 +2,7 @@
 #include <string>
 #pragma once
 
+
 enum class Error {
         Ok,
         PasswordNeedsAtLeastNineCharacters,
@@ -16,15 +17,15 @@ std::string getErrorMessage(int errcode) {
         case 0:
             return "Ok";
         case 1:
-            return "PasswordNeedsAtLeastNineCharacters";
+            return "Password Needs AtLeast Nine Characters";
         case 2:
-            return "PasswordNeedsAtLeastOneNumber";
+            return "Password Needs AtLeast OneNumber";
         case 3:
-            return "PasswordNeedsAtLeastOneSpecialCharacter";
+            return "Password Needs AtLeast One Special Character";
         case 4:
-            return "PasswordNeedsAtLeastOneUppercaseLetter";
+            return "Password Needs AtLeast One Uppercase Letter";
         case 5:
-            return "PasswordsDoNotMatch";
+            return "Passwords Do Not Match";
     }
 }
 
@@ -42,16 +43,15 @@ int checkPasswordRules(std::string pass) {
     OneNumber = false;
     OneUppercaseLetter = false;
     OneSpecialCharacter = false;
-    if (pass.length() < 9) 
+    if (pass.length()<9) 
         return static_cast <int>(back = Error::PasswordNeedsAtLeastNineCharacters);
-    else
-        for (i = 0; i<pass.length(); ++i) {
-            if (pass[i] >= '0' && pass[i] <= '9')
-                OneNumber = true;
-            if (pass[i] >= 'A' && pass[i] <= 'Z')
-                OneUppercaseLetter = true;
-            if (!(pass[i] >= '0' && pass[i] <= '9') && !(pass[i] >= 'A' && pass[i] <= 'Z') && !(pass[i] >= 'a' && pass[i] <= 'z') && (pass[i] > 31 && pass[i] < 127))
-                OneSpecialCharacter = true;
+    for (auto element : pass) {
+        if (isdigit(element))
+            OneNumber = true;
+        if (!isalnum(element))
+            OneSpecialCharacter = true;
+        if (isupper(element))
+            OneUppercaseLetter = true;
         }
     if (!OneNumber)
         return static_cast <int>(back = Error::PasswordNeedsAtLeastOneNumber);
