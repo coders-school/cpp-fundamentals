@@ -1,6 +1,7 @@
 #pragma once
-//#include <iostream>
-//#include <string>
+#include <iostream>
+#include <string>
+#include <cctype>
 enum class Error {
         Ok,
         PasswordNeedsAtLeastNineCharacters,
