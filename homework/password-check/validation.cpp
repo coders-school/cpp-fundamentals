@@ -63,10 +63,3 @@ int checkPasswordRules(std::string pass) {
                 return static_cast <int>(back = Error::PasswordNeedsAtLeastOneSpecialCharacter);
     else return static_cast <int>(back = Error::Ok); 
 }
-
-int checkPassword(std::string firstpassword, std::string secondpassword) {
-    if (!doPasswordsMatch(firstpassword, secondpassword))
-        return static_cast<int>(Error::PasswordsDoNotMatch);
-    else
-        return checkPasswordRules(firstpassword);
-}
