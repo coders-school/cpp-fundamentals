@@ -4,7 +4,14 @@
 #include <string>
 #include <cctype>
 
-    
+enum class ErrorCode {
+        Ok,
+        PasswordNeedsAtLeastNineCharacters,
+        PasswordNeedsAtLeastOneNumber,
+        PasswordNeedsAtLeastOneSpecialCharacter,
+        PasswordNeedsAtLeastOneUppercaseLetter,
+        PasswordsDoNotMatch
+};
 std::string getErrorMessage(int errcode) {
     switch (errcode) {
     case 0:
