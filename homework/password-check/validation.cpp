@@ -15,7 +15,7 @@ enum class ErrorCode {
 std::string getErrorMessage(int errcode) {
     switch (errcode) {
     case 0:
-        return "Ok";
+        return "ErrorCode::Ok";
     case 1:
         return "Password Needs AtLeast Nine Characters";
     case 2:
