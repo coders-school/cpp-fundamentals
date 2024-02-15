@@ -3,7 +3,15 @@
 #include <iostream>
 #include <string>
 #include <cctype>
-   
+
+enum class Error {
+        Ok,
+        PasswordNeedsAtLeastNineCharacters,
+        PasswordNeedsAtLeastOneNumber,
+        PasswordNeedsAtLeastOneSpecialCharacter,
+        PasswordNeedsAtLeastOneUppercaseLetter,
+        PasswordsDoNotMatch
+    };
 std::string getErrorMessage(int errcode) {
     switch (errcode) {
         case 0:
