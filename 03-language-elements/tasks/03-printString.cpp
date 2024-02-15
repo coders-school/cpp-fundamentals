@@ -1,7 +1,12 @@
 #include <iostream>
 
-// Write your function here
-
+void printString(std::string text, int count)
+{
+    for(count; count>0; --count)
+        {
+         std::cout<<text<<'\n';   
+        }
+}
 int main() {
     printString("Hello", 5);
     std::cout << "\n";
