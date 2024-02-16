@@ -55,7 +55,7 @@ ErrorCode checkPasswordRules(std::string pass) {
     else if (!OneSpecialCharacter)
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     else 
-        return ErrorCode::Ok; 
+        return ErrorCode::Ok;
 }
 
 ErrorCode checkPassword(std::string firstpassword, std::string secondpassword) {
