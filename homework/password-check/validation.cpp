@@ -50,12 +50,10 @@ ErrorCode checkPasswordRules(std::string pass) {
     }
     if (!OneNumber)
         return ErrorCode::PasswordNeedsAtLeastOneNumber;
-    else
-        if (!OneUppercaseLetter)
-            return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-    else
-        if (!OneSpecialCharacter)
-            return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    else if (!OneUppercaseLetter)
+        return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
+    else if (!OneSpecialCharacter)
+        return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
     else 
         return ErrorCode::Ok; 
 }
