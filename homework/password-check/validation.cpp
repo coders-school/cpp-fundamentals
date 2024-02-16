@@ -1,22 +1,28 @@
 #include "validation.hpp"
+#include <cctype>
 #include <iostream>
 #include <string>
-#include <cctype>
 
 std::string getErrorMessage(ErrorCode faultcode) {
     switch (faultcode) {
     case ErrorCode::Ok:
-        return "Ok"; break;
+        return "Ok"; 
+        break;
     case ErrorCode::PasswordNeedsAtLeastNineCharacters:
-        return "Password needs to have at least nine characters"; break;
+        return "Password needs to have at least nine characters";
+        break;
     case ErrorCode::PasswordNeedsAtLeastOneNumber:
-        return "Password needs to have at least one number"; break;
+        return "Password needs to have at least one number";
+        break;
     case ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter:
-        return "Password needs to have at least one special character"; break;
+        return "Password needs to have at least one special character";
+        break;
     case ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter:
-        return "Password needs to have at least one uppercase letter"; break;
+        return "Password needs to have at least one uppercase letter";
+        break;
     case ErrorCode::PasswordsDoNotMatch:
-        return "Passwords do not match"; break;
+        return "Passwords do not match";
+        break;
     }
 }
 
@@ -32,7 +38,7 @@ ErrorCode checkPasswordRules(std::string pass) {
     OneNumber = false;
     OneUppercaseLetter = false;
     OneSpecialCharacter = false;
-    if (pass.length()<9)
+    if (pass.length() < 9)
         return ErrorCode::PasswordNeedsAtLeastNineCharacters;
     for (auto element : pass) {
         if (isdigit(element))
@@ -47,10 +53,11 @@ ErrorCode checkPasswordRules(std::string pass) {
     else
         if (!OneUppercaseLetter)
             return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
-        else
-            if (!OneSpecialCharacter)
-                return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    else return ErrorCode::Ok; 
+    else
+        if (!OneSpecialCharacter)
+            return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
+    else 
+        return ErrorCode::Ok; 
 }
 
 ErrorCode checkPassword(std::string firstpassword, std::string secondpassword) {
