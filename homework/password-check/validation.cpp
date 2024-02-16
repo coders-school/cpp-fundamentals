@@ -28,7 +28,6 @@ bool doPasswordsMatch(std::string psw1, std::string psw2) {
 }
 
 ErrorCode checkPasswordRules(std::string pass) {
-    int i;
     bool OneNumber, OneUppercaseLetter, OneSpecialCharacter;
     OneNumber = false;
     OneUppercaseLetter = false;
