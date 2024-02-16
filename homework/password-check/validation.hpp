@@ -9,7 +9,7 @@ enum class ErrorCode {
         PasswordNeedsAtLeastOneUppercaseLetter,
         PasswordsDoNotMatch
 };
-std::string getErrorMessage(ErrorCode faultcode)
+std::string getErrorMessage(ErrorCode faultcode);
 bool doPasswordsMatch(std::string psw1, std::string psw2);
 ErrorCode checkPasswordRules(std::string pass);
 ErrorCode checkPassword(std::string firstpassword, std::string secondpassword);
