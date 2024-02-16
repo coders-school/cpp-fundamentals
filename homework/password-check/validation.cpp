@@ -54,7 +54,7 @@ ErrorCode checkPasswordRules(std::string pass) {
         return ErrorCode::PasswordNeedsAtLeastOneUppercaseLetter;
     else if (!OneSpecialCharacter)
         return ErrorCode::PasswordNeedsAtLeastOneSpecialCharacter;
-    else 
+    else
         return ErrorCode::Ok;
 }
 
