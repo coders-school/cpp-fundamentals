@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 
+std::vector<std::shared_ptr<int>> smartvector;
 std::vector<std::shared_ptr<int>> generate(int count) {
     int i = 0;
     for (i; i<count; ++i){
