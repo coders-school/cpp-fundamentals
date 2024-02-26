@@ -2,7 +2,6 @@
 #include <vector>
 #include <memory>
 
-std::vector<std::shared_ptr<int>> smartvector;
 std::vector<std::shared_ptr<int>> generate(int count);
 void print(auto printout);
 void add10(auto addten);
