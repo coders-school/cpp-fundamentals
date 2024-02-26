@@ -12,14 +12,14 @@ std::vector<std::shared_ptr<int>> generate(int count) {
     return smartvector;
 }
 
-void print(auto printout) {
+void print(std::vector<std::shared_ptr<int>> printout) {
     std::cout << "\n";
     for (auto & element : printout) {
         std::cout << * element << "\n";
     }
 }
 
-void add10(auto addten) {
+void add10(std::vector<std::shared_ptr<int>> addten) {
     for (auto & element : addten) {
         * element += 10;
     }
