@@ -33,7 +33,7 @@ void sub10(int* const p) {
     }
 }
 
-void sub10(std::vector<std::shared_ptr<int>>  subten) {
+void sub10(std::vector<std::shared_ptr<int>> subten) {
     int* pointer;
     for (auto element : subten) {
         pointer = element.get();
