@@ -34,7 +34,7 @@ void sub10( int * const p) {
 void sub10(std::vector<std::shared_ptr<int>>  subten) {
     int * pointer;
     for (auto element : subten) {
-        if (element != nullptr ) {
+        if (element.get() != nullptr ) {
             pointer = element.get();
             sub10( pointer );
         }
