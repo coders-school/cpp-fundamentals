@@ -28,15 +28,15 @@ void add10(std::vector<std::shared_ptr<int>> addten) {
 }
 
 void sub10( int * const p) {
-    * p -= 10;
+    if (p != nullptr) {
+        * p -= 10;
+    }
 }
 
 void sub10(std::vector<std::shared_ptr<int>>  subten) {
     int * pointer;
     for (auto element : subten) {
-        if (element.get() != nullptr ) {
             pointer = element.get();
             sub10( pointer );
-        }
     }
 }
