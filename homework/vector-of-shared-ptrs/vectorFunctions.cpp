@@ -21,7 +21,7 @@ void print(std::vector<std::shared_ptr<int>> printout) {
 
 void add10(std::vector<std::shared_ptr<int>> addten) {
     for (auto& element : addten) {
-        if (element != nullptr ) {
+        if (element != nullptr) {
             *element += 10;
         }
     }
@@ -34,7 +34,7 @@ void sub10(int* const p) {
 }
 
 void sub10(std::vector<std::shared_ptr<int>>  subten) {
-    int * pointer;
+    int* pointer;
     for (auto element : subten) {
         pointer = element.get();
         sub10(pointer);
