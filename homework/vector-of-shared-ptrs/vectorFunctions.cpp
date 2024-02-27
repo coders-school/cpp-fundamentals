@@ -5,8 +5,8 @@
 
 std::vector<std::shared_ptr<int>> smartvector;
 std::vector<std::shared_ptr<int>> generate(int count) {
-    int i = 0;
-    for (i; i<count; ++i){
+    size_t i = 0;
+    for (i; i < count; ++i){
         smartvector.push_back(std::make_shared<int>(10+i));
     }
     return smartvector;
