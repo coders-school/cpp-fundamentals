@@ -1,0 +1,6 @@
+calculate.ShouldAdd 1 0.00257792
+calculate.ShouldSubtract 1 0.00626455
+calculate.ShouldMultiply 1 0.00440939
+calculate.ShouldDivide 1 0.00247615
+calculate.ShouldReturnInvalidData 1 0.00234644
+---
