@@ -1,10 +1,10 @@
-Start testing: May 01 20:55 CEST
+Start testing: May 02 10:34 CEST
 ----------------------------------------------------------
 1/5 Testing: calculate.ShouldAdd
 1/5 Test: calculate.ShouldAdd
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldAdd" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldAdd" start time: May 01 20:55 CEST
+"calculate.ShouldAdd" start time: May 02 10:34 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -23,7 +23,7 @@ Note: Google Test filter = calculate.ShouldAdd
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"calculate.ShouldAdd" end time: May 01 20:55 CEST
+"calculate.ShouldAdd" end time: May 02 10:34 CEST
 "calculate.ShouldAdd" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/5 Test: calculate.ShouldSubtract
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldSubtract" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldSubtract" start time: May 01 20:55 CEST
+"calculate.ShouldSubtract" start time: May 02 10:34 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -50,7 +50,7 @@ Note: Google Test filter = calculate.ShouldSubtract
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"calculate.ShouldSubtract" end time: May 01 20:55 CEST
+"calculate.ShouldSubtract" end time: May 02 10:34 CEST
 "calculate.ShouldSubtract" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/5 Test: calculate.ShouldMultiply
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldMultiply" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldMultiply" start time: May 01 20:55 CEST
+"calculate.ShouldMultiply" start time: May 02 10:34 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -71,13 +71,13 @@ Note: Google Test filter = calculate.ShouldMultiply
 [----------] 1 test from calculate (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (2 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"calculate.ShouldMultiply" end time: May 01 20:55 CEST
+"calculate.ShouldMultiply" end time: May 02 10:34 CEST
 "calculate.ShouldMultiply" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/5 Test: calculate.ShouldDivide
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldDivide" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldDivide" start time: May 01 20:55 CEST
+"calculate.ShouldDivide" start time: May 02 10:34 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -104,7 +104,7 @@ Note: Google Test filter = calculate.ShouldDivide
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"calculate.ShouldDivide" end time: May 01 20:55 CEST
+"calculate.ShouldDivide" end time: May 02 10:34 CEST
 "calculate.ShouldDivide" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ Test Passed.
 5/5 Test: calculate.ShouldReturnInvalidData
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldReturnInvalidData" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldReturnInvalidData" start time: May 01 20:55 CEST
+"calculate.ShouldReturnInvalidData" start time: May 02 10:34 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -131,8 +131,8 @@ Note: Google Test filter = calculate.ShouldReturnInvalidData
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"calculate.ShouldReturnInvalidData" end time: May 01 20:55 CEST
+"calculate.ShouldReturnInvalidData" end time: May 02 10:34 CEST
 "calculate.ShouldReturnInvalidData" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 01 20:55 CEST
+End testing: May 02 10:34 CEST
