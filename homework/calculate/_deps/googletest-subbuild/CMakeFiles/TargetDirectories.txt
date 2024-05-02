@@ -1,0 +1,3 @@
+/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

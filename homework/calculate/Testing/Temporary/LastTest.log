@@ -1,0 +1,19 @@
+Start testing: May 02 12:00 CEST
+----------------------------------------------------------
+Unable to find executable: calculate-ut_NOT_BUILT
+1/1 Testing: calculate-ut_NOT_BUILT
+1/1 Test: calculate-ut_NOT_BUILT
+Command: ""
+Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
+"calculate-ut_NOT_BUILT" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"calculate-ut_NOT_BUILT" end time: May 02 12:00 CEST
+"calculate-ut_NOT_BUILT" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 02 12:00 CEST
