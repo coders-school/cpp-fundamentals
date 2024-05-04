@@ -1,10 +1,10 @@
-Start testing: May 04 12:33 CEST
+Start testing: May 04 12:37 CEST
 ----------------------------------------------------------
 1/5 Testing: calculate.ShouldAdd
 1/5 Test: calculate.ShouldAdd
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldAdd" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldAdd" start time: May 04 12:33 CEST
+"calculate.ShouldAdd" start time: May 04 12:37 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -13,45 +13,17 @@ Note: Google Test filter = calculate.ShouldAdd
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldAdd
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:5: Failure
-Expected equality of these values:
-  calculate("add", 10, 20)
-    Which is: ""
-  "30"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:6: Failure
-Expected equality of these values:
-  calculate("add", 15, 5)
-    Which is: ""
-  "20"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:7: Failure
-Expected equality of these values:
-  calculate("add", 0, 0)
-    Which is: ""
-  "0"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:8: Failure
-Expected equality of these values:
-  calculate("add", 1, -20)
-    Which is: ""
-  "-19"
-
-[  FAILED  ] calculate.ShouldAdd (0 ms)
+[       OK ] calculate.ShouldAdd (0 ms)
 [----------] 1 test from calculate (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] calculate.ShouldAdd
-
- 1 FAILED TEST
+[  PASSED  ] 1 test.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"calculate.ShouldAdd" end time: May 04 12:33 CEST
+Test Passed.
+"calculate.ShouldAdd" end time: May 04 12:37 CEST
 "calculate.ShouldAdd" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -59,7 +31,7 @@ Test Failed.
 2/5 Test: calculate.ShouldSubtract
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldSubtract" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldSubtract" start time: May 04 12:33 CEST
+"calculate.ShouldSubtract" start time: May 04 12:37 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -68,45 +40,11 @@ Note: Google Test filter = calculate.ShouldSubtract
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldSubtract
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:12: Failure
-Expected equality of these values:
-  calculate("subtract", 10, 20)
-    Which is: ""
-  "-10"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:13: Failure
-Expected equality of these values:
-  calculate("subtract", 15, 5)
-    Which is: ""
-  "10"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:14: Failure
-Expected equality of these values:
-  calculate("subtract", 0, 0)
-    Which is: ""
-  "0"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:15: Failure
-Expected equality of these values:
-  calculate("subtract", 1, -20)
-    Which is: ""
-  "21"
-
-[  FAILED  ] calculate.ShouldSubtract (0 ms)
-[----------] 1 test from calculate (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] calculate.ShouldSubtract
-
- 1 FAILED TEST
 <end of output>
-Test time =   0.00 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
 Test Failed.
-"calculate.ShouldSubtract" end time: May 04 12:33 CEST
+"calculate.ShouldSubtract" end time: May 04 12:37 CEST
 "calculate.ShouldSubtract" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -114,7 +52,7 @@ Test Failed.
 3/5 Test: calculate.ShouldMultiply
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldMultiply" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldMultiply" start time: May 04 12:33 CEST
+"calculate.ShouldMultiply" start time: May 04 12:37 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -123,45 +61,11 @@ Note: Google Test filter = calculate.ShouldMultiply
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldMultiply
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:19: Failure
-Expected equality of these values:
-  calculate("multiply", 10, 20)
-    Which is: ""
-  "200"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:20: Failure
-Expected equality of these values:
-  calculate("multiply", 15, 5)
-    Which is: ""
-  "75"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:21: Failure
-Expected equality of these values:
-  calculate("multiply", 0, 0)
-    Which is: ""
-  "0"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:22: Failure
-Expected equality of these values:
-  calculate("multiply", 1, -20)
-    Which is: ""
-  "-20"
-
-[  FAILED  ] calculate.ShouldMultiply (0 ms)
-[----------] 1 test from calculate (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] calculate.ShouldMultiply
-
- 1 FAILED TEST
 <end of output>
-Test time =   0.00 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Failed.
-"calculate.ShouldMultiply" end time: May 04 12:33 CEST
+"calculate.ShouldMultiply" end time: May 04 12:37 CEST
 "calculate.ShouldMultiply" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -169,7 +73,7 @@ Test Failed.
 4/5 Test: calculate.ShouldDivide
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldDivide" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldDivide" start time: May 04 12:33 CEST
+"calculate.ShouldDivide" start time: May 04 12:37 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -178,45 +82,11 @@ Note: Google Test filter = calculate.ShouldDivide
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldDivide
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:26: Failure
-Expected equality of these values:
-  calculate("divide", 10, 20)
-    Which is: ""
-  "0"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:27: Failure
-Expected equality of these values:
-  calculate("divide", 15, 5)
-    Which is: ""
-  "3"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:28: Failure
-Expected equality of these values:
-  calculate("divide", 0, 0)
-    Which is: ""
-  "Division by 0"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:29: Failure
-Expected equality of these values:
-  calculate("divide", -20, 10)
-    Which is: ""
-  "-2"
-
-[  FAILED  ] calculate.ShouldDivide (0 ms)
-[----------] 1 test from calculate (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] calculate.ShouldDivide
-
- 1 FAILED TEST
 <end of output>
-Test time =   0.00 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Failed.
-"calculate.ShouldDivide" end time: May 04 12:33 CEST
+"calculate.ShouldDivide" end time: May 04 12:37 CEST
 "calculate.ShouldDivide" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -224,7 +94,7 @@ Test Failed.
 5/5 Test: calculate.ShouldReturnInvalidData
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldReturnInvalidData" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldReturnInvalidData" start time: May 04 12:33 CEST
+"calculate.ShouldReturnInvalidData" start time: May 04 12:37 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -233,46 +103,12 @@ Note: Google Test filter = calculate.ShouldReturnInvalidData
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldReturnInvalidData
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:33: Failure
-Expected equality of these values:
-  calculate("quit", 10, 20)
-    Which is: ""
-  "Invalid data"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:34: Failure
-Expected equality of these values:
-  calculate("q", 15, 5)
-    Which is: ""
-  "Invalid data"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:35: Failure
-Expected equality of these values:
-  calculate("5", 0, 0)
-    Which is: ""
-  "Invalid data"
-
-/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/test.cpp:36: Failure
-Expected equality of these values:
-  calculate("sth", -20, 10)
-    Which is: ""
-  "Invalid data"
-
-[  FAILED  ] calculate.ShouldReturnInvalidData (0 ms)
-[----------] 1 test from calculate (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] calculate.ShouldReturnInvalidData
-
- 1 FAILED TEST
 <end of output>
-Test time =   0.00 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Failed.
-"calculate.ShouldReturnInvalidData" end time: May 04 12:33 CEST
+"calculate.ShouldReturnInvalidData" end time: May 04 12:37 CEST
 "calculate.ShouldReturnInvalidData" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 04 12:33 CEST
+End testing: May 04 12:37 CEST

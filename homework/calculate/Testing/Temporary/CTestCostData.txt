@@ -1,10 +1,9 @@
-calculate.ShouldAdd 0 0
+calculate.ShouldAdd 1 0.00242226
 calculate.ShouldSubtract 0 0
 calculate.ShouldMultiply 0 0
 calculate.ShouldDivide 0 0
 calculate.ShouldReturnInvalidData 0 0
 ---
-calculate.ShouldAdd
 calculate.ShouldSubtract
 calculate.ShouldMultiply
 calculate.ShouldDivide
