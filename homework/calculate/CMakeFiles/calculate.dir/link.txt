@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/calculate.dir/main.cpp.o -o calculate 
