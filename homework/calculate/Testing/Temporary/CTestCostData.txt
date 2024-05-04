@@ -1,7 +1,7 @@
 calculate-ut_NOT_BUILT 0 0
-calculate.ShouldAdd 3 0.00130332
-calculate.ShouldSubtract 3 0.000802138
-calculate.ShouldMultiply 3 0.00289421
-calculate.ShouldDivide 3 0.00164077
-calculate.ShouldReturnInvalidData 3 0.00309247
+calculate.ShouldAdd 4 0.000679906
+calculate.ShouldSubtract 4 0.000647329
+calculate.ShouldMultiply 4 0.000509213
+calculate.ShouldDivide 4 0.000900787
+calculate.ShouldReturnInvalidData 4 0.000591019
 ---
