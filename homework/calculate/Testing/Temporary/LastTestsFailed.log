@@ -1,0 +1,4 @@
+2:calculate.ShouldSubtract
+3:calculate.ShouldMultiply
+4:calculate.ShouldDivide
+5:calculate.ShouldReturnInvalidData
