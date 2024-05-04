@@ -1,10 +1,10 @@
-Start testing: May 04 12:37 CEST
+Start testing: May 04 13:01 CEST
 ----------------------------------------------------------
 1/5 Testing: calculate.ShouldAdd
 1/5 Test: calculate.ShouldAdd
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldAdd" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldAdd" start time: May 04 12:37 CEST
+"calculate.ShouldAdd" start time: May 04 13:01 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -23,7 +23,7 @@ Note: Google Test filter = calculate.ShouldAdd
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"calculate.ShouldAdd" end time: May 04 12:37 CEST
+"calculate.ShouldAdd" end time: May 04 13:01 CEST
 "calculate.ShouldAdd" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/5 Test: calculate.ShouldSubtract
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldSubtract" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldSubtract" start time: May 04 12:37 CEST
+"calculate.ShouldSubtract" start time: May 04 13:01 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -40,11 +40,17 @@ Note: Google Test filter = calculate.ShouldSubtract
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldSubtract
+[       OK ] calculate.ShouldSubtract (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   0.13 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
-Test Failed.
-"calculate.ShouldSubtract" end time: May 04 12:37 CEST
+Test Passed.
+"calculate.ShouldSubtract" end time: May 04 13:01 CEST
 "calculate.ShouldSubtract" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -52,7 +58,7 @@ Test Failed.
 3/5 Test: calculate.ShouldMultiply
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldMultiply" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldMultiply" start time: May 04 12:37 CEST
+"calculate.ShouldMultiply" start time: May 04 13:01 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -61,11 +67,17 @@ Note: Google Test filter = calculate.ShouldMultiply
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldMultiply
+[       OK ] calculate.ShouldMultiply (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   0.07 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"calculate.ShouldMultiply" end time: May 04 12:37 CEST
+Test Passed.
+"calculate.ShouldMultiply" end time: May 04 13:01 CEST
 "calculate.ShouldMultiply" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -73,7 +85,7 @@ Test Failed.
 4/5 Test: calculate.ShouldDivide
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldDivide" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldDivide" start time: May 04 12:37 CEST
+"calculate.ShouldDivide" start time: May 04 13:01 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -82,11 +94,17 @@ Note: Google Test filter = calculate.ShouldDivide
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldDivide
+[       OK ] calculate.ShouldDivide (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   0.07 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
-Test Failed.
-"calculate.ShouldDivide" end time: May 04 12:37 CEST
+Test Passed.
+"calculate.ShouldDivide" end time: May 04 13:01 CEST
 "calculate.ShouldDivide" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,7 +112,7 @@ Test Failed.
 5/5 Test: calculate.ShouldReturnInvalidData
 Command: "/home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/calculate-ut" "--gtest_filter=calculate.ShouldReturnInvalidData" "--gtest_also_run_disabled_tests"
 Directory: /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate
-"calculate.ShouldReturnInvalidData" start time: May 04 12:37 CEST
+"calculate.ShouldReturnInvalidData" start time: May 04 13:01 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /home/jarek1992/JAREK/cpp-fundamentals/homework/calculate/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -103,12 +121,18 @@ Note: Google Test filter = calculate.ShouldReturnInvalidData
 [----------] Global test environment set-up.
 [----------] 1 test from calculate
 [ RUN      ] calculate.ShouldReturnInvalidData
+[       OK ] calculate.ShouldReturnInvalidData (0 ms)
+[----------] 1 test from calculate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   0.08 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"calculate.ShouldReturnInvalidData" end time: May 04 12:37 CEST
+Test Passed.
+"calculate.ShouldReturnInvalidData" end time: May 04 13:01 CEST
 "calculate.ShouldReturnInvalidData" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 04 12:37 CEST
+End testing: May 04 13:01 CEST
