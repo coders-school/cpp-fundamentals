@@ -7,5 +7,5 @@ enum class ErrorCode;
 std::string getErrorMessage(int errorNum);
 bool doPasswordsMatch(std::string& pass1, std::string& pass2);
 int checkPasswordRules(std::string& pass);
-int checkPassword(std::string& pass, std::string repPass);
+int checkPassword(std::string& pass, std::string&repPass);
 bool checkSpecialChar(std::string& pass);
