@@ -1,0 +1,16 @@
+{
+  "name": "cpp-fundamentals",
+  "image": "mcr.microsoft.com/devcontainers/cpp:3-ubuntu24.04",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ],
+      "settings": {
+        "cmake.sourceDirectory": "${workspaceFolder}/homework/vector-of-shared-ptrs",
+        "cmake.buildDirectory": "${workspaceFolder}/build"
+      }
+    }
+  }
+}
