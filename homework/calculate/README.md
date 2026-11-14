@@ -16,10 +16,13 @@ Sygnatura - `std::string calculate(const std::string& command, int first, int se
 
 W przypadku podania błędnego parametru `command` funkcja powinna zwrócić napis "Invalid data".
 
+Przy dzieleniu przez 0 funkcja powinna zwrócić napis "Division by 0".
+
 ## Przykłady użycia
 
 ```cpp
 auto result = calculate("add", 2, 3);  // result = "5"
 result = calculate("multiply", 2, 3);  // result = "6"
 result = calculate("hello", 2, 3);     // result = "Invalid data"
+result = calculate("divide", 5, 0);    // result = "Division by 0"
 ```
