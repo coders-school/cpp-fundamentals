@@ -24,7 +24,7 @@ Wykonaj następujące instrukcje
 5. Sprawdź, czy masz gałęzie `add-even`, `generate-sequence` oraz `max-of-vector` - `git branch -a`
 6. Wrzuć wszystkie nowe gałęzie oraz `master` do swojego forka na Githubie. W tym celu przełączaj się na każdą z tych gałęzi i wykonaj `git push origin HEAD`
 
-Jeśli nie wiesz jak wykonać niektóre kroki, to przypomnij sobie lub zapytaj na Discordzie. Delikatnie puszczam tutaj Twój rowerek, bo część rzeczy już musisz umieć zrobić samodzielnie, bez moich podpowiedzi. Albo musisz wiedzieć, gdzie można znaleźć odpowiedzi 😉
+Jeśli nie wiesz jak wykonać niektóre kroki, to przypomnij sobie lub zapytaj [w społeczności na platformie](https://kursy.coders.school/next/public/community/). Delikatnie puszczam tutaj Twój rowerek, bo część rzeczy już musisz umieć zrobić samodzielnie, bez moich podpowiedzi. Albo musisz wiedzieć, gdzie można znaleźć odpowiedzi 😉
 
 ___
 

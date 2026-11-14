@@ -64,4 +64,4 @@ ___
 
 Jeśli chcesz mieć też te zadania w swoim forku, musisz do niego wysłać zmiany. Robisz to synchronizując repozytoria za pomocą komend `git remote add NICK ADDRESS` oraz `git push NICK TASK`.
 
-W razie problemów zawsze możesz zapytać na Discordzie. Możesz też przejść na pracę samodzielną. Powodzenia! 🙂
+W razie problemów zawsze możesz zapytać [w społeczności na platformie](https://kursy.coders.school/next/public/community/). Możesz też przejść na pracę samodzielną. Powodzenia! 🙂
