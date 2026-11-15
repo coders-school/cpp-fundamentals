@@ -1,0 +1,29 @@
+name: wrong-base-branch
+
+on:
+  pull_request_target:
+    branches: [main]
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  comment:
+    if: >-
+      !contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'),
+      github.event.pull_request.author_association)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/github-script@v7
+      with:
+        script: |
+          await github.rest.issues.createComment({
+            ...context.repo,
+            issue_number: context.payload.pull_request.number,
+            body: [
+              '👋 Ten PR trafił na gałąź `main`, a zadania sprawdzam na ich własnych gałęziach.',
+              '',
+              'Kliknij **Edit** obok tytułu PR-a i zmień gałąź docelową (base) na gałąź zadania, np. `calculate`. Potem zamknij i otwórz PR ponownie (**Close** → **Reopen**) – wtedy uruchomią się testy.',
+            ].join('\n'),
+          });
